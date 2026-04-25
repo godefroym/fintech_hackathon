@@ -8,7 +8,14 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from analytics import AnalyticsEngine, CompanyInput, EmployeeInput
+from analytics import (
+    AnalyticsEngine,
+    CompanyInput,
+    EmployeeInput,
+    EmployeeProfileInput,
+    FeatureInput,
+    ModelUsageInput,
+)
 from forecast import ForecastEngine
 from llm_engine import LLMEngine
 from report_generator import ReportGenerator
@@ -29,6 +36,22 @@ def load_employees(path: Path) -> list[EmployeeInput]:
     return employees
 
 
+def load_jsonl_model(path: Path | None, model: type[Any], label: str) -> list[Any]:
+    if path is None:
+        return []
+    records: list[Any] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            try:
+                records.append(model.model_validate(json.loads(stripped)))
+            except (json.JSONDecodeError, ValidationError) as exc:
+                raise ValueError(f"Invalid {label} JSONL at line {line_number}: {exc}") from exc
+    return records
+
+
 def load_company(path: Path) -> CompanyInput:
     try:
         raw: dict[str, Any] = json.loads(path.read_text(encoding="utf-8"))
@@ -43,6 +66,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--employees", required=True, type=Path, help="Path to employees.jsonl")
     parser.add_argument("--company", required=True, type=Path, help="Path to company.json")
+    parser.add_argument("--employee-profiles", type=Path, help="Optional path to employee_profiles.jsonl")
+    parser.add_argument("--model-usage", type=Path, help="Optional path to model_usage.jsonl")
+    parser.add_argument("--features", type=Path, help="Optional path to features.jsonl")
     parser.add_argument(
         "--no-llm",
         action="store_true",
@@ -75,9 +101,22 @@ def main() -> int:
     try:
         employees = load_employees(args.employees)
         company = load_company(args.company)
+        employee_profiles = load_jsonl_model(
+            args.employee_profiles,
+            EmployeeProfileInput,
+            "employee profile",
+        )
+        model_usage = load_jsonl_model(args.model_usage, ModelUsageInput, "model usage")
+        features = load_jsonl_model(args.features, FeatureInput, "feature")
 
         engine = AnalyticsEngine()
-        deterministic = engine.analyze(employees=employees, company=company)
+        deterministic = engine.analyze(
+            employees=employees,
+            company=company,
+            employee_profiles=employee_profiles,
+            model_usage=model_usage,
+            features=features,
+        )
 
         llm_content = {}
         if not args.no_llm:
@@ -89,6 +128,9 @@ def main() -> int:
         result = engine.analyze(
             employees=employees,
             company=company,
+            employee_profiles=employee_profiles,
+            model_usage=model_usage,
+            features=features,
             llm_content=llm_content,
         ).output
 

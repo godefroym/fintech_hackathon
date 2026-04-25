@@ -28,6 +28,8 @@ class ReportGenerator:
             "executive_report": report_dir / "executive_report.json",
             "forecast_scenarios": report_dir / "forecast_scenarios.json",
             "action_plan": report_dir / "action_plan.json",
+            "issue_cards": report_dir / "issue_cards.json",
+            "comparative_analysis": report_dir / "comparative_analysis.json",
         }
 
         payloads = {
@@ -36,6 +38,8 @@ class ReportGenerator:
             "executive_report": executive_report,
             "forecast_scenarios": forecast,
             "action_plan": {"items": action_plan},
+            "issue_cards": {"cards": analytics_output.get("issue_cards", [])},
+            "comparative_analysis": analytics_output.get("comparative_analysis", {}),
         }
         for key, path in files.items():
             path.write_text(
@@ -48,6 +52,8 @@ class ReportGenerator:
             "frontend_entrypoint": "dashboard_data.json",
             "executive_entrypoint": "executive_report.json",
             "forecast_entrypoint": "forecast_scenarios.json",
+            "issue_cards_entrypoint": "issue_cards.json",
+            "comparative_analysis_entrypoint": "comparative_analysis.json",
         }
         index_path = report_dir / "index.json"
         index_path.write_text(json.dumps(index, ensure_ascii=False, indent=indent) + "\n", encoding="utf-8")
@@ -109,6 +115,8 @@ class ReportGenerator:
             },
             "rankings": analytics_output["rankings"],
             "analysis_sections": analytics_output.get("analysis_sections", {}),
+            "comparative_analysis": analytics_output.get("comparative_analysis", {}),
+            "issue_cards": analytics_output.get("issue_cards", []),
         }
 
     def _executive_report(
@@ -132,6 +140,7 @@ class ReportGenerator:
                 f"Applying the action plan projects {forecast['delta_summary']['operating_profit_delta']} additional operating profit over 12 months.",
             ],
             "diagnosis": llm_content.get("diagnosis") or analytics_output["insights"],
+            "issue_cards": analytics_output.get("issue_cards", []),
             "risk_level": self._risk_level(summary, analytics_output),
             "recommended_action_plan": llm_content.get("action_plan")
             or self._fallback_action_plan(forecast),

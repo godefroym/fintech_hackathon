@@ -1,0 +1,272 @@
+{
+  "cfo_decision_summary": {
+    "recommended_budget_decision": "maintain_with_controls",
+    "financial_position": "AI spend is financially justified, but targeted controls are needed to reduce waste.",
+    "budget_usage_percent": 81.7,
+    "monthly_ai_spend_growth_percent": 15.6,
+    "forecast_next_month_ai_spend": 29114.5,
+    "projected_12_month_operating_profit_delta": 3744275.06,
+    "primary_value_creators": [
+      "Mehdi Karim",
+      "Amina Diallo",
+      "Sofia Rossi",
+      "Alice Martin",
+      "Camille Perrin"
+    ],
+    "primary_waste_sources": [
+      "Yanis Mercier",
+      "Nathan Colin",
+      "Tom Bernard",
+      "Julie Laurent",
+      "Kevin Moreau"
+    ],
+    "finance_controls_to_apply": [
+      "Set monthly token budget thresholds by team and user segment.",
+      "Require review for high-spend users below ROI threshold.",
+      "Preserve access for high-ROI users and replicate their workflows.",
+      "Downgrade or pause premium usage where ROI remains low after remediation."
+    ],
+    "spend_control": {
+      "monthly_growth_in_ai_spend_percent": 15.6,
+      "budget_usage_percent": 81.7,
+      "forecast_next_month_spend": 29114.5
+    }
+  },
+  "status": "reasoned_and_justified",
+  "summary": [
+    "AI spend is financially justified, but targeted controls are needed to reduce waste.",
+    "AI spend uses 81.7% of the monthly budget and is forecast at 29114.5 next month.",
+    "Applying the action plan projects 3744275.06 additional operating profit over 12 months."
+  ],
+  "diagnosis": [
+    {
+      "severity": "medium",
+      "message": "Top 20% of users generate 32.4% of measured AI value."
+    },
+    {
+      "severity": "high",
+      "message": "Abnormal token usage detected for Yanis Mercier."
+    },
+    {
+      "severity": "low",
+      "message": "AI budget has 5500 remaining this month."
+    }
+  ],
+  "issue_cards": [
+    {
+      "id": "overspender_concentration",
+      "headline": "Overspenders consume 42.2% of employee tokens while producing weak ROI.",
+      "efficiency_impact": "high",
+      "financial_impact": {
+        "tokens_at_risk": 1634000,
+        "estimated_monthly_savings": 13.13
+      },
+      "problem_details": {
+        "affected_users": [
+          "Yanis Mercier",
+          "Ibrahim Haddad",
+          "Julie Laurent",
+          "Nathan Colin",
+          "Tom Bernard",
+          "Omar Benali",
+          "Kevin Moreau"
+        ],
+        "why_it_matters": "This is the clearest finance control opportunity: high consumption with low measured output."
+      },
+      "recommended_solution": {
+        "action": "Set spend caps for low-ROI high spenders and require manager review before premium usage is expanded.",
+        "owner": "Finance and Engineering Managers",
+        "timeframe": "30 days"
+      }
+    },
+    {
+      "id": "budget_run_rate",
+      "headline": "AI spend is at 81.7% of budget and next month is forecast at 29114.5.",
+      "efficiency_impact": "medium",
+      "financial_impact": {
+        "current_budget_usage_percent": 81.7,
+        "forecast_next_month_ai_spend": 29114.5
+      },
+      "problem_details": {
+        "why_it_matters": "Spend is still justified, but the run rate is close enough to budget to require controls."
+      },
+      "recommended_solution": {
+        "action": "Approve current budget but add monthly alerts by provider, model, team, and user segment.",
+        "owner": "CFO / FP&A",
+        "timeframe": "Immediate"
+      }
+    },
+    {
+      "id": "model_cost_mix",
+      "headline": "gpt-4.1 is the highest-cost model in the current mix.",
+      "efficiency_impact": "medium",
+      "financial_impact": {
+        "model": "gpt-4.1",
+        "estimated_cost": 236.5
+      },
+      "problem_details": {
+        "why_it_matters": "Model routing can reduce cost without cutting AI access if simple tasks move to cheaper models."
+      },
+      "recommended_solution": {
+        "action": "Route low-complexity use cases to cheaper models and reserve premium models for high-value features.",
+        "owner": "Finance and Platform",
+        "timeframe": "45 days"
+      }
+    },
+    {
+      "id": "feature_token_waste",
+      "headline": "3 feature(s) show high token usage with low estimated business value.",
+      "efficiency_impact": "high",
+      "financial_impact": {
+        "features_at_risk": [
+          "Internal settings refactor",
+          "Admin audit export",
+          "Legacy theme migration"
+        ]
+      },
+      "problem_details": {
+        "why_it_matters": "AI spend should be concentrated on revenue growth, cost savings, or critical delivery outcomes."
+      },
+      "recommended_solution": {
+        "action": "Require business-value tagging before approving premium model usage on low-priority features.",
+        "owner": "Product Finance",
+        "timeframe": "30 days"
+      }
+    }
+  ],
+  "risk_level": "medium",
+  "recommended_action_plan": [
+    {
+      "priority": 1,
+      "title": "Execute ROI optimization plan",
+      "owner": "COO",
+      "timeframe": "90 days",
+      "action": "Apply the forecast action plan assumptions and review impact monthly.",
+      "expected_effect": "Projected operating profit delta: 3744275.06."
+    }
+  ],
+  "forecast_delta_summary": {
+    "revenue_delta": 3638772.74,
+    "ai_spend_delta": -36796.31,
+    "operating_profit_delta": 3744275.06
+  },
+  "analysis_sections": {
+    "cost_efficiency": {
+      "metrics": [
+        "tokens_per_ticket",
+        "tokens_per_story_point",
+        "business_output_per_1k_tokens"
+      ],
+      "best_users": [
+        "Amina Diallo",
+        "Maya Cohen",
+        "Zoé Caron"
+      ],
+      "worst_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Julie Laurent"
+      ]
+    },
+    "productivity_score": {
+      "based_on": [
+        "tickets_resolved",
+        "story_points",
+        "bugs_closed",
+        "merge_requests"
+      ],
+      "top_users": [
+        "Mehdi Karim",
+        "Sofia Rossi",
+        "Amina Diallo"
+      ]
+    },
+    "quality_score": {
+      "based_on": [
+        "reopen_rate",
+        "clarification_rate",
+        "completion_speed"
+      ],
+      "quality_risks": [
+        "Maxime Dubois"
+      ]
+    },
+    "roi_score": {
+      "estimate": "business_output_generated / token_spend, blended with quality and productivity scores",
+      "top_users": [
+        "Mehdi Karim",
+        "Amina Diallo",
+        "Sofia Rossi"
+      ],
+      "waste_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Tom Bernard",
+        "Julie Laurent",
+        "Kevin Moreau"
+      ]
+    },
+    "company_level_analysis": {
+      "spend_control": {
+        "monthly_growth_in_ai_spend_percent": 15.6,
+        "budget_usage_percent": 81.7,
+        "forecast_next_month_spend": 29114.5
+      },
+      "performance_impact": {
+        "productivity_gain_percent": 29.7,
+        "bugs_reduction_percent": 26.5,
+        "completion_speed_improvement_percent": 29.7
+      },
+      "strategic_roi": {
+        "is_ai_spend_justified": true,
+        "overall_ai_roi_score": 75,
+        "value_creators": [
+          "Mehdi Karim",
+          "Amina Diallo",
+          "Sofia Rossi",
+          "Alice Martin",
+          "Camille Perrin"
+        ],
+        "waste_sources": [
+          "Yanis Mercier",
+          "Nathan Colin",
+          "Tom Bernard",
+          "Julie Laurent",
+          "Kevin Moreau"
+        ]
+      }
+    }
+  },
+  "assumptions": [
+    {
+      "name": "baseline_monthly_revenue_growth",
+      "value": 0.4,
+      "unit": "percent",
+      "rationale": "Conservative default for do-nothing revenue projection."
+    },
+    {
+      "name": "baseline_monthly_ai_spend_growth",
+      "value": 2.24,
+      "unit": "percent",
+      "rationale": "Derived from current spend versus previous 12-month average."
+    },
+    {
+      "name": "action_plan_productivity_lift",
+      "value": 13,
+      "unit": "percent",
+      "rationale": "Capped aggregate lift from action plan items."
+    },
+    {
+      "name": "action_plan_ai_spend_reduction",
+      "value": 21,
+      "unit": "percent",
+      "rationale": "Capped aggregate spend reduction from action plan items."
+    },
+    {
+      "name": "action_plan_bug_reduction",
+      "value": 9,
+      "unit": "percent",
+      "rationale": "Capped aggregate quality improvement from action plan items."
+    }
+  ]
+}

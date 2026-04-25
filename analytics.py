@@ -90,6 +90,73 @@ class EmployeeInput(BaseModel):
         return max(0.0, safe_float(value))
 
 
+class EmployeeProfileInput(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    name: str
+    role: str = "unknown"
+    seniority_level: str = "unknown"
+    years_experience: float = 0
+    primary_skill: str = "unknown"
+    skill_level: str = "unknown"
+    business_unit: str = "unknown"
+
+    @field_validator("years_experience", mode="before")
+    @classmethod
+    def numeric_default(cls, value: Any) -> float:
+        return max(0.0, safe_float(value))
+
+
+class ModelUsageInput(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    employee_name: str
+    provider: str
+    model: str
+    tokens_used: float = 0
+    estimated_cost: float = 0
+    use_case: str = "unknown"
+    month: str = "unknown"
+
+    @field_validator("tokens_used", "estimated_cost", mode="before")
+    @classmethod
+    def numeric_default(cls, value: Any) -> float:
+        return max(0.0, safe_float(value))
+
+
+class FeatureInput(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    feature_id: str
+    feature_name: str
+    owner: str
+    feature_type: str = "unknown"
+    business_priority: str = "medium"
+    business_value_type: str = "unknown"
+    tokens_used: float = 0
+    estimated_ai_cost: float = 0
+    revenue_impact_estimate: float = 0
+    cost_saving_estimate: float = 0
+    story_points: float = 0
+    tickets_resolved: float = 0
+    bugs_after_release: float = 0
+    month: str = "unknown"
+
+    @field_validator(
+        "tokens_used",
+        "estimated_ai_cost",
+        "revenue_impact_estimate",
+        "cost_saving_estimate",
+        "story_points",
+        "tickets_resolved",
+        "bugs_after_release",
+        mode="before",
+    )
+    @classmethod
+    def numeric_default(cls, value: Any) -> float:
+        return max(0.0, safe_float(value))
+
+
 class CompanyInput(BaseModel):
     model_config = ConfigDict(extra="allow")
 
@@ -166,12 +233,20 @@ class AnalyticsEngine:
         self,
         employees: list[EmployeeInput],
         company: CompanyInput,
+        employee_profiles: list[EmployeeProfileInput] | None = None,
+        model_usage: list[ModelUsageInput] | None = None,
+        features: list[FeatureInput] | None = None,
         llm_content: dict[str, Any] | None = None,
     ) -> AnalyticsResult:
         employee_df = self._employee_dataframe(employees)
+        profile_df = self._profile_dataframe(employee_profiles or [])
+        model_df = self._model_usage_dataframe(model_usage or [])
+        feature_df = self._feature_dataframe(features or [])
         company_metrics = self._company_metrics(company, employee_df)
         rankings = self._rankings(employee_df)
         chart_data = self._chart_data(employee_df, company, company_metrics)
+        comparative_analysis = self._comparative_analysis(employee_df, profile_df, model_df, feature_df)
+        issue_cards = self._issue_cards(employee_df, company_metrics, comparative_analysis)
         deterministic_insights = self._insights(employee_df, company, company_metrics)
         deterministic_recommendations = self._recommendations(employee_df, company_metrics)
 
@@ -213,6 +288,8 @@ class AnalyticsEngine:
             "executive_summary": executive_summary,
             "employee_metrics": self._employee_records(employee_df, llm_content),
             "analysis_sections": self._analysis_sections(employee_df, company_metrics),
+            "comparative_analysis": comparative_analysis,
+            "issue_cards": llm_content.get("issue_cards") or issue_cards,
             "rankings": rankings,
             "chart_data": chart_data,
             "insights": llm_content.get("insights") or deterministic_insights,
@@ -220,7 +297,17 @@ class AnalyticsEngine:
             or deterministic_recommendations,
         }
 
-        return AnalyticsResult(output=output, llm_context=self._llm_context(employee_df, company, company_metrics, rankings))
+        return AnalyticsResult(
+            output=output,
+            llm_context=self._llm_context(
+                employee_df,
+                company,
+                company_metrics,
+                rankings,
+                comparative_analysis,
+                issue_cards,
+            ),
+        )
 
     def _employee_dataframe(self, employees: list[EmployeeInput]) -> pd.DataFrame:
         rows = [employee.model_dump() for employee in employees]
@@ -289,6 +376,77 @@ class AnalyticsEngine:
         df["is_anomaly"] = self._token_anomaly_flags(df["token_used"])
         df["category"] = df.apply(self._categorize_employee, axis=1)
         df["recommendation"] = df.apply(self._employee_recommendation, axis=1)
+        return df
+
+    def _profile_dataframe(self, profiles: list[EmployeeProfileInput]) -> pd.DataFrame:
+        if not profiles:
+            return pd.DataFrame(
+                columns=[
+                    "name",
+                    "role",
+                    "seniority_level",
+                    "years_experience",
+                    "primary_skill",
+                    "skill_level",
+                    "business_unit",
+                ]
+            )
+        df = pd.DataFrame([profile.model_dump() for profile in profiles])
+        df["years_experience"] = pd.to_numeric(df["years_experience"], errors="coerce").fillna(0.0)
+        return df
+
+    def _model_usage_dataframe(self, usage: list[ModelUsageInput]) -> pd.DataFrame:
+        if not usage:
+            return pd.DataFrame(
+                columns=[
+                    "employee_name",
+                    "provider",
+                    "model",
+                    "tokens_used",
+                    "estimated_cost",
+                    "use_case",
+                    "month",
+                ]
+            )
+        df = pd.DataFrame([item.model_dump() for item in usage])
+        for column in ["tokens_used", "estimated_cost"]:
+            df[column] = pd.to_numeric(df[column], errors="coerce").fillna(0.0).clip(lower=0.0)
+        return df
+
+    def _feature_dataframe(self, features: list[FeatureInput]) -> pd.DataFrame:
+        if not features:
+            return pd.DataFrame(
+                columns=[
+                    "feature_id",
+                    "feature_name",
+                    "owner",
+                    "feature_type",
+                    "business_priority",
+                    "business_value_type",
+                    "tokens_used",
+                    "estimated_ai_cost",
+                    "revenue_impact_estimate",
+                    "cost_saving_estimate",
+                    "story_points",
+                    "tickets_resolved",
+                    "bugs_after_release",
+                    "month",
+                ]
+            )
+        df = pd.DataFrame([feature.model_dump() for feature in features])
+        for column in [
+            "tokens_used",
+            "estimated_ai_cost",
+            "revenue_impact_estimate",
+            "cost_saving_estimate",
+            "story_points",
+            "tickets_resolved",
+            "bugs_after_release",
+        ]:
+            df[column] = pd.to_numeric(df[column], errors="coerce").fillna(0.0).clip(lower=0.0)
+        df["estimated_business_value"] = df["revenue_impact_estimate"] + df["cost_saving_estimate"]
+        df["value_per_1k_tokens"] = df["estimated_business_value"] / df["tokens_used"].clip(lower=1) * 1000
+        df["cost_per_story_point"] = df["estimated_ai_cost"] / df["story_points"].clip(lower=1)
         return df
 
     def _token_anomaly_flags(self, tokens: pd.Series) -> pd.Series:
@@ -653,6 +811,251 @@ class AnalyticsEngine:
             )
         return records
 
+    def _comparative_analysis(
+        self,
+        employee_df: pd.DataFrame,
+        profile_df: pd.DataFrame,
+        model_df: pd.DataFrame,
+        feature_df: pd.DataFrame,
+    ) -> dict[str, Any]:
+        employee_lookup = employee_df[
+            ["name", "roi_score", "business_output_generated", "business_output_per_1k_tokens"]
+        ].rename(columns={"name": "employee_name"})
+
+        model_efficiency: dict[str, Any] = {
+            "tokens_by_provider": [],
+            "tokens_by_model": [],
+            "cost_by_model": [],
+            "roi_by_model": [],
+            "best_model_by_use_case": [],
+        }
+        if not model_df.empty:
+            enriched_model = model_df.merge(employee_lookup, on="employee_name", how="left").fillna(0)
+            enriched_model["business_output_allocated"] = (
+                enriched_model["business_output_generated"]
+                * enriched_model["tokens_used"]
+                / enriched_model.groupby("employee_name")["tokens_used"].transform("sum").clip(lower=1)
+            )
+            enriched_model["output_per_dollar"] = (
+                enriched_model["business_output_allocated"] / enriched_model["estimated_cost"].clip(lower=0.01)
+            )
+            model_efficiency = {
+                "tokens_by_provider": self._group_sum_records(enriched_model, "provider", "tokens_used"),
+                "tokens_by_model": self._group_sum_records(enriched_model, "model", "tokens_used"),
+                "cost_by_model": self._group_sum_records(enriched_model, "model", "estimated_cost"),
+                "roi_by_model": self._group_mean_records(enriched_model, "model", "output_per_dollar"),
+                "best_model_by_use_case": self._best_by_group(
+                    enriched_model,
+                    group_column="use_case",
+                    label_column="model",
+                    value_column="output_per_dollar",
+                ),
+            }
+
+        background_efficiency: dict[str, Any] = {
+            "tokens_by_seniority": [],
+            "roi_by_seniority": [],
+            "tokens_by_skill": [],
+            "roi_by_skill": [],
+        }
+        if not profile_df.empty:
+            enriched_profiles = employee_df.merge(profile_df, left_on="name", right_on="name", how="left")
+            enriched_profiles = enriched_profiles.fillna("unknown")
+            background_efficiency = {
+                "tokens_by_seniority": self._group_sum_records(
+                    enriched_profiles, "seniority_level", "token_used"
+                ),
+                "roi_by_seniority": self._group_mean_records(
+                    enriched_profiles, "seniority_level", "roi_score"
+                ),
+                "tokens_by_skill": self._group_sum_records(
+                    enriched_profiles, "primary_skill", "token_used"
+                ),
+                "roi_by_skill": self._group_mean_records(enriched_profiles, "primary_skill", "roi_score"),
+                "tokens_by_skill_level": self._group_sum_records(
+                    enriched_profiles, "skill_level", "token_used"
+                ),
+                "roi_by_skill_level": self._group_mean_records(
+                    enriched_profiles, "skill_level", "roi_score"
+                ),
+            }
+
+        feature_efficiency: dict[str, Any] = {
+            "tokens_by_feature": [],
+            "cost_per_feature": [],
+            "roi_per_feature": [],
+            "high_value_features": [],
+            "waste_risk_features": [],
+        }
+        if not feature_df.empty:
+            feature_efficiency = {
+                "tokens_by_feature": [
+                    {
+                        "feature_id": row["feature_id"],
+                        "feature_name": row["feature_name"],
+                        "tokens_used": int(round(row["tokens_used"])),
+                    }
+                    for _, row in feature_df.sort_values("tokens_used", ascending=False).iterrows()
+                ],
+                "cost_per_feature": [
+                    {
+                        "feature_id": row["feature_id"],
+                        "feature_name": row["feature_name"],
+                        "estimated_ai_cost": round_metric(row["estimated_ai_cost"], 2),
+                    }
+                    for _, row in feature_df.sort_values("estimated_ai_cost", ascending=False).iterrows()
+                ],
+                "roi_per_feature": [
+                    {
+                        "feature_id": row["feature_id"],
+                        "feature_name": row["feature_name"],
+                        "value_per_1k_tokens": round_metric(row["value_per_1k_tokens"], 2),
+                        "estimated_business_value": round_metric(row["estimated_business_value"], 2),
+                    }
+                    for _, row in feature_df.sort_values("value_per_1k_tokens", ascending=False).iterrows()
+                ],
+                "high_value_features": feature_df.sort_values(
+                    "estimated_business_value", ascending=False
+                )["feature_name"].head(5).tolist(),
+                "waste_risk_features": feature_df[
+                    (feature_df["tokens_used"] >= feature_df["tokens_used"].quantile(0.75))
+                    & (feature_df["value_per_1k_tokens"] <= feature_df["value_per_1k_tokens"].quantile(0.35))
+                ]["feature_name"].tolist(),
+            }
+
+        return {
+            "model_efficiency": model_efficiency,
+            "employee_background_efficiency": background_efficiency,
+            "feature_efficiency": feature_efficiency,
+        }
+
+    def _issue_cards(
+        self,
+        employee_df: pd.DataFrame,
+        company_metrics: dict[str, float],
+        comparative_analysis: dict[str, Any],
+    ) -> list[dict[str, Any]]:
+        total_tokens = float(employee_df["token_used"].sum())
+        overspenders = employee_df[employee_df["category"].eq("overspender")]
+        overspender_tokens = float(overspenders["token_used"].sum())
+        overspender_share = safe_divide(overspender_tokens, total_tokens) * 100
+        issue_cards = [
+            {
+                "id": "overspender_concentration",
+                "headline": f"Overspenders consume {round_metric(overspender_share)}% of employee tokens while producing weak ROI.",
+                "efficiency_impact": "high" if overspender_share >= 30 else "medium",
+                "financial_impact": {
+                    "tokens_at_risk": int(round(overspender_tokens)),
+                    "estimated_monthly_savings": round_metric(self._estimated_savings(employee_df), 2),
+                },
+                "problem_details": {
+                    "affected_users": overspenders.sort_values("token_used", ascending=False)["name"].tolist(),
+                    "why_it_matters": "This is the clearest finance control opportunity: high consumption with low measured output.",
+                },
+                "recommended_solution": {
+                    "action": "Set spend caps for low-ROI high spenders and require manager review before premium usage is expanded.",
+                    "owner": "Finance and Engineering Managers",
+                    "timeframe": "30 days",
+                },
+            },
+            {
+                "id": "budget_run_rate",
+                "headline": f"AI spend is at {company_metrics['budget_usage_percent']}% of budget and next month is forecast at {company_metrics['forecast_next_month_ai_spend']}.",
+                "efficiency_impact": "medium" if company_metrics["budget_usage_percent"] < 90 else "high",
+                "financial_impact": {
+                    "current_budget_usage_percent": company_metrics["budget_usage_percent"],
+                    "forecast_next_month_ai_spend": company_metrics["forecast_next_month_ai_spend"],
+                },
+                "problem_details": {
+                    "why_it_matters": "Spend is still justified, but the run rate is close enough to budget to require controls.",
+                },
+                "recommended_solution": {
+                    "action": "Approve current budget but add monthly alerts by provider, model, team, and user segment.",
+                    "owner": "CFO / FP&A",
+                    "timeframe": "Immediate",
+                },
+            },
+        ]
+
+        model_efficiency = comparative_analysis.get("model_efficiency", {})
+        cost_by_model = model_efficiency.get("cost_by_model", [])
+        if cost_by_model:
+            highest_cost = max(cost_by_model, key=lambda item: item["value"])
+            issue_cards.append(
+                {
+                    "id": "model_cost_mix",
+                    "headline": f"{highest_cost['name']} is the highest-cost model in the current mix.",
+                    "efficiency_impact": "medium",
+                    "financial_impact": {
+                        "model": highest_cost["name"],
+                        "estimated_cost": highest_cost["value"],
+                    },
+                    "problem_details": {
+                        "why_it_matters": "Model routing can reduce cost without cutting AI access if simple tasks move to cheaper models.",
+                    },
+                    "recommended_solution": {
+                        "action": "Route low-complexity use cases to cheaper models and reserve premium models for high-value features.",
+                        "owner": "Finance and Platform",
+                        "timeframe": "45 days",
+                    },
+                }
+            )
+
+        feature_efficiency = comparative_analysis.get("feature_efficiency", {})
+        waste_features = feature_efficiency.get("waste_risk_features", [])
+        if waste_features:
+            issue_cards.append(
+                {
+                    "id": "feature_token_waste",
+                    "headline": f"{len(waste_features)} feature(s) show high token usage with low estimated business value.",
+                    "efficiency_impact": "high",
+                    "financial_impact": {"features_at_risk": waste_features},
+                    "problem_details": {
+                        "why_it_matters": "AI spend should be concentrated on revenue growth, cost savings, or critical delivery outcomes.",
+                    },
+                    "recommended_solution": {
+                        "action": "Require business-value tagging before approving premium model usage on low-priority features.",
+                        "owner": "Product Finance",
+                        "timeframe": "30 days",
+                    },
+                }
+            )
+
+        return issue_cards
+
+    def _group_sum_records(self, df: pd.DataFrame, group_column: str, value_column: str) -> list[dict[str, Any]]:
+        if df.empty or group_column not in df or value_column not in df:
+            return []
+        grouped = df.groupby(group_column, dropna=False)[value_column].sum().sort_values(ascending=False)
+        return [{"name": str(index), "value": round_metric(value, 2)} for index, value in grouped.items()]
+
+    def _group_mean_records(self, df: pd.DataFrame, group_column: str, value_column: str) -> list[dict[str, Any]]:
+        if df.empty or group_column not in df or value_column not in df:
+            return []
+        grouped = df.groupby(group_column, dropna=False)[value_column].mean().sort_values(ascending=False)
+        return [{"name": str(index), "value": round_metric(value, 2)} for index, value in grouped.items()]
+
+    def _best_by_group(
+        self,
+        df: pd.DataFrame,
+        group_column: str,
+        label_column: str,
+        value_column: str,
+    ) -> list[dict[str, Any]]:
+        if df.empty:
+            return []
+        records = []
+        for group, group_df in df.groupby(group_column):
+            winner = group_df.sort_values(value_column, ascending=False).iloc[0]
+            records.append(
+                {
+                    "use_case": str(group),
+                    "best_model": str(winner[label_column]),
+                    "value": round_metric(winner[value_column], 2),
+                }
+            )
+        return records
+
     def _analysis_sections(self, df: pd.DataFrame, company_metrics: dict[str, float]) -> dict[str, Any]:
         return {
             "cost_efficiency": {
@@ -729,6 +1132,8 @@ class AnalyticsEngine:
         company: CompanyInput,
         company_metrics: dict[str, float],
         rankings: dict[str, list[str]],
+        comparative_analysis: dict[str, Any],
+        issue_cards: list[dict[str, Any]],
     ) -> dict[str, Any]:
         top_decile_count = max(1, int(round(len(df) * 0.1)))
         top_efficiency = float(df.nlargest(top_decile_count, "spend_efficiency")["spend_efficiency"].mean())
@@ -737,6 +1142,8 @@ class AnalyticsEngine:
             "company": company.model_dump(),
             "company_metrics": company_metrics,
             "rankings": rankings,
+            "comparative_analysis": comparative_analysis,
+            "issue_cards": issue_cards,
             "category_counts": df["category"].value_counts().to_dict(),
             "top_10_vs_bottom_10_spend_efficiency": {
                 "top_10_percent_avg": round_metric(top_efficiency),

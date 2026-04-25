@@ -1,0 +1,1660 @@
+{
+  "summary_cards": [
+    {
+      "label": "Overall AI ROI",
+      "value": 75,
+      "unit": "score",
+      "status": "healthy"
+    },
+    {
+      "label": "Monthly AI Spend",
+      "value": 24500,
+      "unit": "currency",
+      "status": "watch"
+    },
+    {
+      "label": "Next Month AI Spend",
+      "value": 29114.5,
+      "unit": "currency",
+      "status": "watch"
+    },
+    {
+      "label": "Productivity Gain",
+      "value": 29.7,
+      "unit": "percent",
+      "status": "healthy"
+    },
+    {
+      "label": "Forecast Profit Delta",
+      "value": 3744275.06,
+      "unit": "currency",
+      "status": "healthy"
+    }
+  ],
+  "charts": {
+    "tokens_by_employee": [
+      {
+        "name": "Yanis Mercier",
+        "tokens_used": 305000
+      },
+      {
+        "name": "Ibrahim Haddad",
+        "tokens_used": 268000
+      },
+      {
+        "name": "Julie Laurent",
+        "tokens_used": 255000
+      },
+      {
+        "name": "Nathan Colin",
+        "tokens_used": 232000
+      },
+      {
+        "name": "Tom Bernard",
+        "tokens_used": 210000
+      },
+      {
+        "name": "Omar Benali",
+        "tokens_used": 188000
+      },
+      {
+        "name": "Kevin Moreau",
+        "tokens_used": 176000
+      },
+      {
+        "name": "Antoine Leroy",
+        "tokens_used": 159000
+      },
+      {
+        "name": "Paul Lefevre",
+        "tokens_used": 151000
+      },
+      {
+        "name": "Lucas Girard",
+        "tokens_used": 143000
+      },
+      {
+        "name": "Victor Marchand",
+        "tokens_used": 136000
+      },
+      {
+        "name": "Lea Fontaine",
+        "tokens_used": 134000
+      },
+      {
+        "name": "Alice Martin",
+        "tokens_used": 124500
+      },
+      {
+        "name": "Romain Garcia",
+        "tokens_used": 121000
+      },
+      {
+        "name": "Chloe Andre",
+        "tokens_used": 117000
+      },
+      {
+        "name": "Mehdi Karim",
+        "tokens_used": 112300
+      },
+      {
+        "name": "Sofia Rossi",
+        "tokens_used": 108000
+      },
+      {
+        "name": "Amina Diallo",
+        "tokens_used": 99000
+      },
+      {
+        "name": "Sarah Dupont",
+        "tokens_used": 98000
+      },
+      {
+        "name": "Camille Perrin",
+        "tokens_used": 94000
+      },
+      {
+        "name": "Emma Petit",
+        "tokens_used": 87500
+      },
+      {
+        "name": "Elena Costa",
+        "tokens_used": 83000
+      },
+      {
+        "name": "Clara Nguyen",
+        "tokens_used": 76000
+      },
+      {
+        "name": "Maxime Dubois",
+        "tokens_used": 72000
+      },
+      {
+        "name": "Nina Roux",
+        "tokens_used": 67000
+      },
+      {
+        "name": "Maya Cohen",
+        "tokens_used": 64000
+      },
+      {
+        "name": "Zoé Caron",
+        "tokens_used": 59000
+      },
+      {
+        "name": "Hugo Simon",
+        "tokens_used": 52000
+      },
+      {
+        "name": "Ines Robert",
+        "tokens_used": 45000
+      },
+      {
+        "name": "Bastien Noel",
+        "tokens_used": 39000
+      }
+    ],
+    "roi_by_employee": [
+      {
+        "name": "Mehdi Karim",
+        "roi_score": 98
+      },
+      {
+        "name": "Amina Diallo",
+        "roi_score": 95
+      },
+      {
+        "name": "Sofia Rossi",
+        "roi_score": 95
+      },
+      {
+        "name": "Alice Martin",
+        "roi_score": 90
+      },
+      {
+        "name": "Camille Perrin",
+        "roi_score": 90
+      },
+      {
+        "name": "Lea Fontaine",
+        "roi_score": 88
+      },
+      {
+        "name": "Sarah Dupont",
+        "roi_score": 84
+      },
+      {
+        "name": "Chloe Andre",
+        "roi_score": 82
+      },
+      {
+        "name": "Lucas Girard",
+        "roi_score": 79
+      },
+      {
+        "name": "Clara Nguyen",
+        "roi_score": 78
+      },
+      {
+        "name": "Emma Petit",
+        "roi_score": 78
+      },
+      {
+        "name": "Romain Garcia",
+        "roi_score": 77
+      },
+      {
+        "name": "Maya Cohen",
+        "roi_score": 75
+      },
+      {
+        "name": "Zoé Caron",
+        "roi_score": 72
+      },
+      {
+        "name": "Elena Costa",
+        "roi_score": 72
+      },
+      {
+        "name": "Victor Marchand",
+        "roi_score": 71
+      },
+      {
+        "name": "Antoine Leroy",
+        "roi_score": 71
+      },
+      {
+        "name": "Nina Roux",
+        "roi_score": 70
+      },
+      {
+        "name": "Paul Lefevre",
+        "roi_score": 70
+      },
+      {
+        "name": "Hugo Simon",
+        "roi_score": 50
+      },
+      {
+        "name": "Omar Benali",
+        "roi_score": 50
+      },
+      {
+        "name": "Ines Robert",
+        "roi_score": 49
+      },
+      {
+        "name": "Maxime Dubois",
+        "roi_score": 44
+      },
+      {
+        "name": "Bastien Noel",
+        "roi_score": 38
+      },
+      {
+        "name": "Ibrahim Haddad",
+        "roi_score": 31
+      },
+      {
+        "name": "Kevin Moreau",
+        "roi_score": 30
+      },
+      {
+        "name": "Julie Laurent",
+        "roi_score": 29
+      },
+      {
+        "name": "Tom Bernard",
+        "roi_score": 26
+      },
+      {
+        "name": "Nathan Colin",
+        "roi_score": 25
+      },
+      {
+        "name": "Yanis Mercier",
+        "roi_score": 14
+      }
+    ],
+    "tokens_vs_output": [
+      {
+        "name": "Alice Martin",
+        "tokens_used": 124500,
+        "output_score": 89,
+        "business_output_generated": 199.3,
+        "business_output_per_1k_tokens": 1.6,
+        "roi_score": 90
+      },
+      {
+        "name": "Tom Bernard",
+        "tokens_used": 210000,
+        "output_score": 29,
+        "business_output_generated": 84.1,
+        "business_output_per_1k_tokens": 0.4,
+        "roi_score": 26
+      },
+      {
+        "name": "Sarah Dupont",
+        "tokens_used": 98000,
+        "output_score": 72,
+        "business_output_generated": 167.8,
+        "business_output_per_1k_tokens": 1.71,
+        "roi_score": 84
+      },
+      {
+        "name": "Mehdi Karim",
+        "tokens_used": 112300,
+        "output_score": 100,
+        "business_output_generated": 217,
+        "business_output_per_1k_tokens": 1.93,
+        "roi_score": 98
+      },
+      {
+        "name": "Julie Laurent",
+        "tokens_used": 255000,
+        "output_score": 36,
+        "business_output_generated": 95.2,
+        "business_output_per_1k_tokens": 0.37,
+        "roi_score": 29
+      },
+      {
+        "name": "Kevin Moreau",
+        "tokens_used": 176000,
+        "output_score": 23,
+        "business_output_generated": 73.5,
+        "business_output_per_1k_tokens": 0.42,
+        "roi_score": 30
+      },
+      {
+        "name": "Emma Petit",
+        "tokens_used": 87500,
+        "output_score": 60,
+        "business_output_generated": 148.1,
+        "business_output_per_1k_tokens": 1.69,
+        "roi_score": 78
+      },
+      {
+        "name": "Lucas Girard",
+        "tokens_used": 143000,
+        "output_score": 75,
+        "business_output_generated": 173.2,
+        "business_output_per_1k_tokens": 1.21,
+        "roi_score": 79
+      },
+      {
+        "name": "Nina Roux",
+        "tokens_used": 67000,
+        "output_score": 44,
+        "business_output_generated": 116.8,
+        "business_output_per_1k_tokens": 1.74,
+        "roi_score": 70
+      },
+      {
+        "name": "Hugo Simon",
+        "tokens_used": 52000,
+        "output_score": 13,
+        "business_output_generated": 58.4,
+        "business_output_per_1k_tokens": 1.12,
+        "roi_score": 50
+      },
+      {
+        "name": "Lea Fontaine",
+        "tokens_used": 134000,
+        "output_score": 85,
+        "business_output_generated": 191,
+        "business_output_per_1k_tokens": 1.43,
+        "roi_score": 88
+      },
+      {
+        "name": "Yanis Mercier",
+        "tokens_used": 305000,
+        "output_score": 32,
+        "business_output_generated": 87.3,
+        "business_output_per_1k_tokens": 0.29,
+        "roi_score": 14
+      },
+      {
+        "name": "Clara Nguyen",
+        "tokens_used": 76000,
+        "output_score": 61,
+        "business_output_generated": 144.8,
+        "business_output_per_1k_tokens": 1.91,
+        "roi_score": 78
+      },
+      {
+        "name": "Antoine Leroy",
+        "tokens_used": 159000,
+        "output_score": 68,
+        "business_output_generated": 156.5,
+        "business_output_per_1k_tokens": 0.98,
+        "roi_score": 71
+      },
+      {
+        "name": "Ines Robert",
+        "tokens_used": 45000,
+        "output_score": 6,
+        "business_output_generated": 46.3,
+        "business_output_per_1k_tokens": 1.03,
+        "roi_score": 49
+      },
+      {
+        "name": "Romain Garcia",
+        "tokens_used": 121000,
+        "output_score": 69,
+        "business_output_generated": 161.9,
+        "business_output_per_1k_tokens": 1.34,
+        "roi_score": 77
+      },
+      {
+        "name": "Camille Perrin",
+        "tokens_used": 94000,
+        "output_score": 81,
+        "business_output_generated": 183.2,
+        "business_output_per_1k_tokens": 1.95,
+        "roi_score": 90
+      },
+      {
+        "name": "Omar Benali",
+        "tokens_used": 188000,
+        "output_score": 46,
+        "business_output_generated": 112.4,
+        "business_output_per_1k_tokens": 0.6,
+        "roi_score": 50
+      },
+      {
+        "name": "Sofia Rossi",
+        "tokens_used": 108000,
+        "output_score": 95,
+        "business_output_generated": 209.2,
+        "business_output_per_1k_tokens": 1.94,
+        "roi_score": 95
+      },
+      {
+        "name": "Maxime Dubois",
+        "tokens_used": 72000,
+        "output_score": 20,
+        "business_output_generated": 68.7,
+        "business_output_per_1k_tokens": 0.95,
+        "roi_score": 44
+      },
+      {
+        "name": "Elena Costa",
+        "tokens_used": 83000,
+        "output_score": 53,
+        "business_output_generated": 132.9,
+        "business_output_per_1k_tokens": 1.6,
+        "roi_score": 72
+      },
+      {
+        "name": "Nathan Colin",
+        "tokens_used": 232000,
+        "output_score": 28,
+        "business_output_generated": 80,
+        "business_output_per_1k_tokens": 0.34,
+        "roi_score": 25
+      },
+      {
+        "name": "Maya Cohen",
+        "tokens_used": 64000,
+        "output_score": 51,
+        "business_output_generated": 128.2,
+        "business_output_per_1k_tokens": 2,
+        "roi_score": 75
+      },
+      {
+        "name": "Paul Lefevre",
+        "tokens_used": 151000,
+        "output_score": 64,
+        "business_output_generated": 148.3,
+        "business_output_per_1k_tokens": 0.98,
+        "roi_score": 70
+      },
+      {
+        "name": "Amina Diallo",
+        "tokens_used": 99000,
+        "output_score": 93,
+        "business_output_generated": 203.6,
+        "business_output_per_1k_tokens": 2.06,
+        "roi_score": 95
+      },
+      {
+        "name": "Bastien Noel",
+        "tokens_used": 39000,
+        "output_score": 0,
+        "business_output_generated": 34.2,
+        "business_output_per_1k_tokens": 0.88,
+        "roi_score": 38
+      },
+      {
+        "name": "Chloe Andre",
+        "tokens_used": 117000,
+        "output_score": 73,
+        "business_output_generated": 168.5,
+        "business_output_per_1k_tokens": 1.44,
+        "roi_score": 82
+      },
+      {
+        "name": "Ibrahim Haddad",
+        "tokens_used": 268000,
+        "output_score": 41,
+        "business_output_generated": 102.9,
+        "business_output_per_1k_tokens": 0.38,
+        "roi_score": 31
+      },
+      {
+        "name": "Zoé Caron",
+        "tokens_used": 59000,
+        "output_score": 43,
+        "business_output_generated": 115.1,
+        "business_output_per_1k_tokens": 1.95,
+        "roi_score": 72
+      },
+      {
+        "name": "Victor Marchand",
+        "tokens_used": 136000,
+        "output_score": 61,
+        "business_output_generated": 147,
+        "business_output_per_1k_tokens": 1.08,
+        "roi_score": 71
+      }
+    ],
+    "spend_control": [
+      {
+        "metric": "previous_month_ai_spend",
+        "value": 21200
+      },
+      {
+        "metric": "current_month_ai_spend",
+        "value": 24500
+      },
+      {
+        "metric": "previous_quarter_ai_spend_avg",
+        "value": 19800
+      },
+      {
+        "metric": "monthly_ai_budget",
+        "value": 30000
+      },
+      {
+        "metric": "monthly_ai_spend_growth_percent",
+        "value": 15.6
+      },
+      {
+        "metric": "budget_usage_percent",
+        "value": 81.7
+      },
+      {
+        "metric": "forecast_next_month_ai_spend",
+        "value": 29114.5
+      }
+    ],
+    "before_after_company": [
+      {
+        "metric": "productivity",
+        "before": 1450,
+        "after": 1880
+      },
+      {
+        "metric": "completion_time_days",
+        "before": 9.1,
+        "after": 6.4
+      },
+      {
+        "metric": "bugs",
+        "before": 132,
+        "after": 97
+      }
+    ],
+    "annual_company": [
+      {
+        "metric": "revenue",
+        "value": 10200000
+      },
+      {
+        "metric": "burn",
+        "value": 7440000
+      },
+      {
+        "metric": "ai_spend",
+        "value": 294000
+      },
+      {
+        "metric": "payroll",
+        "value": 5160000
+      }
+    ],
+    "previous_12_month_baseline": [
+      {
+        "metric": "ai_spend_avg",
+        "value": 19300
+      },
+      {
+        "metric": "productivity_avg",
+        "value": 1510
+      },
+      {
+        "metric": "completion_time_avg_days",
+        "value": 8.7
+      },
+      {
+        "metric": "bugs_avg",
+        "value": 124
+      }
+    ],
+    "forecast_revenue": [
+      {
+        "scenario": "baseline_no_action",
+        "month": 1,
+        "value": 850000
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 2,
+        "value": 853400
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 3,
+        "value": 856813.6
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 4,
+        "value": 860240.85
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 5,
+        "value": 863681.82
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 6,
+        "value": 867136.55
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 7,
+        "value": 870605.09
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 8,
+        "value": 874087.51
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 9,
+        "value": 877583.86
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 10,
+        "value": 881094.2
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 11,
+        "value": 884618.57
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 12,
+        "value": 888157.05
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 1,
+        "value": 850000
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 2,
+        "value": 898195
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 3,
+        "value": 949122.66
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 4,
+        "value": 1002937.91
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 5,
+        "value": 1059804.49
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 6,
+        "value": 1119895.41
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 7,
+        "value": 1183393.47
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 8,
+        "value": 1250491.88
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 9,
+        "value": 1321394.77
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 10,
+        "value": 1396317.86
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 11,
+        "value": 1475489.08
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 12,
+        "value": 1559149.31
+      }
+    ],
+    "forecast_operating_profit": [
+      {
+        "scenario": "baseline_no_action",
+        "month": 1,
+        "value": 230000
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 2,
+        "value": 232850.79
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 3,
+        "value": 235702.87
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 4,
+        "value": 238556.02
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 5,
+        "value": 241410.01
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 6,
+        "value": 244264.6
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 7,
+        "value": 247119.56
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 8,
+        "value": 249974.63
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 9,
+        "value": 252829.58
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 10,
+        "value": 255684.13
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 11,
+        "value": 258538.02
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 12,
+        "value": 261390.98
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 1,
+        "value": 235725.5
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 2,
+        "value": 283885.79
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 3,
+        "value": 334778.69
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 4,
+        "value": 388559.14
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 5,
+        "value": 445390.86
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 6,
+        "value": 505446.87
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 7,
+        "value": 568909.99
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 8,
+        "value": 635973.39
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 9,
+        "value": 706841.23
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 10,
+        "value": 781729.21
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 11,
+        "value": 860865.28
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 12,
+        "value": 944490.3
+      }
+    ],
+    "forecast_ai_spend": [
+      {
+        "scenario": "baseline_no_action",
+        "month": 1,
+        "value": 24500
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 2,
+        "value": 25049.21
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 3,
+        "value": 25610.73
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 4,
+        "value": 26184.84
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 5,
+        "value": 26771.81
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 6,
+        "value": 27371.95
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 7,
+        "value": 27985.53
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 8,
+        "value": 28612.88
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 9,
+        "value": 29254.28
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 10,
+        "value": 29910.07
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 11,
+        "value": 30580.55
+      },
+      {
+        "scenario": "baseline_no_action",
+        "month": 12,
+        "value": 31266.06
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 1,
+        "value": 24500
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 2,
+        "value": 24534.71
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 3,
+        "value": 24569.47
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 4,
+        "value": 24604.27
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 5,
+        "value": 24639.13
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 6,
+        "value": 24674.03
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 7,
+        "value": 24708.99
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 8,
+        "value": 24743.99
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 9,
+        "value": 24779.05
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 10,
+        "value": 24814.15
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 11,
+        "value": 24849.3
+      },
+      {
+        "scenario": "with_action_plan",
+        "month": 12,
+        "value": 24884.51
+      }
+    ],
+    "category_distribution": [
+      {
+        "category": "average_user",
+        "count": 7
+      },
+      {
+        "category": "efficient_user",
+        "count": 4
+      },
+      {
+        "category": "high_roi",
+        "count": 6
+      },
+      {
+        "category": "low_adoption",
+        "count": 5
+      },
+      {
+        "category": "overspender",
+        "count": 7
+      },
+      {
+        "category": "quality_risk",
+        "count": 1
+      }
+    ]
+  },
+  "rankings": {
+    "top_roi_users": [
+      "Mehdi Karim",
+      "Sofia Rossi",
+      "Amina Diallo"
+    ],
+    "highest_spenders": [
+      "Yanis Mercier",
+      "Ibrahim Haddad",
+      "Julie Laurent"
+    ],
+    "quality_risks": [
+      "Maxime Dubois"
+    ],
+    "optimization_targets": [
+      "Yanis Mercier",
+      "Nathan Colin",
+      "Tom Bernard"
+    ]
+  },
+  "analysis_sections": {
+    "cost_efficiency": {
+      "metrics": [
+        "tokens_per_ticket",
+        "tokens_per_story_point",
+        "business_output_per_1k_tokens"
+      ],
+      "best_users": [
+        "Amina Diallo",
+        "Maya Cohen",
+        "Zoé Caron"
+      ],
+      "worst_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Julie Laurent"
+      ]
+    },
+    "productivity_score": {
+      "based_on": [
+        "tickets_resolved",
+        "story_points",
+        "bugs_closed",
+        "merge_requests"
+      ],
+      "top_users": [
+        "Mehdi Karim",
+        "Sofia Rossi",
+        "Amina Diallo"
+      ]
+    },
+    "quality_score": {
+      "based_on": [
+        "reopen_rate",
+        "clarification_rate",
+        "completion_speed"
+      ],
+      "quality_risks": [
+        "Maxime Dubois"
+      ]
+    },
+    "roi_score": {
+      "estimate": "business_output_generated / token_spend, blended with quality and productivity scores",
+      "top_users": [
+        "Mehdi Karim",
+        "Amina Diallo",
+        "Sofia Rossi"
+      ],
+      "waste_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Tom Bernard",
+        "Julie Laurent",
+        "Kevin Moreau"
+      ]
+    },
+    "company_level_analysis": {
+      "spend_control": {
+        "monthly_growth_in_ai_spend_percent": 15.6,
+        "budget_usage_percent": 81.7,
+        "forecast_next_month_spend": 29114.5
+      },
+      "performance_impact": {
+        "productivity_gain_percent": 29.7,
+        "bugs_reduction_percent": 26.5,
+        "completion_speed_improvement_percent": 29.7
+      },
+      "strategic_roi": {
+        "is_ai_spend_justified": true,
+        "overall_ai_roi_score": 75,
+        "value_creators": [
+          "Mehdi Karim",
+          "Amina Diallo",
+          "Sofia Rossi",
+          "Alice Martin",
+          "Camille Perrin"
+        ],
+        "waste_sources": [
+          "Yanis Mercier",
+          "Nathan Colin",
+          "Tom Bernard",
+          "Julie Laurent",
+          "Kevin Moreau"
+        ]
+      }
+    }
+  },
+  "comparative_analysis": {
+    "model_efficiency": {
+      "tokens_by_provider": [
+        {
+          "name": "openai",
+          "value": 1575000
+        },
+        {
+          "name": "google",
+          "value": 542500
+        },
+        {
+          "name": "anthropic",
+          "value": 389800
+        }
+      ],
+      "tokens_by_model": [
+        {
+          "name": "gpt-4.1",
+          "value": 1575000
+        },
+        {
+          "name": "claude-3-7-sonnet",
+          "value": 389800
+        },
+        {
+          "name": "gemini-2.5-flash",
+          "value": 364500
+        },
+        {
+          "name": "gemini-2.5-pro",
+          "value": 178000
+        }
+      ],
+      "cost_by_model": [
+        {
+          "name": "gpt-4.1",
+          "value": 236.5
+        },
+        {
+          "name": "claude-3-7-sonnet",
+          "value": 71.2
+        },
+        {
+          "name": "gemini-2.5-flash",
+          "value": 34.5
+        },
+        {
+          "name": "gemini-2.5-pro",
+          "value": 26.3
+        }
+      ],
+      "roi_by_model": [
+        {
+          "name": "gemini-2.5-flash",
+          "value": 17.55
+        },
+        {
+          "name": "gpt-4.1",
+          "value": 8.03
+        },
+        {
+          "name": "claude-3-7-sonnet",
+          "value": 6.01
+        },
+        {
+          "name": "gemini-2.5-pro",
+          "value": 2.42
+        }
+      ],
+      "best_model_by_use_case": [
+        {
+          "use_case": "architecture",
+          "best_model": "gpt-4.1",
+          "value": 12.91
+        },
+        {
+          "use_case": "code_generation",
+          "best_model": "gemini-2.5-flash",
+          "value": 20.66
+        },
+        {
+          "use_case": "data_analysis",
+          "best_model": "gemini-2.5-flash",
+          "value": 21.82
+        },
+        {
+          "use_case": "debugging",
+          "best_model": "gpt-4.1",
+          "value": 13.61
+        },
+        {
+          "use_case": "documentation",
+          "best_model": "gemini-2.5-flash",
+          "value": 16.85
+        },
+        {
+          "use_case": "testing",
+          "best_model": "gemini-2.5-flash",
+          "value": 18.19
+        }
+      ]
+    },
+    "employee_background_efficiency": {
+      "tokens_by_seniority": [
+        {
+          "name": "mid",
+          "value": 1728000
+        },
+        {
+          "name": "senior",
+          "value": 1464000
+        },
+        {
+          "name": "junior",
+          "value": 463000
+        },
+        {
+          "name": "staff",
+          "value": 220300
+        }
+      ],
+      "roi_by_seniority": [
+        {
+          "name": "staff",
+          "value": 96.5
+        },
+        {
+          "name": "senior",
+          "value": 81.25
+        },
+        {
+          "name": "mid",
+          "value": 49.36
+        },
+        {
+          "name": "junior",
+          "value": 42
+        }
+      ],
+      "tokens_by_skill": [
+        {
+          "name": "javascript",
+          "value": 805000
+        },
+        {
+          "name": "python",
+          "value": 698800
+        },
+        {
+          "name": "react",
+          "value": 562500
+        },
+        {
+          "name": "java",
+          "value": 467000
+        },
+        {
+          "name": "testing",
+          "value": 339000
+        },
+        {
+          "name": "typescript",
+          "value": 323000
+        },
+        {
+          "name": "go",
+          "value": 310000
+        },
+        {
+          "name": "sql",
+          "value": 176000
+        },
+        {
+          "name": "kotlin",
+          "value": 142000
+        },
+        {
+          "name": "swift",
+          "value": 52000
+        }
+      ],
+      "roi_by_skill": [
+        {
+          "name": "python",
+          "value": 90.5
+        },
+        {
+          "name": "typescript",
+          "value": 79.75
+        },
+        {
+          "name": "kotlin",
+          "value": 72
+        },
+        {
+          "name": "go",
+          "value": 70.5
+        },
+        {
+          "name": "java",
+          "value": 66.67
+        },
+        {
+          "name": "react",
+          "value": 61.6
+        },
+        {
+          "name": "swift",
+          "value": 50
+        },
+        {
+          "name": "testing",
+          "value": 38.67
+        },
+        {
+          "name": "sql",
+          "value": 30
+        },
+        {
+          "name": "javascript",
+          "value": 23.33
+        }
+      ],
+      "tokens_by_skill_level": [
+        {
+          "name": "intermediate",
+          "value": 1784000
+        },
+        {
+          "name": "advanced",
+          "value": 1663000
+        },
+        {
+          "name": "expert",
+          "value": 220300
+        },
+        {
+          "name": "beginner",
+          "value": 208000
+        }
+      ],
+      "roi_by_skill_level": [
+        {
+          "name": "expert",
+          "value": 96.5
+        },
+        {
+          "name": "advanced",
+          "value": 80
+        },
+        {
+          "name": "beginner",
+          "value": 45.25
+        },
+        {
+          "name": "intermediate",
+          "value": 38.56
+        }
+      ]
+    },
+    "feature_efficiency": {
+      "tokens_by_feature": [
+        {
+          "feature_id": "FEAT-104",
+          "feature_name": "Internal settings refactor",
+          "tokens_used": 118000
+        },
+        {
+          "feature_id": "FEAT-111",
+          "feature_name": "Legacy theme migration",
+          "tokens_used": 99000
+        },
+        {
+          "feature_id": "FEAT-107",
+          "feature_name": "Admin audit export",
+          "tokens_used": 94000
+        },
+        {
+          "feature_id": "FEAT-101",
+          "feature_name": "Invoice reconciliation dashboard",
+          "tokens_used": 76000
+        },
+        {
+          "feature_id": "FEAT-106",
+          "feature_name": "Risk scoring batch pipeline",
+          "tokens_used": 72000
+        },
+        {
+          "feature_id": "FEAT-102",
+          "feature_name": "Premium onboarding flow",
+          "tokens_used": 68000
+        },
+        {
+          "feature_id": "FEAT-108",
+          "feature_name": "Customer churn predictor",
+          "tokens_used": 65000
+        },
+        {
+          "feature_id": "FEAT-112",
+          "feature_name": "Compliance evidence collector",
+          "tokens_used": 61000
+        },
+        {
+          "feature_id": "FEAT-110",
+          "feature_name": "Checkout retry engine",
+          "tokens_used": 59000
+        },
+        {
+          "feature_id": "FEAT-103",
+          "feature_name": "AI support triage rules",
+          "tokens_used": 54000
+        },
+        {
+          "feature_id": "FEAT-109",
+          "feature_name": "Developer portal search",
+          "tokens_used": 42000
+        },
+        {
+          "feature_id": "FEAT-105",
+          "feature_name": "Mobile payment confirmation",
+          "tokens_used": 39000
+        }
+      ],
+      "cost_per_feature": [
+        {
+          "feature_id": "FEAT-104",
+          "feature_name": "Internal settings refactor",
+          "estimated_ai_cost": 18.6
+        },
+        {
+          "feature_id": "FEAT-111",
+          "feature_name": "Legacy theme migration",
+          "estimated_ai_cost": 15.6
+        },
+        {
+          "feature_id": "FEAT-107",
+          "feature_name": "Admin audit export",
+          "estimated_ai_cost": 14.9
+        },
+        {
+          "feature_id": "FEAT-101",
+          "feature_name": "Invoice reconciliation dashboard",
+          "estimated_ai_cost": 12.1
+        },
+        {
+          "feature_id": "FEAT-106",
+          "feature_name": "Risk scoring batch pipeline",
+          "estimated_ai_cost": 11
+        },
+        {
+          "feature_id": "FEAT-102",
+          "feature_name": "Premium onboarding flow",
+          "estimated_ai_cost": 10.4
+        },
+        {
+          "feature_id": "FEAT-112",
+          "feature_name": "Compliance evidence collector",
+          "estimated_ai_cost": 9.8
+        },
+        {
+          "feature_id": "FEAT-108",
+          "feature_name": "Customer churn predictor",
+          "estimated_ai_cost": 9.5
+        },
+        {
+          "feature_id": "FEAT-110",
+          "feature_name": "Checkout retry engine",
+          "estimated_ai_cost": 8.6
+        },
+        {
+          "feature_id": "FEAT-103",
+          "feature_name": "AI support triage rules",
+          "estimated_ai_cost": 7.8
+        },
+        {
+          "feature_id": "FEAT-109",
+          "feature_name": "Developer portal search",
+          "estimated_ai_cost": 6.2
+        },
+        {
+          "feature_id": "FEAT-105",
+          "feature_name": "Mobile payment confirmation",
+          "estimated_ai_cost": 5.9
+        }
+      ],
+      "roi_per_feature": [
+        {
+          "feature_id": "FEAT-108",
+          "feature_name": "Customer churn predictor",
+          "value_per_1k_tokens": 1061.54,
+          "estimated_business_value": 69000
+        },
+        {
+          "feature_id": "FEAT-110",
+          "feature_name": "Checkout retry engine",
+          "value_per_1k_tokens": 966.1,
+          "estimated_business_value": 57000
+        },
+        {
+          "feature_id": "FEAT-103",
+          "feature_name": "AI support triage rules",
+          "value_per_1k_tokens": 888.89,
+          "estimated_business_value": 48000
+        },
+        {
+          "feature_id": "FEAT-102",
+          "feature_name": "Premium onboarding flow",
+          "value_per_1k_tokens": 882.35,
+          "estimated_business_value": 60000
+        },
+        {
+          "feature_id": "FEAT-106",
+          "feature_name": "Risk scoring batch pipeline",
+          "value_per_1k_tokens": 861.11,
+          "estimated_business_value": 62000
+        },
+        {
+          "feature_id": "FEAT-112",
+          "feature_name": "Compliance evidence collector",
+          "value_per_1k_tokens": 852.46,
+          "estimated_business_value": 52000
+        },
+        {
+          "feature_id": "FEAT-101",
+          "feature_name": "Invoice reconciliation dashboard",
+          "value_per_1k_tokens": 789.47,
+          "estimated_business_value": 60000
+        },
+        {
+          "feature_id": "FEAT-105",
+          "feature_name": "Mobile payment confirmation",
+          "value_per_1k_tokens": 666.67,
+          "estimated_business_value": 26000
+        },
+        {
+          "feature_id": "FEAT-109",
+          "feature_name": "Developer portal search",
+          "value_per_1k_tokens": 500,
+          "estimated_business_value": 21000
+        },
+        {
+          "feature_id": "FEAT-107",
+          "feature_name": "Admin audit export",
+          "value_per_1k_tokens": 148.94,
+          "estimated_business_value": 14000
+        },
+        {
+          "feature_id": "FEAT-111",
+          "feature_name": "Legacy theme migration",
+          "value_per_1k_tokens": 70.71,
+          "estimated_business_value": 7000
+        },
+        {
+          "feature_id": "FEAT-104",
+          "feature_name": "Internal settings refactor",
+          "value_per_1k_tokens": 50.85,
+          "estimated_business_value": 6000
+        }
+      ],
+      "high_value_features": [
+        "Customer churn predictor",
+        "Risk scoring batch pipeline",
+        "Invoice reconciliation dashboard",
+        "Premium onboarding flow",
+        "Checkout retry engine"
+      ],
+      "waste_risk_features": [
+        "Internal settings refactor",
+        "Admin audit export",
+        "Legacy theme migration"
+      ]
+    }
+  },
+  "issue_cards": [
+    {
+      "id": "overspender_concentration",
+      "headline": "Overspenders consume 42.2% of employee tokens while producing weak ROI.",
+      "efficiency_impact": "high",
+      "financial_impact": {
+        "tokens_at_risk": 1634000,
+        "estimated_monthly_savings": 13.13
+      },
+      "problem_details": {
+        "affected_users": [
+          "Yanis Mercier",
+          "Ibrahim Haddad",
+          "Julie Laurent",
+          "Nathan Colin",
+          "Tom Bernard",
+          "Omar Benali",
+          "Kevin Moreau"
+        ],
+        "why_it_matters": "This is the clearest finance control opportunity: high consumption with low measured output."
+      },
+      "recommended_solution": {
+        "action": "Set spend caps for low-ROI high spenders and require manager review before premium usage is expanded.",
+        "owner": "Finance and Engineering Managers",
+        "timeframe": "30 days"
+      }
+    },
+    {
+      "id": "budget_run_rate",
+      "headline": "AI spend is at 81.7% of budget and next month is forecast at 29114.5.",
+      "efficiency_impact": "medium",
+      "financial_impact": {
+        "current_budget_usage_percent": 81.7,
+        "forecast_next_month_ai_spend": 29114.5
+      },
+      "problem_details": {
+        "why_it_matters": "Spend is still justified, but the run rate is close enough to budget to require controls."
+      },
+      "recommended_solution": {
+        "action": "Approve current budget but add monthly alerts by provider, model, team, and user segment.",
+        "owner": "CFO / FP&A",
+        "timeframe": "Immediate"
+      }
+    },
+    {
+      "id": "model_cost_mix",
+      "headline": "gpt-4.1 is the highest-cost model in the current mix.",
+      "efficiency_impact": "medium",
+      "financial_impact": {
+        "model": "gpt-4.1",
+        "estimated_cost": 236.5
+      },
+      "problem_details": {
+        "why_it_matters": "Model routing can reduce cost without cutting AI access if simple tasks move to cheaper models."
+      },
+      "recommended_solution": {
+        "action": "Route low-complexity use cases to cheaper models and reserve premium models for high-value features.",
+        "owner": "Finance and Platform",
+        "timeframe": "45 days"
+      }
+    },
+    {
+      "id": "feature_token_waste",
+      "headline": "3 feature(s) show high token usage with low estimated business value.",
+      "efficiency_impact": "high",
+      "financial_impact": {
+        "features_at_risk": [
+          "Internal settings refactor",
+          "Admin audit export",
+          "Legacy theme migration"
+        ]
+      },
+      "problem_details": {
+        "why_it_matters": "AI spend should be concentrated on revenue growth, cost savings, or critical delivery outcomes."
+      },
+      "recommended_solution": {
+        "action": "Require business-value tagging before approving premium model usage on low-priority features.",
+        "owner": "Product Finance",
+        "timeframe": "30 days"
+      }
+    }
+  ]
+}

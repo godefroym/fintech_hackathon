@@ -58,6 +58,21 @@ class ForecastAssumption(BaseModel):
     rationale: str
 
 
+class IssueCard(BaseModel):
+    id: str
+    headline: str
+    efficiency_impact: str = "medium"
+    financial_impact: dict[str, Any] = Field(default_factory=dict)
+    problem_details: dict[str, Any] = Field(default_factory=dict)
+    recommended_solution: dict[str, Any] = Field(default_factory=dict)
+
+    @field_validator("efficiency_impact", mode="before")
+    @classmethod
+    def normalize_impact(cls, value: Any) -> str:
+        normalized = str(value or "medium").lower()
+        return normalized if normalized in {"low", "medium", "high"} else "medium"
+
+
 class LLMAnalyticsContent(BaseModel):
     verdict: str
     main_recommendation: str
@@ -68,6 +83,7 @@ class LLMAnalyticsContent(BaseModel):
     recommendations: list[Recommendation] = Field(default_factory=list)
     action_plan: list[ActionPlanItem] = Field(default_factory=list)
     forecast_assumptions: list[ForecastAssumption] = Field(default_factory=list)
+    issue_cards: list[IssueCard] = Field(default_factory=list)
     employee_recommendations: dict[str, str] = Field(default_factory=dict)
 
     @field_validator("situation_status", mode="before")
@@ -134,6 +150,8 @@ class LLMEngine:
                 "You may propose forecast assumptions, but they must be conservative and explicitly justified.",
                 "Keep wording clear, concise, financial, and decision-oriented.",
                 "Focus on spend justification, budget risk, value creation, waste sources, and next financial controls.",
+                "Use comparative metrics by model, employee background, and feature when available.",
+                "Issue cards must be clickable-card ready: one short headline, efficiency_impact low/medium/high, financial details, problem details, and recommended solution.",
                 "Recommendations must tell finance leaders what decision to make, who should own it, and what impact to expect.",
                 "Employee recommendations should be one sentence per relevant employee.",
                 "Action plan items must include numeric expected effects for deterministic forecast calculation.",
