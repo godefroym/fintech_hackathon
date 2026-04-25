@@ -1,0 +1,204 @@
+{
+  "purpose": "Canonical input contract for the AI token ROI analytics engine.",
+  "format_notes": {
+    "json": "company.json and input_example.json are regular JSON files.",
+    "jsonl": "employees.jsonl, employee_profiles.jsonl, model_usage.jsonl, and features.jsonl are JSON Lines files: one JSON object per line.",
+    "join_keys": {
+      "employee_metrics_to_profiles": "employees.jsonl.name = employee_profiles.jsonl.name",
+      "employee_metrics_to_model_usage": "employees.jsonl.name = model_usage.jsonl.employee_name",
+      "employee_metrics_to_features": "employees.jsonl.name = features.jsonl.owner"
+    }
+  },
+  "required_files": {
+    "employees": {
+      "path": "inputs/employees.jsonl",
+      "required": true,
+      "description": "One line per employee for the analyzed period. Contains delivery, quality, and token usage metrics.",
+      "fields": {
+        "name": "string, employee display name; used as join key",
+        "token_used": "number, total AI tokens used by the employee",
+        "tickets_resolved": "number, completed tickets",
+        "tickets_reopen": "number, reopened tickets",
+        "comments_for_clarification": "number, clarification comments required",
+        "time_to_completion": "number, average completion time in days",
+        "merge_requests_by_tickets": "number, merge requests divided by tickets",
+        "bugs_closed": "number, bugs closed",
+        "story_points": "number, delivered story points",
+        "lines_of_codes": "number, lines of code changed",
+        "merge_requests": "number, merge requests opened/merged"
+      },
+      "example_line": {
+        "name": "Alice Martin",
+        "token_used": 124500,
+        "tickets_resolved": 34,
+        "tickets_reopen": 3,
+        "comments_for_clarification": 7,
+        "time_to_completion": 3.8,
+        "merge_requests_by_tickets": 0.91,
+        "bugs_closed": 11,
+        "story_points": 79,
+        "lines_of_codes": 2450,
+        "merge_requests": 31
+      }
+    },
+    "company": {
+      "path": "inputs/company.json",
+      "required": true,
+      "description": "One company-level JSON object for budget, revenue, burn, AI spend, productivity, completion speed, and defect baselines.",
+      "fields": {
+        "company_name": "string",
+        "employee_count": "number",
+        "monthly_revenue": "number",
+        "monthly_burn": "number",
+        "cash_runway_months": "number",
+        "monthly_ai_spend_total": "number",
+        "previous_month_ai_spend": "number",
+        "previous_quarter_ai_spend_avg": "number",
+        "previous_12_month_ai_spend_total": "number",
+        "previous_12_month_ai_spend_avg": "number",
+        "monthly_payroll_total": "number",
+        "annual_revenue": "number",
+        "annual_burn": "number",
+        "annual_ai_spend_total": "number",
+        "annual_payroll_total": "number",
+        "productivity_before_ai": "number",
+        "productivity_after_ai": "number",
+        "previous_12_month_productivity_avg": "number",
+        "average_completion_time_before_ai_days": "number",
+        "average_completion_time_after_ai_days": "number",
+        "previous_12_month_completion_time_avg_days": "number",
+        "bugs_before_ai": "number",
+        "bugs_after_ai": "number",
+        "previous_12_month_bugs_avg": "number",
+        "estimated_hires_avoided_due_to_ai": "number",
+        "monthly_ai_budget": "number",
+        "annual_ai_budget": "number"
+      },
+      "example": {
+        "company_name": "NovaTech",
+        "employee_count": 120,
+        "monthly_revenue": 850000,
+        "monthly_burn": 620000,
+        "cash_runway_months": 14,
+        "monthly_ai_spend_total": 24500,
+        "previous_month_ai_spend": 21200,
+        "previous_quarter_ai_spend_avg": 19800,
+        "previous_12_month_ai_spend_total": 231600,
+        "previous_12_month_ai_spend_avg": 19300,
+        "monthly_payroll_total": 430000,
+        "annual_revenue": 10200000,
+        "annual_burn": 7440000,
+        "annual_ai_spend_total": 294000,
+        "annual_payroll_total": 5160000,
+        "productivity_before_ai": 1450,
+        "productivity_after_ai": 1880,
+        "previous_12_month_productivity_avg": 1510,
+        "average_completion_time_before_ai_days": 9.1,
+        "average_completion_time_after_ai_days": 6.4,
+        "previous_12_month_completion_time_avg_days": 8.7,
+        "bugs_before_ai": 132,
+        "bugs_after_ai": 97,
+        "previous_12_month_bugs_avg": 124,
+        "estimated_hires_avoided_due_to_ai": 2,
+        "monthly_ai_budget": 30000,
+        "annual_ai_budget": 360000
+      }
+    },
+    "employee_profiles": {
+      "path": "inputs/employee_profiles.jsonl",
+      "required": true,
+      "description": "One line per employee. Used for token spend vs seniority, role, skill, and business unit analysis.",
+      "fields": {
+        "name": "string, employee name; must match employees.jsonl.name",
+        "role": "string, e.g. backend_engineer, frontend_engineer, data_engineer",
+        "seniority_level": "string, e.g. junior, mid, senior, staff",
+        "years_experience": "number",
+        "primary_skill": "string, e.g. python, react, sql",
+        "skill_level": "string, e.g. beginner, intermediate, advanced, expert",
+        "business_unit": "string"
+      },
+      "example_line": {
+        "name": "Alice Martin",
+        "role": "backend_engineer",
+        "seniority_level": "senior",
+        "years_experience": 7,
+        "primary_skill": "python",
+        "skill_level": "advanced",
+        "business_unit": "product_engineering"
+      }
+    },
+    "model_usage": {
+      "path": "inputs/model_usage.jsonl",
+      "required": true,
+      "description": "One line per employee/model/use-case usage bucket. Used for token spend and cost by provider/model/use case.",
+      "fields": {
+        "employee_name": "string, must match employees.jsonl.name",
+        "provider": "string, e.g. openai, anthropic, google",
+        "model": "string, e.g. gpt-4.1, claude-3-7-sonnet, gemini-2.5-flash",
+        "tokens_used": "number",
+        "estimated_cost": "number, estimated cost in company currency",
+        "use_case": "string, e.g. code_generation, debugging, testing, architecture, documentation",
+        "month": "string, YYYY-MM or month label"
+      },
+      "example_line": {
+        "employee_name": "Alice Martin",
+        "provider": "openai",
+        "model": "gpt-4.1",
+        "tokens_used": 62000,
+        "estimated_cost": 9.3,
+        "use_case": "architecture",
+        "month": "2026-04"
+      }
+    },
+    "features": {
+      "path": "inputs/features.jsonl",
+      "required": true,
+      "description": "One line per shipped feature. Used for token spend vs feature value and feature waste risk.",
+      "fields": {
+        "feature_id": "string",
+        "feature_name": "string",
+        "owner": "string, must match employees.jsonl.name",
+        "feature_type": "string, e.g. dashboard, growth, automation, compliance",
+        "business_priority": "string, low, medium, high",
+        "business_value_type": "string, e.g. revenue_growth, cost_saving, risk_reduction, maintenance",
+        "tokens_used": "number",
+        "estimated_ai_cost": "number, estimated AI cost allocated to the feature",
+        "revenue_impact_estimate": "number",
+        "cost_saving_estimate": "number",
+        "story_points": "number",
+        "tickets_resolved": "number",
+        "bugs_after_release": "number",
+        "month": "string, YYYY-MM or month label"
+      },
+      "example_line": {
+        "feature_id": "FEAT-101",
+        "feature_name": "Invoice reconciliation dashboard",
+        "owner": "Mehdi Karim",
+        "feature_type": "dashboard",
+        "business_priority": "high",
+        "business_value_type": "revenue_protection",
+        "tokens_used": 76000,
+        "estimated_ai_cost": 12.1,
+        "revenue_impact_estimate": 42000,
+        "cost_saving_estimate": 18000,
+        "story_points": 34,
+        "tickets_resolved": 11,
+        "bugs_after_release": 1,
+        "month": "2026-04"
+      }
+    }
+  },
+  "expected_outputs": {
+    "path": "outputs/",
+    "files": {
+      "index.json": "Manifest consumed by the frontend.",
+      "output.json": "Full analytics payload.",
+      "dashboard_data.json": "Summary cards, charts, rankings, comparative analysis, and issue cards.",
+      "executive_report.json": "CFO decision summary, financial situation, diagnosis, issue cards, and action plan.",
+      "forecast_scenarios.json": "12-month no-action vs action-plan forecast.",
+      "action_plan.json": "Action plan items.",
+      "issue_cards.json": "Clickable issue cards: one sentence, impact level, details, and solution.",
+      "comparative_analysis.json": "Model, employee background, and feature efficiency comparisons."
+    }
+  }
+}
