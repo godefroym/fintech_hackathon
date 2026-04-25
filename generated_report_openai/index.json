@@ -1,0 +1,12 @@
+{
+  "files": {
+    "raw_output": "output.json",
+    "dashboard_data": "dashboard_data.json",
+    "executive_report": "executive_report.json",
+    "forecast_scenarios": "forecast_scenarios.json",
+    "action_plan": "action_plan.json"
+  },
+  "frontend_entrypoint": "dashboard_data.json",
+  "executive_entrypoint": "executive_report.json",
+  "forecast_entrypoint": "forecast_scenarios.json"
+}

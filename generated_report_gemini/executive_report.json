@@ -1,0 +1,115 @@
+{
+  "status": "partially_reasoned",
+  "summary": [
+    "NovaTech's AI spend is growing (26.9% vs. 12-month average) but remains within budget (81.7% usage).",
+    "Significant operational improvements are evident, including a 29.7% productivity gain, 29.7% reduction in completion time, and 26.5% fewer bugs.",
+    "The company has avoided an estimated 2 hires due to AI, demonstrating tangible cost savings and efficiency benefits.",
+    "A critical disparity exists: Top 10% ROI users are 5.76 times more efficient than the bottom 10%, highlighting areas for optimization.",
+    "Seven 'overspender' employees with low ROI are driving up costs without proportional benefits, while five 'low adoption' users are underutilizing AI's potential."
+  ],
+  "diagnosis": [
+    {
+      "severity": "high",
+      "message": "A significant portion of AI spend is concentrated among a few 'overspender' employees who exhibit very low ROI and quality scores, indicating inefficient or misuse of tokens."
+    },
+    {
+      "severity": "medium",
+      "message": "There is a clear gap in AI adoption and effectiveness, with a group of 'low adoption' users not fully leveraging AI for productivity gains."
+    },
+    {
+      "severity": "medium",
+      "message": "One employee, Maxime Dubois, is flagged as a 'quality risk', suggesting AI outputs may require more oversight or specific training."
+    }
+  ],
+  "risk_level": "medium",
+  "recommended_action_plan": [
+    {
+      "priority": 1,
+      "title": "Overspender Optimization Program",
+      "owner": "Head of Engineering",
+      "timeframe": "Next 3 months",
+      "action": "Conduct individual reviews with top 3 highest spenders (Yanis Mercier, Ibrahim Haddad, Julie Laurent) to identify workflow inefficiencies and provide targeted training on prompt engineering and tool utilization.",
+      "expected_effect": "Reduce AI spend by 20% for these users, leading to an estimated $10,000 monthly saving.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 20.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 2,
+      "title": "Low Adoption Enablement Initiative",
+      "owner": "Head of HR & Training",
+      "timeframe": "Next 6 months",
+      "action": "Launch a company-wide workshop series on advanced AI features and use cases, focusing on employees with low adoption scores.",
+      "expected_effect": "Increase overall productivity by 5% across the low adoption group, equivalent to 0.5 FTE productivity lift.",
+      "productivity_lift_percent": 5.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 1,
+      "title": "AI Quality Assurance Protocol",
+      "owner": "Head of Product",
+      "timeframe": "Next 2 months",
+      "action": "Implement a peer review or automated quality check system for AI-assisted outputs, starting with identified quality risks like Maxime Dubois.",
+      "expected_effect": "Reduce AI-related bugs by 15% for affected users, improving overall output reliability.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 15.0
+    }
+  ],
+  "forecast_delta_summary": {
+    "revenue_delta": 1878491.86,
+    "ai_spend_delta": -35158.51,
+    "operating_profit_delta": 1984060.38
+  },
+  "assumptions": [
+    {
+      "name": "AI Spend Growth Rate",
+      "value": 5.0,
+      "unit": "percent per month",
+      "rationale": "Based on the recent trend of 26.9% growth vs. previous 12-month average, a conservative 5% monthly growth is assumed if no optimization actions are taken."
+    },
+    {
+      "name": "Productivity Value per FTE",
+      "value": 7166.67,
+      "unit": "USD per month",
+      "rationale": "Calculated from the monthly payroll total ($430,000) divided by the employee count (120), then multiplied by the estimated hires avoided (2), representing direct cost savings."
+    },
+    {
+      "name": "Average AI ROI Improvement from Optimization",
+      "value": 10.0,
+      "unit": "percent",
+      "rationale": "A conservative estimate that targeted interventions for overspenders and low adopters can yield an average 10% improvement in their individual ROI scores over the next quarter."
+    },
+    {
+      "name": "baseline_monthly_revenue_growth",
+      "value": 0.4,
+      "unit": "percent",
+      "rationale": "Conservative default for do-nothing revenue projection."
+    },
+    {
+      "name": "baseline_monthly_ai_spend_growth",
+      "value": 2.24,
+      "unit": "percent",
+      "rationale": "Derived from current spend versus previous 12-month average."
+    },
+    {
+      "name": "action_plan_productivity_lift",
+      "value": 5,
+      "unit": "percent",
+      "rationale": "Capped aggregate lift from action plan items."
+    },
+    {
+      "name": "action_plan_ai_spend_reduction",
+      "value": 20,
+      "unit": "percent",
+      "rationale": "Capped aggregate spend reduction from action plan items."
+    },
+    {
+      "name": "action_plan_bug_reduction",
+      "value": 15,
+      "unit": "percent",
+      "rationale": "Capped aggregate quality improvement from action plan items."
+    }
+  ]
+}

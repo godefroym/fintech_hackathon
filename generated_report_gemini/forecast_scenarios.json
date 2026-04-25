@@ -1,0 +1,254 @@
+{
+  "forecast_horizon_months": 12,
+  "baseline_no_action": [
+    {
+      "scenario": "baseline_no_action",
+      "month": 1,
+      "projected_revenue": 850000,
+      "projected_ai_spend": 24500,
+      "projected_burn": 620000,
+      "projected_operating_profit": 230000
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 2,
+      "projected_revenue": 853400,
+      "projected_ai_spend": 25049.21,
+      "projected_burn": 620549.21,
+      "projected_operating_profit": 232850.79
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 3,
+      "projected_revenue": 856813.6,
+      "projected_ai_spend": 25610.73,
+      "projected_burn": 621110.73,
+      "projected_operating_profit": 235702.87
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 4,
+      "projected_revenue": 860240.85,
+      "projected_ai_spend": 26184.84,
+      "projected_burn": 621684.84,
+      "projected_operating_profit": 238556.02
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 5,
+      "projected_revenue": 863681.82,
+      "projected_ai_spend": 26771.81,
+      "projected_burn": 622271.81,
+      "projected_operating_profit": 241410.01
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 6,
+      "projected_revenue": 867136.55,
+      "projected_ai_spend": 27371.95,
+      "projected_burn": 622871.95,
+      "projected_operating_profit": 244264.6
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 7,
+      "projected_revenue": 870605.09,
+      "projected_ai_spend": 27985.53,
+      "projected_burn": 623485.53,
+      "projected_operating_profit": 247119.56
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 8,
+      "projected_revenue": 874087.51,
+      "projected_ai_spend": 28612.88,
+      "projected_burn": 624112.88,
+      "projected_operating_profit": 249974.63
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 9,
+      "projected_revenue": 877583.86,
+      "projected_ai_spend": 29254.28,
+      "projected_burn": 624754.28,
+      "projected_operating_profit": 252829.58
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 10,
+      "projected_revenue": 881094.2,
+      "projected_ai_spend": 29910.07,
+      "projected_burn": 625410.07,
+      "projected_operating_profit": 255684.13
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 11,
+      "projected_revenue": 884618.57,
+      "projected_ai_spend": 30580.55,
+      "projected_burn": 626080.55,
+      "projected_operating_profit": 258538.02
+    },
+    {
+      "scenario": "baseline_no_action",
+      "month": 12,
+      "projected_revenue": 888157.05,
+      "projected_ai_spend": 31266.06,
+      "projected_burn": 626766.06,
+      "projected_operating_profit": 261390.98
+    }
+  ],
+  "with_action_plan": [
+    {
+      "scenario": "with_action_plan",
+      "month": 1,
+      "projected_revenue": 850000,
+      "projected_ai_spend": 24500,
+      "projected_burn": 614132.5,
+      "projected_operating_profit": 235867.5
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 2,
+      "projected_revenue": 878475,
+      "projected_ai_spend": 24559.21,
+      "projected_burn": 614191.71,
+      "projected_operating_profit": 264283.29
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 3,
+      "projected_revenue": 907903.91,
+      "projected_ai_spend": 24618.56,
+      "projected_burn": 614251.06,
+      "projected_operating_profit": 293652.85
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 4,
+      "projected_revenue": 938318.69,
+      "projected_ai_spend": 24678.05,
+      "projected_burn": 614310.55,
+      "projected_operating_profit": 324008.14
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 5,
+      "projected_revenue": 969752.37,
+      "projected_ai_spend": 24737.69,
+      "projected_burn": 614370.19,
+      "projected_operating_profit": 355382.18
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 6,
+      "projected_revenue": 1002239.07,
+      "projected_ai_spend": 24797.48,
+      "projected_burn": 614429.98,
+      "projected_operating_profit": 387809.1
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 7,
+      "projected_revenue": 1035814.08,
+      "projected_ai_spend": 24857.4,
+      "projected_burn": 614489.9,
+      "projected_operating_profit": 421324.18
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 8,
+      "projected_revenue": 1070513.85,
+      "projected_ai_spend": 24917.48,
+      "projected_burn": 614549.98,
+      "projected_operating_profit": 455963.88
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 9,
+      "projected_revenue": 1106376.07,
+      "projected_ai_spend": 24977.69,
+      "projected_burn": 614610.19,
+      "projected_operating_profit": 491765.88
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 10,
+      "projected_revenue": 1143439.67,
+      "projected_ai_spend": 25038.06,
+      "projected_burn": 614670.56,
+      "projected_operating_profit": 528769.11
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 11,
+      "projected_revenue": 1181744.9,
+      "projected_ai_spend": 25098.56,
+      "projected_burn": 614731.06,
+      "projected_operating_profit": 567013.83
+    },
+    {
+      "scenario": "with_action_plan",
+      "month": 12,
+      "projected_revenue": 1221333.35,
+      "projected_ai_spend": 25159.22,
+      "projected_burn": 614791.72,
+      "projected_operating_profit": 606541.63
+    }
+  ],
+  "delta_summary": {
+    "revenue_delta": 1878491.86,
+    "ai_spend_delta": -35158.51,
+    "operating_profit_delta": 1984060.38
+  },
+  "assumptions": [
+    {
+      "name": "AI Spend Growth Rate",
+      "value": 5.0,
+      "unit": "percent per month",
+      "rationale": "Based on the recent trend of 26.9% growth vs. previous 12-month average, a conservative 5% monthly growth is assumed if no optimization actions are taken."
+    },
+    {
+      "name": "Productivity Value per FTE",
+      "value": 7166.67,
+      "unit": "USD per month",
+      "rationale": "Calculated from the monthly payroll total ($430,000) divided by the employee count (120), then multiplied by the estimated hires avoided (2), representing direct cost savings."
+    },
+    {
+      "name": "Average AI ROI Improvement from Optimization",
+      "value": 10.0,
+      "unit": "percent",
+      "rationale": "A conservative estimate that targeted interventions for overspenders and low adopters can yield an average 10% improvement in their individual ROI scores over the next quarter."
+    },
+    {
+      "name": "baseline_monthly_revenue_growth",
+      "value": 0.4,
+      "unit": "percent",
+      "rationale": "Conservative default for do-nothing revenue projection."
+    },
+    {
+      "name": "baseline_monthly_ai_spend_growth",
+      "value": 2.24,
+      "unit": "percent",
+      "rationale": "Derived from current spend versus previous 12-month average."
+    },
+    {
+      "name": "action_plan_productivity_lift",
+      "value": 5,
+      "unit": "percent",
+      "rationale": "Capped aggregate lift from action plan items."
+    },
+    {
+      "name": "action_plan_ai_spend_reduction",
+      "value": 20,
+      "unit": "percent",
+      "rationale": "Capped aggregate spend reduction from action plan items."
+    },
+    {
+      "name": "action_plan_bug_reduction",
+      "value": 15,
+      "unit": "percent",
+      "rationale": "Capped aggregate quality improvement from action plan items."
+    }
+  ]
+}

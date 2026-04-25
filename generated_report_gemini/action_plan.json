@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "priority": 1,
+      "title": "Overspender Optimization Program",
+      "owner": "Head of Engineering",
+      "timeframe": "Next 3 months",
+      "action": "Conduct individual reviews with top 3 highest spenders (Yanis Mercier, Ibrahim Haddad, Julie Laurent) to identify workflow inefficiencies and provide targeted training on prompt engineering and tool utilization.",
+      "expected_effect": "Reduce AI spend by 20% for these users, leading to an estimated $10,000 monthly saving.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 20.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 2,
+      "title": "Low Adoption Enablement Initiative",
+      "owner": "Head of HR & Training",
+      "timeframe": "Next 6 months",
+      "action": "Launch a company-wide workshop series on advanced AI features and use cases, focusing on employees with low adoption scores.",
+      "expected_effect": "Increase overall productivity by 5% across the low adoption group, equivalent to 0.5 FTE productivity lift.",
+      "productivity_lift_percent": 5.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 1,
+      "title": "AI Quality Assurance Protocol",
+      "owner": "Head of Product",
+      "timeframe": "Next 2 months",
+      "action": "Implement a peer review or automated quality check system for AI-assisted outputs, starting with identified quality risks like Maxime Dubois.",
+      "expected_effect": "Reduce AI-related bugs by 15% for affected users, improving overall output reliability.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 15.0
+    }
+  ]
+}

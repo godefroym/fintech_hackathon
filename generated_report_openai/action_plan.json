@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "priority": 1,
+      "title": "Implement Spend Caps for Overspenders",
+      "owner": "Finance Controller",
+      "timeframe": "1 month",
+      "action": "Set and monitor monthly AI token usage limits for top 7 overspenders to control budget risk.",
+      "expected_effect": "Reduce AI spend waste by 20%, saving approximately $4,900 monthly.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 20.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 2,
+      "title": "Quality Risk Mitigation for Maxime Dubois",
+      "owner": "QA Manager",
+      "timeframe": "2 months",
+      "action": "Perform detailed quality review and provide targeted coaching to improve output quality.",
+      "expected_effect": "Achieve 15% reduction in bugs related to this user, lowering defect costs.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 15.0
+    },
+    {
+      "priority": 3,
+      "title": "Increase AI Adoption in Low Usage Employees",
+      "owner": "HR Learning & Development",
+      "timeframe": "3 months",
+      "action": "Launch training programs and incentives to boost AI token utilization among low adoption employees.",
+      "expected_effect": "Drive 10% productivity lift in this segment, increasing overall efficiency.",
+      "productivity_lift_percent": 10.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 4,
+      "title": "Scale High ROI User Best Practices",
+      "owner": "AI Program Manager",
+      "timeframe": "3 months",
+      "action": "Document and disseminate effective AI usage patterns from top performers to all teams.",
+      "expected_effect": "Improve company-wide productivity by 5%, enhancing ROI on AI spend.",
+      "productivity_lift_percent": 5.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    }
+  ]
+}

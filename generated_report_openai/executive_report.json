@@ -1,0 +1,247 @@
+{
+  "cfo_decision_summary": {
+    "recommended_budget_decision": "maintain_with_controls",
+    "financial_position": "AI token spend at NovaTech delivers strong ROI but requires targeted optimization to mitigate overspend and quality risks.",
+    "budget_usage_percent": 81.7,
+    "monthly_ai_spend_growth_percent": 15.6,
+    "forecast_next_month_ai_spend": 29114.5,
+    "projected_12_month_operating_profit_delta": 4749766.38,
+    "primary_value_creators": [
+      "Mehdi Karim",
+      "Amina Diallo",
+      "Sofia Rossi",
+      "Alice Martin",
+      "Camille Perrin"
+    ],
+    "primary_waste_sources": [
+      "Yanis Mercier",
+      "Nathan Colin",
+      "Tom Bernard",
+      "Julie Laurent",
+      "Kevin Moreau"
+    ],
+    "finance_controls_to_apply": [
+      "Set monthly token budget thresholds by team and user segment.",
+      "Require review for high-spend users below ROI threshold.",
+      "Preserve access for high-ROI users and replicate their workflows.",
+      "Downgrade or pause premium usage where ROI remains low after remediation."
+    ],
+    "spend_control": {
+      "monthly_growth_in_ai_spend_percent": 15.6,
+      "budget_usage_percent": 81.7,
+      "forecast_next_month_spend": 29114.5
+    }
+  },
+  "status": "partially_reasoned",
+  "summary": [
+    "NovaTech's AI token spend is 81.7% of the annual budget with a 26.9% increase vs. last 12-month average, representing 2.88% of annual revenue.",
+    "Productivity improved by 29.7% and bug rates reduced by 26.5% post-AI adoption, confirming value creation.",
+    "Top 10% users deliver 5.76x higher spend efficiency than bottom 10%, highlighting uneven ROI distribution.",
+    "Seven overspenders consume disproportionate tokens with low ROI and quality scores, posing budget and quality risks.",
+    "One user flagged for quality risk requires immediate review to prevent defect-related costs.",
+    "Conservative forecast assumes AI spend growth will moderate to 10% next quarter with continued productivity gains of 5% from optimization."
+  ],
+  "diagnosis": [
+    {
+      "severity": "high",
+      "message": "Overspenders Yanis Mercier, Ibrahim Haddad, Julie Laurent, Tom Bernard, Nathan Colin, Kevin Moreau, and Omar Benali drive budget risk with low ROI and quality scores."
+    },
+    {
+      "severity": "medium",
+      "message": "Quality risk identified with Maxime Dubois, whose low quality score may increase defect-related costs."
+    },
+    {
+      "severity": "medium",
+      "message": "Low adoption among 5 employees limits potential productivity gains and indicates opportunity for targeted enablement."
+    }
+  ],
+  "risk_level": "medium",
+  "recommended_action_plan": [
+    {
+      "priority": 1,
+      "title": "Implement Spend Caps for Overspenders",
+      "owner": "Finance Controller",
+      "timeframe": "1 month",
+      "action": "Set and monitor monthly AI token usage limits for top 7 overspenders to control budget risk.",
+      "expected_effect": "Reduce AI spend waste by 20%, saving approximately $4,900 monthly.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 20.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 2,
+      "title": "Quality Risk Mitigation for Maxime Dubois",
+      "owner": "QA Manager",
+      "timeframe": "2 months",
+      "action": "Perform detailed quality review and provide targeted coaching to improve output quality.",
+      "expected_effect": "Achieve 15% reduction in bugs related to this user, lowering defect costs.",
+      "productivity_lift_percent": 0.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 15.0
+    },
+    {
+      "priority": 3,
+      "title": "Increase AI Adoption in Low Usage Employees",
+      "owner": "HR Learning & Development",
+      "timeframe": "3 months",
+      "action": "Launch training programs and incentives to boost AI token utilization among low adoption employees.",
+      "expected_effect": "Drive 10% productivity lift in this segment, increasing overall efficiency.",
+      "productivity_lift_percent": 10.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    },
+    {
+      "priority": 4,
+      "title": "Scale High ROI User Best Practices",
+      "owner": "AI Program Manager",
+      "timeframe": "3 months",
+      "action": "Document and disseminate effective AI usage patterns from top performers to all teams.",
+      "expected_effect": "Improve company-wide productivity by 5%, enhancing ROI on AI spend.",
+      "productivity_lift_percent": 5.0,
+      "ai_spend_reduction_percent": 0.0,
+      "bug_reduction_percent": 0.0
+    }
+  ],
+  "forecast_delta_summary": {
+    "revenue_delta": 4644197.86,
+    "ai_spend_delta": -35158.51,
+    "operating_profit_delta": 4749766.38
+  },
+  "analysis_sections": {
+    "cost_efficiency": {
+      "metrics": [
+        "tokens_per_ticket",
+        "tokens_per_story_point",
+        "business_output_per_1k_tokens"
+      ],
+      "best_users": [
+        "Amina Diallo",
+        "Maya Cohen",
+        "Zoé Caron"
+      ],
+      "worst_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Julie Laurent"
+      ]
+    },
+    "productivity_score": {
+      "based_on": [
+        "tickets_resolved",
+        "story_points",
+        "bugs_closed",
+        "merge_requests"
+      ],
+      "top_users": [
+        "Mehdi Karim",
+        "Sofia Rossi",
+        "Amina Diallo"
+      ]
+    },
+    "quality_score": {
+      "based_on": [
+        "reopen_rate",
+        "clarification_rate",
+        "completion_speed"
+      ],
+      "quality_risks": [
+        "Maxime Dubois"
+      ]
+    },
+    "roi_score": {
+      "estimate": "business_output_generated / token_spend, blended with quality and productivity scores",
+      "top_users": [
+        "Mehdi Karim",
+        "Amina Diallo",
+        "Sofia Rossi"
+      ],
+      "waste_users": [
+        "Yanis Mercier",
+        "Nathan Colin",
+        "Tom Bernard",
+        "Julie Laurent",
+        "Kevin Moreau"
+      ]
+    },
+    "company_level_analysis": {
+      "spend_control": {
+        "monthly_growth_in_ai_spend_percent": 15.6,
+        "budget_usage_percent": 81.7,
+        "forecast_next_month_spend": 29114.5
+      },
+      "performance_impact": {
+        "productivity_gain_percent": 29.7,
+        "bugs_reduction_percent": 26.5,
+        "completion_speed_improvement_percent": 29.7
+      },
+      "strategic_roi": {
+        "is_ai_spend_justified": true,
+        "overall_ai_roi_score": 75,
+        "value_creators": [
+          "Mehdi Karim",
+          "Amina Diallo",
+          "Sofia Rossi",
+          "Alice Martin",
+          "Camille Perrin"
+        ],
+        "waste_sources": [
+          "Yanis Mercier",
+          "Nathan Colin",
+          "Tom Bernard",
+          "Julie Laurent",
+          "Kevin Moreau"
+        ]
+      }
+    }
+  },
+  "assumptions": [
+    {
+      "name": "AI Spend Growth Next Quarter",
+      "value": 10.0,
+      "unit": "percent",
+      "rationale": "Conservative moderation from current 15.6% MoM growth due to spend controls."
+    },
+    {
+      "name": "Productivity Gain from Optimization",
+      "value": 5.0,
+      "unit": "percent",
+      "rationale": "Based on achievable lift from scaling best practices and training low adoption users."
+    },
+    {
+      "name": "Bug Reduction from Quality Controls",
+      "value": 15.0,
+      "unit": "percent",
+      "rationale": "Expected defect reduction from targeted coaching of quality risk user."
+    },
+    {
+      "name": "baseline_monthly_revenue_growth",
+      "value": 0.4,
+      "unit": "percent",
+      "rationale": "Conservative default for do-nothing revenue projection."
+    },
+    {
+      "name": "baseline_monthly_ai_spend_growth",
+      "value": 2.24,
+      "unit": "percent",
+      "rationale": "Derived from current spend versus previous 12-month average."
+    },
+    {
+      "name": "action_plan_productivity_lift",
+      "value": 15,
+      "unit": "percent",
+      "rationale": "Capped aggregate lift from action plan items."
+    },
+    {
+      "name": "action_plan_ai_spend_reduction",
+      "value": 20,
+      "unit": "percent",
+      "rationale": "Capped aggregate spend reduction from action plan items."
+    },
+    {
+      "name": "action_plan_bug_reduction",
+      "value": 15,
+      "unit": "percent",
+      "rationale": "Capped aggregate quality improvement from action plan items."
+    }
+  ]
+}
