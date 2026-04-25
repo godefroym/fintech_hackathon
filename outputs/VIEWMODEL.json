@@ -7,7 +7,7 @@
     "productivity_gain_percent": 17.5,
     "bugs_reduction_percent": -59.6,
     "currency": "USD",
-    "main_recommendation": "Prioritize two actions next month: retrain and closely monitor high-token users who deliver relatively few story points, and replicate the workflows of efficient users through structured adoption coaching. This keeps AI spend aligned to measurable delivery by reducing waste in overspender and quality_risk categories while scaling the practices of high_roi and efficient_user employees."
+    "main_recommendation": "Prioritize two actions next month: retrain and closely monitor high-token users who deliver relatively few story points, and replicate the workflows of efficient users with strong delivery at low token cost. Run adoption coaching for low-adoption users so budget stays focused on categories where token usage converts into measurable story point output."
   },
   "monthly_metrics": [
     {
@@ -1242,280 +1242,280 @@
       "category": "high_roi",
       "tokens_used": 28132738,
       "story_points": 136,
-      "recommendation": "Replicate Leila Park's workflow because 28132738 tokens produced 136 story points, which is the strongest value pattern in the high_roi category. Use this employee in adoption coaching to show prompt structure, context discipline, and task selection that convert low token spend into high delivery."
+      "recommendation": "Replicate this workflow across the team because this high_roi pattern combines very low tokens_used with exceptionally high story_points. Ask Leila to document prompts, context selection, and review habits so others can copy a proven high-value AI usage model."
     },
     {
       "name": "Amina Blanc",
       "category": "efficient_user",
       "tokens_used": 40417346,
       "story_points": 65,
-      "recommendation": "Replicate Amina Blanc's workflow because 40417346 tokens supported 65 story points, a strong outcome for an efficient_user. Include this employee in adoption coaching so peers can copy the practical prompting and context habits behind that efficient delivery."
+      "recommendation": "Replicate this workflow because as an efficient_user, Amina delivers solid story_points with low tokens_used. Have her share practical prompt examples and task choices that keep AI usage lean while sustaining delivery."
     },
     {
       "name": "Camille Garnier",
       "category": "efficient_user",
       "tokens_used": 48839131,
       "story_points": 57,
-      "recommendation": "Replicate Camille Garnier's workflow because 48839131 tokens generated 57 story points, which is strong efficiency for the efficient_user category. Use this employee as an internal example in adoption coaching to spread the working habits that keep token use controlled."
+      "recommendation": "Replicate this workflow because as an efficient_user, Camille converts modest tokens_used into strong story_points. Use Camille in peer sessions to show how focused prompting and tighter context can improve team-wide efficiency."
     },
     {
       "name": "Jules Nguyen",
       "category": "efficient_user",
       "tokens_used": 5689436,
       "story_points": 47,
-      "recommendation": "Replicate Jules Nguyen's workflow because only 5689436 tokens produced 47 story points, making this one of the clearest efficient_user examples. Turn this into adoption coaching content so others can learn how to get useful output with minimal token consumption."
+      "recommendation": "Replicate this workflow because Jules shows one of the strongest efficient_user patterns with extremely low tokens_used and strong story_points. Turn this into a benchmark example for lightweight AI usage that still supports meaningful delivery."
     },
     {
       "name": "Maya Kowalski",
       "category": "efficient_user",
       "tokens_used": 24334442,
       "story_points": 71,
-      "recommendation": "Replicate Maya Kowalski's workflow because 24334442 tokens delivered 71 story points, a very strong efficient_user result. Ask this employee to support adoption coaching with concrete examples of where AI is used selectively for high-value work."
+      "recommendation": "Replicate this workflow because Maya’s efficient_user profile shows high story_points without heavy tokens_used. Capture her working pattern and share it with peers who need examples of productive, cost-controlled AI adoption."
     },
     {
       "name": "Simon Martin",
       "category": "efficient_user",
       "tokens_used": 90801785,
       "story_points": 69,
-      "recommendation": "Replicate Simon Martin's workflow because 90801785 tokens produced 69 story points, showing solid output without excessive spend for an efficient_user. Use this employee in adoption coaching to demonstrate balanced AI usage that supports delivery."
+      "recommendation": "Replicate this workflow because Simon’s efficient_user results show strong story_points at moderate tokens_used. Use his approach as a coaching example for teammates who need better output per token."
     },
     {
       "name": "Victor Durand",
       "category": "efficient_user",
       "tokens_used": 36760403,
       "story_points": 60,
-      "recommendation": "Replicate Victor Durand's workflow because 36760403 tokens generated 60 story points, which is a strong efficient_user pattern. Share this employee's workflow in adoption coaching so similar teams can copy the same efficient usage model."
+      "recommendation": "Replicate this workflow because Victor delivers strong story_points with relatively low tokens_used for an efficient_user. Ask him to share how he scopes tasks and prompts so others can improve value without increasing spend."
     },
     {
       "name": "Alexandre Diallo",
       "category": "average_user",
       "tokens_used": 626235460,
       "story_points": 74,
-      "recommendation": "Monitor Alexandre Diallo because 626235460 tokens and 74 story points place this employee in the average_user category with meaningful spend but not a clear outlier result. Provide light adoption coaching using efficient-user examples to improve value without immediate retraining."
+      "recommendation": "Monitor this average_user because tokens_used and story_points are both substantial but not clearly out of line for the category. Provide light coaching using efficient_user examples to improve output without expanding token consumption."
     },
     {
       "name": "Alix Mbaye",
       "category": "average_user",
       "tokens_used": 248018565,
       "story_points": 73,
-      "recommendation": "Monitor Alix Mbaye because 248018565 tokens produced 73 story points, which is balanced enough for the average_user category. Use light adoption coaching to refine workflow choices and see whether story point output can rise without increasing token use."
+      "recommendation": "Monitor this average_user because Alix shows balanced tokens_used and story_points without a strong risk or standout efficiency signal. Use light coaching and peer examples to see whether delivery can improve before changing access or budget."
     },
     {
       "name": "Chloe Leroy",
       "category": "average_user",
       "tokens_used": 288050639,
       "story_points": 40,
-      "recommendation": "Monitor Chloe Leroy because 288050639 tokens resulted in 40 story points, an average_user pattern that needs observation but not immediate escalation. Use adoption coaching from efficient peers to improve how AI is applied to higher-value tasks."
+      "recommendation": "Monitor this average_user because tokens_used are meaningful while story_points are moderate for the category. Compare Chloe’s workflow with efficient_user peers to identify whether prompt discipline can raise delivery."
     },
     {
       "name": "Clara Chevalier",
       "category": "average_user",
       "tokens_used": 305157673,
       "story_points": 34,
-      "recommendation": "Monitor Clara Chevalier because 305157673 tokens produced 34 story points, which is average_user performance with room for better conversion. Apply light adoption coaching and compare next-month output against efficient-user benchmarks before considering retraining."
+      "recommendation": "Monitor this average_user because Clara’s tokens_used are moderate to high while story_points are lower than the strongest peers. Use targeted coaching from efficient users to test whether better task selection improves conversion of spend into delivery."
     },
     {
       "name": "Eva Moreau",
       "category": "average_user",
       "tokens_used": 122269890,
       "story_points": 77,
-      "recommendation": "Monitor Eva Moreau because 122269890 tokens delivered 77 story points, a healthy average_user result with good delivery for the spend level. Continue light coaching and track whether this employee can move toward efficient_user performance."
+      "recommendation": "Monitor this average_user because Eva’s story_points are strong relative to moderate tokens_used, but the category still suggests room to optimize. Keep access stable and compare her workflow with top efficient users for incremental gains."
     },
     {
       "name": "Hugo Dubois",
       "category": "average_user",
       "tokens_used": 242512967,
       "story_points": 28,
-      "recommendation": "Monitor Hugo Dubois because 242512967 tokens generated 28 story points, which is weak for the spend but still categorized as average_user. Use adoption coaching first to improve task selection and prompting before moving to retraining."
+      "recommendation": "Monitor this average_user because Hugo’s tokens_used are moderate while story_points remain on the lower side for the category. Use coaching and closer review of task selection before deciding whether retraining is needed."
     },
     {
       "name": "Jade Faure",
       "category": "average_user",
       "tokens_used": 139009694,
       "story_points": 90,
-      "recommendation": "Monitor Jade Faure because 139009694 tokens produced 90 story points, a strong average_user outcome that may be close to efficient-user behavior. Continue light coaching and review whether this workflow can be replicated more broadly if performance stays consistent."
+      "recommendation": "Monitor this average_user because Jade delivers high story_points with manageable tokens_used, indicating a healthy but not top-tier efficiency pattern. Share a few efficient_user practices to see if this can be pushed into a stronger ROI profile."
     },
     {
       "name": "Julien Bourgeois",
       "category": "average_user",
       "tokens_used": 310404973,
       "story_points": 42,
-      "recommendation": "Monitor Julien Bourgeois because 310404973 tokens resulted in 42 story points, which is an average_user pattern with moderate value conversion. Use adoption coaching from efficient peers to improve output before changing access or tooling."
+      "recommendation": "Monitor this average_user because Julien’s tokens_used are fairly high relative to moderate story_points, but not enough to classify as overspending. Review prompt structure and task mix with efficient-user examples before taking stronger action."
     },
     {
       "name": "Laure Fontaine",
       "category": "average_user",
       "tokens_used": 351310057,
       "story_points": 91,
-      "recommendation": "Monitor Laure Fontaine because 351310057 tokens produced 91 story points, a solid average_user result with good delivery despite higher spend. Keep monitoring and use light coaching to see if token use can be reduced while preserving output."
+      "recommendation": "Monitor this average_user because Laure delivers strong story_points with moderate-to-high tokens_used, suggesting acceptable but improvable efficiency. Keep usage steady and benchmark against high_roi and efficient_user workflows for refinement."
     },
     {
       "name": "Lena Chen",
       "category": "average_user",
       "tokens_used": 531690249,
       "story_points": 77,
-      "recommendation": "Monitor Lena Chen because 531690249 tokens generated 77 story points, which is substantial spend but still within the average_user category. Use adoption coaching to tighten workflow efficiency and review whether token-heavy steps can be reduced."
+      "recommendation": "Monitor this average_user because Lena’s tokens_used are high, but story_points are also meaningful enough to avoid immediate retraining. Review whether some tasks can be handled with leaner prompts to improve cost efficiency over time."
     },
     {
       "name": "Lucas Renard",
       "category": "average_user",
       "tokens_used": 170434052,
       "story_points": 26,
-      "recommendation": "Monitor Lucas Renard because 170434052 tokens produced 26 story points, an average_user result that is below ideal for the spend level. Start with adoption coaching and close tracking before deciding on retraining."
+      "recommendation": "Monitor this average_user because Lucas has moderate tokens_used with relatively low story_points for the category. Use light coaching and compare against efficient_user habits before escalating to retraining."
     },
     {
       "name": "Maxime Lefebvre",
       "category": "average_user",
       "tokens_used": 92614426,
       "story_points": 45,
-      "recommendation": "Monitor Maxime Lefebvre because 92614426 tokens delivered 45 story points, which is a middle-range average_user pattern. Use light coaching to improve consistency and compare future value against efficient-user examples."
+      "recommendation": "Monitor this average_user because Maxime’s tokens_used and story_points sit in a middle range without a clear efficiency or risk signal. Keep tracking next month and use peer examples to improve output per token."
     },
     {
       "name": "Nicolas Michel",
       "category": "average_user",
       "tokens_used": 44450539,
       "story_points": 31,
-      "recommendation": "Monitor Nicolas Michel because 44450539 tokens produced 31 story points, which is modest spend and modest output for an average_user. Continue light adoption coaching and watch whether this employee can improve delivery without more tokens."
+      "recommendation": "Monitor this average_user because Nicolas uses relatively low tokens_used and delivers moderate story_points, which suggests stable but not standout adoption. Offer light coaching to help convert this into a more efficient_user pattern."
     },
     {
       "name": "Pierre Okafor",
       "category": "average_user",
       "tokens_used": 443924602,
       "story_points": 55,
-      "recommendation": "Monitor Pierre Okafor because 443924602 tokens generated 55 story points, an average_user pattern with high spend that should be watched carefully. Use adoption coaching to improve token-to-delivery conversion before considering retraining."
+      "recommendation": "Monitor this average_user because Pierre’s tokens_used are high while story_points are moderate, but still not extreme enough for overspender treatment. Review workflow choices and compare with stronger peers to improve value from current spend."
     },
     {
       "name": "Quentin Morin",
       "category": "average_user",
       "tokens_used": 146482942,
       "story_points": 41,
-      "recommendation": "Monitor Quentin Morin because 146482942 tokens produced 41 story points, which is a typical average_user profile. Apply light coaching and track whether better prompt discipline improves output next month."
+      "recommendation": "Monitor this average_user because Quentin shows moderate tokens_used and moderate story_points with no urgent risk signal. Keep access unchanged and use efficient-user examples to test for better delivery efficiency."
     },
     {
       "name": "Remy Dupuis",
       "category": "average_user",
       "tokens_used": 157657495,
       "story_points": 83,
-      "recommendation": "Monitor Remy Dupuis because 157657495 tokens delivered 83 story points, a strong average_user result that may be worth developing further. Continue light coaching and assess whether this workflow can become a repeatable model for peers."
+      "recommendation": "Monitor this average_user because Remy delivers strong story_points with moderate tokens_used, indicating a healthy baseline. Use peer benchmarking to see whether this can be replicated more broadly or improved further."
     },
     {
       "name": "Romain Roux",
       "category": "average_user",
       "tokens_used": 161093114,
       "story_points": 45,
-      "recommendation": "Monitor Romain Roux because 161093114 tokens produced 45 story points, which is average_user performance with room for better efficiency. Use adoption coaching to improve task targeting and review next-month conversion before stronger intervention."
+      "recommendation": "Monitor this average_user because Romain’s tokens_used are moderate while story_points are also moderate, leaving room for better conversion. Apply light coaching from efficient users before making any access changes."
     },
     {
       "name": "Sofia Benali",
       "category": "average_user",
       "tokens_used": 433353302,
       "story_points": 92,
-      "recommendation": "Monitor Sofia Benali because 433353302 tokens generated 92 story points, a productive average_user result despite higher spend. Keep monitoring and use light coaching to reduce token intensity while preserving strong delivery."
+      "recommendation": "Monitor this average_user because Sofia’s story_points are strong, but tokens_used are also high enough to warrant efficiency review. Keep usage stable and compare her workflow with high_roi examples to improve token productivity."
     },
     {
       "name": "Thomas Simon",
       "category": "average_user",
       "tokens_used": 160459695,
       "story_points": 60,
-      "recommendation": "Monitor Thomas Simon because 160459695 tokens produced 60 story points, which is a stable average_user pattern. Continue light adoption coaching and compare future performance to efficient-user benchmarks."
+      "recommendation": "Monitor this average_user because Thomas has moderate tokens_used and solid story_points, which suggests acceptable usage without a clear action trigger. Use light coaching and peer comparison to improve efficiency incrementally."
     },
     {
       "name": "Yasmine El Idrissi",
       "category": "average_user",
       "tokens_used": 32039670,
       "story_points": 31,
-      "recommendation": "Monitor Yasmine El Idrissi because 32039670 tokens delivered 31 story points, a modest but acceptable average_user profile. Use light coaching to improve consistency and determine whether this employee can move toward efficient-user behavior."
+      "recommendation": "Monitor this average_user because Yasmine’s tokens_used are low to moderate and story_points are also moderate, indicating a stable but not highly optimized pattern. Provide light coaching to help raise delivery without materially increasing spend."
     },
     {
       "name": "Yuna Schmitt",
       "category": "average_user",
       "tokens_used": 518066030,
       "story_points": 68,
-      "recommendation": "Monitor Yuna Schmitt because 518066030 tokens produced 68 story points, which is high spend for an average_user result. Apply adoption coaching and close monitoring to improve value before considering retraining."
+      "recommendation": "Monitor this average_user because Yuna’s tokens_used are high, but story_points are still meaningful enough to avoid immediate retraining. Review prompt and context discipline to improve output per token while keeping current access."
     },
     {
       "name": "Antoine Petit",
       "category": "low_adoption",
       "tokens_used": 48323460,
       "story_points": 7,
-      "recommendation": "Run adoption coaching for Antoine Petit because 48323460 tokens and 7 story points indicate low adoption with low delivery. Focus on practical use cases and short workflow examples, then monitor next month to confirm whether usage becomes more productive."
+      "recommendation": "Run adoption coaching for this low_adoption user because both tokens_used and story_points are low. The business action is to increase practical AI usage on real tasks, then monitor next month for improvement from this baseline."
     },
     {
       "name": "Nadia Fernandez",
       "category": "low_adoption",
       "tokens_used": 16464467,
       "story_points": 24,
-      "recommendation": "Run adoption coaching for Nadia Fernandez because 16464467 tokens and 24 story points suggest low_adoption rather than overspending. Give targeted examples of where AI should be used in daily work and monitor whether both usage and delivery improve."
+      "recommendation": "Run adoption coaching for this low_adoption user because low tokens_used and low story_points suggest underuse rather than overspend. Give Nadia concrete examples of where AI can help daily work and monitor whether delivery rises after coaching."
     },
     {
       "name": "Zoe Laurent",
       "category": "low_adoption",
       "tokens_used": 10102844,
       "story_points": 6,
-      "recommendation": "Run adoption coaching for Zoe Laurent because 10102844 tokens produced only 6 story points, matching a low_adoption pattern. Provide simple, repeatable AI workflows and monitor the next cycle to see whether adoption lifts delivery."
+      "recommendation": "Run adoption coaching for this low_adoption user because tokens_used are very low and story_points are also low. Focus on simple, repeatable use cases first, then monitor whether adoption improves before changing budget access."
     },
     {
       "name": "Fatima Muller",
       "category": "quality_risk",
       "tokens_used": 348549942,
       "story_points": 22,
-      "recommendation": "Retrain Fatima Muller because 348549942 tokens produced only 22 story points, which is a poor conversion pattern in the quality_risk category. Add review checkpoints and coaching on task decomposition so token use is tied to clearer business output."
+      "recommendation": "Retrain this quality_risk user because tokens_used are high relative to low story_points, which suggests weak conversion of AI spend into delivery. Add review checkpoints and task-decomposition coaching before allowing any increase in AI usage."
     },
     {
       "name": "Florian Rousseau",
       "category": "quality_risk",
       "tokens_used": 209759142,
       "story_points": 15,
-      "recommendation": "Retrain Florian Rousseau because 209759142 tokens resulted in 15 story points, a weak quality_risk outcome for the spend level. Focus retraining on prompt discipline, smaller task breakdowns, and manager review before scaling usage."
+      "recommendation": "Retrain this quality_risk user because Florian consumes substantial tokens_used but produces low story_points for the category. Focus retraining on prompt quality, smaller task breakdowns, and manager review so spend leads to better output."
     },
     {
       "name": "Nina Traore",
       "category": "quality_risk",
       "tokens_used": 202833499,
       "story_points": 13,
-      "recommendation": "Retrain Nina Traore because 202833499 tokens generated only 13 story points, which is low delivery for the token volume in the quality_risk category. Use structured coaching and review checkpoints to improve output quality before allowing broader AI use."
+      "recommendation": "Retrain this quality_risk user because Nina’s tokens_used are high while story_points remain very low. Tighten review controls and coach on using AI for narrower, higher-value tasks before scaling usage further."
     },
     {
       "name": "Sara Mercier",
       "category": "quality_risk",
       "tokens_used": 269440710,
       "story_points": 16,
-      "recommendation": "Retrain Sara Mercier because 269440710 tokens produced just 16 story points, showing weak business return in the quality_risk category. Emphasize task selection and manager review so AI use supports measurable delivery instead of extra spend."
+      "recommendation": "Retrain this quality_risk user because Sara shows high tokens_used with low story_points, indicating poor value realization. Use structured coaching and review gates to improve work quality before approving more AI-driven activity."
     },
     {
       "name": "Theo Girard",
       "category": "quality_risk",
       "tokens_used": 124441231,
       "story_points": 11,
-      "recommendation": "Retrain Theo Girard because 124441231 tokens delivered only 11 story points, which is a clear quality_risk signal. Focus on prompt basics and task decomposition, then monitor whether retraining improves conversion before expanding usage."
+      "recommendation": "Retrain this quality_risk user because Theo’s tokens_used are significant while story_points are very low. Emphasize task decomposition and prompt discipline so AI usage supports delivery instead of adding cost without output."
     },
     {
       "name": "Adrien Ivanova",
       "category": "overspender",
       "tokens_used": 745127529,
       "story_points": 74,
-      "recommendation": "Retrain Adrien Ivanova because 745127529 tokens produced 74 story points, a high-spend overspender pattern with weaker value than efficient peers. Review workflow design, reduce unnecessary context, and closely monitor next-month token efficiency."
+      "recommendation": "Retrain and closely monitor this overspender because tokens_used are very high relative to story_points. Review whether Adrien is sending too much context or using AI on low-value tasks, then track next month for a better spend-to-delivery ratio."
     },
     {
       "name": "Baptiste Bernard",
       "category": "overspender",
       "tokens_used": 767324881,
       "story_points": 42,
-      "recommendation": "Retrain Baptiste Bernard because 767324881 tokens generated 42 story points, which is a clear overspender profile with poor conversion. Audit prompt habits and task selection immediately, then monitor for a material drop in token use per delivered point."
+      "recommendation": "Retrain and closely monitor this overspender because Baptiste has extremely high tokens_used with limited story_points for the category. Audit workflow habits immediately and reduce waste by coaching on leaner prompts, narrower tasks, and stronger review discipline."
     },
     {
       "name": "Ines Camus",
       "category": "overspender",
       "tokens_used": 402794252,
       "story_points": 39,
-      "recommendation": "Retrain Ines Camus because 402794252 tokens produced 39 story points, indicating overspender behavior with limited delivery return. Focus on reducing low-value AI interactions and monitor whether retraining improves token-to-output efficiency."
+      "recommendation": "Retrain and closely monitor this overspender because Ines uses high tokens_used for comparatively modest story_points. Review prompt patterns and task selection to ensure AI usage is tied to work that produces clearer delivery outcomes."
     },
     {
       "name": "Omar Leclerc",
       "category": "overspender",
       "tokens_used": 753829866,
       "story_points": 41,
-      "recommendation": "Retrain Omar Leclerc because 753829866 tokens delivered 41 story points, a strong overspender signal with weak business value. Review context size, prompt patterns, and use cases, then closely monitor for improved efficiency next month."
+      "recommendation": "Retrain and closely monitor this overspender because Omar’s tokens_used are extremely high relative to story_points. The business action is to audit workflow usage, cut low-value prompting, and monitor next month for measurable efficiency improvement."
     }
   ]
 }
