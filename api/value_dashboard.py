@@ -198,7 +198,7 @@ def vs_median(value: float, median: float) -> float:
     return safe_divide(value - median, median) * 100
 
 
-def build_positioning_context(
+def build_recommendation_context(
     row: dict[str, Any],
     token_values: list[float],
     story_point_values: list[float],
@@ -207,18 +207,27 @@ def build_positioning_context(
     employee_count = len(token_values)
     token_rank = rank_desc(token_values, row["tokens_used"])
     story_point_rank = rank_desc(story_point_values, row["story_points"])
-    productivity_rank = rank_desc(productivity_values, row["productivity"])
+    efficiency_rank = rank_desc(productivity_values, row["productivity"])
     token_percentile = percentile_rank(token_values, row["tokens_used"])
     story_point_percentile = percentile_rank(story_point_values, row["story_points"])
-    productivity_percentile = percentile_rank(productivity_values, row["productivity"])
-    positioning_index = productivity_percentile - token_percentile
+    efficiency_percentile = percentile_rank(productivity_values, row["productivity"])
+    tokens_per_story_point_values = [
+        safe_divide(tokens, story_points)
+        for tokens, story_points in zip(token_values, story_point_values)
+        if story_points > 0
+    ]
+    tokens_per_story_point = safe_divide(row["tokens_used"], row["story_points"])
+    median_tokens = percentile(token_values, 0.5)
+    median_story_points = percentile(story_point_values, 0.5)
+    median_efficiency = percentile(productivity_values, 0.5)
+    median_tokens_per_story_point = percentile(tokens_per_story_point_values, 0.5)
 
     flags = []
-    if token_rank / employee_count <= 0.05 and productivity_percentile <= 60:
-        flags.append("top_5_percent_usage_with_average_or_lower_productivity")
-    if token_percentile >= 75 and productivity_percentile <= 25:
-        flags.append("high_usage_low_productivity")
-    if productivity_percentile >= 90 and story_point_percentile >= 75:
+    if token_rank / employee_count <= 0.05 and efficiency_percentile <= 60:
+        flags.append("top_5_percent_usage_with_average_or_lower_efficiency")
+    if token_percentile >= 75 and efficiency_percentile <= 25:
+        flags.append("high_usage_low_efficiency")
+    if efficiency_percentile >= 90 and story_point_percentile >= 75:
         flags.append("benchmark_user")
     if token_percentile <= 25 and story_point_percentile <= 25:
         flags.append("low_adoption")
@@ -228,35 +237,43 @@ def build_positioning_context(
         "tokens_used": int(round(row["tokens_used"])),
         "story_points": round_metric(row["story_points"], 1),
         "story_points_per_million_tokens": round_metric(row["productivity"], 2),
+        "tokens_per_story_point": round_metric(tokens_per_story_point, 0),
         "employee_count": employee_count,
         "token_rank": token_rank,
         "story_point_rank": story_point_rank,
-        "productivity_rank": productivity_rank,
+        "efficiency_rank": efficiency_rank,
         "token_top_share_percent": round_metric(safe_divide(token_rank, employee_count) * 100, 1),
         "story_point_top_share_percent": round_metric(
             safe_divide(story_point_rank, employee_count) * 100,
             1,
         ),
-        "productivity_top_share_percent": round_metric(
-            safe_divide(productivity_rank, employee_count) * 100,
+        "efficiency_top_share_percent": round_metric(
+            safe_divide(efficiency_rank, employee_count) * 100,
             1,
         ),
         "token_percentile": round_metric(token_percentile, 0),
         "story_point_percentile": round_metric(story_point_percentile, 0),
-        "productivity_percentile": round_metric(productivity_percentile, 0),
+        "efficiency_percentile": round_metric(efficiency_percentile, 0),
+        "team_median_tokens_used": int(round(median_tokens)),
+        "team_median_story_points": round_metric(median_story_points, 1),
+        "team_median_story_points_per_million_tokens": round_metric(median_efficiency, 2),
+        "team_median_tokens_per_story_point": round_metric(median_tokens_per_story_point, 0),
         "token_vs_median_percent": round_metric(
-            vs_median(row["tokens_used"], percentile(token_values, 0.5)),
+            vs_median(row["tokens_used"], median_tokens),
             1,
         ),
         "story_points_vs_median_percent": round_metric(
-            vs_median(row["story_points"], percentile(story_point_values, 0.5)),
+            vs_median(row["story_points"], median_story_points),
             1,
         ),
-        "productivity_vs_median_percent": round_metric(
-            vs_median(row["productivity"], percentile(productivity_values, 0.5)),
+        "efficiency_vs_median_percent": round_metric(
+            vs_median(row["productivity"], median_efficiency),
             1,
         ),
-        "positioning_index": round_metric(positioning_index, 1),
+        "tokens_per_story_point_vs_median_percent": round_metric(
+            vs_median(tokens_per_story_point, median_tokens_per_story_point),
+            1,
+        ),
         "flags": flags,
     }
 
@@ -272,44 +289,47 @@ def fallback_recommendation(category: str, context: dict[str, Any]) -> str:
         f"{top_share_label(context['story_point_rank'], total)} story point delivery "
         f"(rank #{context['story_point_rank']}/{total}, {percent_label(context['story_point_percentile'])})"
     )
-    productivity_position = (
-        f"{top_share_label(context['productivity_rank'], total)} productivity "
-        f"(rank #{context['productivity_rank']}/{total}, {percent_label(context['productivity_percentile'])})"
+    efficiency_position = (
+        f"{top_share_label(context['efficiency_rank'], total)} efficiency "
+        f"(rank #{context['efficiency_rank']}/{total}, {percent_label(context['efficiency_percentile'])})"
     )
-    productivity_value = context["story_points_per_million_tokens"]
-    index = signed_metric(context["positioning_index"])
+    story_points_per_million_tokens = context["story_points_per_million_tokens"]
+    tokens_per_story_point = context["tokens_per_story_point"]
     token_vs_median = signed_metric(context["token_vs_median_percent"])
     story_vs_median = signed_metric(context["story_points_vs_median_percent"])
-    productivity_vs_median = signed_metric(context["productivity_vs_median_percent"])
+    efficiency_vs_median = signed_metric(context["efficiency_vs_median_percent"])
+    tokens_per_story_point_vs_median = signed_metric(
+        context["tokens_per_story_point_vs_median_percent"]
+    )
 
     if category == "high_roi":
         return (
-            f"{name} is a benchmark: {story_position} and {productivity_position}, with {productivity_value} story points per million tokens and a positioning index of {index}. "
-            f"Usage is {token_position} ({token_vs_median}% vs median), but delivery is {story_vs_median}% vs median and productivity is {productivity_vs_median}% vs median, so the action is to document this workflow and reuse it as the team's reference playbook."
+            f"{name} is a benchmark: {story_position} and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
+            f"Usage is {token_position} ({token_vs_median}% vs median), but delivery is {story_vs_median}% vs median and efficiency is {efficiency_vs_median}% vs median, so recognize this person as a top AI user and have them coach others on token discipline."
         )
     if category == "efficient_user":
         return (
-            f"{name} is an efficient user: {story_position} with {token_position}, producing {productivity_value} story points per million tokens and a positioning index of {index}. "
-            f"Because productivity is {productivity_vs_median}% vs median while usage is {token_vs_median}% vs median, the business action is to make this employee share prompts, context-selection habits, and task patterns with the rest of the team."
+            f"{name} is efficient: {story_position} with {token_position}, producing {story_points_per_million_tokens} story points per million tokens versus a team median of {context['team_median_story_points_per_million_tokens']}. "
+            f"Because token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median, praise this usage pattern and have this employee share prompts, context-selection habits, and task patterns with the rest of the team."
         )
     if category == "overspender":
         return (
-            f"{name} is a cost-reduction priority: {token_position}, but only {story_position} and {productivity_position}, with {productivity_value} story points per million tokens and a positioning index of {index}. "
-            f"This means token spend is {token_vs_median}% vs median while productivity is {productivity_vs_median}% vs median, so review prompt logs, cap oversized context, and retrain before increasing this user's AI budget."
+            f"{name} is a cost-reduction priority: {token_position}, but only {story_position} and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
+            f"Token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median, so review prompt logs, cap oversized context, and retrain before increasing this user's AI budget."
         )
     if category == "low_adoption":
         return (
-            f"{name} looks like an adoption problem rather than pure waste: usage is {token_position} and delivery is {story_position}, with {productivity_value} story points per million tokens. "
+            f"{name} looks like an adoption problem rather than pure waste: usage is {token_position} and delivery is {story_position}, with {story_points_per_million_tokens} story points per million tokens. "
             f"Because both usage and story points sit below the peer median ({token_vs_median}% tokens, {story_vs_median}% story points), run targeted coaching and compare next month against this baseline before cutting access."
         )
     if category == "quality_risk":
         return (
-            f"{name} should not receive more AI budget yet: delivery is only {story_position} and productivity is {productivity_position}, with a positioning index of {index}. "
+            f"{name} should not receive more AI budget yet: delivery is only {story_position} and efficiency is {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
             f"Usage is {token_vs_median}% vs median but story points are {story_vs_median}% vs median, so add task decomposition, review checkpoints, and quality gates before encouraging heavier AI usage."
         )
     return (
-        f"{name} is not an extreme outlier: {token_position}, {story_position}, and {productivity_position}, with a positioning index of {index}. "
-        f"Keep monitoring the trend, then use efficient-user playbooks if productivity stays below the peer median ({productivity_vs_median}% vs median) or token usage rises without a matching story point increase."
+        f"{name} is not an extreme outlier: {token_position}, {story_position}, and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
+        f"Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median ({efficiency_vs_median}% vs median) or token usage rises without a matching story point increase."
     )
 
 
@@ -360,7 +380,7 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> tuple[list[dict[str, A
     recommendation_context = []
     for row in employee_rows:
         category = classify_employee(row, token_values, story_point_values, productivity_values)
-        context = build_positioning_context(
+        context = build_recommendation_context(
             row,
             token_values,
             story_point_values,
@@ -407,7 +427,7 @@ def fallback_main_recommendation(categories: Counter[str]) -> str:
     ):
         return (
             "Prioritize two actions next month: review high-token users who deliver few story points, "
-            "and turn efficient users into internal examples. This keeps the AI budget focused on work that converts into measurable delivery."
+            "and recognize efficient users as internal coaches. This keeps the AI budget focused on work that converts into measurable delivery while spreading the habits that already work."
         )
     if categories.get("overspender", 0):
         return (
@@ -416,8 +436,8 @@ def fallback_main_recommendation(categories: Counter[str]) -> str:
         )
     if categories.get("high_roi", 0) or categories.get("efficient_user", 0):
         return (
-            "Expand AI usage by copying the workflows of users who already convert tokens into story points. "
-            "Use their habits as the onboarding playbook for lower-performing teams."
+            "Expand AI usage by recognizing users who already convert tokens into story points efficiently. "
+            "Use their habits as the onboarding playbook for lower-performing teams and ask them to coach peers."
         )
     return (
         "Keep the AI budget stable and review employee-level outliers monthly. "
@@ -497,9 +517,13 @@ def maybe_apply_openai_recommendations(
             "Do not add, remove, rename, or compute output fields.",
             "Return only main_recommendation and employee recommendations by name.",
             "Each employee recommendation must be 3 to 4 concise sentences.",
-            "Each employee recommendation must include rank or percentile comparisons against peers.",
-            "Each employee recommendation must include the positioning index, defined as productivity percentile minus token-usage percentile.",
+            "Each employee recommendation must be understandable without knowing finance or analytics jargon.",
+            "Do not mention any abstract invented metric.",
+            "Use only plain comparisons: tokens_used, story_points, tokens per story point, story points per million tokens, peer rank, percentile, and median comparison.",
+            "When using a derived ratio, explain it directly, for example: 'tokens per story point means how many tokens were spent to deliver one story point; lower is better'.",
+            "Do not use the word productivity in employee recommendations; use 'efficiency' only when it is tied to a direct ratio such as story points per million tokens.",
             "Each employee recommendation must include a clear business action: reduce/cap usage, retrain, monitor, replicate workflow, or run adoption coaching.",
+            "The dashboard should not only criticize poor usage. For high_roi and efficient_user employees, explicitly praise the behavior and recommend that they coach or mentor peers on token usage.",
             "Each employee recommendation must include one next-month KPI to watch.",
             "For overspenders, explicitly explain why cost should be reduced or controlled.",
             "For efficient users and high_roi users, explicitly explain what should be replicated.",
