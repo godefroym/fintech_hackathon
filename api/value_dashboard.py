@@ -54,6 +54,10 @@ def round_metric(value: float, digits: int = 2) -> float:
     return int(rounded) if rounded.is_integer() else rounded
 
 
+def round_ratio(value: float) -> float:
+    return round(float(value), 12)
+
+
 def parse_days(value: Any) -> float | None:
     if value is None:
         return None
@@ -171,7 +175,8 @@ def build_monthly_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                         safe_divide(row["completion_days_total"], row["story_points"]),
                         3,
                     ),
-                    "story_points_per_token": round_metric(row["story_points_per_token"], 6),
+                    "story_points_per_token": round_ratio(row["story_points_per_token"]),
+                    "story_points_per_1m_tokens": round_metric(row["story_points_per_token"] * 1_000_000, 2),
                     "tokens_per_story_point": round_metric(row["tokens_per_story_point"], 1),
                 }
             )
@@ -314,7 +319,8 @@ def format_employee_metrics(employees: list[dict[str, Any]]) -> list[dict[str, A
                 "category": item["category"],
                 "tokens_used": int(round(item["tokens_used"])),
                 "story_points": round_metric(item["story_points"], 1),
-                "story_points_per_token": round_metric(item["story_points_per_token"], 6),
+                "story_points_per_token": round_ratio(item["story_points_per_token"]),
+                "story_points_per_1m_tokens": round_metric(item["story_points_per_token"] * 1_000_000, 2),
                 "tokens_per_story_point": round_metric(item["tokens_per_story_point"], 1),
                 "tickets_closed": int(round(item["tickets_closed"])),
                 "lines_of_code": int(round(item["lines_of_code"])),
@@ -413,6 +419,7 @@ def maybe_apply_openai_recommendations(
                 "tokens_used": item["tokens_used"],
                 "story_points": item["story_points"],
                 "story_points_per_token": item["story_points_per_token"],
+                "story_points_per_1m_tokens": round_metric(item["story_points_per_token"] * 1_000_000, 2),
                 "tokens_per_story_point": item["tokens_per_story_point"],
                 "outlier_reason": item["outlier_reason"],
                 "action_type": item["action_type"],
