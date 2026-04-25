@@ -1,17 +1,13 @@
 """
 Generate the dashboard view model from employee_metrics.jsonl.
 
-The output intentionally follows the shape of VIEWMODEL.json:
+The output follows the provided VIEWMODEL.json contract exactly:
   - executive_summary
   - monthly_metrics
   - employee_metrics
 
-Core metrics:
-  - story_points_per_token = story_points / tokens_used
-  - tokens_per_story_point = tokens_used / story_points
-
-OpenAI is optional. If OPENAI_API_KEY is present in cle.env, it only generates
-recommendation text from computed metrics; it does not compute the metrics.
+The only added field is `productivity`, defined as:
+  story_points / tokens_used * 1_000_000
 """
 
 from __future__ import annotations
@@ -20,11 +16,9 @@ import argparse
 import json
 import os
 import re
-import statistics
 import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -49,34 +43,21 @@ def safe_divide(numerator: float, denominator: float, default: float = 0.0) -> f
     return numerator / denominator
 
 
-def round_metric(value: float, digits: int = 2) -> float:
+def round_metric(value: float, digits: int = 2) -> int | float:
     rounded = round(float(value), digits)
     return int(rounded) if rounded.is_integer() else rounded
 
 
-def round_ratio(value: float) -> float:
-    return round(float(value), 12)
-
-
-def parse_days(value: Any) -> float | None:
-    if value is None:
-        return None
-    if isinstance(value, (int, float)):
-        return float(value)
-    match = re.search(r"[-+]?\d*\.?\d+", str(value))
-    if not match:
-        return None
-    return float(match.group(0))
-
-
 def month_sort_key(month: str) -> tuple[int, int]:
     match = re.match(r"(\d{1,2})/(\d{4})", month or "")
-    if not match:
-        match = re.match(r"(\d{4})-(\d{1,2})", month or "")
-        if match:
-            return (int(match.group(1)), int(match.group(2)))
-        return (9999, 99)
-    return (int(match.group(2)), int(match.group(1)))
+    if match:
+        return (int(match.group(2)), int(match.group(1)))
+
+    match = re.match(r"(\d{4})-(\d{1,2})", month or "")
+    if match:
+        return (int(match.group(1)), int(match.group(2)))
+
+    return (9999, 99)
 
 
 def month_label(month: str) -> str:
@@ -89,9 +70,11 @@ def month_label(month: str) -> str:
 def percentile(values: list[float], q: float) -> float:
     if not values:
         return 0.0
+
     ordered = sorted(values)
     if len(ordered) == 1:
         return ordered[0]
+
     position = (len(ordered) - 1) * q
     lower = int(position)
     upper = min(lower + 1, len(ordered) - 1)
@@ -99,13 +82,25 @@ def percentile(values: list[float], q: float) -> float:
     return ordered[lower] * (1 - weight) + ordered[upper] * weight
 
 
+def percentile_rank(values: list[float], value: float) -> float:
+    if not values:
+        return 0.0
+    return sum(1 for item in values if item <= value) / len(values)
+
+
+def clamp(value: float, lower: float, upper: float) -> float:
+    return max(lower, min(upper, value))
+
+
 def load_env_file(path: Path) -> None:
     if not path.exists():
         return
+
     for raw_line in path.read_text(encoding="utf-8").splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
+
         key, value = line.split("=", 1)
         key = key.strip()
         value = value.strip().strip('"').strip("'")
@@ -120,38 +115,33 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
             stripped = line.strip()
             if not stripped:
                 continue
+
             try:
                 rows.append(json.loads(stripped))
             except json.JSONDecodeError as exc:
                 raise ValueError(f"Invalid JSONL at line {line_number}: {exc}") from exc
+
     return rows
 
 
-def normalized_row(row: dict[str, Any], cost_per_1m_tokens: float) -> dict[str, Any]:
-    tokens = safe_float(row.get("token_usage"))
+def productivity(story_points: float, tokens_used: float) -> float:
+    return safe_divide(story_points, tokens_used) * 1_000_000
+
+
+def normalized_row(row: dict[str, Any]) -> dict[str, Any]:
+    tokens_used = safe_float(
+        row.get("token_usage", row.get("token_used", row.get("tokens_used")))
+    )
     story_points = safe_float(row.get("story_points"))
-    tickets_closed = safe_float(row.get("tickets_resolved"))
-    avg_completion_days = parse_days(row.get("time_to_completion")) or 0.0
-    lines_of_code = safe_float(row.get("lines_of_code"))
-    bugs_closed = safe_float(row.get("bugs_closed"))
-    merge_requests = safe_float(row.get("merge_requests"))
 
     return {
         "name": str(row.get("name") or "Unknown"),
         "month": str(row.get("month") or "unknown"),
         "month_label": month_label(str(row.get("month") or "unknown")),
-        "tokens_used": tokens,
+        "tokens_used": tokens_used,
         "story_points": story_points,
-        "tickets_closed": tickets_closed,
-        "lines_of_code": lines_of_code,
-        "avg_completion_days": avg_completion_days,
-        "completion_days_total": avg_completion_days * tickets_closed,
-        "bugs_closed": bugs_closed,
-        "merge_requests": merge_requests,
-        "estimated_ai_cost": tokens / 1_000_000 * cost_per_1m_tokens,
-        "story_points_per_token": safe_divide(story_points, tokens),
-        "story_points_per_1k_tokens": safe_divide(story_points, tokens) * 1000,
-        "tokens_per_story_point": safe_divide(tokens, story_points),
+        "bugs_closed": safe_float(row.get("bugs_closed")),
+        "productivity": productivity(story_points, tokens_used),
     }
 
 
@@ -169,168 +159,128 @@ def build_monthly_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "name": row["name"],
                     "tokens_used": int(round(row["tokens_used"])),
                     "story_points": round_metric(row["story_points"], 1),
-                    "tickets_closed": int(round(row["tickets_closed"])),
-                    "lines_of_code": int(round(row["lines_of_code"])),
-                    "avg_days_per_story_point": round_metric(
-                        safe_divide(row["completion_days_total"], row["story_points"]),
-                        3,
-                    ),
-                    "story_points_per_token": round_ratio(row["story_points_per_token"]),
-                    "story_points_per_1m_tokens": round_metric(row["story_points_per_token"] * 1_000_000, 2),
-                    "tokens_per_story_point": round_metric(row["tokens_per_story_point"], 1),
+                    "productivity": round_metric(row["productivity"], 2),
                 }
             )
+
         monthly_metrics.append({"month": month_label(month), "employees": employees})
+
     return monthly_metrics
 
 
-def aggregate_employees(rows: list[dict[str, Any]], cost_per_1m_tokens: float) -> list[dict[str, Any]]:
-    grouped: dict[str, dict[str, Any]] = defaultdict(
-        lambda: {
-            "name": "",
-            "tokens_used": 0.0,
-            "story_points": 0.0,
-            "tickets_closed": 0.0,
-            "lines_of_code": 0.0,
-            "completion_days_total": 0.0,
-            "bugs_closed": 0.0,
-            "merge_requests": 0.0,
-            "months": set(),
-        }
-    )
-
+def latest_employee_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    latest_by_name: dict[str, dict[str, Any]] = {}
     for row in rows:
-        item = grouped[row["name"]]
-        item["name"] = row["name"]
-        item["tokens_used"] += row["tokens_used"]
-        item["story_points"] += row["story_points"]
-        item["tickets_closed"] += row["tickets_closed"]
-        item["lines_of_code"] += row["lines_of_code"]
-        item["completion_days_total"] += row["completion_days_total"]
-        item["bugs_closed"] += row["bugs_closed"]
-        item["merge_requests"] += row["merge_requests"]
-        item["months"].add(row["month"])
+        current = latest_by_name.get(row["name"])
+        if current is None or month_sort_key(row["month"]) > month_sort_key(current["month"]):
+            latest_by_name[row["name"]] = row
 
-    employees = []
-    for item in grouped.values():
-        item["estimated_ai_cost"] = item["tokens_used"] / 1_000_000 * cost_per_1m_tokens
-        item["story_points_per_token"] = safe_divide(item["story_points"], item["tokens_used"])
-        item["story_points_per_1k_tokens"] = item["story_points_per_token"] * 1000
-        item["tokens_per_story_point"] = safe_divide(item["tokens_used"], item["story_points"])
-        item["avg_days_per_story_point"] = safe_divide(
-            item["completion_days_total"],
-            item["story_points"],
-        )
-        item["months"] = sorted(item["months"], key=month_sort_key)
-        employees.append(item)
-    return employees
+    return list(latest_by_name.values())
 
 
-def classify_employees(employees: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    token_values = [item["tokens_used"] for item in employees]
-    story_point_values = [item["story_points"] for item in employees]
-    tokens_per_story_point_values = [
-        item["tokens_per_story_point"] for item in employees if item["tokens_per_story_point"] > 0
-    ]
-    story_points_per_token_values = [
-        item["story_points_per_token"] for item in employees if item["story_points_per_token"] > 0
-    ]
+def fallback_recommendation(category: str) -> str:
+    if category == "high_roi":
+        return "Maintain usage and replicate workflow."
+    if category == "efficient_user":
+        return "Document workflow and expand adoption carefully."
+    if category == "overspender":
+        return "Review prompts, tool usage, and token-heavy workflows."
+    if category == "low_adoption":
+        return "Provide onboarding and targeted AI workflow examples."
+    if category == "quality_risk":
+        return "Add quality gates and reduce rework before scaling usage."
+    return "Monitor usage and coach toward top-performer patterns."
 
+
+def classify_employee(
+    row: dict[str, Any],
+    token_values: list[float],
+    story_point_values: list[float],
+    productivity_values: list[float],
+) -> str:
     q25_tokens = percentile(token_values, 0.25)
+    q50_tokens = percentile(token_values, 0.50)
     q75_tokens = percentile(token_values, 0.75)
     q25_story_points = percentile(story_point_values, 0.25)
+    q50_story_points = percentile(story_point_values, 0.50)
     q75_story_points = percentile(story_point_values, 0.75)
-    q75_tokens_per_story_point = percentile(tokens_per_story_point_values, 0.75)
-    q75_story_points_per_token = percentile(story_points_per_token_values, 0.75)
+    q25_productivity = percentile(productivity_values, 0.25)
+    q75_productivity = percentile(productivity_values, 0.75)
 
-    for item in employees:
-        high_tokens = item["tokens_used"] >= q75_tokens
-        low_tokens = item["tokens_used"] <= q25_tokens
-        moderate_tokens = q25_tokens < item["tokens_used"] < q75_tokens
-        low_story_points = item["story_points"] <= q25_story_points
-        high_story_points = item["story_points"] >= q75_story_points
-        inefficient = item["tokens_per_story_point"] >= q75_tokens_per_story_point
-        efficient = item["story_points_per_token"] >= q75_story_points_per_token
+    high_tokens = row["tokens_used"] >= q75_tokens
+    low_tokens = row["tokens_used"] <= q25_tokens
+    moderate_tokens = q25_tokens < row["tokens_used"] <= q50_tokens
+    low_story_points = row["story_points"] <= q25_story_points
+    solid_story_points = row["story_points"] >= q50_story_points
+    high_story_points = row["story_points"] >= q75_story_points
+    low_productivity = row["productivity"] <= q25_productivity
+    high_productivity = row["productivity"] >= q75_productivity
 
-        category = "normal"
-        outlier_reason = "No major outlier pattern detected."
-        action_type = "monitor"
-
-        if high_tokens and low_story_points and inefficient:
-            category = "high_token_low_story_points"
-            outlier_reason = "High token usage with low story point delivery."
-            action_type = "retrain_user"
-        elif moderate_tokens and high_story_points and efficient:
-            category = "moderate_tokens_high_productivity"
-            outlier_reason = "Moderate token usage with very strong story point delivery."
-            action_type = "share_playbook"
-        elif low_tokens and high_story_points and efficient:
-            category = "low_tokens_high_productivity"
-            outlier_reason = "Low token usage with strong story point delivery."
-            action_type = "share_playbook"
-        elif high_tokens and high_story_points:
-            category = "high_tokens_high_productivity"
-            outlier_reason = "High token usage is paired with high story point delivery."
-            action_type = "monitor_budget"
-        elif low_tokens and low_story_points:
-            category = "low_tokens_low_productivity"
-            outlier_reason = "Low token usage with low story point delivery."
-            action_type = "test_ai_enablement"
-        elif high_tokens and inefficient:
-            category = "high_token_efficiency_risk"
-            outlier_reason = "High token usage with weak tokens per story point."
-            action_type = "review_usage"
-
-        item["category"] = category
-        item["outlier_reason"] = outlier_reason
-        item["action_type"] = action_type
-        item["recommendation"] = fallback_recommendation(item)
-
-    return sorted(employees, key=lambda item: item["tokens_per_story_point"], reverse=True)
+    if high_tokens and low_productivity:
+        return "overspender"
+    if high_productivity and high_story_points:
+        return "high_roi"
+    if high_productivity and solid_story_points and (moderate_tokens or low_tokens):
+        return "efficient_user"
+    if low_tokens and low_story_points:
+        return "low_adoption"
+    if low_story_points and low_productivity:
+        return "quality_risk"
+    return "average_user"
 
 
-def fallback_recommendation(employee: dict[str, Any]) -> str:
-    category = employee["category"]
-    if category == "high_token_low_story_points":
-        return (
-            "Retrain this user on prompt structure, context selection, and task decomposition; "
-            "review their highest-token sessions before expanding access."
-        )
-    if category in {"moderate_tokens_high_productivity", "low_tokens_high_productivity"}:
-        return (
-            "Ask this user to document their AI workflow and run a short enablement session "
-            "for peers with lower story points per token."
-        )
-    if category == "high_tokens_high_productivity":
-        return "Keep access, but monitor tokens per story point so high productivity does not hide budget drift."
-    if category == "low_tokens_low_productivity":
-        return "Run a controlled AI adoption experiment to see whether targeted usage improves story point delivery."
-    if category == "high_token_efficiency_risk":
-        return "Review whether the user is over-sending context or using premium models for low-complexity work."
-    return "Monitor month-by-month trend and compare against peers doing similar work."
+def roi_score(
+    row: dict[str, Any],
+    token_values: list[float],
+    story_point_values: list[float],
+    productivity_values: list[float],
+) -> int:
+    productivity_rank = percentile_rank(productivity_values, row["productivity"])
+    story_point_rank = percentile_rank(story_point_values, row["story_points"])
+    token_rank = percentile_rank(token_values, row["tokens_used"])
+    score = 100 * (0.65 * productivity_rank + 0.35 * story_point_rank - 0.08 * token_rank)
+    return int(round(clamp(score, 0, 100)))
 
 
-def format_employee_metrics(employees: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    output = []
-    for item in employees:
-        output.append(
+def build_employee_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    employee_rows = latest_employee_rows(rows)
+    token_values = [row["tokens_used"] for row in employee_rows]
+    story_point_values = [row["story_points"] for row in employee_rows]
+    productivity_values = [row["productivity"] for row in employee_rows]
+
+    employees = []
+    for row in employee_rows:
+        category = classify_employee(row, token_values, story_point_values, productivity_values)
+        employees.append(
             {
-                "name": item["name"],
-                "category": item["category"],
-                "tokens_used": int(round(item["tokens_used"])),
-                "story_points": round_metric(item["story_points"], 1),
-                "story_points_per_token": round_ratio(item["story_points_per_token"]),
-                "story_points_per_1m_tokens": round_metric(item["story_points_per_token"] * 1_000_000, 2),
-                "tokens_per_story_point": round_metric(item["tokens_per_story_point"], 1),
-                "tickets_closed": int(round(item["tickets_closed"])),
-                "lines_of_code": int(round(item["lines_of_code"])),
-                "avg_days_per_story_point": round_metric(item["avg_days_per_story_point"], 3),
-                "outlier_reason": item["outlier_reason"],
-                "action_type": item["action_type"],
-                "recommendation": item["recommendation"],
+                "name": row["name"],
+                "category": category,
+                "roi_score": roi_score(row, token_values, story_point_values, productivity_values),
+                "tokens_used": int(round(row["tokens_used"])),
+                "recommendation": fallback_recommendation(category),
+                "productivity": round_metric(row["productivity"], 2),
             }
         )
-    return output
+
+    return sorted(employees, key=lambda item: item["roi_score"], reverse=True)
+
+
+def rows_for_month(rows: list[dict[str, Any]], month: str | None) -> list[dict[str, Any]]:
+    if month is None:
+        return []
+    return [row for row in rows if row["month"] == month]
+
+
+def fallback_main_recommendation(categories: Counter[str]) -> str:
+    if categories.get("overspender", 0) and (
+        categories.get("high_roi", 0) or categories.get("efficient_user", 0)
+    ):
+        return "Retrain high-token low-output users and replicate workflows from high-productivity users."
+    if categories.get("overspender", 0):
+        return "Cap and review token-heavy workflows before increasing AI spend."
+    if categories.get("high_roi", 0) or categories.get("efficient_user", 0):
+        return "Expand AI usage by copying workflows from the most productive users."
+    return "Monitor productivity per million tokens monthly and review outliers."
 
 
 def build_executive_summary(
@@ -341,113 +291,72 @@ def build_executive_summary(
     monthly_budget: float | None,
 ) -> dict[str, Any]:
     months = sorted({row["month"] for row in rows}, key=month_sort_key)
-    last_month = months[-1] if months else None
+    latest_month = months[-1] if months else None
     previous_month = months[-2] if len(months) >= 2 else None
+    first_month = months[0] if months else None
 
-    def month_rows(month: str | None) -> list[dict[str, Any]]:
-        if month is None:
-            return []
-        return [row for row in rows if row["month"] == month]
+    latest_rows = rows_for_month(rows, latest_month)
+    previous_rows = rows_for_month(rows, previous_month)
+    first_rows = rows_for_month(rows, first_month)
 
-    current_rows = month_rows(last_month)
-    previous_rows = month_rows(previous_month)
-    current_tokens = sum(row["tokens_used"] for row in current_rows)
+    latest_tokens = sum(row["tokens_used"] for row in latest_rows)
     previous_tokens = sum(row["tokens_used"] for row in previous_rows)
-    current_spend = current_tokens / 1_000_000 * cost_per_1m_tokens
+    latest_spend = latest_tokens / 1_000_000 * cost_per_1m_tokens
     previous_spend = previous_tokens / 1_000_000 * cost_per_1m_tokens
-    monthly_growth = safe_divide(current_spend - previous_spend, previous_spend) * 100
-    forecast_next_month = current_spend * (1 + max(min(monthly_growth, 35), -20) / 100)
+    monthly_growth = safe_divide(latest_spend - previous_spend, previous_spend) * 100
+    forecast_growth = clamp(monthly_growth, -20, 35)
+    forecast_next_month = latest_spend * (1 + forecast_growth / 100)
 
-    first_story_points = sum(row["story_points"] for row in month_rows(months[0] if months else None))
-    current_story_points = sum(row["story_points"] for row in current_rows)
-    productivity_gain = safe_divide(current_story_points - first_story_points, first_story_points) * 100
+    first_story_points = sum(row["story_points"] for row in first_rows)
+    latest_story_points = sum(row["story_points"] for row in latest_rows)
+    productivity_gain = safe_divide(
+        latest_story_points - first_story_points,
+        first_story_points,
+    ) * 100
 
-    first_bugs = sum(row["bugs_closed"] for row in month_rows(months[0] if months else None))
-    current_bugs = sum(row["bugs_closed"] for row in current_rows)
-    bugs_reduction = safe_divide(first_bugs - current_bugs, first_bugs) * 100
+    first_bugs = sum(row["bugs_closed"] for row in first_rows)
+    latest_bugs = sum(row["bugs_closed"] for row in latest_rows)
+    bugs_reduction = safe_divide(first_bugs - latest_bugs, first_bugs) * 100
 
     if monthly_budget is None:
-        monthly_budget = current_spend / 0.817 if current_spend else 0.0
-    budget_usage = safe_divide(current_spend, monthly_budget) * 100
+        monthly_budget = latest_spend / 0.817 if latest_spend else 0.0
+    budget_usage = safe_divide(latest_spend, monthly_budget) * 100
 
     categories = Counter(item["category"] for item in employee_metrics)
-    main_recommendation = fallback_main_recommendation(categories)
 
     return {
-        "monthly_ai_spend_total": round_metric(current_spend, 2),
+        "monthly_ai_spend_total": round_metric(latest_spend, 2),
         "forecast_next_month_ai_spend": round_metric(forecast_next_month, 2),
         "monthly_ai_spend_growth_percent": round_metric(monthly_growth, 1),
         "budget_usage_percent": round_metric(budget_usage, 1),
         "productivity_gain_percent": round_metric(productivity_gain, 1),
         "bugs_reduction_percent": round_metric(bugs_reduction, 1),
         "currency": currency,
-        "main_recommendation": main_recommendation,
+        "main_recommendation": fallback_main_recommendation(categories),
     }
 
 
-def fallback_main_recommendation(categories: Counter[str]) -> str:
-    waste_count = categories.get("high_token_low_story_points", 0) + categories.get(
-        "high_token_efficiency_risk", 0
-    )
-    benchmark_count = categories.get("moderate_tokens_high_productivity", 0) + categories.get(
-        "low_tokens_high_productivity", 0
-    )
-    if waste_count and benchmark_count:
-        return "Retrain high-token low-output users and replicate workflows from high-productivity efficient users."
-    if waste_count:
-        return "Focus the next cycle on reducing tokens per story point for high-consumption outliers."
-    if benchmark_count:
-        return "Scale the workflows of efficient high-productivity users before increasing token budgets."
-    return "Keep monitoring tokens per story point and review outliers monthly."
-
-
-def maybe_apply_openai_recommendations(
-    viewmodel: dict[str, Any],
-    employee_metrics: list[dict[str, Any]],
-) -> str:
+def maybe_apply_openai_recommendations(viewmodel: dict[str, Any]) -> str:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
-        return "fallback"
+        return "skipped"
 
     model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
-    context = {
-        "executive_summary": viewmodel["executive_summary"],
-        "employees": [
-            {
-                "name": item["name"],
-                "category": item["category"],
-                "tokens_used": item["tokens_used"],
-                "story_points": item["story_points"],
-                "story_points_per_token": item["story_points_per_token"],
-                "story_points_per_1m_tokens": round_metric(item["story_points_per_token"] * 1_000_000, 2),
-                "tokens_per_story_point": item["tokens_per_story_point"],
-                "outlier_reason": item["outlier_reason"],
-                "action_type": item["action_type"],
-            }
-            for item in employee_metrics
-        ],
-    }
     prompt = {
-        "task": (
-            "Generate concise action recommendations for a dashboard that detects AI token usage outliers. "
-            "Use only the metrics provided. Do not invent new numbers."
-        ),
+        "task": "Write concise manager recommendations for an AI token value dashboard.",
+        "rules": [
+            "Use only the provided JSON.",
+            "Do not add, remove, rename, or compute fields.",
+            "Return only main_recommendation and employee recommendations by name.",
+            "Focus on productivity measured as story points per million tokens.",
+        ],
         "required_json_shape": {
             "main_recommendation": "string",
             "employee_recommendations": [
-                {
-                    "name": "string",
-                    "recommendation": "one concise sentence",
-                }
+                {"name": "string", "recommendation": "one concise sentence"}
             ],
         },
-        "rules": [
-            "For high_token_low_story_points, recommend retraining or workflow review.",
-            "For moderate_tokens_high_productivity or low_tokens_high_productivity, recommend sharing the user's AI workflow with peers.",
-            "For normal users, recommend monitoring unless a metric is clearly unusual.",
-            "Keep recommendations concrete and manager-friendly.",
-        ],
-        "context": context,
+        "viewmodel": viewmodel,
     }
     payload = {
         "model": model,
@@ -456,7 +365,7 @@ def maybe_apply_openai_recommendations(
         "messages": [
             {
                 "role": "system",
-                "content": "You produce valid JSON only for an AI token efficiency dashboard.",
+                "content": "You produce valid JSON only for a fintech AI spending dashboard.",
             },
             {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
         ],
@@ -470,6 +379,7 @@ def maybe_apply_openai_recommendations(
         },
         method="POST",
     )
+
     try:
         with urllib.request.urlopen(request, timeout=45) as response:
             response_payload = json.loads(response.read().decode("utf-8"))
@@ -478,8 +388,9 @@ def maybe_apply_openai_recommendations(
     except (KeyError, json.JSONDecodeError, urllib.error.URLError, TimeoutError):
         return "fallback"
 
-    if isinstance(recommendations.get("main_recommendation"), str):
-        viewmodel["executive_summary"]["main_recommendation"] = recommendations["main_recommendation"]
+    main_recommendation = recommendations.get("main_recommendation")
+    if isinstance(main_recommendation, str) and main_recommendation.strip():
+        viewmodel["executive_summary"]["main_recommendation"] = main_recommendation.strip()
 
     recommendation_by_name = {
         item.get("name"): item.get("recommendation")
@@ -493,10 +404,13 @@ def maybe_apply_openai_recommendations(
     return "openai"
 
 
-def build_viewmodel(rows: list[dict[str, Any]], cost_per_1m_tokens: float, currency: str) -> dict[str, Any]:
-    normalized_rows = [normalized_row(row, cost_per_1m_tokens) for row in rows]
-    employees = classify_employees(aggregate_employees(normalized_rows, cost_per_1m_tokens))
-    employee_metrics = format_employee_metrics(employees)
+def build_viewmodel(
+    rows: list[dict[str, Any]],
+    cost_per_1m_tokens: float,
+    currency: str,
+) -> tuple[dict[str, Any], str]:
+    normalized_rows = [normalized_row(row) for row in rows]
+    employee_metrics = build_employee_metrics(normalized_rows)
     monthly_budget = safe_float(os.environ.get("AI_MONTHLY_BUDGET"), default=0.0) or None
 
     viewmodel = {
@@ -510,14 +424,12 @@ def build_viewmodel(rows: list[dict[str, Any]], cost_per_1m_tokens: float, curre
         "monthly_metrics": build_monthly_metrics(normalized_rows),
         "employee_metrics": employee_metrics,
     }
-    recommendation_source = maybe_apply_openai_recommendations(viewmodel, employee_metrics)
-    viewmodel["recommendation_source"] = recommendation_source
-    viewmodel["generated_at"] = datetime.now(timezone.utc).isoformat()
-    return viewmodel
+    recommendation_source = maybe_apply_openai_recommendations(viewmodel)
+    return viewmodel, recommendation_source
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Build VIEWMODEL-style token outlier dashboard data.")
+    parser = argparse.ArgumentParser(description="Build VIEWMODEL-style token value dashboard data.")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT, help="Input employee metrics JSONL.")
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Output JSON path.")
     parser.add_argument("--env-file", type=Path, default=DEFAULT_ENV_FILE, help="Local env file with API keys.")
@@ -527,18 +439,22 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> int:
     args = build_parser().parse_args()
     load_env_file(args.env_file)
-    cost_per_1m_tokens = safe_float(os.environ.get("AI_COST_PER_1M_TOKENS_EUR"), default=8.0)
-    currency = os.environ.get("AI_COST_CURRENCY", "EUR")
+
+    cost_per_1m_tokens = safe_float(
+        os.environ.get("AI_COST_PER_1M_TOKENS_USD"),
+        default=safe_float(os.environ.get("AI_COST_PER_1M_TOKENS_EUR"), default=8.0),
+    )
+    currency = os.environ.get("AI_COST_CURRENCY", "USD")
 
     rows = read_jsonl(args.input)
-    viewmodel = build_viewmodel(rows, cost_per_1m_tokens, currency)
+    viewmodel, recommendation_source = build_viewmodel(rows, cost_per_1m_tokens, currency)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(viewmodel, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    outliers = Counter(item["category"] for item in viewmodel["employee_metrics"])
+    categories = Counter(item["category"] for item in viewmodel["employee_metrics"])
     print(f"Wrote {args.output} from {len(rows)} JSONL records")
-    print(f"Recommendation source: {viewmodel['recommendation_source']}")
-    print(f"Categories: {dict(sorted(outliers.items()))}")
+    print(f"Recommendations: {recommendation_source}")
+    print(f"Categories: {dict(sorted(categories.items()))}")
     return 0
 
 

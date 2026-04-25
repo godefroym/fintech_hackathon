@@ -34,37 +34,13 @@ python3 api/value_dashboard.py \
 Le fichier généré contient :
 
 - `executive_summary` : résumé financier et recommandation globale
-- `monthly_metrics` : une liste de mois, avec les métriques de chaque employé
-- `employee_metrics` : métriques agrégées par employé, catégorie d'outlier et recommandation
+- `monthly_metrics` : une liste de mois, avec `name`, `tokens_used`, `story_points`, `productivity`
+- `employee_metrics` : snapshot par employé avec `name`, `category`, `roi_score`, `tokens_used`, `recommendation`, `productivity`
 
-La métrique centrale brute est `story_points_per_token` :
-
-```text
-story_points / token_usage
-```
-
-Pour l'affichage, on expose aussi `story_points_per_1k_tokens`, plus lisible :
+Le schéma respecte le `VIEWMODEL.json` fourni. Le seul champ ajouté est `productivity` :
 
 ```text
-story_points / token_usage * 1000
-```
-
-On expose aussi l'inverse :
-
-```text
-tokens_per_story_point = token_usage / story_points
-```
-
-Les métriques mensuelles exposent aussi :
-
-- `lines_of_code`
-- `tickets_closed`
-- `avg_days_per_story_point`
-
-`avg_days_per_story_point` est calculé comme :
-
-```text
-sum(avg_ticket_completion_days * tickets_closed) / story_points
+story_points / tokens_used * 1_000_000
 ```
 
 Le but est de distinguer :

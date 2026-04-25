@@ -6,8 +6,8 @@
     "budget_usage_percent": 81.7,
     "productivity_gain_percent": 17.5,
     "bugs_reduction_percent": -59.6,
-    "currency": "EUR",
-    "main_recommendation": "Retrain high-token low-output users and replicate workflows from high-productivity efficient users."
+    "currency": "USD",
+    "main_recommendation": "Retrain high-token low-productivity users and replicate the workflows of top story-points-per-million-token performers."
   },
   "monthly_metrics": [
     {
@@ -17,441 +17,241 @@
           "name": "Adrien Ivanova",
           "tokens_used": 479177254,
           "story_points": 46,
-          "tickets_closed": 9,
-          "lines_of_code": 7929,
-          "avg_days_per_story_point": 0.501,
-          "story_points_per_token": 9.5998e-08,
-          "story_points_per_1m_tokens": 0.1,
-          "tokens_per_story_point": 10416896.8
+          "productivity": 0.1
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 443052294,
           "story_points": 107,
-          "tickets_closed": 20,
-          "lines_of_code": 13006,
-          "avg_days_per_story_point": 0.327,
-          "story_points_per_token": 2.41506e-07,
-          "story_points_per_1m_tokens": 0.24,
-          "tokens_per_story_point": 4140675.6
+          "productivity": 0.24
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 235331263,
           "story_points": 76,
-          "tickets_closed": 14,
-          "lines_of_code": 11023,
-          "avg_days_per_story_point": 0.407,
-          "story_points_per_token": 3.22949e-07,
-          "story_points_per_1m_tokens": 0.32,
-          "tokens_per_story_point": 3096464
+          "productivity": 0.32
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 19408963,
           "story_points": 74,
-          "tickets_closed": 10,
-          "lines_of_code": 7262,
-          "avg_days_per_story_point": 0.257,
-          "story_points_per_token": 3.812671e-06,
-          "story_points_per_1m_tokens": 3.81,
-          "tokens_per_story_point": 262283.3
+          "productivity": 3.81
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 33253694,
           "story_points": 21,
-          "tickets_closed": 4,
-          "lines_of_code": 4349,
-          "avg_days_per_story_point": 0.381,
-          "story_points_per_token": 6.31509e-07,
-          "story_points_per_1m_tokens": 0.63,
-          "tokens_per_story_point": 1583509.2
+          "productivity": 0.63
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 662490438,
           "story_points": 20,
-          "tickets_closed": 5,
-          "lines_of_code": 3543,
-          "avg_days_per_story_point": 0.65,
-          "story_points_per_token": 3.0189e-08,
-          "story_points_per_1m_tokens": 0.03,
-          "tokens_per_story_point": 33124521.9
+          "productivity": 0.03
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 26590057,
           "story_points": 42,
-          "tickets_closed": 9,
-          "lines_of_code": 5919,
-          "avg_days_per_story_point": 0.523,
-          "story_points_per_token": 1.579538e-06,
-          "story_points_per_1m_tokens": 1.58,
-          "tokens_per_story_point": 633096.6
+          "productivity": 1.58
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 219350965,
           "story_points": 44,
-          "tickets_closed": 9,
-          "lines_of_code": 7318,
-          "avg_days_per_story_point": 0.342,
-          "story_points_per_token": 2.00592e-07,
-          "story_points_per_1m_tokens": 0.2,
-          "tokens_per_story_point": 4985249.2
+          "productivity": 0.2
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 189015842,
           "story_points": 54,
-          "tickets_closed": 15,
-          "lines_of_code": 12443,
-          "avg_days_per_story_point": 0.519,
-          "story_points_per_token": 2.8569e-07,
-          "story_points_per_1m_tokens": 0.29,
-          "tokens_per_story_point": 3500293.4
+          "productivity": 0.29
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 81865168,
           "story_points": 69,
-          "tickets_closed": 15,
-          "lines_of_code": 11030,
-          "avg_days_per_story_point": 0.522,
-          "story_points_per_token": 8.42849e-07,
-          "story_points_per_1m_tokens": 0.84,
-          "tokens_per_story_point": 1186451.7
+          "productivity": 0.84
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 141869314,
           "story_points": 40,
-          "tickets_closed": 9,
-          "lines_of_code": 8910,
-          "avg_days_per_story_point": 0.524,
-          "story_points_per_token": 2.8195e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3546732.9
+          "productivity": 0.28
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 120887003,
           "story_points": 13,
-          "tickets_closed": 6,
-          "lines_of_code": 5351,
-          "avg_days_per_story_point": 1.537,
-          "story_points_per_token": 1.07538e-07,
-          "story_points_per_1m_tokens": 0.11,
-          "tokens_per_story_point": 9299000.2
+          "productivity": 0.11
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 168877834,
           "story_points": 47,
-          "tickets_closed": 6,
-          "lines_of_code": 3947,
-          "avg_days_per_story_point": 0.361,
-          "story_points_per_token": 2.78308e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3593145.4
+          "productivity": 0.28
         },
         {
           "name": "Ines Camus",
           "tokens_used": 172011756,
           "story_points": 59,
-          "tickets_closed": 12,
-          "lines_of_code": 7850,
-          "avg_days_per_story_point": 0.492,
-          "story_points_per_token": 3.43e-07,
-          "story_points_per_1m_tokens": 0.34,
-          "tokens_per_story_point": 2915453.5
+          "productivity": 0.34
         },
         {
           "name": "Jade Faure",
           "tokens_used": 118783637,
           "story_points": 36,
-          "tickets_closed": 6,
-          "lines_of_code": 11154,
-          "avg_days_per_story_point": 0.305,
-          "story_points_per_token": 3.03072e-07,
-          "story_points_per_1m_tokens": 0.3,
-          "tokens_per_story_point": 3299545.5
+          "productivity": 0.3
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3070806,
           "story_points": 23,
-          "tickets_closed": 4,
-          "lines_of_code": 5779,
-          "avg_days_per_story_point": 0.652,
-          "story_points_per_token": 7.48989e-06,
-          "story_points_per_1m_tokens": 7.49,
-          "tokens_per_story_point": 133513.3
+          "productivity": 7.49
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 206910469,
           "story_points": 31,
-          "tickets_closed": 4,
-          "lines_of_code": 5148,
-          "avg_days_per_story_point": 0.323,
-          "story_points_per_token": 1.49823e-07,
-          "story_points_per_1m_tokens": 0.15,
-          "tokens_per_story_point": 6674531.3
+          "productivity": 0.15
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 246070302,
           "story_points": 70,
-          "tickets_closed": 15,
-          "lines_of_code": 11083,
-          "avg_days_per_story_point": 0.444,
-          "story_points_per_token": 2.84472e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3515290
+          "productivity": 0.28
         },
         {
           "name": "Leila Park",
           "tokens_used": 25121551,
           "story_points": 90,
-          "tickets_closed": 19,
-          "lines_of_code": 10917,
-          "avg_days_per_story_point": 0.31,
-          "story_points_per_token": 3.582581e-06,
-          "story_points_per_1m_tokens": 3.58,
-          "tokens_per_story_point": 279128.3
+          "productivity": 3.58
         },
         {
           "name": "Lena Chen",
           "tokens_used": 566466338,
           "story_points": 27,
-          "tickets_closed": 7,
-          "lines_of_code": 6193,
-          "avg_days_per_story_point": 0.778,
-          "story_points_per_token": 4.7664e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 20980234.7
+          "productivity": 0.05
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 122000310,
           "story_points": 34,
-          "tickets_closed": 9,
-          "lines_of_code": 7199,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 2.78688e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3588244.4
+          "productivity": 0.28
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 48629199,
           "story_points": 39,
-          "tickets_closed": 8,
-          "lines_of_code": 6751,
-          "avg_days_per_story_point": 0.615,
-          "story_points_per_token": 8.01987e-07,
-          "story_points_per_1m_tokens": 0.8,
-          "tokens_per_story_point": 1246902.5
+          "productivity": 0.8
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 21530587,
           "story_points": 62,
-          "tickets_closed": 12,
-          "lines_of_code": 13943,
-          "avg_days_per_story_point": 0.323,
-          "story_points_per_token": 2.879624e-06,
-          "story_points_per_1m_tokens": 2.88,
-          "tokens_per_story_point": 347267.5
+          "productivity": 2.88
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 12064662,
           "story_points": 45,
-          "tickets_closed": 8,
-          "lines_of_code": 6379,
-          "avg_days_per_story_point": 0.423,
-          "story_points_per_token": 3.729901e-06,
-          "story_points_per_1m_tokens": 3.73,
-          "tokens_per_story_point": 268103.6
+          "productivity": 3.73
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 22580398,
           "story_points": 59,
-          "tickets_closed": 11,
-          "lines_of_code": 5649,
-          "avg_days_per_story_point": 0.492,
-          "story_points_per_token": 2.612886e-06,
-          "story_points_per_1m_tokens": 2.61,
-          "tokens_per_story_point": 382718.6
+          "productivity": 2.61
         },
         {
           "name": "Nina Traore",
           "tokens_used": 144305747,
           "story_points": 22,
-          "tickets_closed": 4,
-          "lines_of_code": 3509,
-          "avg_days_per_story_point": 0.727,
-          "story_points_per_token": 1.52454e-07,
-          "story_points_per_1m_tokens": 0.15,
-          "tokens_per_story_point": 6559352.1
+          "productivity": 0.15
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 448035671,
           "story_points": 26,
-          "tickets_closed": 5,
-          "lines_of_code": 4670,
-          "avg_days_per_story_point": 0.654,
-          "story_points_per_token": 5.8031e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 17232141.2
+          "productivity": 0.06
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 404320214,
           "story_points": 34,
-          "tickets_closed": 7,
-          "lines_of_code": 7028,
-          "avg_days_per_story_point": 0.589,
-          "story_points_per_token": 8.4092e-08,
-          "story_points_per_1m_tokens": 0.08,
-          "tokens_per_story_point": 11891771
+          "productivity": 0.08
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 92692543,
           "story_points": 44,
-          "tickets_closed": 11,
-          "lines_of_code": 8570,
-          "avg_days_per_story_point": 0.568,
-          "story_points_per_token": 4.74688e-07,
-          "story_points_per_1m_tokens": 0.47,
-          "tokens_per_story_point": 2106648.7
+          "productivity": 0.47
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 120038144,
           "story_points": 50,
-          "tickets_closed": 9,
-          "lines_of_code": 15426,
-          "avg_days_per_story_point": 0.239,
-          "story_points_per_token": 4.16534e-07,
-          "story_points_per_1m_tokens": 0.42,
-          "tokens_per_story_point": 2400762.9
+          "productivity": 0.42
         },
         {
           "name": "Romain Roux",
           "tokens_used": 122076918,
           "story_points": 54,
-          "tickets_closed": 12,
-          "lines_of_code": 8415,
-          "avg_days_per_story_point": 0.296,
-          "story_points_per_token": 4.42344e-07,
-          "story_points_per_1m_tokens": 0.44,
-          "tokens_per_story_point": 2260683.7
+          "productivity": 0.44
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 217581291,
           "story_points": 14,
-          "tickets_closed": 3,
-          "lines_of_code": 2792,
-          "avg_days_per_story_point": 0.429,
-          "story_points_per_token": 6.4344e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 15541520.8
+          "productivity": 0.06
         },
         {
           "name": "Simon Martin",
           "tokens_used": 69892889,
           "story_points": 58,
-          "tickets_closed": 9,
-          "lines_of_code": 8345,
-          "avg_days_per_story_point": 0.293,
-          "story_points_per_token": 8.29841e-07,
-          "story_points_per_1m_tokens": 0.83,
-          "tokens_per_story_point": 1205049.8
+          "productivity": 0.83
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 269778902,
           "story_points": 65,
-          "tickets_closed": 15,
-          "lines_of_code": 8912,
-          "avg_days_per_story_point": 0.554,
-          "story_points_per_token": 2.40938e-07,
-          "story_points_per_1m_tokens": 0.24,
-          "tokens_per_story_point": 4150444.6
+          "productivity": 0.24
         },
         {
           "name": "Theo Girard",
           "tokens_used": 104816617,
           "story_points": 23,
-          "tickets_closed": 4,
-          "lines_of_code": 2762,
-          "avg_days_per_story_point": 0.348,
-          "story_points_per_token": 2.19431e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4557244.2
+          "productivity": 0.22
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 101202981,
           "story_points": 58,
-          "tickets_closed": 8,
-          "lines_of_code": 8214,
-          "avg_days_per_story_point": 0.241,
-          "story_points_per_token": 5.73106e-07,
-          "story_points_per_1m_tokens": 0.57,
-          "tokens_per_story_point": 1744879
+          "productivity": 0.57
         },
         {
           "name": "Victor Durand",
           "tokens_used": 26047984,
           "story_points": 3,
-          "tickets_closed": 2,
-          "lines_of_code": 5636,
-          "avg_days_per_story_point": 1,
-          "story_points_per_token": 1.15172e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8682661.3
+          "productivity": 0.12
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 25271405,
           "story_points": 2,
-          "tickets_closed": 1,
-          "lines_of_code": 3093,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 7.9141e-08,
-          "story_points_per_1m_tokens": 0.08,
-          "tokens_per_story_point": 12635702.5
+          "productivity": 0.08
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 361717291,
           "story_points": 33,
-          "tickets_closed": 7,
-          "lines_of_code": 6124,
-          "avg_days_per_story_point": 0.424,
-          "story_points_per_token": 9.1231e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 10961130
+          "productivity": 0.09
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 6264149,
           "story_points": 3,
-          "tickets_closed": 2,
-          "lines_of_code": 3285,
-          "avg_days_per_story_point": 2.667,
-          "story_points_per_token": 4.78916e-07,
-          "story_points_per_1m_tokens": 0.48,
-          "tokens_per_story_point": 2088049.7
+          "productivity": 0.48
         }
       ]
     },
@@ -462,430 +262,235 @@
           "name": "Adrien Ivanova",
           "tokens_used": 512246613,
           "story_points": 29,
-          "tickets_closed": 10,
-          "lines_of_code": 12100,
-          "avg_days_per_story_point": 0.931,
-          "story_points_per_token": 5.6613e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 17663676.3
+          "productivity": 0.06
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 487267947,
           "story_points": 92,
-          "tickets_closed": 16,
-          "lines_of_code": 13995,
-          "avg_days_per_story_point": 0.381,
-          "story_points_per_token": 1.88808e-07,
-          "story_points_per_1m_tokens": 0.19,
-          "tokens_per_story_point": 5296390.7
+          "productivity": 0.19
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 206631777,
           "story_points": 37,
-          "tickets_closed": 8,
-          "lines_of_code": 6861,
-          "avg_days_per_story_point": 0.324,
-          "story_points_per_token": 1.79062e-07,
-          "story_points_per_1m_tokens": 0.18,
-          "tokens_per_story_point": 5584642.6
+          "productivity": 0.18
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 23897744,
           "story_points": 129,
-          "tickets_closed": 18,
-          "lines_of_code": 8305,
-          "avg_days_per_story_point": 0.279,
-          "story_points_per_token": 5.397999e-06,
-          "story_points_per_1m_tokens": 5.4,
-          "tokens_per_story_point": 185253.8
+          "productivity": 5.4
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 47360160,
           "story_points": 18,
-          "tickets_closed": 5,
-          "lines_of_code": 4382,
-          "avg_days_per_story_point": 0.667,
-          "story_points_per_token": 3.80066e-07,
-          "story_points_per_1m_tokens": 0.38,
-          "tokens_per_story_point": 2631120
+          "productivity": 0.38
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 571511047,
           "story_points": 19,
-          "tickets_closed": 6,
-          "lines_of_code": 3129,
-          "avg_days_per_story_point": 0.789,
-          "story_points_per_token": 3.3245e-08,
-          "story_points_per_1m_tokens": 0.03,
-          "tokens_per_story_point": 30079528.8
+          "productivity": 0.03
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 42618095,
           "story_points": 44,
-          "tickets_closed": 9,
-          "lines_of_code": 6765,
-          "avg_days_per_story_point": 0.499,
-          "story_points_per_token": 1.032425e-06,
-          "story_points_per_1m_tokens": 1.03,
-          "tokens_per_story_point": 968593.1
+          "productivity": 1.03
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 237291932,
           "story_points": 89,
-          "tickets_closed": 15,
-          "lines_of_code": 10107,
-          "avg_days_per_story_point": 0.46,
-          "story_points_per_token": 3.75065e-07,
-          "story_points_per_1m_tokens": 0.38,
-          "tokens_per_story_point": 2666201.5
+          "productivity": 0.38
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 205941592,
           "story_points": 49,
-          "tickets_closed": 13,
-          "lines_of_code": 10687,
-          "avg_days_per_story_point": 0.448,
-          "story_points_per_token": 2.37932e-07,
-          "story_points_per_1m_tokens": 0.24,
-          "tokens_per_story_point": 4202889.6
+          "productivity": 0.24
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 113898525,
           "story_points": 110,
-          "tickets_closed": 19,
-          "lines_of_code": 12672,
-          "avg_days_per_story_point": 0.364,
-          "story_points_per_token": 9.65772e-07,
-          "story_points_per_1m_tokens": 0.97,
-          "tokens_per_story_point": 1035441.1
+          "productivity": 0.97
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 269142488,
           "story_points": 59,
-          "tickets_closed": 9,
-          "lines_of_code": 7662,
-          "avg_days_per_story_point": 0.238,
-          "story_points_per_token": 2.19215e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4561737.1
+          "productivity": 0.22
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 117100612,
           "story_points": 24,
-          "tickets_closed": 6,
-          "lines_of_code": 6319,
-          "avg_days_per_story_point": 0.875,
-          "story_points_per_token": 2.04952e-07,
-          "story_points_per_1m_tokens": 0.2,
-          "tokens_per_story_point": 4879192.2
+          "productivity": 0.2
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 221827119,
           "story_points": 8,
-          "tickets_closed": 1,
-          "lines_of_code": 3136,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 3.6064e-08,
-          "story_points_per_1m_tokens": 0.04,
-          "tokens_per_story_point": 27728389.9
+          "productivity": 0.04
         },
         {
           "name": "Ines Camus",
           "tokens_used": 192193747,
           "story_points": 57,
-          "tickets_closed": 12,
-          "lines_of_code": 8550,
-          "avg_days_per_story_point": 0.474,
-          "story_points_per_token": 2.96576e-07,
-          "story_points_per_1m_tokens": 0.3,
-          "tokens_per_story_point": 3371820.1
+          "productivity": 0.3
         },
         {
           "name": "Jade Faure",
           "tokens_used": 132283598,
           "story_points": 49,
-          "tickets_closed": 13,
-          "lines_of_code": 6659,
-          "avg_days_per_story_point": 0.57,
-          "story_points_per_token": 3.70416e-07,
-          "story_points_per_1m_tokens": 0.37,
-          "tokens_per_story_point": 2699665.3
+          "productivity": 0.37
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3981081,
           "story_points": 31,
-          "tickets_closed": 7,
-          "lines_of_code": 4882,
-          "avg_days_per_story_point": 0.743,
-          "story_points_per_token": 7.78683e-06,
-          "story_points_per_1m_tokens": 7.79,
-          "tokens_per_story_point": 128422
+          "productivity": 7.79
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 205491694,
           "story_points": 18,
-          "tickets_closed": 4,
-          "lines_of_code": 5321,
-          "avg_days_per_story_point": 0.222,
-          "story_points_per_token": 8.7595e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 11416205.2
+          "productivity": 0.09
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 300984527,
           "story_points": 85,
-          "tickets_closed": 17,
-          "lines_of_code": 14038,
-          "avg_days_per_story_point": 0.33,
-          "story_points_per_token": 2.82407e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3540994.4
+          "productivity": 0.28
         },
         {
           "name": "Leila Park",
           "tokens_used": 24888328,
           "story_points": 89,
-          "tickets_closed": 17,
-          "lines_of_code": 13006,
-          "avg_days_per_story_point": 0.336,
-          "story_points_per_token": 3.575973e-06,
-          "story_points_per_1m_tokens": 3.58,
-          "tokens_per_story_point": 279644.1
+          "productivity": 3.58
         },
         {
           "name": "Lena Chen",
           "tokens_used": 652724963,
           "story_points": 29,
-          "tickets_closed": 8,
-          "lines_of_code": 6957,
-          "avg_days_per_story_point": 0.828,
-          "story_points_per_token": 4.4429e-08,
-          "story_points_per_1m_tokens": 0.04,
-          "tokens_per_story_point": 22507757.3
+          "productivity": 0.04
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 116673208,
           "story_points": 47,
-          "tickets_closed": 7,
-          "lines_of_code": 6776,
-          "avg_days_per_story_point": 0.319,
-          "story_points_per_token": 4.02835e-07,
-          "story_points_per_1m_tokens": 0.4,
-          "tokens_per_story_point": 2482408.7
+          "productivity": 0.4
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 67612048,
           "story_points": 15,
-          "tickets_closed": 4,
-          "lines_of_code": 5989,
-          "avg_days_per_story_point": 0.467,
-          "story_points_per_token": 2.21854e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4507469.9
+          "productivity": 0.22
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 20918973,
           "story_points": 50,
-          "tickets_closed": 15,
-          "lines_of_code": 14466,
-          "avg_days_per_story_point": 0.561,
-          "story_points_per_token": 2.390175e-06,
-          "story_points_per_1m_tokens": 2.39,
-          "tokens_per_story_point": 418379.5
+          "productivity": 2.39
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 13828686,
           "story_points": 38,
-          "tickets_closed": 10,
-          "lines_of_code": 6861,
-          "avg_days_per_story_point": 0.605,
-          "story_points_per_token": 2.747911e-06,
-          "story_points_per_1m_tokens": 2.75,
-          "tokens_per_story_point": 363912.8
+          "productivity": 2.75
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 27951299,
           "story_points": 29,
-          "tickets_closed": 4,
-          "lines_of_code": 5271,
-          "avg_days_per_story_point": 0.241,
-          "story_points_per_token": 1.037519e-06,
-          "story_points_per_1m_tokens": 1.04,
-          "tokens_per_story_point": 963837.9
+          "productivity": 1.04
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 484983079,
           "story_points": 35,
-          "tickets_closed": 5,
-          "lines_of_code": 3539,
-          "avg_days_per_story_point": 0.314,
-          "story_points_per_token": 7.2167e-08,
-          "story_points_per_1m_tokens": 0.07,
-          "tokens_per_story_point": 13856659.4
+          "productivity": 0.07
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 409261598,
           "story_points": 79,
-          "tickets_closed": 13,
-          "lines_of_code": 9610,
-          "avg_days_per_story_point": 0.392,
-          "story_points_per_token": 1.93031e-07,
-          "story_points_per_1m_tokens": 0.19,
-          "tokens_per_story_point": 5180526.6
+          "productivity": 0.19
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 90974451,
           "story_points": 52,
-          "tickets_closed": 11,
-          "lines_of_code": 8243,
-          "avg_days_per_story_point": 0.404,
-          "story_points_per_token": 5.71589e-07,
-          "story_points_per_1m_tokens": 0.57,
-          "tokens_per_story_point": 1749508.7
+          "productivity": 0.57
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 178857125,
           "story_points": 65,
-          "tickets_closed": 18,
-          "lines_of_code": 10559,
-          "avg_days_per_story_point": 0.415,
-          "story_points_per_token": 3.63419e-07,
-          "story_points_per_1m_tokens": 0.36,
-          "tokens_per_story_point": 2751648.1
+          "productivity": 0.36
         },
         {
           "name": "Romain Roux",
           "tokens_used": 113113611,
           "story_points": 114,
-          "tickets_closed": 19,
-          "lines_of_code": 8365,
-          "avg_days_per_story_point": 0.298,
-          "story_points_per_token": 1.007836e-06,
-          "story_points_per_1m_tokens": 1.01,
-          "tokens_per_story_point": 992224.7
+          "productivity": 1.01
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 292377984,
           "story_points": 22,
-          "tickets_closed": 3,
-          "lines_of_code": 3490,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 7.5245e-08,
-          "story_points_per_1m_tokens": 0.08,
-          "tokens_per_story_point": 13289908.4
+          "productivity": 0.08
         },
         {
           "name": "Simon Martin",
           "tokens_used": 66857434,
           "story_points": 93,
-          "tickets_closed": 13,
-          "lines_of_code": 7925,
-          "avg_days_per_story_point": 0.355,
-          "story_points_per_token": 1.39102e-06,
-          "story_points_per_1m_tokens": 1.39,
-          "tokens_per_story_point": 718897.1
+          "productivity": 1.39
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 372494932,
           "story_points": 94,
-          "tickets_closed": 14,
-          "lines_of_code": 9418,
-          "avg_days_per_story_point": 0.393,
-          "story_points_per_token": 2.52352e-07,
-          "story_points_per_1m_tokens": 0.25,
-          "tokens_per_story_point": 3962712
+          "productivity": 0.25
         },
         {
           "name": "Theo Girard",
           "tokens_used": 88524309,
           "story_points": 39,
-          "tickets_closed": 8,
-          "lines_of_code": 3747,
-          "avg_days_per_story_point": 0.64,
-          "story_points_per_token": 4.40557e-07,
-          "story_points_per_1m_tokens": 0.44,
-          "tokens_per_story_point": 2269854.1
+          "productivity": 0.44
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 107678017,
           "story_points": 20,
-          "tickets_closed": 5,
-          "lines_of_code": 8604,
-          "avg_days_per_story_point": 0.6,
-          "story_points_per_token": 1.85739e-07,
-          "story_points_per_1m_tokens": 0.19,
-          "tokens_per_story_point": 5383900.8
+          "productivity": 0.19
         },
         {
           "name": "Victor Durand",
           "tokens_used": 25892084,
           "story_points": 21,
-          "tickets_closed": 8,
-          "lines_of_code": 8683,
-          "avg_days_per_story_point": 1.048,
-          "story_points_per_token": 8.11059e-07,
-          "story_points_per_1m_tokens": 0.81,
-          "tokens_per_story_point": 1232956.4
+          "productivity": 0.81
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 38749657,
           "story_points": 5,
-          "tickets_closed": 2,
-          "lines_of_code": 1819,
-          "avg_days_per_story_point": 1.2,
-          "story_points_per_token": 1.29033e-07,
-          "story_points_per_1m_tokens": 0.13,
-          "tokens_per_story_point": 7749931.4
+          "productivity": 0.13
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 386905905,
           "story_points": 68,
-          "tickets_closed": 10,
-          "lines_of_code": 6133,
-          "avg_days_per_story_point": 0.235,
-          "story_points_per_token": 1.75753e-07,
-          "story_points_per_1m_tokens": 0.18,
-          "tokens_per_story_point": 5689792.7
+          "productivity": 0.18
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 7673116,
           "story_points": 19,
-          "tickets_closed": 5,
-          "lines_of_code": 2957,
-          "avg_days_per_story_point": 0.632,
-          "story_points_per_token": 2.476178e-06,
-          "story_points_per_1m_tokens": 2.48,
-          "tokens_per_story_point": 403848.2
+          "productivity": 2.48
         }
       ]
     },
@@ -896,441 +501,241 @@
           "name": "Adrien Ivanova",
           "tokens_used": 379724737,
           "story_points": 47,
-          "tickets_closed": 10,
-          "lines_of_code": 10392,
-          "avg_days_per_story_point": 0.511,
-          "story_points_per_token": 1.23774e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8079249.7
+          "productivity": 0.12
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 693563849,
           "story_points": 67,
-          "tickets_closed": 15,
-          "lines_of_code": 10766,
-          "avg_days_per_story_point": 0.374,
-          "story_points_per_token": 9.6602e-08,
-          "story_points_per_1m_tokens": 0.1,
-          "tokens_per_story_point": 10351699.2
+          "productivity": 0.1
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 233128529,
           "story_points": 77,
-          "tickets_closed": 14,
-          "lines_of_code": 11500,
-          "avg_days_per_story_point": 0.273,
-          "story_points_per_token": 3.3029e-07,
-          "story_points_per_1m_tokens": 0.33,
-          "tokens_per_story_point": 3027643.2
+          "productivity": 0.33
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 24638534,
           "story_points": 36,
-          "tickets_closed": 7,
-          "lines_of_code": 8957,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 1.461126e-06,
-          "story_points_per_1m_tokens": 1.46,
-          "tokens_per_story_point": 684403.7
+          "productivity": 1.46
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 33181721,
           "story_points": 19,
-          "tickets_closed": 3,
-          "lines_of_code": 4880,
-          "avg_days_per_story_point": 0.579,
-          "story_points_per_token": 5.72604e-07,
-          "story_points_per_1m_tokens": 0.57,
-          "tokens_per_story_point": 1746406.4
+          "productivity": 0.57
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 781195988,
           "story_points": 20,
-          "tickets_closed": 5,
-          "lines_of_code": 4482,
-          "avg_days_per_story_point": 0.8,
-          "story_points_per_token": 2.5602e-08,
-          "story_points_per_1m_tokens": 0.03,
-          "tokens_per_story_point": 39059799.4
+          "productivity": 0.03
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 37443008,
           "story_points": 65,
-          "tickets_closed": 10,
-          "lines_of_code": 8419,
-          "avg_days_per_story_point": 0.385,
-          "story_points_per_token": 1.735972e-06,
-          "story_points_per_1m_tokens": 1.74,
-          "tokens_per_story_point": 576046.3
+          "productivity": 1.74
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 251228831,
           "story_points": 35,
-          "tickets_closed": 8,
-          "lines_of_code": 11267,
-          "avg_days_per_story_point": 0.686,
-          "story_points_per_token": 1.39315e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 7177966.6
+          "productivity": 0.14
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 226089213,
           "story_points": 80,
-          "tickets_closed": 11,
-          "lines_of_code": 10788,
-          "avg_days_per_story_point": 0.312,
-          "story_points_per_token": 3.53843e-07,
-          "story_points_per_1m_tokens": 0.35,
-          "tokens_per_story_point": 2826115.2
+          "productivity": 0.35
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 94388436,
           "story_points": 89,
-          "tickets_closed": 19,
-          "lines_of_code": 13847,
-          "avg_days_per_story_point": 0.416,
-          "story_points_per_token": 9.42912e-07,
-          "story_points_per_1m_tokens": 0.94,
-          "tokens_per_story_point": 1060544.2
+          "productivity": 0.94
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 254114456,
           "story_points": 35,
-          "tickets_closed": 8,
-          "lines_of_code": 7713,
-          "avg_days_per_story_point": 0.571,
-          "story_points_per_token": 1.37733e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 7260413
+          "productivity": 0.14
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 144095237,
           "story_points": 40,
-          "tickets_closed": 10,
-          "lines_of_code": 9977,
-          "avg_days_per_story_point": 0.575,
-          "story_points_per_token": 2.77594e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3602380.9
+          "productivity": 0.28
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 199772860,
           "story_points": 6,
-          "tickets_closed": 2,
-          "lines_of_code": 3450,
-          "avg_days_per_story_point": 1,
-          "story_points_per_token": 3.0034e-08,
-          "story_points_per_1m_tokens": 0.03,
-          "tokens_per_story_point": 33295476.7
+          "productivity": 0.03
         },
         {
           "name": "Ines Camus",
           "tokens_used": 198391575,
           "story_points": 49,
-          "tickets_closed": 14,
-          "lines_of_code": 10102,
-          "avg_days_per_story_point": 0.369,
-          "story_points_per_token": 2.46986e-07,
-          "story_points_per_1m_tokens": 0.25,
-          "tokens_per_story_point": 4048807.7
+          "productivity": 0.25
         },
         {
           "name": "Jade Faure",
           "tokens_used": 135384432,
           "story_points": 68,
-          "tickets_closed": 11,
-          "lines_of_code": 10329,
-          "avg_days_per_story_point": 0.427,
-          "story_points_per_token": 5.02273e-07,
-          "story_points_per_1m_tokens": 0.5,
-          "tokens_per_story_point": 1990947.5
+          "productivity": 0.5
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3338661,
           "story_points": 34,
-          "tickets_closed": 5,
-          "lines_of_code": 5567,
-          "avg_days_per_story_point": 0.441,
-          "story_points_per_token": 1.0183723e-05,
-          "story_points_per_1m_tokens": 10.18,
-          "tokens_per_story_point": 98195.9
+          "productivity": 10.18
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 223885577,
           "story_points": 30,
-          "tickets_closed": 7,
-          "lines_of_code": 5586,
-          "avg_days_per_story_point": 0.366,
-          "story_points_per_token": 1.33997e-07,
-          "story_points_per_1m_tokens": 0.13,
-          "tokens_per_story_point": 7462852.6
+          "productivity": 0.13
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 286585526,
           "story_points": 51,
-          "tickets_closed": 12,
-          "lines_of_code": 14923,
-          "avg_days_per_story_point": 0.334,
-          "story_points_per_token": 1.77957e-07,
-          "story_points_per_1m_tokens": 0.18,
-          "tokens_per_story_point": 5619324
+          "productivity": 0.18
         },
         {
           "name": "Leila Park",
           "tokens_used": 24196762,
           "story_points": 75,
-          "tickets_closed": 12,
-          "lines_of_code": 11213,
-          "avg_days_per_story_point": 0.253,
-          "story_points_per_token": 3.099588e-06,
-          "story_points_per_1m_tokens": 3.1,
-          "tokens_per_story_point": 322623.5
+          "productivity": 3.1
         },
         {
           "name": "Lena Chen",
           "tokens_used": 577320277,
           "story_points": 25,
-          "tickets_closed": 11,
-          "lines_of_code": 4829,
-          "avg_days_per_story_point": 1.32,
-          "story_points_per_token": 4.3304e-08,
-          "story_points_per_1m_tokens": 0.04,
-          "tokens_per_story_point": 23092811.1
+          "productivity": 0.04
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 137561703,
           "story_points": 39,
-          "tickets_closed": 8,
-          "lines_of_code": 6688,
-          "avg_days_per_story_point": 0.591,
-          "story_points_per_token": 2.83509e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3527223.2
+          "productivity": 0.28
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 61187622,
           "story_points": 32,
-          "tickets_closed": 7,
-          "lines_of_code": 6983,
-          "avg_days_per_story_point": 0.687,
-          "story_points_per_token": 5.22982e-07,
-          "story_points_per_1m_tokens": 0.52,
-          "tokens_per_story_point": 1912113.2
+          "productivity": 0.52
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 26621675,
           "story_points": 85,
-          "tickets_closed": 16,
-          "lines_of_code": 10439,
-          "avg_days_per_story_point": 0.305,
-          "story_points_per_token": 3.192887e-06,
-          "story_points_per_1m_tokens": 3.19,
-          "tokens_per_story_point": 313196.2
+          "productivity": 3.19
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 12677017,
           "story_points": 33,
-          "tickets_closed": 6,
-          "lines_of_code": 9682,
-          "avg_days_per_story_point": 0.455,
-          "story_points_per_token": 2.603136e-06,
-          "story_points_per_1m_tokens": 2.6,
-          "tokens_per_story_point": 384152
+          "productivity": 2.6
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 27687859,
           "story_points": 35,
-          "tickets_closed": 6,
-          "lines_of_code": 6096,
-          "avg_days_per_story_point": 0.343,
-          "story_points_per_token": 1.264092e-06,
-          "story_points_per_1m_tokens": 1.26,
-          "tokens_per_story_point": 791081.7
+          "productivity": 1.26
         },
         {
           "name": "Nina Traore",
           "tokens_used": 140881335,
           "story_points": 9,
-          "tickets_closed": 5,
-          "lines_of_code": 3536,
-          "avg_days_per_story_point": 1.556,
-          "story_points_per_token": 6.3884e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 15653481.7
+          "productivity": 0.06
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 623149176,
           "story_points": 12,
-          "tickets_closed": 4,
-          "lines_of_code": 3911,
-          "avg_days_per_story_point": 1.333,
-          "story_points_per_token": 1.9257e-08,
-          "story_points_per_1m_tokens": 0.02,
-          "tokens_per_story_point": 51929098
+          "productivity": 0.02
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 300984125,
           "story_points": 50,
-          "tickets_closed": 13,
-          "lines_of_code": 8341,
-          "avg_days_per_story_point": 0.64,
-          "story_points_per_token": 1.66122e-07,
-          "story_points_per_1m_tokens": 0.17,
-          "tokens_per_story_point": 6019682.5
+          "productivity": 0.17
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 114847352,
           "story_points": 29,
-          "tickets_closed": 7,
-          "lines_of_code": 6461,
-          "avg_days_per_story_point": 0.517,
-          "story_points_per_token": 2.52509e-07,
-          "story_points_per_1m_tokens": 0.25,
-          "tokens_per_story_point": 3960253.5
+          "productivity": 0.25
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 141828404,
           "story_points": 90,
-          "tickets_closed": 16,
-          "lines_of_code": 13679,
-          "avg_days_per_story_point": 0.366,
-          "story_points_per_token": 6.3457e-07,
-          "story_points_per_1m_tokens": 0.63,
-          "tokens_per_story_point": 1575871.2
+          "productivity": 0.63
         },
         {
           "name": "Romain Roux",
           "tokens_used": 136897573,
           "story_points": 68,
-          "tickets_closed": 13,
-          "lines_of_code": 9983,
-          "avg_days_per_story_point": 0.294,
-          "story_points_per_token": 4.96722e-07,
-          "story_points_per_1m_tokens": 0.5,
-          "tokens_per_story_point": 2013199.6
+          "productivity": 0.5
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 245027449,
           "story_points": 23,
-          "tickets_closed": 4,
-          "lines_of_code": 2984,
-          "avg_days_per_story_point": 0.478,
-          "story_points_per_token": 9.3867e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 10653367.3
+          "productivity": 0.09
         },
         {
           "name": "Simon Martin",
           "tokens_used": 67965649,
           "story_points": 97,
-          "tickets_closed": 17,
-          "lines_of_code": 6382,
-          "avg_days_per_story_point": 0.351,
-          "story_points_per_token": 1.427192e-06,
-          "story_points_per_1m_tokens": 1.43,
-          "tokens_per_story_point": 700676.8
+          "productivity": 1.43
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 243518351,
           "story_points": 43,
-          "tickets_closed": 12,
-          "lines_of_code": 10790,
-          "avg_days_per_story_point": 0.441,
-          "story_points_per_token": 1.76578e-07,
-          "story_points_per_1m_tokens": 0.18,
-          "tokens_per_story_point": 5663217.5
+          "productivity": 0.18
         },
         {
           "name": "Theo Girard",
           "tokens_used": 139010762,
           "story_points": 31,
-          "tickets_closed": 3,
-          "lines_of_code": 4716,
-          "avg_days_per_story_point": 0.322,
-          "story_points_per_token": 2.23004e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4484218.1
+          "productivity": 0.22
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 112239276,
           "story_points": 49,
-          "tickets_closed": 11,
-          "lines_of_code": 6140,
-          "avg_days_per_story_point": 0.55,
-          "story_points_per_token": 4.36567e-07,
-          "story_points_per_1m_tokens": 0.44,
-          "tokens_per_story_point": 2290597.5
+          "productivity": 0.44
         },
         {
           "name": "Victor Durand",
           "tokens_used": 26787130,
           "story_points": 60,
-          "tickets_closed": 10,
-          "lines_of_code": 7623,
-          "avg_days_per_story_point": 0.367,
-          "story_points_per_token": 2.239882e-06,
-          "story_points_per_1m_tokens": 2.24,
-          "tokens_per_story_point": 446452.2
+          "productivity": 2.24
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 45344219,
           "story_points": 9,
-          "tickets_closed": 2,
-          "lines_of_code": 2428,
-          "avg_days_per_story_point": 0.667,
-          "story_points_per_token": 1.98482e-07,
-          "story_points_per_1m_tokens": 0.2,
-          "tokens_per_story_point": 5038246.6
+          "productivity": 0.2
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 447314753,
           "story_points": 21,
-          "tickets_closed": 8,
-          "lines_of_code": 8050,
-          "avg_days_per_story_point": 0.762,
-          "story_points_per_token": 4.6947e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 21300702.5
+          "productivity": 0.05
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 9219333,
           "story_points": 22,
-          "tickets_closed": 6,
-          "lines_of_code": 2640,
-          "avg_days_per_story_point": 1.045,
-          "story_points_per_token": 2.38629e-06,
-          "story_points_per_1m_tokens": 2.39,
-          "tokens_per_story_point": 419060.6
+          "productivity": 2.39
         }
       ]
     },
@@ -1341,441 +746,241 @@
           "name": "Adrien Ivanova",
           "tokens_used": 495071338,
           "story_points": 43,
-          "tickets_closed": 7,
-          "lines_of_code": 10009,
-          "avg_days_per_story_point": 0.373,
-          "story_points_per_token": 8.6856e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 11513286.9
+          "productivity": 0.09
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 390317536,
           "story_points": 80,
-          "tickets_closed": 17,
-          "lines_of_code": 17483,
-          "avg_days_per_story_point": 0.351,
-          "story_points_per_token": 2.04961e-07,
-          "story_points_per_1m_tokens": 0.2,
-          "tokens_per_story_point": 4878969.2
+          "productivity": 0.2
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 299497166,
           "story_points": 62,
-          "tickets_closed": 15,
-          "lines_of_code": 12904,
-          "avg_days_per_story_point": 0.404,
-          "story_points_per_token": 2.07014e-07,
-          "story_points_per_1m_tokens": 0.21,
-          "tokens_per_story_point": 4830599.5
+          "productivity": 0.21
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 24703366,
           "story_points": 39,
-          "tickets_closed": 7,
-          "lines_of_code": 10630,
-          "avg_days_per_story_point": 0.257,
-          "story_points_per_token": 1.578732e-06,
-          "story_points_per_1m_tokens": 1.58,
-          "tokens_per_story_point": 633419.6
+          "productivity": 1.58
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 44654165,
           "story_points": 44,
-          "tickets_closed": 5,
-          "lines_of_code": 4420,
-          "avg_days_per_story_point": 0.341,
-          "story_points_per_token": 9.8535e-07,
-          "story_points_per_1m_tokens": 0.99,
-          "tokens_per_story_point": 1014867.4
+          "productivity": 0.99
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 820688196,
           "story_points": 16,
-          "tickets_closed": 4,
-          "lines_of_code": 3702,
-          "avg_days_per_story_point": 0.688,
-          "story_points_per_token": 1.9496e-08,
-          "story_points_per_1m_tokens": 0.02,
-          "tokens_per_story_point": 51293012.2
+          "productivity": 0.02
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 58867701,
           "story_points": 68,
-          "tickets_closed": 14,
-          "lines_of_code": 13253,
-          "avg_days_per_story_point": 0.589,
-          "story_points_per_token": 1.155133e-06,
-          "story_points_per_1m_tokens": 1.16,
-          "tokens_per_story_point": 865701.5
+          "productivity": 1.16
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 259797071,
           "story_points": 81,
-          "tickets_closed": 13,
-          "lines_of_code": 6900,
-          "avg_days_per_story_point": 0.481,
-          "story_points_per_token": 3.11782e-07,
-          "story_points_per_1m_tokens": 0.31,
-          "tokens_per_story_point": 3207371.2
+          "productivity": 0.31
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 221456635,
           "story_points": 53,
-          "tickets_closed": 9,
-          "lines_of_code": 11647,
-          "avg_days_per_story_point": 0.472,
-          "story_points_per_token": 2.39325e-07,
-          "story_points_per_1m_tokens": 0.24,
-          "tokens_per_story_point": 4178427.1
+          "productivity": 0.24
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 116071064,
           "story_points": 96,
-          "tickets_closed": 19,
-          "lines_of_code": 7168,
-          "avg_days_per_story_point": 0.418,
-          "story_points_per_token": 8.2708e-07,
-          "story_points_per_1m_tokens": 0.83,
-          "tokens_per_story_point": 1209073.6
+          "productivity": 0.83
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 285706660,
           "story_points": 62,
-          "tickets_closed": 10,
-          "lines_of_code": 7780,
-          "avg_days_per_story_point": 0.435,
-          "story_points_per_token": 2.17006e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4608171.9
+          "productivity": 0.22
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 89375040,
           "story_points": 84,
-          "tickets_closed": 11,
-          "lines_of_code": 8245,
-          "avg_days_per_story_point": 0.274,
-          "story_points_per_token": 9.3986e-07,
-          "story_points_per_1m_tokens": 0.94,
-          "tokens_per_story_point": 1063988.6
+          "productivity": 0.94
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 316926780,
           "story_points": 40,
-          "tickets_closed": 8,
-          "lines_of_code": 3201,
-          "avg_days_per_story_point": 0.576,
-          "story_points_per_token": 1.26212e-07,
-          "story_points_per_1m_tokens": 0.13,
-          "tokens_per_story_point": 7923169.5
+          "productivity": 0.13
         },
         {
           "name": "Ines Camus",
           "tokens_used": 293314925,
           "story_points": 55,
-          "tickets_closed": 11,
-          "lines_of_code": 9076,
-          "avg_days_per_story_point": 0.49,
-          "story_points_per_token": 1.87512e-07,
-          "story_points_per_1m_tokens": 0.19,
-          "tokens_per_story_point": 5332998.6
+          "productivity": 0.19
         },
         {
           "name": "Jade Faure",
           "tokens_used": 143262066,
           "story_points": 43,
-          "tickets_closed": 12,
-          "lines_of_code": 6708,
-          "avg_days_per_story_point": 0.628,
-          "story_points_per_token": 3.00149e-07,
-          "story_points_per_1m_tokens": 0.3,
-          "tokens_per_story_point": 3331676
+          "productivity": 0.3
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 5035312,
           "story_points": 15,
-          "tickets_closed": 6,
-          "lines_of_code": 5454,
-          "avg_days_per_story_point": 1,
-          "story_points_per_token": 2.978961e-06,
-          "story_points_per_1m_tokens": 2.98,
-          "tokens_per_story_point": 335687.5
+          "productivity": 2.98
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 242029809,
           "story_points": 28,
-          "tickets_closed": 6,
-          "lines_of_code": 6343,
-          "avg_days_per_story_point": 0.714,
-          "story_points_per_token": 1.15688e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8643921.8
+          "productivity": 0.12
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 243972027,
           "story_points": 102,
-          "tickets_closed": 19,
-          "lines_of_code": 14491,
-          "avg_days_per_story_point": 0.324,
-          "story_points_per_token": 4.18081e-07,
-          "story_points_per_1m_tokens": 0.42,
-          "tokens_per_story_point": 2391882.6
+          "productivity": 0.42
         },
         {
           "name": "Leila Park",
           "tokens_used": 25661965,
           "story_points": 93,
-          "tickets_closed": 15,
-          "lines_of_code": 13155,
-          "avg_days_per_story_point": 0.269,
-          "story_points_per_token": 3.62404e-06,
-          "story_points_per_1m_tokens": 3.62,
-          "tokens_per_story_point": 275935.1
+          "productivity": 3.62
         },
         {
           "name": "Lena Chen",
           "tokens_used": 750690644,
           "story_points": 37,
-          "tickets_closed": 8,
-          "lines_of_code": 4051,
-          "avg_days_per_story_point": 0.541,
-          "story_points_per_token": 4.9288e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 20288936.3
+          "productivity": 0.05
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 134135518,
           "story_points": 12,
-          "tickets_closed": 3,
-          "lines_of_code": 8163,
-          "avg_days_per_story_point": 0.5,
-          "story_points_per_token": 8.9462e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 11177959.8
+          "productivity": 0.09
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 70176351,
           "story_points": 63,
-          "tickets_closed": 10,
-          "lines_of_code": 6116,
-          "avg_days_per_story_point": 0.349,
-          "story_points_per_token": 8.97738e-07,
-          "story_points_per_1m_tokens": 0.9,
-          "tokens_per_story_point": 1113910.3
+          "productivity": 0.9
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 23082890,
           "story_points": 103,
-          "tickets_closed": 17,
-          "lines_of_code": 9818,
-          "avg_days_per_story_point": 0.262,
-          "story_points_per_token": 4.46218e-06,
-          "story_points_per_1m_tokens": 4.46,
-          "tokens_per_story_point": 224105.7
+          "productivity": 4.46
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 11205907,
           "story_points": 39,
-          "tickets_closed": 8,
-          "lines_of_code": 10379,
-          "avg_days_per_story_point": 0.513,
-          "story_points_per_token": 3.480307e-06,
-          "story_points_per_1m_tokens": 3.48,
-          "tokens_per_story_point": 287330.9
+          "productivity": 3.48
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 19086619,
           "story_points": 70,
-          "tickets_closed": 10,
-          "lines_of_code": 6353,
-          "avg_days_per_story_point": 0.414,
-          "story_points_per_token": 3.667491e-06,
-          "story_points_per_1m_tokens": 3.67,
-          "tokens_per_story_point": 272666
+          "productivity": 3.67
         },
         {
           "name": "Nina Traore",
           "tokens_used": 145764556,
           "story_points": 19,
-          "tickets_closed": 6,
-          "lines_of_code": 2244,
-          "avg_days_per_story_point": 0.685,
-          "story_points_per_token": 1.30347e-07,
-          "story_points_per_1m_tokens": 0.13,
-          "tokens_per_story_point": 7671818.7
+          "productivity": 0.13
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 433591936,
           "story_points": 24,
-          "tickets_closed": 6,
-          "lines_of_code": 3077,
-          "avg_days_per_story_point": 0.625,
-          "story_points_per_token": 5.5352e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 18066330.7
+          "productivity": 0.06
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 439701963,
           "story_points": 32,
-          "tickets_closed": 8,
-          "lines_of_code": 11015,
-          "avg_days_per_story_point": 0.625,
-          "story_points_per_token": 7.2777e-08,
-          "story_points_per_1m_tokens": 0.07,
-          "tokens_per_story_point": 13740686.3
+          "productivity": 0.07
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 100084344,
           "story_points": 40,
-          "tickets_closed": 7,
-          "lines_of_code": 8928,
-          "avg_days_per_story_point": 0.45,
-          "story_points_per_token": 3.99663e-07,
-          "story_points_per_1m_tokens": 0.4,
-          "tokens_per_story_point": 2502108.6
+          "productivity": 0.4
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 160106975,
           "story_points": 49,
-          "tickets_closed": 16,
-          "lines_of_code": 15011,
-          "avg_days_per_story_point": 0.715,
-          "story_points_per_token": 3.06045e-07,
-          "story_points_per_1m_tokens": 0.31,
-          "tokens_per_story_point": 3267489.3
+          "productivity": 0.31
         },
         {
           "name": "Romain Roux",
           "tokens_used": 159443628,
           "story_points": 104,
-          "tickets_closed": 19,
-          "lines_of_code": 8809,
-          "avg_days_per_story_point": 0.327,
-          "story_points_per_token": 6.52268e-07,
-          "story_points_per_1m_tokens": 0.65,
-          "tokens_per_story_point": 1533111.8
+          "productivity": 0.65
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 341041938,
           "story_points": 19,
-          "tickets_closed": 7,
-          "lines_of_code": 2278,
-          "avg_days_per_story_point": 0.998,
-          "story_points_per_token": 5.5712e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 17949575.7
+          "productivity": 0.06
         },
         {
           "name": "Simon Martin",
           "tokens_used": 95485231,
           "story_points": 49,
-          "tickets_closed": 11,
-          "lines_of_code": 10042,
-          "avg_days_per_story_point": 0.489,
-          "story_points_per_token": 5.13168e-07,
-          "story_points_per_1m_tokens": 0.51,
-          "tokens_per_story_point": 1948678.2
+          "productivity": 0.51
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 358111596,
           "story_points": 38,
-          "tickets_closed": 13,
-          "lines_of_code": 10537,
-          "avg_days_per_story_point": 0.736,
-          "story_points_per_token": 1.06112e-07,
-          "story_points_per_1m_tokens": 0.11,
-          "tokens_per_story_point": 9423989.4
+          "productivity": 0.11
         },
         {
           "name": "Theo Girard",
           "tokens_used": 110203316,
           "story_points": 34,
-          "tickets_closed": 7,
-          "lines_of_code": 4096,
-          "avg_days_per_story_point": 0.618,
-          "story_points_per_token": 3.08521e-07,
-          "story_points_per_1m_tokens": 0.31,
-          "tokens_per_story_point": 3241274
+          "productivity": 0.31
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 111089822,
           "story_points": 58,
-          "tickets_closed": 9,
-          "lines_of_code": 5474,
-          "avg_days_per_story_point": 0.31,
-          "story_points_per_token": 5.221e-07,
-          "story_points_per_1m_tokens": 0.52,
-          "tokens_per_story_point": 1915341.8
+          "productivity": 0.52
         },
         {
           "name": "Victor Durand",
           "tokens_used": 28864827,
           "story_points": 35,
-          "tickets_closed": 7,
-          "lines_of_code": 9527,
-          "avg_days_per_story_point": 0.428,
-          "story_points_per_token": 1.212548e-06,
-          "story_points_per_1m_tokens": 1.21,
-          "tokens_per_story_point": 824709.3
+          "productivity": 1.21
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 38419724,
           "story_points": 21,
-          "tickets_closed": 2,
-          "lines_of_code": 2468,
-          "avg_days_per_story_point": 0.286,
-          "story_points_per_token": 5.46594e-07,
-          "story_points_per_1m_tokens": 0.55,
-          "tokens_per_story_point": 1829510.7
+          "productivity": 0.55
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 363488168,
           "story_points": 88,
-          "tickets_closed": 14,
-          "lines_of_code": 5374,
-          "avg_days_per_story_point": 0.42,
-          "story_points_per_token": 2.42099e-07,
-          "story_points_per_1m_tokens": 0.24,
-          "tokens_per_story_point": 4130547.4
+          "productivity": 0.24
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 6685535,
           "story_points": 24,
-          "tickets_closed": 3,
-          "lines_of_code": 2335,
-          "avg_days_per_story_point": 0.375,
-          "story_points_per_token": 3.58984e-06,
-          "story_points_per_1m_tokens": 3.59,
-          "tokens_per_story_point": 278564
+          "productivity": 3.59
         }
       ]
     },
@@ -1786,441 +991,241 @@
           "name": "Adrien Ivanova",
           "tokens_used": 738368748,
           "story_points": 52,
-          "tickets_closed": 10,
-          "lines_of_code": 7388,
-          "avg_days_per_story_point": 0.462,
-          "story_points_per_token": 7.0426e-08,
-          "story_points_per_1m_tokens": 0.07,
-          "tokens_per_story_point": 14199399
+          "productivity": 0.07
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 759745353,
           "story_points": 87,
-          "tickets_closed": 18,
-          "lines_of_code": 16537,
-          "avg_days_per_story_point": 0.333,
-          "story_points_per_token": 1.14512e-07,
-          "story_points_per_1m_tokens": 0.11,
-          "tokens_per_story_point": 8732705.2
+          "productivity": 0.11
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 348382966,
           "story_points": 87,
-          "tickets_closed": 15,
-          "lines_of_code": 11387,
-          "avg_days_per_story_point": 0.357,
-          "story_points_per_token": 2.49725e-07,
-          "story_points_per_1m_tokens": 0.25,
-          "tokens_per_story_point": 4004401.9
+          "productivity": 0.25
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 23898797,
           "story_points": 68,
-          "tickets_closed": 11,
-          "lines_of_code": 10076,
-          "avg_days_per_story_point": 0.367,
-          "story_points_per_token": 2.845332e-06,
-          "story_points_per_1m_tokens": 2.85,
-          "tokens_per_story_point": 351452.9
+          "productivity": 2.85
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 42672876,
           "story_points": 14,
-          "tickets_closed": 4,
-          "lines_of_code": 5393,
-          "avg_days_per_story_point": 1.143,
-          "story_points_per_token": 3.28077e-07,
-          "story_points_per_1m_tokens": 0.33,
-          "tokens_per_story_point": 3048062.6
+          "productivity": 0.33
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 1192558541,
           "story_points": 5,
-          "tickets_closed": 2,
-          "lines_of_code": 4279,
-          "avg_days_per_story_point": 1.4,
-          "story_points_per_token": 4.193e-09,
-          "story_points_per_1m_tokens": 0,
-          "tokens_per_story_point": 238511708.2
+          "productivity": 0
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 48166339,
           "story_points": 40,
-          "tickets_closed": 12,
-          "lines_of_code": 7837,
-          "avg_days_per_story_point": 0.624,
-          "story_points_per_token": 8.30455e-07,
-          "story_points_per_1m_tokens": 0.83,
-          "tokens_per_story_point": 1204158.5
+          "productivity": 0.83
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 277414115,
           "story_points": 57,
-          "tickets_closed": 12,
-          "lines_of_code": 10197,
-          "avg_days_per_story_point": 0.562,
-          "story_points_per_token": 2.05469e-07,
-          "story_points_per_1m_tokens": 0.21,
-          "tokens_per_story_point": 4866914.3
+          "productivity": 0.21
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 232984773,
           "story_points": 110,
-          "tickets_closed": 14,
-          "lines_of_code": 8666,
-          "avg_days_per_story_point": 0.246,
-          "story_points_per_token": 4.72134e-07,
-          "story_points_per_1m_tokens": 0.47,
-          "tokens_per_story_point": 2118043.4
+          "productivity": 0.47
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 126840055,
           "story_points": 76,
-          "tickets_closed": 16,
-          "lines_of_code": 19855,
-          "avg_days_per_story_point": 0.356,
-          "story_points_per_token": 5.9918e-07,
-          "story_points_per_1m_tokens": 0.6,
-          "tokens_per_story_point": 1668948.1
+          "productivity": 0.6
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 349456536,
           "story_points": 62,
-          "tickets_closed": 15,
-          "lines_of_code": 10527,
-          "avg_days_per_story_point": 0.532,
-          "story_points_per_token": 1.77418e-07,
-          "story_points_per_1m_tokens": 0.18,
-          "tokens_per_story_point": 5636395.7
+          "productivity": 0.18
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 178959319,
           "story_points": 55,
-          "tickets_closed": 10,
-          "lines_of_code": 4524,
-          "avg_days_per_story_point": 0.582,
-          "story_points_per_token": 3.07332e-07,
-          "story_points_per_1m_tokens": 0.31,
-          "tokens_per_story_point": 3253805.8
+          "productivity": 0.31
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 280527119,
           "story_points": 12,
-          "tickets_closed": 4,
-          "lines_of_code": 5336,
-          "avg_days_per_story_point": 0.833,
-          "story_points_per_token": 4.2777e-08,
-          "story_points_per_1m_tokens": 0.04,
-          "tokens_per_story_point": 23377259.9
+          "productivity": 0.04
         },
         {
           "name": "Ines Camus",
           "tokens_used": 364045967,
           "story_points": 98,
-          "tickets_closed": 16,
-          "lines_of_code": 10486,
-          "avg_days_per_story_point": 0.327,
-          "story_points_per_token": 2.69197e-07,
-          "story_points_per_1m_tokens": 0.27,
-          "tokens_per_story_point": 3714754.8
+          "productivity": 0.27
         },
         {
           "name": "Jade Faure",
           "tokens_used": 152045694,
           "story_points": 32,
-          "tickets_closed": 11,
-          "lines_of_code": 8302,
-          "avg_days_per_story_point": 0.749,
-          "story_points_per_token": 2.10463e-07,
-          "story_points_per_1m_tokens": 0.21,
-          "tokens_per_story_point": 4751427.9
+          "productivity": 0.21
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 6897143,
           "story_points": 35,
-          "tickets_closed": 8,
-          "lines_of_code": 6523,
-          "avg_days_per_story_point": 0.43,
-          "story_points_per_token": 5.074565e-06,
-          "story_points_per_1m_tokens": 5.07,
-          "tokens_per_story_point": 197061.2
+          "productivity": 5.07
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 258731380,
           "story_points": 76,
-          "tickets_closed": 13,
-          "lines_of_code": 7059,
-          "avg_days_per_story_point": 0.381,
-          "story_points_per_token": 2.93741e-07,
-          "story_points_per_1m_tokens": 0.29,
-          "tokens_per_story_point": 3404360.3
+          "productivity": 0.29
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 255244038,
           "story_points": 70,
-          "tickets_closed": 10,
-          "lines_of_code": 10245,
-          "avg_days_per_story_point": 0.257,
-          "story_points_per_token": 2.74247e-07,
-          "story_points_per_1m_tokens": 0.27,
-          "tokens_per_story_point": 3646343.4
+          "productivity": 0.27
         },
         {
           "name": "Leila Park",
           "tokens_used": 33329217,
           "story_points": 79,
-          "tickets_closed": 18,
-          "lines_of_code": 15162,
-          "avg_days_per_story_point": 0.431,
-          "story_points_per_token": 2.370293e-06,
-          "story_points_per_1m_tokens": 2.37,
-          "tokens_per_story_point": 421888.8
+          "productivity": 2.37
         },
         {
           "name": "Lena Chen",
           "tokens_used": 695014713,
           "story_points": 50,
-          "tickets_closed": 10,
-          "lines_of_code": 6949,
-          "avg_days_per_story_point": 0.52,
-          "story_points_per_token": 7.1941e-08,
-          "story_points_per_1m_tokens": 0.07,
-          "tokens_per_story_point": 13900294.3
+          "productivity": 0.07
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 144704168,
           "story_points": 37,
-          "tickets_closed": 8,
-          "lines_of_code": 5040,
-          "avg_days_per_story_point": 0.515,
-          "story_points_per_token": 2.55694e-07,
-          "story_points_per_1m_tokens": 0.26,
-          "tokens_per_story_point": 3910923.5
+          "productivity": 0.26
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 93878199,
           "story_points": 42,
-          "tickets_closed": 8,
-          "lines_of_code": 7160,
-          "avg_days_per_story_point": 0.499,
-          "story_points_per_token": 4.47388e-07,
-          "story_points_per_1m_tokens": 0.45,
-          "tokens_per_story_point": 2235195.2
+          "productivity": 0.45
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 31664829,
           "story_points": 69,
-          "tickets_closed": 19,
-          "lines_of_code": 13574,
-          "avg_days_per_story_point": 0.463,
-          "story_points_per_token": 2.179074e-06,
-          "story_points_per_1m_tokens": 2.18,
-          "tokens_per_story_point": 458910.6
+          "productivity": 2.18
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 21990408,
           "story_points": 82,
-          "tickets_closed": 12,
-          "lines_of_code": 6926,
-          "avg_days_per_story_point": 0.464,
-          "story_points_per_token": 3.728899e-06,
-          "story_points_per_1m_tokens": 3.73,
-          "tokens_per_story_point": 268175.7
+          "productivity": 3.73
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 30595284,
           "story_points": 34,
-          "tickets_closed": 4,
-          "lines_of_code": 6334,
-          "avg_days_per_story_point": 0.235,
-          "story_points_per_token": 1.111282e-06,
-          "story_points_per_1m_tokens": 1.11,
-          "tokens_per_story_point": 899861.3
+          "productivity": 1.11
         },
         {
           "name": "Nina Traore",
           "tokens_used": 211465009,
           "story_points": 12,
-          "tickets_closed": 3,
-          "lines_of_code": 3958,
-          "avg_days_per_story_point": 0.917,
-          "story_points_per_token": 5.6747e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 17622084.1
+          "productivity": 0.06
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 602542300,
           "story_points": 13,
-          "tickets_closed": 4,
-          "lines_of_code": 5424,
-          "avg_days_per_story_point": 1.231,
-          "story_points_per_token": 2.1575e-08,
-          "story_points_per_1m_tokens": 0.02,
-          "tokens_per_story_point": 46349407.7
+          "productivity": 0.02
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 468659286,
           "story_points": 21,
-          "tickets_closed": 4,
-          "lines_of_code": 7171,
-          "avg_days_per_story_point": 0.524,
-          "story_points_per_token": 4.4809e-08,
-          "story_points_per_1m_tokens": 0.04,
-          "tokens_per_story_point": 22317108.9
+          "productivity": 0.04
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 134122416,
           "story_points": 70,
-          "tickets_closed": 12,
-          "lines_of_code": 9738,
-          "avg_days_per_story_point": 0.3,
-          "story_points_per_token": 5.21911e-07,
-          "story_points_per_1m_tokens": 0.52,
-          "tokens_per_story_point": 1916034.5
+          "productivity": 0.52
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 172231995,
           "story_points": 94,
-          "tickets_closed": 16,
-          "lines_of_code": 11868,
-          "avg_days_per_story_point": 0.255,
-          "story_points_per_token": 5.45775e-07,
-          "story_points_per_1m_tokens": 0.55,
-          "tokens_per_story_point": 1832255.3
+          "productivity": 0.55
         },
         {
           "name": "Romain Roux",
           "tokens_used": 191199068,
           "story_points": 59,
-          "tickets_closed": 15,
-          "lines_of_code": 12706,
-          "avg_days_per_story_point": 0.356,
-          "story_points_per_token": 3.08579e-07,
-          "story_points_per_1m_tokens": 0.31,
-          "tokens_per_story_point": 3240662.2
+          "productivity": 0.31
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 394968137,
           "story_points": 18,
-          "tickets_closed": 2,
-          "lines_of_code": 3730,
-          "avg_days_per_story_point": 0.333,
-          "story_points_per_token": 4.5573e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 21942674.3
+          "productivity": 0.05
         },
         {
           "name": "Simon Martin",
           "tokens_used": 115841762,
           "story_points": 85,
-          "tickets_closed": 17,
-          "lines_of_code": 10930,
-          "avg_days_per_story_point": 0.448,
-          "story_points_per_token": 7.3376e-07,
-          "story_points_per_1m_tokens": 0.73,
-          "tokens_per_story_point": 1362844.3
+          "productivity": 0.73
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 278612420,
           "story_points": 62,
-          "tickets_closed": 12,
-          "lines_of_code": 12154,
-          "avg_days_per_story_point": 0.468,
-          "story_points_per_token": 2.22531e-07,
-          "story_points_per_1m_tokens": 0.22,
-          "tokens_per_story_point": 4493748.7
+          "productivity": 0.22
         },
         {
           "name": "Theo Girard",
           "tokens_used": 171701241,
           "story_points": 9,
-          "tickets_closed": 2,
-          "lines_of_code": 4956,
-          "avg_days_per_story_point": 0.444,
-          "story_points_per_token": 5.2417e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 19077915.7
+          "productivity": 0.05
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 147288911,
           "story_points": 17,
-          "tickets_closed": 6,
-          "lines_of_code": 9618,
-          "avg_days_per_story_point": 1.059,
-          "story_points_per_token": 1.15419e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8664053.6
+          "productivity": 0.12
         },
         {
           "name": "Victor Durand",
           "tokens_used": 31638489,
           "story_points": 82,
-          "tickets_closed": 15,
-          "lines_of_code": 7167,
-          "avg_days_per_story_point": 0.512,
-          "story_points_per_token": 2.59178e-06,
-          "story_points_per_1m_tokens": 2.59,
-          "tokens_per_story_point": 385835.2
+          "productivity": 2.59
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 49978056,
           "story_points": 23,
-          "tickets_closed": 5,
-          "lines_of_code": 2581,
-          "avg_days_per_story_point": 0.87,
-          "story_points_per_token": 4.60202e-07,
-          "story_points_per_1m_tokens": 0.46,
-          "tokens_per_story_point": 2172959
+          "productivity": 0.46
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 601937141,
           "story_points": 61,
-          "tickets_closed": 9,
-          "lines_of_code": 7279,
-          "avg_days_per_story_point": 0.443,
-          "story_points_per_token": 1.01339e-07,
-          "story_points_per_1m_tokens": 0.1,
-          "tokens_per_story_point": 9867822
+          "productivity": 0.1
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 9173029,
           "story_points": 6,
-          "tickets_closed": 2,
-          "lines_of_code": 3752,
-          "avg_days_per_story_point": 1.5,
-          "story_points_per_token": 6.54091e-07,
-          "story_points_per_1m_tokens": 0.65,
-          "tokens_per_story_point": 1528838.2
+          "productivity": 0.65
         }
       ]
     },
@@ -2231,1047 +1236,565 @@
           "name": "Adrien Ivanova",
           "tokens_used": 745127529,
           "story_points": 74,
-          "tickets_closed": 11,
-          "lines_of_code": 11444,
-          "avg_days_per_story_point": 0.419,
-          "story_points_per_token": 9.9312e-08,
-          "story_points_per_1m_tokens": 0.1,
-          "tokens_per_story_point": 10069290.9
+          "productivity": 0.1
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 626235460,
           "story_points": 74,
-          "tickets_closed": 17,
-          "lines_of_code": 16450,
-          "avg_days_per_story_point": 0.324,
-          "story_points_per_token": 1.18166e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8462641.4
+          "productivity": 0.12
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 248018565,
           "story_points": 73,
-          "tickets_closed": 15,
-          "lines_of_code": 11039,
-          "avg_days_per_story_point": 0.52,
-          "story_points_per_token": 2.94333e-07,
-          "story_points_per_1m_tokens": 0.29,
-          "tokens_per_story_point": 3397514.6
+          "productivity": 0.29
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 40417346,
           "story_points": 65,
-          "tickets_closed": 14,
-          "lines_of_code": 8435,
-          "avg_days_per_story_point": 0.461,
-          "story_points_per_token": 1.60822e-06,
-          "story_points_per_1m_tokens": 1.61,
-          "tokens_per_story_point": 621805.3
+          "productivity": 1.61
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 48323460,
           "story_points": 7,
-          "tickets_closed": 4,
-          "lines_of_code": 3832,
-          "avg_days_per_story_point": 2,
-          "story_points_per_token": 1.44857e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 6903351.4
+          "productivity": 0.14
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 767324881,
           "story_points": 42,
-          "tickets_closed": 6,
-          "lines_of_code": 3540,
-          "avg_days_per_story_point": 0.404,
-          "story_points_per_token": 5.4736e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 18269640
+          "productivity": 0.05
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 48839131,
           "story_points": 57,
-          "tickets_closed": 8,
-          "lines_of_code": 5208,
-          "avg_days_per_story_point": 0.334,
-          "story_points_per_token": 1.167097e-06,
-          "story_points_per_1m_tokens": 1.17,
-          "tokens_per_story_point": 856826.9
+          "productivity": 1.17
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 288050639,
           "story_points": 40,
-          "tickets_closed": 9,
-          "lines_of_code": 10997,
-          "avg_days_per_story_point": 0.601,
-          "story_points_per_token": 1.38864e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 7201266
+          "productivity": 0.14
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 305157673,
           "story_points": 34,
-          "tickets_closed": 10,
-          "lines_of_code": 11248,
-          "avg_days_per_story_point": 0.676,
-          "story_points_per_token": 1.11418e-07,
-          "story_points_per_1m_tokens": 0.11,
-          "tokens_per_story_point": 8975225.7
+          "productivity": 0.11
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 122269890,
           "story_points": 77,
-          "tickets_closed": 17,
-          "lines_of_code": 14242,
-          "avg_days_per_story_point": 0.364,
-          "story_points_per_token": 6.29754e-07,
-          "story_points_per_1m_tokens": 0.63,
-          "tokens_per_story_point": 1587920.6
+          "productivity": 0.63
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 348549942,
           "story_points": 22,
-          "tickets_closed": 7,
-          "lines_of_code": 10054,
-          "avg_days_per_story_point": 0.636,
-          "story_points_per_token": 6.3119e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 15843179.2
+          "productivity": 0.06
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 209759142,
           "story_points": 15,
-          "tickets_closed": 4,
-          "lines_of_code": 5299,
-          "avg_days_per_story_point": 0.6,
-          "story_points_per_token": 7.1511e-08,
-          "story_points_per_1m_tokens": 0.07,
-          "tokens_per_story_point": 13983942.8
+          "productivity": 0.07
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 242512967,
           "story_points": 28,
-          "tickets_closed": 7,
-          "lines_of_code": 5077,
-          "avg_days_per_story_point": 0.785,
-          "story_points_per_token": 1.15458e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8661177.4
+          "productivity": 0.12
         },
         {
           "name": "Ines Camus",
           "tokens_used": 402794252,
           "story_points": 39,
-          "tickets_closed": 11,
-          "lines_of_code": 11912,
-          "avg_days_per_story_point": 0.691,
-          "story_points_per_token": 9.6824e-08,
-          "story_points_per_1m_tokens": 0.1,
-          "tokens_per_story_point": 10328057.7
+          "productivity": 0.1
         },
         {
           "name": "Jade Faure",
           "tokens_used": 139009694,
           "story_points": 90,
-          "tickets_closed": 11,
-          "lines_of_code": 5508,
-          "avg_days_per_story_point": 0.299,
-          "story_points_per_token": 6.47437e-07,
-          "story_points_per_1m_tokens": 0.65,
-          "tokens_per_story_point": 1544552.2
+          "productivity": 0.65
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 5689436,
           "story_points": 47,
-          "tickets_closed": 9,
-          "lines_of_code": 7319,
-          "avg_days_per_story_point": 0.446,
-          "story_points_per_token": 8.260924e-06,
-          "story_points_per_1m_tokens": 8.26,
-          "tokens_per_story_point": 121051.8
+          "productivity": 8.26
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 310404973,
           "story_points": 42,
-          "tickets_closed": 8,
-          "lines_of_code": 7347,
-          "avg_days_per_story_point": 0.429,
-          "story_points_per_token": 1.35307e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 7390594.6
+          "productivity": 0.14
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 351310057,
           "story_points": 91,
-          "tickets_closed": 16,
-          "lines_of_code": 10961,
-          "avg_days_per_story_point": 0.352,
-          "story_points_per_token": 2.5903e-07,
-          "story_points_per_1m_tokens": 0.26,
-          "tokens_per_story_point": 3860550.1
+          "productivity": 0.26
         },
         {
           "name": "Leila Park",
           "tokens_used": 28132738,
           "story_points": 136,
-          "tickets_closed": 22,
-          "lines_of_code": 10008,
-          "avg_days_per_story_point": 0.243,
-          "story_points_per_token": 4.834226e-06,
-          "story_points_per_1m_tokens": 4.83,
-          "tokens_per_story_point": 206858.4
+          "productivity": 4.83
         },
         {
           "name": "Lena Chen",
           "tokens_used": 531690249,
           "story_points": 77,
-          "tickets_closed": 12,
-          "lines_of_code": 5428,
-          "avg_days_per_story_point": 0.402,
-          "story_points_per_token": 1.44821e-07,
-          "story_points_per_1m_tokens": 0.14,
-          "tokens_per_story_point": 6905068.2
+          "productivity": 0.14
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 170434052,
           "story_points": 26,
-          "tickets_closed": 8,
-          "lines_of_code": 5147,
-          "avg_days_per_story_point": 0.578,
-          "story_points_per_token": 1.52552e-07,
-          "story_points_per_1m_tokens": 0.15,
-          "tokens_per_story_point": 6555155.8
+          "productivity": 0.15
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 92614426,
           "story_points": 45,
-          "tickets_closed": 9,
-          "lines_of_code": 9860,
-          "avg_days_per_story_point": 0.466,
-          "story_points_per_token": 4.85885e-07,
-          "story_points_per_1m_tokens": 0.49,
-          "tokens_per_story_point": 2058098.4
+          "productivity": 0.49
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 24334442,
           "story_points": 71,
-          "tickets_closed": 14,
-          "lines_of_code": 12857,
-          "avg_days_per_story_point": 0.353,
-          "story_points_per_token": 2.917675e-06,
-          "story_points_per_1m_tokens": 2.92,
-          "tokens_per_story_point": 342738.6
+          "productivity": 2.92
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 16464467,
           "story_points": 24,
-          "tickets_closed": 5,
-          "lines_of_code": 8847,
-          "avg_days_per_story_point": 0.333,
-          "story_points_per_token": 1.457685e-06,
-          "story_points_per_1m_tokens": 1.46,
-          "tokens_per_story_point": 686019.5
+          "productivity": 1.46
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 44450539,
           "story_points": 31,
-          "tickets_closed": 6,
-          "lines_of_code": 9413,
-          "avg_days_per_story_point": 0.42,
-          "story_points_per_token": 6.97404e-07,
-          "story_points_per_1m_tokens": 0.7,
-          "tokens_per_story_point": 1433888.4
+          "productivity": 0.7
         },
         {
           "name": "Nina Traore",
           "tokens_used": 202833499,
           "story_points": 13,
-          "tickets_closed": 2,
-          "lines_of_code": 3980,
-          "avg_days_per_story_point": 0.615,
-          "story_points_per_token": 6.4092e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 15602576.8
+          "productivity": 0.06
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 753829866,
           "story_points": 41,
-          "tickets_closed": 7,
-          "lines_of_code": 5050,
-          "avg_days_per_story_point": 0.391,
-          "story_points_per_token": 5.4389e-08,
-          "story_points_per_1m_tokens": 0.05,
-          "tokens_per_story_point": 18386094.3
+          "productivity": 0.05
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 443924602,
           "story_points": 55,
-          "tickets_closed": 13,
-          "lines_of_code": 7922,
-          "avg_days_per_story_point": 0.619,
-          "story_points_per_token": 1.23895e-07,
-          "story_points_per_1m_tokens": 0.12,
-          "tokens_per_story_point": 8071356.4
+          "productivity": 0.12
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 146482942,
           "story_points": 41,
-          "tickets_closed": 9,
-          "lines_of_code": 10756,
-          "avg_days_per_story_point": 0.463,
-          "story_points_per_token": 2.79896e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3572754.7
+          "productivity": 0.28
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 157657495,
           "story_points": 83,
-          "tickets_closed": 15,
-          "lines_of_code": 10646,
-          "avg_days_per_story_point": 0.325,
-          "story_points_per_token": 5.26458e-07,
-          "story_points_per_1m_tokens": 0.53,
-          "tokens_per_story_point": 1899487.9
+          "productivity": 0.53
         },
         {
           "name": "Romain Roux",
           "tokens_used": 161093114,
           "story_points": 45,
-          "tickets_closed": 13,
-          "lines_of_code": 16026,
-          "avg_days_per_story_point": 0.621,
-          "story_points_per_token": 2.79342e-07,
-          "story_points_per_1m_tokens": 0.28,
-          "tokens_per_story_point": 3579847
+          "productivity": 0.28
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 269440710,
           "story_points": 16,
-          "tickets_closed": 5,
-          "lines_of_code": 3381,
-          "avg_days_per_story_point": 0.812,
-          "story_points_per_token": 5.9382e-08,
-          "story_points_per_1m_tokens": 0.06,
-          "tokens_per_story_point": 16840044.4
+          "productivity": 0.06
         },
         {
           "name": "Simon Martin",
           "tokens_used": 90801785,
           "story_points": 69,
-          "tickets_closed": 14,
-          "lines_of_code": 9146,
-          "avg_days_per_story_point": 0.363,
-          "story_points_per_token": 7.59897e-07,
-          "story_points_per_1m_tokens": 0.76,
-          "tokens_per_story_point": 1315967.9
+          "productivity": 0.76
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 433353302,
           "story_points": 92,
-          "tickets_closed": 16,
-          "lines_of_code": 10810,
-          "avg_days_per_story_point": 0.358,
-          "story_points_per_token": 2.12298e-07,
-          "story_points_per_1m_tokens": 0.21,
-          "tokens_per_story_point": 4710362
+          "productivity": 0.21
         },
         {
           "name": "Theo Girard",
           "tokens_used": 124441231,
           "story_points": 11,
-          "tickets_closed": 5,
-          "lines_of_code": 5433,
-          "avg_days_per_story_point": 1.455,
-          "story_points_per_token": 8.8395e-08,
-          "story_points_per_1m_tokens": 0.09,
-          "tokens_per_story_point": 11312839.2
+          "productivity": 0.09
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 160459695,
           "story_points": 60,
-          "tickets_closed": 14,
-          "lines_of_code": 11351,
-          "avg_days_per_story_point": 0.534,
-          "story_points_per_token": 3.73926e-07,
-          "story_points_per_1m_tokens": 0.37,
-          "tokens_per_story_point": 2674328.2
+          "productivity": 0.37
         },
         {
           "name": "Victor Durand",
           "tokens_used": 36760403,
           "story_points": 60,
-          "tickets_closed": 8,
-          "lines_of_code": 10454,
-          "avg_days_per_story_point": 0.216,
-          "story_points_per_token": 1.632191e-06,
-          "story_points_per_1m_tokens": 1.63,
-          "tokens_per_story_point": 612673.4
+          "productivity": 1.63
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 32039670,
           "story_points": 31,
-          "tickets_closed": 8,
-          "lines_of_code": 3756,
-          "avg_days_per_story_point": 0.71,
-          "story_points_per_token": 9.67551e-07,
-          "story_points_per_1m_tokens": 0.97,
-          "tokens_per_story_point": 1033537.7
+          "productivity": 0.97
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 518066030,
           "story_points": 68,
-          "tickets_closed": 15,
-          "lines_of_code": 9967,
-          "avg_days_per_story_point": 0.485,
-          "story_points_per_token": 1.31257e-07,
-          "story_points_per_1m_tokens": 0.13,
-          "tokens_per_story_point": 7618618.1
+          "productivity": 0.13
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 10102844,
           "story_points": 6,
-          "tickets_closed": 2,
-          "lines_of_code": 3706,
-          "avg_days_per_story_point": 1.167,
-          "story_points_per_token": 5.93892e-07,
-          "story_points_per_1m_tokens": 0.59,
-          "tokens_per_story_point": 1683807.3
+          "productivity": 0.59
         }
       ]
     }
   ],
   "employee_metrics": [
     {
-      "name": "Baptiste Bernard",
-      "category": "high_token_low_story_points",
-      "tokens_used": 4795769091,
-      "story_points": 122,
-      "story_points_per_token": 2.5439e-08,
-      "story_points_per_1m_tokens": 0.03,
-      "tokens_per_story_point": 39309582.7,
-      "tickets_closed": 28,
-      "lines_of_code": 22675,
-      "avg_days_per_story_point": 0.647,
-      "outlier_reason": "High token usage with low story point delivery.",
-      "action_type": "retrain_user",
-      "recommendation": "Retrain this user on prompt structure, context selection, and task decomposition; review their highest-token sessions before expanding access."
-    },
-    {
-      "name": "Omar Leclerc",
-      "category": "high_token_low_story_points",
-      "tokens_used": 3346132028,
-      "story_points": 151,
-      "story_points_per_token": 4.5127e-08,
-      "story_points_per_1m_tokens": 0.05,
-      "tokens_per_story_point": 22159814.8,
-      "tickets_closed": 31,
-      "lines_of_code": 25671,
-      "avg_days_per_story_point": 0.603,
-      "outlier_reason": "High token usage with low story point delivery.",
-      "action_type": "retrain_user",
-      "recommendation": "Retrain this user on prompt structure, context selection, and task decomposition; review their highest-token sessions before expanding access."
-    },
-    {
-      "name": "Sara Mercier",
-      "category": "high_token_low_story_points",
-      "tokens_used": 1760437509,
-      "story_points": 112,
-      "story_points_per_token": 6.3621e-08,
-      "story_points_per_1m_tokens": 0.06,
-      "tokens_per_story_point": 15718192,
-      "tickets_closed": 24,
-      "lines_of_code": 18655,
-      "avg_days_per_story_point": 0.589,
-      "outlier_reason": "High token usage with low story point delivery.",
-      "action_type": "retrain_user",
-      "recommendation": "Retrain this user on prompt structure, context selection, and task decomposition; review their highest-token sessions before expanding access."
-    },
-    {
-      "name": "Lena Chen",
-      "category": "high_token_efficiency_risk",
-      "tokens_used": 3773907184,
-      "story_points": 245,
-      "story_points_per_token": 6.4919e-08,
-      "story_points_per_1m_tokens": 0.06,
-      "tokens_per_story_point": 15403702.8,
-      "tickets_closed": 56,
-      "lines_of_code": 34407,
-      "avg_days_per_story_point": 0.632,
-      "outlier_reason": "High token usage with weak tokens per story point.",
-      "action_type": "review_usage",
-      "recommendation": "Review whether the user is over-sending context or using premium models for low-complexity work."
-    },
-    {
-      "name": "Adrien Ivanova",
-      "category": "high_token_efficiency_risk",
-      "tokens_used": 3349716219,
-      "story_points": 291,
-      "story_points_per_token": 8.6873e-08,
-      "story_points_per_1m_tokens": 0.09,
-      "tokens_per_story_point": 11511052.3,
-      "tickets_closed": 57,
-      "lines_of_code": 59262,
-      "avg_days_per_story_point": 0.499,
-      "outlier_reason": "High token usage with weak tokens per story point.",
-      "action_type": "review_usage",
-      "recommendation": "Review whether the user is over-sending context or using premium models for low-complexity work."
-    },
-    {
-      "name": "Nina Traore",
-      "category": "normal",
-      "tokens_used": 845250146,
-      "story_points": 75,
-      "story_points_per_token": 8.8731e-08,
-      "story_points_per_1m_tokens": 0.09,
-      "tokens_per_story_point": 11270001.9,
-      "tickets_closed": 20,
-      "lines_of_code": 17227,
-      "avg_days_per_story_point": 0.827,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Hugo Dubois",
-      "category": "normal",
-      "tokens_used": 1430444679,
-      "story_points": 141,
-      "story_points_per_token": 9.8571e-08,
-      "story_points_per_1m_tokens": 0.1,
-      "tokens_per_story_point": 10144997.7,
-      "tickets_closed": 28,
-      "lines_of_code": 24147,
-      "avg_days_per_story_point": 0.582,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Pierre Okafor",
-      "category": "high_token_efficiency_risk",
-      "tokens_used": 2466851788,
-      "story_points": 271,
-      "story_points_per_token": 1.09857e-07,
-      "story_points_per_1m_tokens": 0.11,
-      "tokens_per_story_point": 9102774.1,
-      "tickets_closed": 58,
-      "lines_of_code": 51087,
-      "avg_days_per_story_point": 0.546,
-      "outlier_reason": "High token usage with weak tokens per story point.",
-      "action_type": "review_usage",
-      "recommendation": "Review whether the user is over-sending context or using premium models for low-complexity work."
-    },
-    {
-      "name": "Yuna Schmitt",
-      "category": "high_token_efficiency_risk",
-      "tokens_used": 2679429288,
-      "story_points": 339,
-      "story_points_per_token": 1.26519e-07,
-      "story_points_per_1m_tokens": 0.13,
-      "tokens_per_story_point": 7903921.2,
-      "tickets_closed": 63,
-      "lines_of_code": 42927,
-      "avg_days_per_story_point": 0.422,
-      "outlier_reason": "High token usage with weak tokens per story point.",
-      "action_type": "review_usage",
-      "recommendation": "Review whether the user is over-sending context or using premium models for low-complexity work."
-    },
-    {
-      "name": "Alexandre Diallo",
-      "category": "high_tokens_high_productivity",
-      "tokens_used": 3400182439,
-      "story_points": 507,
-      "story_points_per_token": 1.4911e-07,
-      "story_points_per_1m_tokens": 0.15,
-      "tokens_per_story_point": 6706474.2,
-      "tickets_closed": 103,
-      "lines_of_code": 88237,
-      "avg_days_per_story_point": 0.347,
-      "outlier_reason": "High token usage is paired with high story point delivery.",
-      "action_type": "monitor_budget",
-      "recommendation": "Keep access, but monitor tokens per story point so high productivity does not hide budget drift."
-    },
-    {
-      "name": "Julien Bourgeois",
-      "category": "normal",
-      "tokens_used": 1447453902,
-      "story_points": 225,
-      "story_points_per_token": 1.55445e-07,
-      "story_points_per_1m_tokens": 0.16,
-      "tokens_per_story_point": 6433128.5,
-      "tickets_closed": 42,
-      "lines_of_code": 36804,
-      "avg_days_per_story_point": 0.409,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Fatima Muller",
-      "category": "normal",
-      "tokens_used": 1648839396,
-      "story_points": 280,
-      "story_points_per_token": 1.69816e-07,
-      "story_points_per_1m_tokens": 0.17,
-      "tokens_per_story_point": 5888712.1,
-      "tickets_closed": 58,
-      "lines_of_code": 52646,
-      "avg_days_per_story_point": 0.461,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Theo Girard",
-      "category": "normal",
-      "tokens_used": 738697476,
-      "story_points": 147,
-      "story_points_per_token": 1.98999e-07,
-      "story_points_per_1m_tokens": 0.2,
-      "tokens_per_story_point": 5025152.9,
-      "tickets_closed": 29,
-      "lines_of_code": 25710,
-      "avg_days_per_story_point": 0.571,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Sofia Benali",
-      "category": "normal",
-      "tokens_used": 1955869503,
-      "story_points": 394,
-      "story_points_per_token": 2.01445e-07,
-      "story_points_per_1m_tokens": 0.2,
-      "tokens_per_story_point": 4964135.8,
-      "tickets_closed": 82,
-      "lines_of_code": 62621,
-      "avg_days_per_story_point": 0.462,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Ines Camus",
-      "category": "normal",
-      "tokens_used": 1622752222,
-      "story_points": 357,
-      "story_points_per_token": 2.19997e-07,
-      "story_points_per_1m_tokens": 0.22,
-      "tokens_per_story_point": 4545524.4,
-      "tickets_closed": 76,
-      "lines_of_code": 57976,
-      "avg_days_per_story_point": 0.448,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Chloe Leroy",
-      "category": "normal",
-      "tokens_used": 1533133553,
-      "story_points": 346,
-      "story_points_per_token": 2.25682e-07,
-      "story_points_per_1m_tokens": 0.23,
-      "tokens_per_story_point": 4431021.8,
-      "tickets_closed": 66,
-      "lines_of_code": 56786,
-      "avg_days_per_story_point": 0.506,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Lucas Renard",
-      "category": "normal",
-      "tokens_used": 825508959,
-      "story_points": 195,
-      "story_points_per_token": 2.36218e-07,
-      "story_points_per_1m_tokens": 0.24,
-      "tokens_per_story_point": 4233379.3,
-      "tickets_closed": 43,
-      "lines_of_code": 39013,
-      "avg_days_per_story_point": 0.488,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Alix Mbaye",
-      "category": "normal",
-      "tokens_used": 1570990266,
-      "story_points": 412,
-      "story_points_per_token": 2.62255e-07,
-      "story_points_per_1m_tokens": 0.26,
-      "tokens_per_story_point": 3813083.2,
-      "tickets_closed": 81,
-      "lines_of_code": 64714,
-      "avg_days_per_story_point": 0.383,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Florian Rousseau",
-      "category": "normal",
-      "tokens_used": 860176353,
-      "story_points": 231,
-      "story_points_per_token": 2.6855e-07,
-      "story_points_per_1m_tokens": 0.27,
-      "tokens_per_story_point": 3723707.2,
-      "tickets_closed": 47,
-      "lines_of_code": 39715,
-      "avg_days_per_story_point": 0.554,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Clara Chevalier",
-      "category": "normal",
-      "tokens_used": 1380645728,
-      "story_points": 380,
-      "story_points_per_token": 2.75234e-07,
-      "story_points_per_1m_tokens": 0.28,
-      "tokens_per_story_point": 3633278.2,
-      "tickets_closed": 72,
-      "lines_of_code": 65479,
-      "avg_days_per_story_point": 0.395,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Laure Fontaine",
-      "category": "high_tokens_high_productivity",
-      "tokens_used": 1684166477,
-      "story_points": 469,
-      "story_points_per_token": 2.78476e-07,
-      "story_points_per_1m_tokens": 0.28,
-      "tokens_per_story_point": 3590973.3,
-      "tickets_closed": 89,
-      "lines_of_code": 75741,
-      "avg_days_per_story_point": 0.339,
-      "outlier_reason": "High token usage is paired with high story point delivery.",
-      "action_type": "monitor_budget",
-      "recommendation": "Keep access, but monitor tokens per story point so high productivity does not hide budget drift."
-    },
-    {
-      "name": "Thomas Simon",
-      "category": "normal",
-      "tokens_used": 739958702,
-      "story_points": 262,
-      "story_points_per_token": 3.54074e-07,
-      "story_points_per_1m_tokens": 0.35,
-      "tokens_per_story_point": 2824269.9,
-      "tickets_closed": 53,
-      "lines_of_code": 49401,
-      "avg_days_per_story_point": 0.462,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Jade Faure",
-      "category": "normal",
-      "tokens_used": 820769121,
-      "story_points": 318,
-      "story_points_per_token": 3.87441e-07,
-      "story_points_per_1m_tokens": 0.39,
-      "tokens_per_story_point": 2581035,
-      "tickets_closed": 64,
-      "lines_of_code": 48660,
-      "avg_days_per_story_point": 0.459,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Yasmine El Idrissi",
-      "category": "low_tokens_low_productivity",
-      "tokens_used": 229802731,
-      "story_points": 91,
-      "story_points_per_token": 3.95992e-07,
-      "story_points_per_1m_tokens": 0.4,
-      "tokens_per_story_point": 2525304.7,
-      "tickets_closed": 20,
-      "lines_of_code": 16145,
-      "avg_days_per_story_point": 0.67,
-      "outlier_reason": "Low token usage with low story point delivery.",
-      "action_type": "test_ai_enablement",
-      "recommendation": "Run a controlled AI adoption experiment to see whether targeted usage improves story point delivery."
-    },
-    {
-      "name": "Quentin Morin",
-      "category": "normal",
-      "tokens_used": 679204048,
-      "story_points": 276,
-      "story_points_per_token": 4.06358e-07,
-      "story_points_per_1m_tokens": 0.41,
-      "tokens_per_story_point": 2460884.2,
-      "tickets_closed": 57,
-      "lines_of_code": 52696,
-      "avg_days_per_story_point": 0.431,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Remy Dupuis",
-      "category": "normal",
-      "tokens_used": 930720138,
-      "story_points": 431,
-      "story_points_per_token": 4.63082e-07,
-      "story_points_per_1m_tokens": 0.46,
-      "tokens_per_story_point": 2159443.5,
-      "tickets_closed": 90,
-      "lines_of_code": 77189,
-      "avg_days_per_story_point": 0.367,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Antoine Petit",
-      "category": "low_tokens_low_productivity",
-      "tokens_used": 249446076,
-      "story_points": 123,
-      "story_points_per_token": 4.93093e-07,
-      "story_points_per_1m_tokens": 0.49,
-      "tokens_per_story_point": 2028016.9,
-      "tickets_closed": 25,
-      "lines_of_code": 27256,
-      "avg_days_per_story_point": 0.618,
-      "outlier_reason": "Low token usage with low story point delivery.",
-      "action_type": "test_ai_enablement",
-      "recommendation": "Run a controlled AI adoption experiment to see whether targeted usage improves story point delivery."
-    },
-    {
-      "name": "Romain Roux",
-      "category": "normal",
-      "tokens_used": 883823912,
-      "story_points": 444,
-      "story_points_per_token": 5.02363e-07,
-      "story_points_per_1m_tokens": 0.5,
-      "tokens_per_story_point": 1990594.4,
-      "tickets_closed": 91,
-      "lines_of_code": 64304,
-      "avg_days_per_story_point": 0.344,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Maxime Lefebvre",
-      "category": "normal",
-      "tokens_used": 434097845,
-      "story_points": 236,
-      "story_points_per_token": 5.43656e-07,
-      "story_points_per_1m_tokens": 0.54,
-      "tokens_per_story_point": 1839397.6,
-      "tickets_closed": 46,
-      "lines_of_code": 42859,
-      "avg_days_per_story_point": 0.495,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Eva Moreau",
-      "category": "normal",
-      "tokens_used": 655333138,
-      "story_points": 517,
-      "story_points_per_token": 7.88912e-07,
-      "story_points_per_1m_tokens": 0.79,
-      "tokens_per_story_point": 1267568.9,
-      "tickets_closed": 105,
-      "lines_of_code": 78814,
-      "avg_days_per_story_point": 0.403,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Simon Martin",
-      "category": "moderate_tokens_high_productivity",
-      "tokens_used": 506844750,
-      "story_points": 451,
-      "story_points_per_token": 8.89819e-07,
-      "story_points_per_1m_tokens": 0.89,
-      "tokens_per_story_point": 1123824.3,
-      "tickets_closed": 81,
-      "lines_of_code": 52770,
-      "avg_days_per_story_point": 0.379,
-      "outlier_reason": "Moderate token usage with very strong story point delivery.",
-      "action_type": "share_playbook",
-      "recommendation": "Ask this user to document their AI workflow and run a short enablement session for peers with lower story points per token."
-    },
-    {
-      "name": "Camille Garnier",
-      "category": "normal",
-      "tokens_used": 262524331,
-      "story_points": 316,
-      "story_points_per_token": 1.203698e-06,
-      "story_points_per_1m_tokens": 1.2,
-      "tokens_per_story_point": 830773.2,
-      "tickets_closed": 62,
-      "lines_of_code": 47401,
-      "avg_days_per_story_point": 0.484,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Victor Durand",
-      "category": "normal",
-      "tokens_used": 175990917,
-      "story_points": 261,
-      "story_points_per_token": 1.483031e-06,
-      "story_points_per_1m_tokens": 1.48,
-      "tokens_per_story_point": 674294.7,
-      "tickets_closed": 50,
-      "lines_of_code": 49090,
-      "avg_days_per_story_point": 0.448,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Nicolas Michel",
-      "category": "normal",
-      "tokens_used": 172351998,
-      "story_points": 258,
-      "story_points_per_token": 1.496937e-06,
-      "story_points_per_1m_tokens": 1.5,
-      "tokens_per_story_point": 668031,
-      "tickets_closed": 41,
-      "lines_of_code": 39116,
-      "avg_days_per_story_point": 0.38,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
-    },
-    {
-      "name": "Zoe Laurent",
-      "category": "low_tokens_low_productivity",
-      "tokens_used": 49118006,
-      "story_points": 80,
-      "story_points_per_token": 1.628731e-06,
-      "story_points_per_1m_tokens": 1.63,
-      "tokens_per_story_point": 613975.1,
-      "tickets_closed": 20,
-      "lines_of_code": 18675,
-      "avg_days_per_story_point": 0.85,
-      "outlier_reason": "Low token usage with low story point delivery.",
-      "action_type": "test_ai_enablement",
-      "recommendation": "Run a controlled AI adoption experiment to see whether targeted usage improves story point delivery."
-    },
-    {
-      "name": "Amina Blanc",
-      "category": "low_tokens_high_productivity",
-      "tokens_used": 156964750,
-      "story_points": 411,
-      "story_points_per_token": 2.618422e-06,
-      "story_points_per_1m_tokens": 2.62,
-      "tokens_per_story_point": 381909.4,
-      "tickets_closed": 67,
-      "lines_of_code": 53665,
-      "avg_days_per_story_point": 0.336,
-      "outlier_reason": "Low token usage with strong story point delivery.",
-      "action_type": "share_playbook",
-      "recommendation": "Ask this user to document their AI workflow and run a short enablement session for peers with lower story points per token."
-    },
-    {
-      "name": "Nadia Fernandez",
-      "category": "normal",
-      "tokens_used": 88231147,
-      "story_points": 261,
-      "story_points_per_token": 2.958139e-06,
-      "story_points_per_1m_tokens": 2.96,
-      "tokens_per_story_point": 338050.4,
-      "tickets_closed": 49,
-      "lines_of_code": 49074,
-      "avg_days_per_story_point": 0.472,
-      "outlier_reason": "No major outlier pattern detected.",
-      "action_type": "monitor",
-      "recommendation": "Monitor month-by-month trend and compare against peers doing similar work."
+      "name": "Leila Park",
+      "category": "high_roi",
+      "roi_score": 97,
+      "tokens_used": 28132738,
+      "recommendation": "Maintain current usage and codify this high story-points-per-million-token workflow for team reuse.",
+      "productivity": 4.83
     },
     {
       "name": "Maya Kowalski",
-      "category": "low_tokens_high_productivity",
-      "tokens_used": 148153396,
-      "story_points": 440,
-      "story_points_per_token": 2.969895e-06,
-      "story_points_per_1m_tokens": 2.97,
-      "tokens_per_story_point": 336712.3,
-      "tickets_closed": 93,
-      "lines_of_code": 75097,
-      "avg_days_per_story_point": 0.359,
-      "outlier_reason": "Low token usage with strong story point delivery.",
-      "action_type": "share_playbook",
-      "recommendation": "Ask this user to document their AI workflow and run a short enablement session for peers with lower story points per token."
-    },
-    {
-      "name": "Leila Park",
-      "category": "low_tokens_high_productivity",
-      "tokens_used": 161330561,
-      "story_points": 562,
-      "story_points_per_token": 3.483531e-06,
-      "story_points_per_1m_tokens": 3.48,
-      "tokens_per_story_point": 287065.1,
-      "tickets_closed": 103,
-      "lines_of_code": 73461,
-      "avg_days_per_story_point": 0.3,
-      "outlier_reason": "Low token usage with strong story point delivery.",
-      "action_type": "share_playbook",
-      "recommendation": "Ask this user to document their AI workflow and run a short enablement session for peers with lower story points per token."
+      "category": "efficient_user",
+      "roi_score": 87,
+      "tokens_used": 24334442,
+      "recommendation": "Document this strong story-points-per-million-token workflow and expand adoption carefully.",
+      "productivity": 2.92
     },
     {
       "name": "Jules Nguyen",
-      "category": "low_tokens_low_productivity",
-      "tokens_used": 28012439,
-      "story_points": 185,
-      "story_points_per_token": 6.604209e-06,
-      "story_points_per_1m_tokens": 6.6,
-      "tokens_per_story_point": 151418.6,
-      "tickets_closed": 39,
-      "lines_of_code": 35524,
-      "avg_days_per_story_point": 0.562,
-      "outlier_reason": "Low token usage with low story point delivery.",
-      "action_type": "test_ai_enablement",
-      "recommendation": "Run a controlled AI adoption experiment to see whether targeted usage improves story point delivery."
+      "category": "efficient_user",
+      "roi_score": 84,
+      "tokens_used": 5689436,
+      "recommendation": "Use this top story-points-per-million-token workflow as a benchmark for broader team coaching.",
+      "productivity": 8.26
+    },
+    {
+      "name": "Amina Blanc",
+      "category": "efficient_user",
+      "roi_score": 81,
+      "tokens_used": 40417346,
+      "recommendation": "Preserve this efficient story-points-per-million-token pattern and share the workflow with peers.",
+      "productivity": 1.61
+    },
+    {
+      "name": "Victor Durand",
+      "category": "efficient_user",
+      "roi_score": 81,
+      "tokens_used": 36760403,
+      "recommendation": "Continue this efficient story-points-per-million-token usage and document the workflow for reuse.",
+      "productivity": 1.63
+    },
+    {
+      "name": "Jade Faure",
+      "category": "average_user",
+      "roi_score": 78,
+      "tokens_used": 139009694,
+      "recommendation": "Coach toward top-performer workflows to raise story points per million tokens.",
+      "productivity": 0.65
+    },
+    {
+      "name": "Eva Moreau",
+      "category": "average_user",
+      "roi_score": 75,
+      "tokens_used": 122269890,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens using top-performer patterns.",
+      "productivity": 0.63
+    },
+    {
+      "name": "Simon Martin",
+      "category": "efficient_user",
+      "roi_score": 75,
+      "tokens_used": 90801785,
+      "recommendation": "Document this solid story-points-per-million-token workflow and scale it carefully.",
+      "productivity": 0.76
+    },
+    {
+      "name": "Camille Garnier",
+      "category": "efficient_user",
+      "roi_score": 74,
+      "tokens_used": 48839131,
+      "recommendation": "Capture this efficient story-points-per-million-token workflow and share it with the team.",
+      "productivity": 1.17
+    },
+    {
+      "name": "Remy Dupuis",
+      "category": "average_user",
+      "roi_score": 72,
+      "tokens_used": 157657495,
+      "recommendation": "Monitor usage and coach toward stronger story points per million tokens.",
+      "productivity": 0.53
+    },
+    {
+      "name": "Nadia Fernandez",
+      "category": "low_adoption",
+      "roi_score": 63,
+      "tokens_used": 16464467,
+      "recommendation": "Provide targeted onboarding to increase adoption while preserving strong story points per million tokens.",
+      "productivity": 1.46
+    },
+    {
+      "name": "Yasmine El Idrissi",
+      "category": "average_user",
+      "roi_score": 63,
+      "tokens_used": 32039670,
+      "recommendation": "Monitor usage and coach toward top-performer patterns to improve story points per million tokens.",
+      "productivity": 0.97
+    },
+    {
+      "name": "Alix Mbaye",
+      "category": "average_user",
+      "roi_score": 61,
+      "tokens_used": 248018565,
+      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
+      "productivity": 0.29
+    },
+    {
+      "name": "Laure Fontaine",
+      "category": "average_user",
+      "roi_score": 61,
+      "tokens_used": 351310057,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens through better workflow patterns.",
+      "productivity": 0.26
+    },
+    {
+      "name": "Sofia Benali",
+      "category": "average_user",
+      "roi_score": 60,
+      "tokens_used": 433353302,
+      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
+      "productivity": 0.21
+    },
+    {
+      "name": "Thomas Simon",
+      "category": "average_user",
+      "roi_score": 60,
+      "tokens_used": 160459695,
+      "recommendation": "Monitor usage and coach toward stronger story points per million tokens.",
+      "productivity": 0.37
+    },
+    {
+      "name": "Nicolas Michel",
+      "category": "average_user",
+      "roi_score": 59,
+      "tokens_used": 44450539,
+      "recommendation": "Monitor usage and coach toward top-performer patterns to improve story points per million tokens.",
+      "productivity": 0.7
+    },
+    {
+      "name": "Maxime Lefebvre",
+      "category": "average_user",
+      "roi_score": 58,
+      "tokens_used": 92614426,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
+      "productivity": 0.49
+    },
+    {
+      "name": "Lena Chen",
+      "category": "average_user",
+      "roi_score": 51,
+      "tokens_used": 531690249,
+      "recommendation": "Review token-heavy workflows and coach toward materially better story points per million tokens.",
+      "productivity": 0.14
+    },
+    {
+      "name": "Romain Roux",
+      "category": "average_user",
+      "roi_score": 50,
+      "tokens_used": 161093114,
+      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
+      "productivity": 0.28
+    },
+    {
+      "name": "Quentin Morin",
+      "category": "average_user",
+      "roi_score": 49,
+      "tokens_used": 146482942,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
+      "productivity": 0.28
+    },
+    {
+      "name": "Zoe Laurent",
+      "category": "low_adoption",
+      "roi_score": 46,
+      "tokens_used": 10102844,
+      "recommendation": "Provide onboarding and workflow examples to improve adoption and story points per million tokens.",
+      "productivity": 0.59
+    },
+    {
+      "name": "Alexandre Diallo",
+      "category": "average_user",
+      "roi_score": 41,
+      "tokens_used": 626235460,
+      "recommendation": "Monitor high token usage closely and coach toward better story points per million tokens.",
+      "productivity": 0.12
+    },
+    {
+      "name": "Yuna Schmitt",
+      "category": "average_user",
+      "roi_score": 40,
+      "tokens_used": 518066030,
+      "recommendation": "Monitor high token usage and coach toward stronger story points per million tokens.",
+      "productivity": 0.13
+    },
+    {
+      "name": "Adrien Ivanova",
+      "category": "overspender",
+      "roi_score": 36,
+      "tokens_used": 745127529,
+      "recommendation": "Review prompts and token-heavy workflows immediately to improve story points per million tokens.",
+      "productivity": 0.1
+    },
+    {
+      "name": "Julien Bourgeois",
+      "category": "average_user",
+      "roi_score": 35,
+      "tokens_used": 310404973,
+      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
+      "productivity": 0.14
+    },
+    {
+      "name": "Lucas Renard",
+      "category": "average_user",
+      "roi_score": 35,
+      "tokens_used": 170434052,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
+      "productivity": 0.15
+    },
+    {
+      "name": "Chloe Leroy",
+      "category": "average_user",
+      "roi_score": 34,
+      "tokens_used": 288050639,
+      "recommendation": "Monitor usage and coach toward better story points per million tokens using top-performer patterns.",
+      "productivity": 0.14
+    },
+    {
+      "name": "Pierre Okafor",
+      "category": "average_user",
+      "roi_score": 34,
+      "tokens_used": 443924602,
+      "recommendation": "Monitor high token usage and coach toward stronger story points per million tokens.",
+      "productivity": 0.12
+    },
+    {
+      "name": "Antoine Petit",
+      "category": "low_adoption",
+      "roi_score": 29,
+      "tokens_used": 48323460,
+      "recommendation": "Provide onboarding and targeted workflow examples to improve story points per million tokens.",
+      "productivity": 0.14
+    },
+    {
+      "name": "Clara Chevalier",
+      "category": "average_user",
+      "roi_score": 22,
+      "tokens_used": 305157673,
+      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
+      "productivity": 0.11
+    },
+    {
+      "name": "Hugo Dubois",
+      "category": "average_user",
+      "roi_score": 22,
+      "tokens_used": 242512967,
+      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
+      "productivity": 0.12
+    },
+    {
+      "name": "Ines Camus",
+      "category": "overspender",
+      "roi_score": 19,
+      "tokens_used": 402794252,
+      "recommendation": "Review prompts and token-heavy workflows to improve story points per million tokens.",
+      "productivity": 0.1
+    },
+    {
+      "name": "Baptiste Bernard",
+      "category": "overspender",
+      "roi_score": 12,
+      "tokens_used": 767324881,
+      "recommendation": "Urgently review token-heavy workflows because story points per million tokens are critically low.",
+      "productivity": 0.05
+    },
+    {
+      "name": "Theo Girard",
+      "category": "quality_risk",
+      "roi_score": 11,
+      "tokens_used": 124441231,
+      "recommendation": "Add quality gates and reduce rework before scaling token usage to improve story points per million tokens.",
+      "productivity": 0.09
+    },
+    {
+      "name": "Florian Rousseau",
+      "category": "quality_risk",
+      "roi_score": 10,
+      "tokens_used": 209759142,
+      "recommendation": "Add quality gates and reduce rework to improve story points per million tokens before scaling usage.",
+      "productivity": 0.07
+    },
+    {
+      "name": "Omar Leclerc",
+      "category": "overspender",
+      "roi_score": 9,
+      "tokens_used": 753829866,
+      "recommendation": "Review prompts and token-heavy workflows immediately to improve very low story points per million tokens.",
+      "productivity": 0.05
+    },
+    {
+      "name": "Fatima Muller",
+      "category": "quality_risk",
+      "roi_score": 7,
+      "tokens_used": 348549942,
+      "recommendation": "Add quality gates and reduce rework to improve story points per million tokens.",
+      "productivity": 0.06
+    },
+    {
+      "name": "Nina Traore",
+      "category": "quality_risk",
+      "roi_score": 7,
+      "tokens_used": 202833499,
+      "recommendation": "Add quality gates and reduce rework before increasing token usage to improve story points per million tokens.",
+      "productivity": 0.06
+    },
+    {
+      "name": "Sara Mercier",
+      "category": "quality_risk",
+      "roi_score": 5,
+      "tokens_used": 269440710,
+      "recommendation": "Add quality gates and reduce rework urgently to improve story points per million tokens.",
+      "productivity": 0.06
     }
-  ],
-  "recommendation_source": "fallback",
-  "generated_at": "2026-04-25T22:56:49.155464+00:00"
+  ]
 }
