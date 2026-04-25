@@ -82,6 +82,16 @@ def percentile(values: list[float], q: float) -> float:
     return ordered[lower] * (1 - weight) + ordered[upper] * weight
 
 
+def percentile_rank(values: list[float], value: float) -> float:
+    if not values:
+        return 0.0
+    return safe_divide(sum(1 for item in values if item <= value), len(values)) * 100
+
+
+def rank_desc(values: list[float], value: float) -> int:
+    return 1 + sum(1 for item in values if item > value)
+
+
 def clamp(value: float, lower: float, upper: float) -> float:
     return max(lower, min(upper, value))
 
@@ -171,35 +181,135 @@ def latest_employee_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return list(latest_by_name.values())
 
 
-def fallback_recommendation(category: str) -> str:
+def signed_metric(value: float, digits: int = 1) -> str:
+    rounded = round_metric(value, digits)
+    return f"+{rounded}" if value > 0 else str(rounded)
+
+
+def percent_label(value: float) -> str:
+    return f"P{round_metric(value, 0)}"
+
+
+def top_share_label(rank: int, total: int) -> str:
+    return f"top {round_metric(safe_divide(rank, total) * 100, 1)}%"
+
+
+def vs_median(value: float, median: float) -> float:
+    return safe_divide(value - median, median) * 100
+
+
+def build_positioning_context(
+    row: dict[str, Any],
+    token_values: list[float],
+    story_point_values: list[float],
+    productivity_values: list[float],
+) -> dict[str, Any]:
+    employee_count = len(token_values)
+    token_rank = rank_desc(token_values, row["tokens_used"])
+    story_point_rank = rank_desc(story_point_values, row["story_points"])
+    productivity_rank = rank_desc(productivity_values, row["productivity"])
+    token_percentile = percentile_rank(token_values, row["tokens_used"])
+    story_point_percentile = percentile_rank(story_point_values, row["story_points"])
+    productivity_percentile = percentile_rank(productivity_values, row["productivity"])
+    positioning_index = productivity_percentile - token_percentile
+
+    flags = []
+    if token_rank / employee_count <= 0.05 and productivity_percentile <= 60:
+        flags.append("top_5_percent_usage_with_average_or_lower_productivity")
+    if token_percentile >= 75 and productivity_percentile <= 25:
+        flags.append("high_usage_low_productivity")
+    if productivity_percentile >= 90 and story_point_percentile >= 75:
+        flags.append("benchmark_user")
+    if token_percentile <= 25 and story_point_percentile <= 25:
+        flags.append("low_adoption")
+
+    return {
+        "name": row["name"],
+        "tokens_used": int(round(row["tokens_used"])),
+        "story_points": round_metric(row["story_points"], 1),
+        "story_points_per_million_tokens": round_metric(row["productivity"], 2),
+        "employee_count": employee_count,
+        "token_rank": token_rank,
+        "story_point_rank": story_point_rank,
+        "productivity_rank": productivity_rank,
+        "token_top_share_percent": round_metric(safe_divide(token_rank, employee_count) * 100, 1),
+        "story_point_top_share_percent": round_metric(
+            safe_divide(story_point_rank, employee_count) * 100,
+            1,
+        ),
+        "productivity_top_share_percent": round_metric(
+            safe_divide(productivity_rank, employee_count) * 100,
+            1,
+        ),
+        "token_percentile": round_metric(token_percentile, 0),
+        "story_point_percentile": round_metric(story_point_percentile, 0),
+        "productivity_percentile": round_metric(productivity_percentile, 0),
+        "token_vs_median_percent": round_metric(
+            vs_median(row["tokens_used"], percentile(token_values, 0.5)),
+            1,
+        ),
+        "story_points_vs_median_percent": round_metric(
+            vs_median(row["story_points"], percentile(story_point_values, 0.5)),
+            1,
+        ),
+        "productivity_vs_median_percent": round_metric(
+            vs_median(row["productivity"], percentile(productivity_values, 0.5)),
+            1,
+        ),
+        "positioning_index": round_metric(positioning_index, 1),
+        "flags": flags,
+    }
+
+
+def fallback_recommendation(category: str, context: dict[str, Any]) -> str:
+    name = context["name"]
+    total = context["employee_count"]
+    token_position = (
+        f"{top_share_label(context['token_rank'], total)} token usage "
+        f"(rank #{context['token_rank']}/{total}, {percent_label(context['token_percentile'])})"
+    )
+    story_position = (
+        f"{top_share_label(context['story_point_rank'], total)} story point delivery "
+        f"(rank #{context['story_point_rank']}/{total}, {percent_label(context['story_point_percentile'])})"
+    )
+    productivity_position = (
+        f"{top_share_label(context['productivity_rank'], total)} productivity "
+        f"(rank #{context['productivity_rank']}/{total}, {percent_label(context['productivity_percentile'])})"
+    )
+    productivity_value = context["story_points_per_million_tokens"]
+    index = signed_metric(context["positioning_index"])
+    token_vs_median = signed_metric(context["token_vs_median_percent"])
+    story_vs_median = signed_metric(context["story_points_vs_median_percent"])
+    productivity_vs_median = signed_metric(context["productivity_vs_median_percent"])
+
     if category == "high_roi":
         return (
-            "Maintain this level of AI access and use this person as a benchmark. "
-            "Their token consumption is justified by strong story point delivery, so the next action is to document the workflow, prompts, and review habits that make the spend productive."
+            f"{name} is a benchmark: {story_position} and {productivity_position}, with {productivity_value} story points per million tokens and a positioning index of {index}. "
+            f"Usage is {token_position} ({token_vs_median}% vs median), but delivery is {story_vs_median}% vs median and productivity is {productivity_vs_median}% vs median, so the action is to document this workflow and reuse it as the team's reference playbook."
         )
     if category == "efficient_user":
         return (
-            "Turn this person into an internal reference user. "
-            "They deliver strong story points without excessive token usage, so ask them to share concrete examples of prompts, context selection, and tasks where AI saves the most time."
+            f"{name} is an efficient user: {story_position} with {token_position}, producing {productivity_value} story points per million tokens and a positioning index of {index}. "
+            f"Because productivity is {productivity_vs_median}% vs median while usage is {token_vs_median}% vs median, the business action is to make this employee share prompts, context-selection habits, and task patterns with the rest of the team."
         )
     if category == "overspender":
         return (
-            "Review this user's AI workflow before increasing their access. "
-            "The token spend is high relative to delivered story points, so check whether they are sending too much context, using AI for low-value tasks, or missing basic prompt patterns."
+            f"{name} is a cost-reduction priority: {token_position}, but only {story_position} and {productivity_position}, with {productivity_value} story points per million tokens and a positioning index of {index}. "
+            f"This means token spend is {token_vs_median}% vs median while productivity is {productivity_vs_median}% vs median, so review prompt logs, cap oversized context, and retrain before increasing this user's AI budget."
         )
     if category == "low_adoption":
         return (
-            "Run a targeted enablement test rather than cutting budget. "
-            "This user has low token usage and low story point delivery, so the issue may be under-adoption; give them practical examples and compare their next month against this baseline."
+            f"{name} looks like an adoption problem rather than pure waste: usage is {token_position} and delivery is {story_position}, with {productivity_value} story points per million tokens. "
+            f"Because both usage and story points sit below the peer median ({token_vs_median}% tokens, {story_vs_median}% story points), run targeted coaching and compare next month against this baseline before cutting access."
         )
     if category == "quality_risk":
         return (
-            "Do not scale AI usage for this user yet. "
-            "Story point delivery is weak relative to the usage pattern, so add review checkpoints and focus on task decomposition before encouraging more token consumption."
+            f"{name} should not receive more AI budget yet: delivery is only {story_position} and productivity is {productivity_position}, with a positioning index of {index}. "
+            f"Usage is {token_vs_median}% vs median but story points are {story_vs_median}% vs median, so add task decomposition, review checkpoints, and quality gates before encouraging heavier AI usage."
         )
     return (
-        "Keep monitoring this user against peers doing similar work. "
-        "Their token usage and story point delivery are not extreme, so the best next step is light coaching using examples from the highest-performing users."
+        f"{name} is not an extreme outlier: {token_position}, {story_position}, and {productivity_position}, with a positioning index of {index}. "
+        f"Keep monitoring the trend, then use efficient-user playbooks if productivity stays below the peer median ({productivity_vs_median}% vs median) or token usage rises without a matching story point increase."
     )
 
 
@@ -240,22 +350,31 @@ def classify_employee(
     return "average_user"
 
 
-def build_employee_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def build_employee_metrics(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     employee_rows = latest_employee_rows(rows)
     token_values = [row["tokens_used"] for row in employee_rows]
     story_point_values = [row["story_points"] for row in employee_rows]
     productivity_values = [row["productivity"] for row in employee_rows]
 
     employees = []
+    recommendation_context = []
     for row in employee_rows:
         category = classify_employee(row, token_values, story_point_values, productivity_values)
+        context = build_positioning_context(
+            row,
+            token_values,
+            story_point_values,
+            productivity_values,
+        )
+        context["category"] = category
+        recommendation_context.append(context)
         employees.append(
             {
                 "name": row["name"],
                 "category": category,
                 "tokens_used": int(round(row["tokens_used"])),
                 "story_points": round_metric(row["story_points"], 1),
-                "recommendation": fallback_recommendation(category),
+                "recommendation": fallback_recommendation(category, context),
             }
         )
 
@@ -267,10 +386,13 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         "quality_risk": 4,
         "overspender": 5,
     }
-    return sorted(
+    sorted_employees = sorted(
         employees,
         key=lambda item: (category_rank.get(item["category"], 99), item["name"]),
     )
+    sorted_names = [item["name"] for item in sorted_employees]
+    context_by_name = {item["name"]: item for item in recommendation_context}
+    return sorted_employees, [context_by_name[name] for name in sorted_names]
 
 
 def rows_for_month(rows: list[dict[str, Any]], month: str | None) -> list[dict[str, Any]]:
@@ -356,29 +478,45 @@ def build_executive_summary(
     }
 
 
-def maybe_apply_openai_recommendations(viewmodel: dict[str, Any]) -> str:
+def maybe_apply_openai_recommendations(
+    viewmodel: dict[str, Any],
+    recommendation_context: list[dict[str, Any]],
+) -> str:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         return "skipped"
 
     model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
     prompt = {
-        "task": "Write manager recommendations for an AI token value dashboard.",
+        "task": (
+            "Write CFO and engineering-manager recommendations for an AI token value dashboard. "
+            "The recommendations must justify whether AI spend is productive, wasteful, or under-adopted."
+        ),
         "rules": [
-            "Use only the provided JSON.",
-            "Do not add, remove, rename, or compute fields.",
+            "Use only the provided dashboard fields and KPI context.",
+            "Do not add, remove, rename, or compute output fields.",
             "Return only main_recommendation and employee recommendations by name.",
-            "Base reasoning on tokens_used, story_points, and category.",
-            "Recommendations should be more detailed than one-liners: 2 clear sentences for each employee.",
-            "Explain the business action: retrain, monitor, replicate workflow, or run adoption coaching.",
+            "Each employee recommendation must be 3 to 4 concise sentences.",
+            "Each employee recommendation must include rank or percentile comparisons against peers.",
+            "Each employee recommendation must include the positioning index, defined as productivity percentile minus token-usage percentile.",
+            "Each employee recommendation must include a clear business action: reduce/cap usage, retrain, monitor, replicate workflow, or run adoption coaching.",
+            "Each employee recommendation must include one next-month KPI to watch.",
+            "For overspenders, explicitly explain why cost should be reduced or controlled.",
+            "For efficient users and high_roi users, explicitly explain what should be replicated.",
+            "For low_adoption users, explicitly explain why enablement may create more value than budget cuts.",
+            "Write for a CFO or manager, not for a developer.",
         ],
         "required_json_shape": {
             "main_recommendation": "string",
             "employee_recommendations": [
-                {"name": "string", "recommendation": "two concise sentences"}
+                {"name": "string", "recommendation": "3 to 4 concise sentences with KPI comparisons and actions"}
             ],
         },
-        "viewmodel": viewmodel,
+        "dashboard": {
+            "executive_summary": viewmodel["executive_summary"],
+            "employee_metrics": viewmodel["employee_metrics"],
+        },
+        "kpi_context": recommendation_context,
     }
     payload = {
         "model": model,
@@ -387,7 +525,10 @@ def maybe_apply_openai_recommendations(viewmodel: dict[str, Any]) -> str:
         "messages": [
             {
                 "role": "system",
-                "content": "You produce valid JSON only for a fintech AI spending dashboard.",
+                "content": (
+                    "You produce valid JSON only for a fintech AI spending dashboard. "
+                    "Your audience is a CFO and engineering manager who need justified, actionable decisions."
+                ),
             },
             {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
         ],
@@ -403,7 +544,7 @@ def maybe_apply_openai_recommendations(viewmodel: dict[str, Any]) -> str:
     )
 
     try:
-        with urllib.request.urlopen(request, timeout=45) as response:
+        with urllib.request.urlopen(request, timeout=90) as response:
             response_payload = json.loads(response.read().decode("utf-8"))
         content = response_payload["choices"][0]["message"]["content"]
         recommendations = json.loads(content)
@@ -432,7 +573,7 @@ def build_viewmodel(
     currency: str,
 ) -> tuple[dict[str, Any], str]:
     normalized_rows = [normalized_row(row) for row in rows]
-    employee_metrics = build_employee_metrics(normalized_rows)
+    employee_metrics, recommendation_context = build_employee_metrics(normalized_rows)
     monthly_budget = safe_float(os.environ.get("AI_MONTHLY_BUDGET"), default=0.0) or None
 
     viewmodel = {
@@ -446,7 +587,7 @@ def build_viewmodel(
         "monthly_metrics": build_monthly_metrics(normalized_rows),
         "employee_metrics": employee_metrics,
     }
-    recommendation_source = maybe_apply_openai_recommendations(viewmodel)
+    recommendation_source = maybe_apply_openai_recommendations(viewmodel, recommendation_context)
     return viewmodel, recommendation_source
 
 

@@ -7,7 +7,7 @@
     "productivity_gain_percent": 17.5,
     "bugs_reduction_percent": -59.6,
     "currency": "USD",
-    "main_recommendation": "Prioritize two actions next month: retrain and closely monitor high-token users who deliver relatively few story points, and replicate the workflows of efficient users with strong delivery at low token cost. Run adoption coaching for low-adoption users so budget stays focused on categories where token usage converts into measurable story point output."
+    "main_recommendation": "AI spend appears productive overall but unevenly allocated: total spend is 81.7% of budget, forecast to decline 5.6% next month, while productivity gain is 17.5%. The priority is to reduce or cap spend for the clear overspenders and quality-risk users whose token usage materially exceeds their productivity, while replicating the workflows of high-ROI and efficient users. Low-adoption users should receive coaching rather than budget cuts, because their low usage suggests unrealized value rather than meaningful cost waste. Next month, watch whether story points shift toward the efficient-user cohort while total AI spend stays at or below the 73,284.79 USD forecast."
   },
   "monthly_metrics": [
     {
@@ -1242,280 +1242,280 @@
       "category": "high_roi",
       "tokens_used": 28132738,
       "story_points": 136,
-      "recommendation": "Replicate this workflow across the team because this high_roi pattern combines very low tokens_used with exceptionally high story_points. Ask Leila to document prompts, context selection, and review habits so others can copy a proven high-value AI usage model."
+      "recommendation": "Leila Park is the clearest model to replicate: rank #1/40 in story points (P100) and #2/40 in productivity (P98) while token usage is only P12, giving a positioning index of +85. This is high-value AI spend, not waste, because delivery is +202.2% vs median and productivity is +1951.3% vs median despite low relative usage. Replicate this workflow by documenting her prompt structure, context selection, and task sequencing as a team playbook. Next month, watch story points from teammates adopting her workflow."
     },
     {
       "name": "Amina Blanc",
       "category": "efficient_user",
       "tokens_used": 40417346,
       "story_points": 65,
-      "recommendation": "Replicate this workflow because as an efficient_user, Amina delivers solid story_points with low tokens_used. Have her share practical prompt examples and task choices that keep AI usage lean while sustaining delivery."
+      "recommendation": "Amina Blanc is an efficient user with story point rank #14/40 (P68), productivity P90, and token usage P20, for a positioning index of +70. Her usage is well below heavier users, yet productivity is +582.4% vs median, which indicates a workflow worth scaling rather than constraining. Replicate her prompt discipline, context-selection habits, and task patterns across similar roles. Next month, watch productivity percentile for the peers who adopt her workflow."
     },
     {
       "name": "Camille Garnier",
       "category": "efficient_user",
       "tokens_used": 48839131,
       "story_points": 57,
-      "recommendation": "Replicate this workflow because as an efficient_user, Camille converts modest tokens_used into strong story_points. Use Camille in peer sessions to show how focused prompting and tighter context can improve team-wide efficiency."
+      "recommendation": "Camille Garnier is an efficient user: story point rank #17/40 (P60), productivity P85, and token usage P28, with a positioning index of +57.5. This indicates productive spend because output and productivity outpace usage relative to peers. Replicate her workflow by sharing how she scopes tasks and limits context to what is necessary. Next month, watch story points per million tokens in the teams that copy this approach."
     },
     {
       "name": "Jules Nguyen",
       "category": "efficient_user",
       "tokens_used": 5689436,
       "story_points": 47,
-      "recommendation": "Replicate this workflow because Jules shows one of the strongest efficient_user patterns with extremely low tokens_used and strong story_points. Turn this into a benchmark example for lightweight AI usage that still supports meaningful delivery."
+      "recommendation": "Jules Nguyen is one of the strongest efficiency cases: productivity rank #1/40 (P100), story points P55, and token usage just P2, producing a positioning index of +97.5. This is exactly what should be replicated, because he converts minimal token spend into the highest peer productivity. Replicate his workflow by capturing his prompt templates and lightweight usage habits for broader training. Next month, watch token usage percentile for coached peers to see if they can reduce spend without losing delivery."
     },
     {
       "name": "Maya Kowalski",
       "category": "efficient_user",
       "tokens_used": 24334442,
       "story_points": 71,
-      "recommendation": "Replicate this workflow because Maya’s efficient_user profile shows high story_points without heavy tokens_used. Capture her working pattern and share it with peers who need examples of productive, cost-controlled AI adoption."
+      "recommendation": "Maya Kowalski is a benchmark efficient user with story point rank #11/40 (P75), productivity P95, and token usage P10, for a positioning index of +85. Her results show that strong delivery does not require heavy token consumption, so this is productive spend that should be scaled. Replicate her workflow by standardizing her prompt patterns and task-selection approach for the wider team. Next month, watch productivity percentile among managers or teams using her playbook."
     },
     {
       "name": "Simon Martin",
       "category": "efficient_user",
       "tokens_used": 90801785,
       "story_points": 69,
-      "recommendation": "Replicate this workflow because Simon’s efficient_user results show strong story_points at moderate tokens_used. Use his approach as a coaching example for teammates who need better output per token."
+      "recommendation": "Simon Martin delivers solid value with story point rank #12/40 (P72), productivity P80, and token usage P30, giving a positioning index of +50. He is not the top benchmark, but he still converts below-median usage into above-median output, which makes his spend productive. Replicate the parts of his workflow that keep usage controlled while sustaining delivery. Next month, watch story points relative to token usage for peers adopting his methods."
     },
     {
       "name": "Victor Durand",
       "category": "efficient_user",
       "tokens_used": 36760403,
       "story_points": 60,
-      "recommendation": "Replicate this workflow because Victor delivers strong story_points with relatively low tokens_used for an efficient_user. Ask him to share how he scopes tasks and prompts so others can improve value without increasing spend."
+      "recommendation": "Victor Durand is an efficient user with story point rank #15/40 (P65), productivity P92, and token usage P18, resulting in a positioning index of +75. His productivity is far ahead of peers despite relatively low usage, so his AI spend is productive and worth copying. Replicate his prompt and context-management habits to improve team-wide efficiency. Next month, watch productivity percentile for the group trained on his workflow."
     },
     {
       "name": "Alexandre Diallo",
       "category": "average_user",
       "tokens_used": 626235460,
       "story_points": 74,
-      "recommendation": "Monitor this average_user because tokens_used and story_points are both substantial but not clearly out of line for the category. Provide light coaching using efficient_user examples to improve output without expanding token consumption."
+      "recommendation": "Alexandre Diallo should be monitored closely: token usage rank #4/40 (P92) is very high relative to story point rank #8/40 (P82) and productivity P30, producing a positioning index of -62.5. This is not yet a clear waste case, but the gap suggests spend is running ahead of efficiency versus peers. Monitor and retrain using efficient-user playbooks if this pattern persists, rather than expanding budget. Next month, watch productivity percentile."
     },
     {
       "name": "Alix Mbaye",
       "category": "average_user",
       "tokens_used": 248018565,
       "story_points": 73,
-      "recommendation": "Monitor this average_user because Alix shows balanced tokens_used and story_points without a strong risk or standout efficiency signal. Use light coaching and peer examples to see whether delivery can improve before changing access or budget."
+      "recommendation": "Alix Mbaye is near balanced performance with token usage rank #16/40 (P62), story points P78, and productivity P60, for a positioning index of -2.5. This suggests current spend is broadly in line with output and does not require immediate cost action. Monitor for drift and selectively apply efficient-user practices if usage rises faster than delivery. Next month, watch token usage percentile."
     },
     {
       "name": "Chloe Leroy",
       "category": "average_user",
       "tokens_used": 288050639,
       "story_points": 40,
-      "recommendation": "Monitor this average_user because tokens_used are meaningful while story_points are moderate for the category. Compare Chloe’s workflow with efficient_user peers to identify whether prompt discipline can raise delivery."
+      "recommendation": "Chloe Leroy is below peer efficiency, with token usage rank #14/40 (P68), story points P38, and productivity P40, giving a positioning index of -27.5. This is not severe overspend, but it does indicate weaker conversion of tokens into delivery than peers. Monitor and retrain on efficient-user workflows before considering tighter controls. Next month, watch story points per million tokens."
     },
     {
       "name": "Clara Chevalier",
       "category": "average_user",
       "tokens_used": 305157673,
       "story_points": 34,
-      "recommendation": "Monitor this average_user because Clara’s tokens_used are moderate to high while story_points are lower than the strongest peers. Use targeted coaching from efficient users to test whether better task selection improves conversion of spend into delivery."
+      "recommendation": "Clara Chevalier shows a meaningful efficiency gap: token usage rank #13/40 (P70) versus story points P32 and productivity P25, for a positioning index of -45. Her spend is not extreme enough for immediate caps, but it is underperforming relative to peers and should be corrected. Retrain using efficient-user examples to improve output from current spend. Next month, watch productivity percentile."
     },
     {
       "name": "Eva Moreau",
       "category": "average_user",
       "tokens_used": 122269890,
       "story_points": 77,
-      "recommendation": "Monitor this average_user because Eva’s story_points are strong relative to moderate tokens_used, but the category still suggests room to optimize. Keep access stable and compare her workflow with top efficient users for incremental gains."
+      "recommendation": "Eva Moreau is a healthy user profile with token usage rank #27/40 (P35), story points P88, and productivity P72, producing a positioning index of +37.5. This indicates productive spend, with output well ahead of usage relative to peers. Monitor and selectively replicate the habits that support her strong delivery at moderate usage. Next month, watch story points."
     },
     {
       "name": "Hugo Dubois",
       "category": "average_user",
       "tokens_used": 242512967,
       "story_points": 28,
-      "recommendation": "Monitor this average_user because Hugo’s tokens_used are moderate while story_points remain on the lower side for the category. Use coaching and closer review of task selection before deciding whether retraining is needed."
+      "recommendation": "Hugo Dubois is underperforming relative to usage, with token usage rank #17/40 (P60), story points P25, and productivity P28, for a positioning index of -32.5. This suggests AI spend is not converting efficiently into delivery, though it is not yet a top cost-risk case. Retrain on task decomposition and efficient-user practices before increasing access. Next month, watch productivity percentile."
     },
     {
       "name": "Jade Faure",
       "category": "average_user",
       "tokens_used": 139009694,
       "story_points": 90,
-      "recommendation": "Monitor this average_user because Jade delivers high story_points with manageable tokens_used, indicating a healthy but not top-tier efficiency pattern. Share a few efficient_user practices to see if this can be pushed into a stronger ROI profile."
+      "recommendation": "Jade Faure is a productive user with token usage rank #25/40 (P40), story points P92, and productivity P75, giving a positioning index of +35. Her spend is justified because delivery materially outpaces usage relative to peers. Monitor and replicate the parts of her workflow that support high output without heavy token consumption. Next month, watch story points per million tokens."
     },
     {
       "name": "Julien Bourgeois",
       "category": "average_user",
       "tokens_used": 310404973,
       "story_points": 42,
-      "recommendation": "Monitor this average_user because Julien’s tokens_used are fairly high relative to moderate story_points, but not enough to classify as overspending. Review prompt structure and task mix with efficient-user examples before taking stronger action."
+      "recommendation": "Julien Bourgeois has token usage rank #12/40 (P72) but only story points P48 and productivity P38, resulting in a positioning index of -35. This indicates spend is somewhat ahead of value creation versus peers. Monitor and retrain with efficient-user playbooks to improve conversion before any budget expansion. Next month, watch productivity percentile."
     },
     {
       "name": "Laure Fontaine",
       "category": "average_user",
       "tokens_used": 351310057,
       "story_points": 91,
-      "recommendation": "Monitor this average_user because Laure delivers strong story_points with moderate-to-high tokens_used, suggesting acceptable but improvable efficiency. Keep usage steady and benchmark against high_roi and efficient_user workflows for refinement."
+      "recommendation": "Laure Fontaine delivers strongly with story point rank #3/40 (P95), but token usage is also high at P78 and productivity is only P52, creating a positioning index of -25. This is productive in absolute output terms, but efficiency is only mid-pack relative to peers. Monitor and apply efficient-user methods to improve cost conversion without reducing delivery. Next month, watch story points per million tokens."
     },
     {
       "name": "Lena Chen",
       "category": "average_user",
       "tokens_used": 531690249,
       "story_points": 77,
-      "recommendation": "Monitor this average_user because Lena’s tokens_used are high, but story_points are also meaningful enough to avoid immediate retraining. Review whether some tasks can be handled with leaner prompts to improve cost efficiency over time."
+      "recommendation": "Lena Chen combines high usage rank #5/40 (P90) with strong story points P88 but only productivity P42, for a positioning index of -47.5. The output is valuable, but the cost to achieve it is high relative to peers, so efficiency needs improvement. Monitor and retrain on leaner workflows rather than adding more budget. Next month, watch productivity percentile."
     },
     {
       "name": "Lucas Renard",
       "category": "average_user",
       "tokens_used": 170434052,
       "story_points": 26,
-      "recommendation": "Monitor this average_user because Lucas has moderate tokens_used with relatively low story_points for the category. Use light coaching and compare against efficient_user habits before escalating to retraining."
+      "recommendation": "Lucas Renard is close to neutral but slightly inefficient, with token usage rank #20/40 (P52), story points P22, and productivity P48, for a positioning index of -5. This does not justify immediate cost controls, but it also does not support more spend. Monitor and retrain if delivery does not improve from current usage levels. Next month, watch story points."
     },
     {
       "name": "Maxime Lefebvre",
       "category": "average_user",
       "tokens_used": 92614426,
       "story_points": 45,
-      "recommendation": "Monitor this average_user because Maxime’s tokens_used and story_points sit in a middle range without a clear efficiency or risk signal. Keep tracking next month and use peer examples to improve output per token."
+      "recommendation": "Maxime Lefebvre is a positive but not extreme case, with token usage rank #28/40 (P32), story points P52, and productivity P65, giving a positioning index of +32.5. His spend appears productive because output and productivity exceed usage relative to peers. Monitor and consider sharing his working habits in smaller team sessions. Next month, watch productivity percentile."
     },
     {
       "name": "Nicolas Michel",
       "category": "average_user",
       "tokens_used": 44450539,
       "story_points": 31,
-      "recommendation": "Monitor this average_user because Nicolas uses relatively low tokens_used and delivers moderate story_points, which suggests stable but not standout adoption. Offer light coaching to help convert this into a more efficient_user pattern."
+      "recommendation": "Nicolas Michel is quietly efficient, with token usage rank #32/40 (P22), story points P30, and productivity P78, for a positioning index of +55. This suggests productive spend and a workflow that may be more scalable than his raw output alone implies. Replicate how he uses AI efficiently, especially for similar task types. Next month, watch story points per million tokens among peers using his approach."
     },
     {
       "name": "Pierre Okafor",
       "category": "average_user",
       "tokens_used": 443924602,
       "story_points": 55,
-      "recommendation": "Monitor this average_user because Pierre’s tokens_used are high while story_points are moderate, but still not extreme enough for overspender treatment. Review workflow choices and compare with stronger peers to improve value from current spend."
+      "recommendation": "Pierre Okafor should be monitored as a high-usage, lower-efficiency case: token usage rank #7/40 (P85), story points P57, and productivity P32, with a positioning index of -52.5. This pattern suggests spend is running ahead of value creation relative to peers. Monitor and retrain on efficient-user methods before approving any additional usage growth. Next month, watch productivity percentile."
     },
     {
       "name": "Quentin Morin",
       "category": "average_user",
       "tokens_used": 146482942,
       "story_points": 41,
-      "recommendation": "Monitor this average_user because Quentin shows moderate tokens_used and moderate story_points with no urgent risk signal. Keep access unchanged and use efficient-user examples to test for better delivery efficiency."
+      "recommendation": "Quentin Morin is broadly stable with token usage rank #24/40 (P42), story points P42, and productivity P57, producing a positioning index of +15. Current spend appears reasonably productive and does not require intervention. Monitor for consistency and use efficient-user examples only if usage rises without better output. Next month, watch token usage percentile."
     },
     {
       "name": "Remy Dupuis",
       "category": "average_user",
       "tokens_used": 157657495,
       "story_points": 83,
-      "recommendation": "Monitor this average_user because Remy delivers strong story_points with moderate tokens_used, indicating a healthy baseline. Use peer benchmarking to see whether this can be replicated more broadly or improved further."
+      "recommendation": "Remy Dupuis shows productive use with token usage rank #23/40 (P45), story points P90, and productivity P68, for a positioning index of +22.5. His output is strong enough to justify current spend, though he is not as efficient as the benchmark users. Monitor and selectively replicate the habits that support his high delivery. Next month, watch story points per million tokens."
     },
     {
       "name": "Romain Roux",
       "category": "average_user",
       "tokens_used": 161093114,
       "story_points": 45,
-      "recommendation": "Monitor this average_user because Romain’s tokens_used are moderate while story_points are also moderate, leaving room for better conversion. Apply light coaching from efficient users before making any access changes."
+      "recommendation": "Romain Roux is near the middle on all measures, with token usage rank #21/40 (P50), story points P52, and productivity P55, giving a positioning index of +5. This is a balanced profile with no immediate sign of waste or under-adoption. Monitor rather than intervene, and use efficient-user coaching only if usage starts to outpace delivery. Next month, watch productivity percentile."
     },
     {
       "name": "Sofia Benali",
       "category": "average_user",
       "tokens_used": 433353302,
       "story_points": 92,
-      "recommendation": "Monitor this average_user because Sofia’s story_points are strong, but tokens_used are also high enough to warrant efficiency review. Keep usage stable and compare her workflow with high_roi examples to improve token productivity."
+      "recommendation": "Sofia Benali delivers very high output with story point rank #2/40 (P98), but token usage is also high at P82 and productivity is only P50, for a positioning index of -32.5. This means spend is productive in absolute terms but not especially efficient relative to peers. Monitor and retrain on leaner workflows to preserve delivery while improving cost conversion. Next month, watch story points per million tokens."
     },
     {
       "name": "Thomas Simon",
       "category": "average_user",
       "tokens_used": 160459695,
       "story_points": 60,
-      "recommendation": "Monitor this average_user because Thomas has moderate tokens_used and solid story_points, which suggests acceptable usage without a clear action trigger. Use light coaching and peer comparison to improve efficiency incrementally."
+      "recommendation": "Thomas Simon has a healthy profile with token usage rank #22/40 (P48), story points P65, and productivity P62, producing a positioning index of +15. His spend appears productive and proportionate to output. Monitor and use him as a secondary example of balanced AI adoption. Next month, watch story points."
     },
     {
       "name": "Yasmine El Idrissi",
       "category": "average_user",
       "tokens_used": 32039670,
       "story_points": 31,
-      "recommendation": "Monitor this average_user because Yasmine’s tokens_used are low to moderate and story_points are also moderate, indicating a stable but not highly optimized pattern. Provide light coaching to help raise delivery without materially increasing spend."
+      "recommendation": "Yasmine El Idrissi is highly efficient relative to usage, with token usage rank #35/40 (P15), story points P30, and productivity P82, for a positioning index of +67.5. This suggests productive spend and a workflow that extracts strong value from limited tokens. Replicate her low-cost usage habits where task profiles are comparable. Next month, watch productivity percentile for peers adopting her methods."
     },
     {
       "name": "Yuna Schmitt",
       "category": "average_user",
       "tokens_used": 518066030,
       "story_points": 68,
-      "recommendation": "Monitor this average_user because Yuna’s tokens_used are high, but story_points are still meaningful enough to avoid immediate retraining. Review prompt and context discipline to improve output per token while keeping current access."
+      "recommendation": "Yuna Schmitt should be monitored as a high-usage, lower-efficiency user: token usage rank #6/40 (P88), story points P70, and productivity P35, with a positioning index of -52.5. Output is respectable, but cost efficiency trails peers materially. Monitor and retrain on efficient-user practices before allowing further usage growth. Next month, watch productivity percentile."
     },
     {
       "name": "Antoine Petit",
       "category": "low_adoption",
       "tokens_used": 48323460,
       "story_points": 7,
-      "recommendation": "Run adoption coaching for this low_adoption user because both tokens_used and story_points are low. The business action is to increase practical AI usage on real tasks, then monitor next month for improvement from this baseline."
+      "recommendation": "Antoine Petit looks under-adopted rather than wasteful, with token usage rank #31/40 (P25), story points rank #39/40 (P5), and productivity P45, for a positioning index of +20. Because both usage and delivery are below median, budget cuts would save little and may forfeit potential value creation. Run adoption coaching to increase effective use before considering any access reduction. Next month, watch story points."
     },
     {
       "name": "Nadia Fernandez",
       "category": "low_adoption",
       "tokens_used": 16464467,
       "story_points": 24,
-      "recommendation": "Run adoption coaching for this low_adoption user because low tokens_used and low story_points suggest underuse rather than overspend. Give Nadia concrete examples of where AI can help daily work and monitor whether delivery rises after coaching."
+      "recommendation": "Nadia Fernandez is a strong case for enablement: token usage rank #38/40 (P8), story points P20, and productivity P88, producing a positioning index of +80. Her low usage means this is not a meaningful cost problem, and her high productivity percentile suggests more adoption could create more value than budget cuts. Run adoption coaching focused on increasing usage in the tasks where she already converts tokens well. Next month, watch token usage percentile."
     },
     {
       "name": "Zoe Laurent",
       "category": "low_adoption",
       "tokens_used": 10102844,
       "story_points": 6,
-      "recommendation": "Run adoption coaching for this low_adoption user because tokens_used are very low and story_points are also low. Focus on simple, repeatable use cases first, then monitor whether adoption improves before changing budget access."
+      "recommendation": "Zoe Laurent is also under-adopted, with token usage rank #39/40 (P5), story points P2, and productivity P70, for a positioning index of +65. The low spend means cutting budget would have minimal financial impact, while her productivity profile suggests room to unlock value through better adoption. Run adoption coaching rather than reducing access. Next month, watch story points."
     },
     {
       "name": "Fatima Muller",
       "category": "quality_risk",
       "tokens_used": 348549942,
       "story_points": 22,
-      "recommendation": "Retrain this quality_risk user because tokens_used are high relative to low story_points, which suggests weak conversion of AI spend into delivery. Add review checkpoints and task-decomposition coaching before allowing any increase in AI usage."
+      "recommendation": "Fatima Muller is a quality-risk and cost-control case: token usage rank #11/40 (P75) versus story points P18 and productivity P10, giving a positioning index of -65. Cost should be controlled because usage is +110.3% vs median while story points are -51.1% vs median, indicating spend is not converting into delivery. Retrain with tighter task decomposition, review checkpoints, and quality gates before any budget increase. Next month, watch productivity percentile."
     },
     {
       "name": "Florian Rousseau",
       "category": "quality_risk",
       "tokens_used": 209759142,
       "story_points": 15,
-      "recommendation": "Retrain this quality_risk user because Florian consumes substantial tokens_used but produces low story_points for the category. Focus retraining on prompt quality, smaller task breakdowns, and manager review so spend leads to better output."
+      "recommendation": "Florian Rousseau is a quality-risk user with token usage rank #18/40 (P57), story points P12, and productivity P15, for a positioning index of -42.5. This spend should not be expanded because output remains far below peers despite above-median usage. Retrain with stronger review checkpoints and narrower task scoping. Next month, watch story points per million tokens."
     },
     {
       "name": "Nina Traore",
       "category": "quality_risk",
       "tokens_used": 202833499,
       "story_points": 13,
-      "recommendation": "Retrain this quality_risk user because Nina’s tokens_used are high while story_points remain very low. Tighten review controls and coach on using AI for narrower, higher-value tasks before scaling usage further."
+      "recommendation": "Nina Traore shows a similar quality-risk pattern: token usage rank #19/40 (P55), story points P10, and productivity P12, producing a positioning index of -42.5. Cost should be controlled because current usage is not translating into business output. Retrain on task decomposition and manager review gates before allowing more AI reliance. Next month, watch productivity percentile."
     },
     {
       "name": "Sara Mercier",
       "category": "quality_risk",
       "tokens_used": 269440710,
       "story_points": 16,
-      "recommendation": "Retrain this quality_risk user because Sara shows high tokens_used with low story_points, indicating poor value realization. Use structured coaching and review gates to improve work quality before approving more AI-driven activity."
+      "recommendation": "Sara Mercier is a clear quality-risk case with token usage rank #15/40 (P65), story points P15, and productivity P8, for a positioning index of -57.5. Cost should be controlled because usage is materially above median while both delivery and productivity are far below peers. Retrain and monitor with explicit quality gates before any additional spend is approved. Next month, watch story points."
     },
     {
       "name": "Theo Girard",
       "category": "quality_risk",
       "tokens_used": 124441231,
       "story_points": 11,
-      "recommendation": "Retrain this quality_risk user because Theo’s tokens_used are significant while story_points are very low. Emphasize task decomposition and prompt discipline so AI usage supports delivery instead of adding cost without output."
+      "recommendation": "Theo Girard is a quality-risk user with token usage rank #26/40 (P38), story points P8, and productivity P18, giving a positioning index of -20. Even without extreme spend, output is weak enough that more budget is unlikely to help without process correction. Retrain on task decomposition and monitor closely rather than increasing usage. Next month, watch productivity percentile."
     },
     {
       "name": "Adrien Ivanova",
       "category": "overspender",
       "tokens_used": 745127529,
       "story_points": 74,
-      "recommendation": "Retrain and closely monitor this overspender because tokens_used are very high relative to story_points. Review whether Adrien is sending too much context or using AI on low-value tasks, then track next month for a better spend-to-delivery ratio."
+      "recommendation": "Adrien Ivanova is a cost-reduction priority: token usage rank #3/40 (P95), story points P82, but productivity only P22, for a positioning index of -72.5. Cost should be reduced or capped because spend is +349.5% vs median while productivity is -57.9% vs median, showing poor conversion of tokens into value. Reduce/cap usage and retrain on prompt discipline and context limits before any budget increase. Next month, watch story points per million tokens."
     },
     {
       "name": "Baptiste Bernard",
       "category": "overspender",
       "tokens_used": 767324881,
       "story_points": 42,
-      "recommendation": "Retrain and closely monitor this overspender because Baptiste has extremely high tokens_used with limited story_points for the category. Audit workflow habits immediately and reduce waste by coaching on leaner prompts, narrower tasks, and stronger review discipline."
+      "recommendation": "Baptiste Bernard is the clearest overspend case: token usage rank #1/40 (P100), story points P48, and productivity P5, producing a positioning index of -95. Cost should be reduced or tightly controlled because spend is +362.9% vs median while productivity is -76.8% vs median, making this a direct budget-efficiency problem. Reduce/cap usage, review prompt logs, and retrain before approving further access. Next month, watch productivity percentile."
     },
     {
       "name": "Ines Camus",
       "category": "overspender",
       "tokens_used": 402794252,
       "story_points": 39,
-      "recommendation": "Retrain and closely monitor this overspender because Ines uses high tokens_used for comparatively modest story_points. Review prompt patterns and task selection to ensure AI usage is tied to work that produces clearer delivery outcomes."
+      "recommendation": "Ines Camus is an overspender with token usage rank #9/40 (P80), story points P35, and productivity P20, for a positioning index of -60. Cost should be reduced because usage is +143% vs median while productivity is -58.9% vs median, indicating excess spend without matching delivery. Reduce/cap usage and retrain on smaller context windows and more targeted prompting. Next month, watch story points per million tokens."
     },
     {
       "name": "Omar Leclerc",
       "category": "overspender",
       "tokens_used": 753829866,
       "story_points": 41,
-      "recommendation": "Retrain and closely monitor this overspender because Omar’s tokens_used are extremely high relative to story_points. The business action is to audit workflow usage, cut low-value prompting, and monitor next month for measurable efficiency improvement."
+      "recommendation": "Omar Leclerc is a top cost-control priority: token usage rank #2/40 (P98), story points P42, and productivity P2, giving a positioning index of -95. Cost should be reduced or capped because spend is +354.8% vs median while productivity is -76.9% vs median, which is a clear sign of wasteful allocation. Reduce/cap usage, review prompt logs, and retrain before any further budget is committed. Next month, watch productivity percentile."
     }
   ]
 }
