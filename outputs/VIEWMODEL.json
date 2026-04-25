@@ -7,7 +7,7 @@
     "productivity_gain_percent": 17.5,
     "bugs_reduction_percent": -59.6,
     "currency": "USD",
-    "main_recommendation": "Retrain high-token low-productivity users and replicate the workflows of top story-points-per-million-token performers."
+    "main_recommendation": "Prioritize two actions next month: retrain and closely monitor high-token users who deliver relatively few story points, and replicate the workflows of efficient users through structured adoption coaching. This keeps AI spend aligned to measurable delivery by reducing waste in overspender and quality_risk categories while scaling the practices of high_roi and efficient_user employees."
   },
   "monthly_metrics": [
     {
@@ -16,242 +16,202 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 479177254,
-          "story_points": 46,
-          "productivity": 0.1
+          "story_points": 46
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 443052294,
-          "story_points": 107,
-          "productivity": 0.24
+          "story_points": 107
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 235331263,
-          "story_points": 76,
-          "productivity": 0.32
+          "story_points": 76
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 19408963,
-          "story_points": 74,
-          "productivity": 3.81
+          "story_points": 74
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 33253694,
-          "story_points": 21,
-          "productivity": 0.63
+          "story_points": 21
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 662490438,
-          "story_points": 20,
-          "productivity": 0.03
+          "story_points": 20
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 26590057,
-          "story_points": 42,
-          "productivity": 1.58
+          "story_points": 42
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 219350965,
-          "story_points": 44,
-          "productivity": 0.2
+          "story_points": 44
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 189015842,
-          "story_points": 54,
-          "productivity": 0.29
+          "story_points": 54
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 81865168,
-          "story_points": 69,
-          "productivity": 0.84
+          "story_points": 69
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 141869314,
-          "story_points": 40,
-          "productivity": 0.28
+          "story_points": 40
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 120887003,
-          "story_points": 13,
-          "productivity": 0.11
+          "story_points": 13
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 168877834,
-          "story_points": 47,
-          "productivity": 0.28
+          "story_points": 47
         },
         {
           "name": "Ines Camus",
           "tokens_used": 172011756,
-          "story_points": 59,
-          "productivity": 0.34
+          "story_points": 59
         },
         {
           "name": "Jade Faure",
           "tokens_used": 118783637,
-          "story_points": 36,
-          "productivity": 0.3
+          "story_points": 36
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3070806,
-          "story_points": 23,
-          "productivity": 7.49
+          "story_points": 23
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 206910469,
-          "story_points": 31,
-          "productivity": 0.15
+          "story_points": 31
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 246070302,
-          "story_points": 70,
-          "productivity": 0.28
+          "story_points": 70
         },
         {
           "name": "Leila Park",
           "tokens_used": 25121551,
-          "story_points": 90,
-          "productivity": 3.58
+          "story_points": 90
         },
         {
           "name": "Lena Chen",
           "tokens_used": 566466338,
-          "story_points": 27,
-          "productivity": 0.05
+          "story_points": 27
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 122000310,
-          "story_points": 34,
-          "productivity": 0.28
+          "story_points": 34
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 48629199,
-          "story_points": 39,
-          "productivity": 0.8
+          "story_points": 39
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 21530587,
-          "story_points": 62,
-          "productivity": 2.88
+          "story_points": 62
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 12064662,
-          "story_points": 45,
-          "productivity": 3.73
+          "story_points": 45
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 22580398,
-          "story_points": 59,
-          "productivity": 2.61
+          "story_points": 59
         },
         {
           "name": "Nina Traore",
           "tokens_used": 144305747,
-          "story_points": 22,
-          "productivity": 0.15
+          "story_points": 22
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 448035671,
-          "story_points": 26,
-          "productivity": 0.06
+          "story_points": 26
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 404320214,
-          "story_points": 34,
-          "productivity": 0.08
+          "story_points": 34
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 92692543,
-          "story_points": 44,
-          "productivity": 0.47
+          "story_points": 44
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 120038144,
-          "story_points": 50,
-          "productivity": 0.42
+          "story_points": 50
         },
         {
           "name": "Romain Roux",
           "tokens_used": 122076918,
-          "story_points": 54,
-          "productivity": 0.44
+          "story_points": 54
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 217581291,
-          "story_points": 14,
-          "productivity": 0.06
+          "story_points": 14
         },
         {
           "name": "Simon Martin",
           "tokens_used": 69892889,
-          "story_points": 58,
-          "productivity": 0.83
+          "story_points": 58
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 269778902,
-          "story_points": 65,
-          "productivity": 0.24
+          "story_points": 65
         },
         {
           "name": "Theo Girard",
           "tokens_used": 104816617,
-          "story_points": 23,
-          "productivity": 0.22
+          "story_points": 23
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 101202981,
-          "story_points": 58,
-          "productivity": 0.57
+          "story_points": 58
         },
         {
           "name": "Victor Durand",
           "tokens_used": 26047984,
-          "story_points": 3,
-          "productivity": 0.12
+          "story_points": 3
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 25271405,
-          "story_points": 2,
-          "productivity": 0.08
+          "story_points": 2
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 361717291,
-          "story_points": 33,
-          "productivity": 0.09
+          "story_points": 33
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 6264149,
-          "story_points": 3,
-          "productivity": 0.48
+          "story_points": 3
         }
       ]
     },
@@ -261,236 +221,197 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 512246613,
-          "story_points": 29,
-          "productivity": 0.06
+          "story_points": 29
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 487267947,
-          "story_points": 92,
-          "productivity": 0.19
+          "story_points": 92
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 206631777,
-          "story_points": 37,
-          "productivity": 0.18
+          "story_points": 37
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 23897744,
-          "story_points": 129,
-          "productivity": 5.4
+          "story_points": 129
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 47360160,
-          "story_points": 18,
-          "productivity": 0.38
+          "story_points": 18
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 571511047,
-          "story_points": 19,
-          "productivity": 0.03
+          "story_points": 19
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 42618095,
-          "story_points": 44,
-          "productivity": 1.03
+          "story_points": 44
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 237291932,
-          "story_points": 89,
-          "productivity": 0.38
+          "story_points": 89
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 205941592,
-          "story_points": 49,
-          "productivity": 0.24
+          "story_points": 49
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 113898525,
-          "story_points": 110,
-          "productivity": 0.97
+          "story_points": 110
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 269142488,
-          "story_points": 59,
-          "productivity": 0.22
+          "story_points": 59
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 117100612,
-          "story_points": 24,
-          "productivity": 0.2
+          "story_points": 24
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 221827119,
-          "story_points": 8,
-          "productivity": 0.04
+          "story_points": 8
         },
         {
           "name": "Ines Camus",
           "tokens_used": 192193747,
-          "story_points": 57,
-          "productivity": 0.3
+          "story_points": 57
         },
         {
           "name": "Jade Faure",
           "tokens_used": 132283598,
-          "story_points": 49,
-          "productivity": 0.37
+          "story_points": 49
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3981081,
-          "story_points": 31,
-          "productivity": 7.79
+          "story_points": 31
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 205491694,
-          "story_points": 18,
-          "productivity": 0.09
+          "story_points": 18
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 300984527,
-          "story_points": 85,
-          "productivity": 0.28
+          "story_points": 85
         },
         {
           "name": "Leila Park",
           "tokens_used": 24888328,
-          "story_points": 89,
-          "productivity": 3.58
+          "story_points": 89
         },
         {
           "name": "Lena Chen",
           "tokens_used": 652724963,
-          "story_points": 29,
-          "productivity": 0.04
+          "story_points": 29
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 116673208,
-          "story_points": 47,
-          "productivity": 0.4
+          "story_points": 47
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 67612048,
-          "story_points": 15,
-          "productivity": 0.22
+          "story_points": 15
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 20918973,
-          "story_points": 50,
-          "productivity": 2.39
+          "story_points": 50
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 13828686,
-          "story_points": 38,
-          "productivity": 2.75
+          "story_points": 38
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 27951299,
-          "story_points": 29,
-          "productivity": 1.04
+          "story_points": 29
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 484983079,
-          "story_points": 35,
-          "productivity": 0.07
+          "story_points": 35
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 409261598,
-          "story_points": 79,
-          "productivity": 0.19
+          "story_points": 79
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 90974451,
-          "story_points": 52,
-          "productivity": 0.57
+          "story_points": 52
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 178857125,
-          "story_points": 65,
-          "productivity": 0.36
+          "story_points": 65
         },
         {
           "name": "Romain Roux",
           "tokens_used": 113113611,
-          "story_points": 114,
-          "productivity": 1.01
+          "story_points": 114
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 292377984,
-          "story_points": 22,
-          "productivity": 0.08
+          "story_points": 22
         },
         {
           "name": "Simon Martin",
           "tokens_used": 66857434,
-          "story_points": 93,
-          "productivity": 1.39
+          "story_points": 93
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 372494932,
-          "story_points": 94,
-          "productivity": 0.25
+          "story_points": 94
         },
         {
           "name": "Theo Girard",
           "tokens_used": 88524309,
-          "story_points": 39,
-          "productivity": 0.44
+          "story_points": 39
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 107678017,
-          "story_points": 20,
-          "productivity": 0.19
+          "story_points": 20
         },
         {
           "name": "Victor Durand",
           "tokens_used": 25892084,
-          "story_points": 21,
-          "productivity": 0.81
+          "story_points": 21
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 38749657,
-          "story_points": 5,
-          "productivity": 0.13
+          "story_points": 5
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 386905905,
-          "story_points": 68,
-          "productivity": 0.18
+          "story_points": 68
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 7673116,
-          "story_points": 19,
-          "productivity": 2.48
+          "story_points": 19
         }
       ]
     },
@@ -500,242 +421,202 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 379724737,
-          "story_points": 47,
-          "productivity": 0.12
+          "story_points": 47
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 693563849,
-          "story_points": 67,
-          "productivity": 0.1
+          "story_points": 67
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 233128529,
-          "story_points": 77,
-          "productivity": 0.33
+          "story_points": 77
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 24638534,
-          "story_points": 36,
-          "productivity": 1.46
+          "story_points": 36
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 33181721,
-          "story_points": 19,
-          "productivity": 0.57
+          "story_points": 19
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 781195988,
-          "story_points": 20,
-          "productivity": 0.03
+          "story_points": 20
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 37443008,
-          "story_points": 65,
-          "productivity": 1.74
+          "story_points": 65
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 251228831,
-          "story_points": 35,
-          "productivity": 0.14
+          "story_points": 35
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 226089213,
-          "story_points": 80,
-          "productivity": 0.35
+          "story_points": 80
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 94388436,
-          "story_points": 89,
-          "productivity": 0.94
+          "story_points": 89
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 254114456,
-          "story_points": 35,
-          "productivity": 0.14
+          "story_points": 35
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 144095237,
-          "story_points": 40,
-          "productivity": 0.28
+          "story_points": 40
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 199772860,
-          "story_points": 6,
-          "productivity": 0.03
+          "story_points": 6
         },
         {
           "name": "Ines Camus",
           "tokens_used": 198391575,
-          "story_points": 49,
-          "productivity": 0.25
+          "story_points": 49
         },
         {
           "name": "Jade Faure",
           "tokens_used": 135384432,
-          "story_points": 68,
-          "productivity": 0.5
+          "story_points": 68
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 3338661,
-          "story_points": 34,
-          "productivity": 10.18
+          "story_points": 34
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 223885577,
-          "story_points": 30,
-          "productivity": 0.13
+          "story_points": 30
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 286585526,
-          "story_points": 51,
-          "productivity": 0.18
+          "story_points": 51
         },
         {
           "name": "Leila Park",
           "tokens_used": 24196762,
-          "story_points": 75,
-          "productivity": 3.1
+          "story_points": 75
         },
         {
           "name": "Lena Chen",
           "tokens_used": 577320277,
-          "story_points": 25,
-          "productivity": 0.04
+          "story_points": 25
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 137561703,
-          "story_points": 39,
-          "productivity": 0.28
+          "story_points": 39
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 61187622,
-          "story_points": 32,
-          "productivity": 0.52
+          "story_points": 32
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 26621675,
-          "story_points": 85,
-          "productivity": 3.19
+          "story_points": 85
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 12677017,
-          "story_points": 33,
-          "productivity": 2.6
+          "story_points": 33
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 27687859,
-          "story_points": 35,
-          "productivity": 1.26
+          "story_points": 35
         },
         {
           "name": "Nina Traore",
           "tokens_used": 140881335,
-          "story_points": 9,
-          "productivity": 0.06
+          "story_points": 9
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 623149176,
-          "story_points": 12,
-          "productivity": 0.02
+          "story_points": 12
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 300984125,
-          "story_points": 50,
-          "productivity": 0.17
+          "story_points": 50
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 114847352,
-          "story_points": 29,
-          "productivity": 0.25
+          "story_points": 29
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 141828404,
-          "story_points": 90,
-          "productivity": 0.63
+          "story_points": 90
         },
         {
           "name": "Romain Roux",
           "tokens_used": 136897573,
-          "story_points": 68,
-          "productivity": 0.5
+          "story_points": 68
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 245027449,
-          "story_points": 23,
-          "productivity": 0.09
+          "story_points": 23
         },
         {
           "name": "Simon Martin",
           "tokens_used": 67965649,
-          "story_points": 97,
-          "productivity": 1.43
+          "story_points": 97
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 243518351,
-          "story_points": 43,
-          "productivity": 0.18
+          "story_points": 43
         },
         {
           "name": "Theo Girard",
           "tokens_used": 139010762,
-          "story_points": 31,
-          "productivity": 0.22
+          "story_points": 31
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 112239276,
-          "story_points": 49,
-          "productivity": 0.44
+          "story_points": 49
         },
         {
           "name": "Victor Durand",
           "tokens_used": 26787130,
-          "story_points": 60,
-          "productivity": 2.24
+          "story_points": 60
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 45344219,
-          "story_points": 9,
-          "productivity": 0.2
+          "story_points": 9
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 447314753,
-          "story_points": 21,
-          "productivity": 0.05
+          "story_points": 21
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 9219333,
-          "story_points": 22,
-          "productivity": 2.39
+          "story_points": 22
         }
       ]
     },
@@ -745,242 +626,202 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 495071338,
-          "story_points": 43,
-          "productivity": 0.09
+          "story_points": 43
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 390317536,
-          "story_points": 80,
-          "productivity": 0.2
+          "story_points": 80
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 299497166,
-          "story_points": 62,
-          "productivity": 0.21
+          "story_points": 62
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 24703366,
-          "story_points": 39,
-          "productivity": 1.58
+          "story_points": 39
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 44654165,
-          "story_points": 44,
-          "productivity": 0.99
+          "story_points": 44
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 820688196,
-          "story_points": 16,
-          "productivity": 0.02
+          "story_points": 16
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 58867701,
-          "story_points": 68,
-          "productivity": 1.16
+          "story_points": 68
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 259797071,
-          "story_points": 81,
-          "productivity": 0.31
+          "story_points": 81
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 221456635,
-          "story_points": 53,
-          "productivity": 0.24
+          "story_points": 53
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 116071064,
-          "story_points": 96,
-          "productivity": 0.83
+          "story_points": 96
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 285706660,
-          "story_points": 62,
-          "productivity": 0.22
+          "story_points": 62
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 89375040,
-          "story_points": 84,
-          "productivity": 0.94
+          "story_points": 84
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 316926780,
-          "story_points": 40,
-          "productivity": 0.13
+          "story_points": 40
         },
         {
           "name": "Ines Camus",
           "tokens_used": 293314925,
-          "story_points": 55,
-          "productivity": 0.19
+          "story_points": 55
         },
         {
           "name": "Jade Faure",
           "tokens_used": 143262066,
-          "story_points": 43,
-          "productivity": 0.3
+          "story_points": 43
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 5035312,
-          "story_points": 15,
-          "productivity": 2.98
+          "story_points": 15
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 242029809,
-          "story_points": 28,
-          "productivity": 0.12
+          "story_points": 28
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 243972027,
-          "story_points": 102,
-          "productivity": 0.42
+          "story_points": 102
         },
         {
           "name": "Leila Park",
           "tokens_used": 25661965,
-          "story_points": 93,
-          "productivity": 3.62
+          "story_points": 93
         },
         {
           "name": "Lena Chen",
           "tokens_used": 750690644,
-          "story_points": 37,
-          "productivity": 0.05
+          "story_points": 37
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 134135518,
-          "story_points": 12,
-          "productivity": 0.09
+          "story_points": 12
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 70176351,
-          "story_points": 63,
-          "productivity": 0.9
+          "story_points": 63
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 23082890,
-          "story_points": 103,
-          "productivity": 4.46
+          "story_points": 103
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 11205907,
-          "story_points": 39,
-          "productivity": 3.48
+          "story_points": 39
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 19086619,
-          "story_points": 70,
-          "productivity": 3.67
+          "story_points": 70
         },
         {
           "name": "Nina Traore",
           "tokens_used": 145764556,
-          "story_points": 19,
-          "productivity": 0.13
+          "story_points": 19
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 433591936,
-          "story_points": 24,
-          "productivity": 0.06
+          "story_points": 24
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 439701963,
-          "story_points": 32,
-          "productivity": 0.07
+          "story_points": 32
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 100084344,
-          "story_points": 40,
-          "productivity": 0.4
+          "story_points": 40
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 160106975,
-          "story_points": 49,
-          "productivity": 0.31
+          "story_points": 49
         },
         {
           "name": "Romain Roux",
           "tokens_used": 159443628,
-          "story_points": 104,
-          "productivity": 0.65
+          "story_points": 104
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 341041938,
-          "story_points": 19,
-          "productivity": 0.06
+          "story_points": 19
         },
         {
           "name": "Simon Martin",
           "tokens_used": 95485231,
-          "story_points": 49,
-          "productivity": 0.51
+          "story_points": 49
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 358111596,
-          "story_points": 38,
-          "productivity": 0.11
+          "story_points": 38
         },
         {
           "name": "Theo Girard",
           "tokens_used": 110203316,
-          "story_points": 34,
-          "productivity": 0.31
+          "story_points": 34
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 111089822,
-          "story_points": 58,
-          "productivity": 0.52
+          "story_points": 58
         },
         {
           "name": "Victor Durand",
           "tokens_used": 28864827,
-          "story_points": 35,
-          "productivity": 1.21
+          "story_points": 35
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 38419724,
-          "story_points": 21,
-          "productivity": 0.55
+          "story_points": 21
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 363488168,
-          "story_points": 88,
-          "productivity": 0.24
+          "story_points": 88
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 6685535,
-          "story_points": 24,
-          "productivity": 3.59
+          "story_points": 24
         }
       ]
     },
@@ -990,242 +831,202 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 738368748,
-          "story_points": 52,
-          "productivity": 0.07
+          "story_points": 52
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 759745353,
-          "story_points": 87,
-          "productivity": 0.11
+          "story_points": 87
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 348382966,
-          "story_points": 87,
-          "productivity": 0.25
+          "story_points": 87
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 23898797,
-          "story_points": 68,
-          "productivity": 2.85
+          "story_points": 68
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 42672876,
-          "story_points": 14,
-          "productivity": 0.33
+          "story_points": 14
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 1192558541,
-          "story_points": 5,
-          "productivity": 0
+          "story_points": 5
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 48166339,
-          "story_points": 40,
-          "productivity": 0.83
+          "story_points": 40
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 277414115,
-          "story_points": 57,
-          "productivity": 0.21
+          "story_points": 57
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 232984773,
-          "story_points": 110,
-          "productivity": 0.47
+          "story_points": 110
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 126840055,
-          "story_points": 76,
-          "productivity": 0.6
+          "story_points": 76
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 349456536,
-          "story_points": 62,
-          "productivity": 0.18
+          "story_points": 62
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 178959319,
-          "story_points": 55,
-          "productivity": 0.31
+          "story_points": 55
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 280527119,
-          "story_points": 12,
-          "productivity": 0.04
+          "story_points": 12
         },
         {
           "name": "Ines Camus",
           "tokens_used": 364045967,
-          "story_points": 98,
-          "productivity": 0.27
+          "story_points": 98
         },
         {
           "name": "Jade Faure",
           "tokens_used": 152045694,
-          "story_points": 32,
-          "productivity": 0.21
+          "story_points": 32
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 6897143,
-          "story_points": 35,
-          "productivity": 5.07
+          "story_points": 35
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 258731380,
-          "story_points": 76,
-          "productivity": 0.29
+          "story_points": 76
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 255244038,
-          "story_points": 70,
-          "productivity": 0.27
+          "story_points": 70
         },
         {
           "name": "Leila Park",
           "tokens_used": 33329217,
-          "story_points": 79,
-          "productivity": 2.37
+          "story_points": 79
         },
         {
           "name": "Lena Chen",
           "tokens_used": 695014713,
-          "story_points": 50,
-          "productivity": 0.07
+          "story_points": 50
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 144704168,
-          "story_points": 37,
-          "productivity": 0.26
+          "story_points": 37
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 93878199,
-          "story_points": 42,
-          "productivity": 0.45
+          "story_points": 42
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 31664829,
-          "story_points": 69,
-          "productivity": 2.18
+          "story_points": 69
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 21990408,
-          "story_points": 82,
-          "productivity": 3.73
+          "story_points": 82
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 30595284,
-          "story_points": 34,
-          "productivity": 1.11
+          "story_points": 34
         },
         {
           "name": "Nina Traore",
           "tokens_used": 211465009,
-          "story_points": 12,
-          "productivity": 0.06
+          "story_points": 12
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 602542300,
-          "story_points": 13,
-          "productivity": 0.02
+          "story_points": 13
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 468659286,
-          "story_points": 21,
-          "productivity": 0.04
+          "story_points": 21
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 134122416,
-          "story_points": 70,
-          "productivity": 0.52
+          "story_points": 70
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 172231995,
-          "story_points": 94,
-          "productivity": 0.55
+          "story_points": 94
         },
         {
           "name": "Romain Roux",
           "tokens_used": 191199068,
-          "story_points": 59,
-          "productivity": 0.31
+          "story_points": 59
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 394968137,
-          "story_points": 18,
-          "productivity": 0.05
+          "story_points": 18
         },
         {
           "name": "Simon Martin",
           "tokens_used": 115841762,
-          "story_points": 85,
-          "productivity": 0.73
+          "story_points": 85
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 278612420,
-          "story_points": 62,
-          "productivity": 0.22
+          "story_points": 62
         },
         {
           "name": "Theo Girard",
           "tokens_used": 171701241,
-          "story_points": 9,
-          "productivity": 0.05
+          "story_points": 9
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 147288911,
-          "story_points": 17,
-          "productivity": 0.12
+          "story_points": 17
         },
         {
           "name": "Victor Durand",
           "tokens_used": 31638489,
-          "story_points": 82,
-          "productivity": 2.59
+          "story_points": 82
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 49978056,
-          "story_points": 23,
-          "productivity": 0.46
+          "story_points": 23
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 601937141,
-          "story_points": 61,
-          "productivity": 0.1
+          "story_points": 61
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 9173029,
-          "story_points": 6,
-          "productivity": 0.65
+          "story_points": 6
         }
       ]
     },
@@ -1235,242 +1036,202 @@
         {
           "name": "Adrien Ivanova",
           "tokens_used": 745127529,
-          "story_points": 74,
-          "productivity": 0.1
+          "story_points": 74
         },
         {
           "name": "Alexandre Diallo",
           "tokens_used": 626235460,
-          "story_points": 74,
-          "productivity": 0.12
+          "story_points": 74
         },
         {
           "name": "Alix Mbaye",
           "tokens_used": 248018565,
-          "story_points": 73,
-          "productivity": 0.29
+          "story_points": 73
         },
         {
           "name": "Amina Blanc",
           "tokens_used": 40417346,
-          "story_points": 65,
-          "productivity": 1.61
+          "story_points": 65
         },
         {
           "name": "Antoine Petit",
           "tokens_used": 48323460,
-          "story_points": 7,
-          "productivity": 0.14
+          "story_points": 7
         },
         {
           "name": "Baptiste Bernard",
           "tokens_used": 767324881,
-          "story_points": 42,
-          "productivity": 0.05
+          "story_points": 42
         },
         {
           "name": "Camille Garnier",
           "tokens_used": 48839131,
-          "story_points": 57,
-          "productivity": 1.17
+          "story_points": 57
         },
         {
           "name": "Chloe Leroy",
           "tokens_used": 288050639,
-          "story_points": 40,
-          "productivity": 0.14
+          "story_points": 40
         },
         {
           "name": "Clara Chevalier",
           "tokens_used": 305157673,
-          "story_points": 34,
-          "productivity": 0.11
+          "story_points": 34
         },
         {
           "name": "Eva Moreau",
           "tokens_used": 122269890,
-          "story_points": 77,
-          "productivity": 0.63
+          "story_points": 77
         },
         {
           "name": "Fatima Muller",
           "tokens_used": 348549942,
-          "story_points": 22,
-          "productivity": 0.06
+          "story_points": 22
         },
         {
           "name": "Florian Rousseau",
           "tokens_used": 209759142,
-          "story_points": 15,
-          "productivity": 0.07
+          "story_points": 15
         },
         {
           "name": "Hugo Dubois",
           "tokens_used": 242512967,
-          "story_points": 28,
-          "productivity": 0.12
+          "story_points": 28
         },
         {
           "name": "Ines Camus",
           "tokens_used": 402794252,
-          "story_points": 39,
-          "productivity": 0.1
+          "story_points": 39
         },
         {
           "name": "Jade Faure",
           "tokens_used": 139009694,
-          "story_points": 90,
-          "productivity": 0.65
+          "story_points": 90
         },
         {
           "name": "Jules Nguyen",
           "tokens_used": 5689436,
-          "story_points": 47,
-          "productivity": 8.26
+          "story_points": 47
         },
         {
           "name": "Julien Bourgeois",
           "tokens_used": 310404973,
-          "story_points": 42,
-          "productivity": 0.14
+          "story_points": 42
         },
         {
           "name": "Laure Fontaine",
           "tokens_used": 351310057,
-          "story_points": 91,
-          "productivity": 0.26
+          "story_points": 91
         },
         {
           "name": "Leila Park",
           "tokens_used": 28132738,
-          "story_points": 136,
-          "productivity": 4.83
+          "story_points": 136
         },
         {
           "name": "Lena Chen",
           "tokens_used": 531690249,
-          "story_points": 77,
-          "productivity": 0.14
+          "story_points": 77
         },
         {
           "name": "Lucas Renard",
           "tokens_used": 170434052,
-          "story_points": 26,
-          "productivity": 0.15
+          "story_points": 26
         },
         {
           "name": "Maxime Lefebvre",
           "tokens_used": 92614426,
-          "story_points": 45,
-          "productivity": 0.49
+          "story_points": 45
         },
         {
           "name": "Maya Kowalski",
           "tokens_used": 24334442,
-          "story_points": 71,
-          "productivity": 2.92
+          "story_points": 71
         },
         {
           "name": "Nadia Fernandez",
           "tokens_used": 16464467,
-          "story_points": 24,
-          "productivity": 1.46
+          "story_points": 24
         },
         {
           "name": "Nicolas Michel",
           "tokens_used": 44450539,
-          "story_points": 31,
-          "productivity": 0.7
+          "story_points": 31
         },
         {
           "name": "Nina Traore",
           "tokens_used": 202833499,
-          "story_points": 13,
-          "productivity": 0.06
+          "story_points": 13
         },
         {
           "name": "Omar Leclerc",
           "tokens_used": 753829866,
-          "story_points": 41,
-          "productivity": 0.05
+          "story_points": 41
         },
         {
           "name": "Pierre Okafor",
           "tokens_used": 443924602,
-          "story_points": 55,
-          "productivity": 0.12
+          "story_points": 55
         },
         {
           "name": "Quentin Morin",
           "tokens_used": 146482942,
-          "story_points": 41,
-          "productivity": 0.28
+          "story_points": 41
         },
         {
           "name": "Remy Dupuis",
           "tokens_used": 157657495,
-          "story_points": 83,
-          "productivity": 0.53
+          "story_points": 83
         },
         {
           "name": "Romain Roux",
           "tokens_used": 161093114,
-          "story_points": 45,
-          "productivity": 0.28
+          "story_points": 45
         },
         {
           "name": "Sara Mercier",
           "tokens_used": 269440710,
-          "story_points": 16,
-          "productivity": 0.06
+          "story_points": 16
         },
         {
           "name": "Simon Martin",
           "tokens_used": 90801785,
-          "story_points": 69,
-          "productivity": 0.76
+          "story_points": 69
         },
         {
           "name": "Sofia Benali",
           "tokens_used": 433353302,
-          "story_points": 92,
-          "productivity": 0.21
+          "story_points": 92
         },
         {
           "name": "Theo Girard",
           "tokens_used": 124441231,
-          "story_points": 11,
-          "productivity": 0.09
+          "story_points": 11
         },
         {
           "name": "Thomas Simon",
           "tokens_used": 160459695,
-          "story_points": 60,
-          "productivity": 0.37
+          "story_points": 60
         },
         {
           "name": "Victor Durand",
           "tokens_used": 36760403,
-          "story_points": 60,
-          "productivity": 1.63
+          "story_points": 60
         },
         {
           "name": "Yasmine El Idrissi",
           "tokens_used": 32039670,
-          "story_points": 31,
-          "productivity": 0.97
+          "story_points": 31
         },
         {
           "name": "Yuna Schmitt",
           "tokens_used": 518066030,
-          "story_points": 68,
-          "productivity": 0.13
+          "story_points": 68
         },
         {
           "name": "Zoe Laurent",
           "tokens_used": 10102844,
-          "story_points": 6,
-          "productivity": 0.59
+          "story_points": 6
         }
       ]
     }
@@ -1479,322 +1240,282 @@
     {
       "name": "Leila Park",
       "category": "high_roi",
-      "roi_score": 97,
       "tokens_used": 28132738,
-      "recommendation": "Maintain current usage and codify this high story-points-per-million-token workflow for team reuse.",
-      "productivity": 4.83
-    },
-    {
-      "name": "Maya Kowalski",
-      "category": "efficient_user",
-      "roi_score": 87,
-      "tokens_used": 24334442,
-      "recommendation": "Document this strong story-points-per-million-token workflow and expand adoption carefully.",
-      "productivity": 2.92
-    },
-    {
-      "name": "Jules Nguyen",
-      "category": "efficient_user",
-      "roi_score": 84,
-      "tokens_used": 5689436,
-      "recommendation": "Use this top story-points-per-million-token workflow as a benchmark for broader team coaching.",
-      "productivity": 8.26
+      "story_points": 136,
+      "recommendation": "Replicate Leila Park's workflow because 28132738 tokens produced 136 story points, which is the strongest value pattern in the high_roi category. Use this employee in adoption coaching to show prompt structure, context discipline, and task selection that convert low token spend into high delivery."
     },
     {
       "name": "Amina Blanc",
       "category": "efficient_user",
-      "roi_score": 81,
       "tokens_used": 40417346,
-      "recommendation": "Preserve this efficient story-points-per-million-token pattern and share the workflow with peers.",
-      "productivity": 1.61
-    },
-    {
-      "name": "Victor Durand",
-      "category": "efficient_user",
-      "roi_score": 81,
-      "tokens_used": 36760403,
-      "recommendation": "Continue this efficient story-points-per-million-token usage and document the workflow for reuse.",
-      "productivity": 1.63
-    },
-    {
-      "name": "Jade Faure",
-      "category": "average_user",
-      "roi_score": 78,
-      "tokens_used": 139009694,
-      "recommendation": "Coach toward top-performer workflows to raise story points per million tokens.",
-      "productivity": 0.65
-    },
-    {
-      "name": "Eva Moreau",
-      "category": "average_user",
-      "roi_score": 75,
-      "tokens_used": 122269890,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens using top-performer patterns.",
-      "productivity": 0.63
-    },
-    {
-      "name": "Simon Martin",
-      "category": "efficient_user",
-      "roi_score": 75,
-      "tokens_used": 90801785,
-      "recommendation": "Document this solid story-points-per-million-token workflow and scale it carefully.",
-      "productivity": 0.76
+      "story_points": 65,
+      "recommendation": "Replicate Amina Blanc's workflow because 40417346 tokens supported 65 story points, a strong outcome for an efficient_user. Include this employee in adoption coaching so peers can copy the practical prompting and context habits behind that efficient delivery."
     },
     {
       "name": "Camille Garnier",
       "category": "efficient_user",
-      "roi_score": 74,
       "tokens_used": 48839131,
-      "recommendation": "Capture this efficient story-points-per-million-token workflow and share it with the team.",
-      "productivity": 1.17
+      "story_points": 57,
+      "recommendation": "Replicate Camille Garnier's workflow because 48839131 tokens generated 57 story points, which is strong efficiency for the efficient_user category. Use this employee as an internal example in adoption coaching to spread the working habits that keep token use controlled."
     },
     {
-      "name": "Remy Dupuis",
-      "category": "average_user",
-      "roi_score": 72,
-      "tokens_used": 157657495,
-      "recommendation": "Monitor usage and coach toward stronger story points per million tokens.",
-      "productivity": 0.53
+      "name": "Jules Nguyen",
+      "category": "efficient_user",
+      "tokens_used": 5689436,
+      "story_points": 47,
+      "recommendation": "Replicate Jules Nguyen's workflow because only 5689436 tokens produced 47 story points, making this one of the clearest efficient_user examples. Turn this into adoption coaching content so others can learn how to get useful output with minimal token consumption."
     },
     {
-      "name": "Nadia Fernandez",
-      "category": "low_adoption",
-      "roi_score": 63,
-      "tokens_used": 16464467,
-      "recommendation": "Provide targeted onboarding to increase adoption while preserving strong story points per million tokens.",
-      "productivity": 1.46
+      "name": "Maya Kowalski",
+      "category": "efficient_user",
+      "tokens_used": 24334442,
+      "story_points": 71,
+      "recommendation": "Replicate Maya Kowalski's workflow because 24334442 tokens delivered 71 story points, a very strong efficient_user result. Ask this employee to support adoption coaching with concrete examples of where AI is used selectively for high-value work."
     },
     {
-      "name": "Yasmine El Idrissi",
-      "category": "average_user",
-      "roi_score": 63,
-      "tokens_used": 32039670,
-      "recommendation": "Monitor usage and coach toward top-performer patterns to improve story points per million tokens.",
-      "productivity": 0.97
+      "name": "Simon Martin",
+      "category": "efficient_user",
+      "tokens_used": 90801785,
+      "story_points": 69,
+      "recommendation": "Replicate Simon Martin's workflow because 90801785 tokens produced 69 story points, showing solid output without excessive spend for an efficient_user. Use this employee in adoption coaching to demonstrate balanced AI usage that supports delivery."
     },
     {
-      "name": "Alix Mbaye",
-      "category": "average_user",
-      "roi_score": 61,
-      "tokens_used": 248018565,
-      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
-      "productivity": 0.29
-    },
-    {
-      "name": "Laure Fontaine",
-      "category": "average_user",
-      "roi_score": 61,
-      "tokens_used": 351310057,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens through better workflow patterns.",
-      "productivity": 0.26
-    },
-    {
-      "name": "Sofia Benali",
-      "category": "average_user",
-      "roi_score": 60,
-      "tokens_used": 433353302,
-      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
-      "productivity": 0.21
-    },
-    {
-      "name": "Thomas Simon",
-      "category": "average_user",
-      "roi_score": 60,
-      "tokens_used": 160459695,
-      "recommendation": "Monitor usage and coach toward stronger story points per million tokens.",
-      "productivity": 0.37
-    },
-    {
-      "name": "Nicolas Michel",
-      "category": "average_user",
-      "roi_score": 59,
-      "tokens_used": 44450539,
-      "recommendation": "Monitor usage and coach toward top-performer patterns to improve story points per million tokens.",
-      "productivity": 0.7
-    },
-    {
-      "name": "Maxime Lefebvre",
-      "category": "average_user",
-      "roi_score": 58,
-      "tokens_used": 92614426,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
-      "productivity": 0.49
-    },
-    {
-      "name": "Lena Chen",
-      "category": "average_user",
-      "roi_score": 51,
-      "tokens_used": 531690249,
-      "recommendation": "Review token-heavy workflows and coach toward materially better story points per million tokens.",
-      "productivity": 0.14
-    },
-    {
-      "name": "Romain Roux",
-      "category": "average_user",
-      "roi_score": 50,
-      "tokens_used": 161093114,
-      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
-      "productivity": 0.28
-    },
-    {
-      "name": "Quentin Morin",
-      "category": "average_user",
-      "roi_score": 49,
-      "tokens_used": 146482942,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
-      "productivity": 0.28
-    },
-    {
-      "name": "Zoe Laurent",
-      "category": "low_adoption",
-      "roi_score": 46,
-      "tokens_used": 10102844,
-      "recommendation": "Provide onboarding and workflow examples to improve adoption and story points per million tokens.",
-      "productivity": 0.59
+      "name": "Victor Durand",
+      "category": "efficient_user",
+      "tokens_used": 36760403,
+      "story_points": 60,
+      "recommendation": "Replicate Victor Durand's workflow because 36760403 tokens generated 60 story points, which is a strong efficient_user pattern. Share this employee's workflow in adoption coaching so similar teams can copy the same efficient usage model."
     },
     {
       "name": "Alexandre Diallo",
       "category": "average_user",
-      "roi_score": 41,
       "tokens_used": 626235460,
-      "recommendation": "Monitor high token usage closely and coach toward better story points per million tokens.",
-      "productivity": 0.12
+      "story_points": 74,
+      "recommendation": "Monitor Alexandre Diallo because 626235460 tokens and 74 story points place this employee in the average_user category with meaningful spend but not a clear outlier result. Provide light adoption coaching using efficient-user examples to improve value without immediate retraining."
     },
     {
-      "name": "Yuna Schmitt",
+      "name": "Alix Mbaye",
       "category": "average_user",
-      "roi_score": 40,
-      "tokens_used": 518066030,
-      "recommendation": "Monitor high token usage and coach toward stronger story points per million tokens.",
-      "productivity": 0.13
-    },
-    {
-      "name": "Adrien Ivanova",
-      "category": "overspender",
-      "roi_score": 36,
-      "tokens_used": 745127529,
-      "recommendation": "Review prompts and token-heavy workflows immediately to improve story points per million tokens.",
-      "productivity": 0.1
-    },
-    {
-      "name": "Julien Bourgeois",
-      "category": "average_user",
-      "roi_score": 35,
-      "tokens_used": 310404973,
-      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
-      "productivity": 0.14
-    },
-    {
-      "name": "Lucas Renard",
-      "category": "average_user",
-      "roi_score": 35,
-      "tokens_used": 170434052,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
-      "productivity": 0.15
+      "tokens_used": 248018565,
+      "story_points": 73,
+      "recommendation": "Monitor Alix Mbaye because 248018565 tokens produced 73 story points, which is balanced enough for the average_user category. Use light adoption coaching to refine workflow choices and see whether story point output can rise without increasing token use."
     },
     {
       "name": "Chloe Leroy",
       "category": "average_user",
-      "roi_score": 34,
       "tokens_used": 288050639,
-      "recommendation": "Monitor usage and coach toward better story points per million tokens using top-performer patterns.",
-      "productivity": 0.14
-    },
-    {
-      "name": "Pierre Okafor",
-      "category": "average_user",
-      "roi_score": 34,
-      "tokens_used": 443924602,
-      "recommendation": "Monitor high token usage and coach toward stronger story points per million tokens.",
-      "productivity": 0.12
-    },
-    {
-      "name": "Antoine Petit",
-      "category": "low_adoption",
-      "roi_score": 29,
-      "tokens_used": 48323460,
-      "recommendation": "Provide onboarding and targeted workflow examples to improve story points per million tokens.",
-      "productivity": 0.14
+      "story_points": 40,
+      "recommendation": "Monitor Chloe Leroy because 288050639 tokens resulted in 40 story points, an average_user pattern that needs observation but not immediate escalation. Use adoption coaching from efficient peers to improve how AI is applied to higher-value tasks."
     },
     {
       "name": "Clara Chevalier",
       "category": "average_user",
-      "roi_score": 22,
       "tokens_used": 305157673,
-      "recommendation": "Monitor usage and coach toward top-performer workflows to improve story points per million tokens.",
-      "productivity": 0.11
+      "story_points": 34,
+      "recommendation": "Monitor Clara Chevalier because 305157673 tokens produced 34 story points, which is average_user performance with room for better conversion. Apply light adoption coaching and compare next-month output against efficient-user benchmarks before considering retraining."
+    },
+    {
+      "name": "Eva Moreau",
+      "category": "average_user",
+      "tokens_used": 122269890,
+      "story_points": 77,
+      "recommendation": "Monitor Eva Moreau because 122269890 tokens delivered 77 story points, a healthy average_user result with good delivery for the spend level. Continue light coaching and track whether this employee can move toward efficient_user performance."
     },
     {
       "name": "Hugo Dubois",
       "category": "average_user",
-      "roi_score": 22,
       "tokens_used": 242512967,
-      "recommendation": "Monitor usage and coach toward higher story points per million tokens.",
-      "productivity": 0.12
+      "story_points": 28,
+      "recommendation": "Monitor Hugo Dubois because 242512967 tokens generated 28 story points, which is weak for the spend but still categorized as average_user. Use adoption coaching first to improve task selection and prompting before moving to retraining."
     },
     {
-      "name": "Ines Camus",
-      "category": "overspender",
-      "roi_score": 19,
-      "tokens_used": 402794252,
-      "recommendation": "Review prompts and token-heavy workflows to improve story points per million tokens.",
-      "productivity": 0.1
+      "name": "Jade Faure",
+      "category": "average_user",
+      "tokens_used": 139009694,
+      "story_points": 90,
+      "recommendation": "Monitor Jade Faure because 139009694 tokens produced 90 story points, a strong average_user outcome that may be close to efficient-user behavior. Continue light coaching and review whether this workflow can be replicated more broadly if performance stays consistent."
     },
     {
-      "name": "Baptiste Bernard",
-      "category": "overspender",
-      "roi_score": 12,
-      "tokens_used": 767324881,
-      "recommendation": "Urgently review token-heavy workflows because story points per million tokens are critically low.",
-      "productivity": 0.05
+      "name": "Julien Bourgeois",
+      "category": "average_user",
+      "tokens_used": 310404973,
+      "story_points": 42,
+      "recommendation": "Monitor Julien Bourgeois because 310404973 tokens resulted in 42 story points, which is an average_user pattern with moderate value conversion. Use adoption coaching from efficient peers to improve output before changing access or tooling."
     },
     {
-      "name": "Theo Girard",
-      "category": "quality_risk",
-      "roi_score": 11,
-      "tokens_used": 124441231,
-      "recommendation": "Add quality gates and reduce rework before scaling token usage to improve story points per million tokens.",
-      "productivity": 0.09
+      "name": "Laure Fontaine",
+      "category": "average_user",
+      "tokens_used": 351310057,
+      "story_points": 91,
+      "recommendation": "Monitor Laure Fontaine because 351310057 tokens produced 91 story points, a solid average_user result with good delivery despite higher spend. Keep monitoring and use light coaching to see if token use can be reduced while preserving output."
     },
     {
-      "name": "Florian Rousseau",
-      "category": "quality_risk",
-      "roi_score": 10,
-      "tokens_used": 209759142,
-      "recommendation": "Add quality gates and reduce rework to improve story points per million tokens before scaling usage.",
-      "productivity": 0.07
+      "name": "Lena Chen",
+      "category": "average_user",
+      "tokens_used": 531690249,
+      "story_points": 77,
+      "recommendation": "Monitor Lena Chen because 531690249 tokens generated 77 story points, which is substantial spend but still within the average_user category. Use adoption coaching to tighten workflow efficiency and review whether token-heavy steps can be reduced."
     },
     {
-      "name": "Omar Leclerc",
-      "category": "overspender",
-      "roi_score": 9,
-      "tokens_used": 753829866,
-      "recommendation": "Review prompts and token-heavy workflows immediately to improve very low story points per million tokens.",
-      "productivity": 0.05
+      "name": "Lucas Renard",
+      "category": "average_user",
+      "tokens_used": 170434052,
+      "story_points": 26,
+      "recommendation": "Monitor Lucas Renard because 170434052 tokens produced 26 story points, an average_user result that is below ideal for the spend level. Start with adoption coaching and close tracking before deciding on retraining."
+    },
+    {
+      "name": "Maxime Lefebvre",
+      "category": "average_user",
+      "tokens_used": 92614426,
+      "story_points": 45,
+      "recommendation": "Monitor Maxime Lefebvre because 92614426 tokens delivered 45 story points, which is a middle-range average_user pattern. Use light coaching to improve consistency and compare future value against efficient-user examples."
+    },
+    {
+      "name": "Nicolas Michel",
+      "category": "average_user",
+      "tokens_used": 44450539,
+      "story_points": 31,
+      "recommendation": "Monitor Nicolas Michel because 44450539 tokens produced 31 story points, which is modest spend and modest output for an average_user. Continue light adoption coaching and watch whether this employee can improve delivery without more tokens."
+    },
+    {
+      "name": "Pierre Okafor",
+      "category": "average_user",
+      "tokens_used": 443924602,
+      "story_points": 55,
+      "recommendation": "Monitor Pierre Okafor because 443924602 tokens generated 55 story points, an average_user pattern with high spend that should be watched carefully. Use adoption coaching to improve token-to-delivery conversion before considering retraining."
+    },
+    {
+      "name": "Quentin Morin",
+      "category": "average_user",
+      "tokens_used": 146482942,
+      "story_points": 41,
+      "recommendation": "Monitor Quentin Morin because 146482942 tokens produced 41 story points, which is a typical average_user profile. Apply light coaching and track whether better prompt discipline improves output next month."
+    },
+    {
+      "name": "Remy Dupuis",
+      "category": "average_user",
+      "tokens_used": 157657495,
+      "story_points": 83,
+      "recommendation": "Monitor Remy Dupuis because 157657495 tokens delivered 83 story points, a strong average_user result that may be worth developing further. Continue light coaching and assess whether this workflow can become a repeatable model for peers."
+    },
+    {
+      "name": "Romain Roux",
+      "category": "average_user",
+      "tokens_used": 161093114,
+      "story_points": 45,
+      "recommendation": "Monitor Romain Roux because 161093114 tokens produced 45 story points, which is average_user performance with room for better efficiency. Use adoption coaching to improve task targeting and review next-month conversion before stronger intervention."
+    },
+    {
+      "name": "Sofia Benali",
+      "category": "average_user",
+      "tokens_used": 433353302,
+      "story_points": 92,
+      "recommendation": "Monitor Sofia Benali because 433353302 tokens generated 92 story points, a productive average_user result despite higher spend. Keep monitoring and use light coaching to reduce token intensity while preserving strong delivery."
+    },
+    {
+      "name": "Thomas Simon",
+      "category": "average_user",
+      "tokens_used": 160459695,
+      "story_points": 60,
+      "recommendation": "Monitor Thomas Simon because 160459695 tokens produced 60 story points, which is a stable average_user pattern. Continue light adoption coaching and compare future performance to efficient-user benchmarks."
+    },
+    {
+      "name": "Yasmine El Idrissi",
+      "category": "average_user",
+      "tokens_used": 32039670,
+      "story_points": 31,
+      "recommendation": "Monitor Yasmine El Idrissi because 32039670 tokens delivered 31 story points, a modest but acceptable average_user profile. Use light coaching to improve consistency and determine whether this employee can move toward efficient-user behavior."
+    },
+    {
+      "name": "Yuna Schmitt",
+      "category": "average_user",
+      "tokens_used": 518066030,
+      "story_points": 68,
+      "recommendation": "Monitor Yuna Schmitt because 518066030 tokens produced 68 story points, which is high spend for an average_user result. Apply adoption coaching and close monitoring to improve value before considering retraining."
+    },
+    {
+      "name": "Antoine Petit",
+      "category": "low_adoption",
+      "tokens_used": 48323460,
+      "story_points": 7,
+      "recommendation": "Run adoption coaching for Antoine Petit because 48323460 tokens and 7 story points indicate low adoption with low delivery. Focus on practical use cases and short workflow examples, then monitor next month to confirm whether usage becomes more productive."
+    },
+    {
+      "name": "Nadia Fernandez",
+      "category": "low_adoption",
+      "tokens_used": 16464467,
+      "story_points": 24,
+      "recommendation": "Run adoption coaching for Nadia Fernandez because 16464467 tokens and 24 story points suggest low_adoption rather than overspending. Give targeted examples of where AI should be used in daily work and monitor whether both usage and delivery improve."
+    },
+    {
+      "name": "Zoe Laurent",
+      "category": "low_adoption",
+      "tokens_used": 10102844,
+      "story_points": 6,
+      "recommendation": "Run adoption coaching for Zoe Laurent because 10102844 tokens produced only 6 story points, matching a low_adoption pattern. Provide simple, repeatable AI workflows and monitor the next cycle to see whether adoption lifts delivery."
     },
     {
       "name": "Fatima Muller",
       "category": "quality_risk",
-      "roi_score": 7,
       "tokens_used": 348549942,
-      "recommendation": "Add quality gates and reduce rework to improve story points per million tokens.",
-      "productivity": 0.06
+      "story_points": 22,
+      "recommendation": "Retrain Fatima Muller because 348549942 tokens produced only 22 story points, which is a poor conversion pattern in the quality_risk category. Add review checkpoints and coaching on task decomposition so token use is tied to clearer business output."
+    },
+    {
+      "name": "Florian Rousseau",
+      "category": "quality_risk",
+      "tokens_used": 209759142,
+      "story_points": 15,
+      "recommendation": "Retrain Florian Rousseau because 209759142 tokens resulted in 15 story points, a weak quality_risk outcome for the spend level. Focus retraining on prompt discipline, smaller task breakdowns, and manager review before scaling usage."
     },
     {
       "name": "Nina Traore",
       "category": "quality_risk",
-      "roi_score": 7,
       "tokens_used": 202833499,
-      "recommendation": "Add quality gates and reduce rework before increasing token usage to improve story points per million tokens.",
-      "productivity": 0.06
+      "story_points": 13,
+      "recommendation": "Retrain Nina Traore because 202833499 tokens generated only 13 story points, which is low delivery for the token volume in the quality_risk category. Use structured coaching and review checkpoints to improve output quality before allowing broader AI use."
     },
     {
       "name": "Sara Mercier",
       "category": "quality_risk",
-      "roi_score": 5,
       "tokens_used": 269440710,
-      "recommendation": "Add quality gates and reduce rework urgently to improve story points per million tokens.",
-      "productivity": 0.06
+      "story_points": 16,
+      "recommendation": "Retrain Sara Mercier because 269440710 tokens produced just 16 story points, showing weak business return in the quality_risk category. Emphasize task selection and manager review so AI use supports measurable delivery instead of extra spend."
+    },
+    {
+      "name": "Theo Girard",
+      "category": "quality_risk",
+      "tokens_used": 124441231,
+      "story_points": 11,
+      "recommendation": "Retrain Theo Girard because 124441231 tokens delivered only 11 story points, which is a clear quality_risk signal. Focus on prompt basics and task decomposition, then monitor whether retraining improves conversion before expanding usage."
+    },
+    {
+      "name": "Adrien Ivanova",
+      "category": "overspender",
+      "tokens_used": 745127529,
+      "story_points": 74,
+      "recommendation": "Retrain Adrien Ivanova because 745127529 tokens produced 74 story points, a high-spend overspender pattern with weaker value than efficient peers. Review workflow design, reduce unnecessary context, and closely monitor next-month token efficiency."
+    },
+    {
+      "name": "Baptiste Bernard",
+      "category": "overspender",
+      "tokens_used": 767324881,
+      "story_points": 42,
+      "recommendation": "Retrain Baptiste Bernard because 767324881 tokens generated 42 story points, which is a clear overspender profile with poor conversion. Audit prompt habits and task selection immediately, then monitor for a material drop in token use per delivered point."
+    },
+    {
+      "name": "Ines Camus",
+      "category": "overspender",
+      "tokens_used": 402794252,
+      "story_points": 39,
+      "recommendation": "Retrain Ines Camus because 402794252 tokens produced 39 story points, indicating overspender behavior with limited delivery return. Focus on reducing low-value AI interactions and monitor whether retraining improves token-to-output efficiency."
+    },
+    {
+      "name": "Omar Leclerc",
+      "category": "overspender",
+      "tokens_used": 753829866,
+      "story_points": 41,
+      "recommendation": "Retrain Omar Leclerc because 753829866 tokens delivered 41 story points, a strong overspender signal with weak business value. Review context size, prompt patterns, and use cases, then closely monitor for improved efficiency next month."
     }
   ]
 }

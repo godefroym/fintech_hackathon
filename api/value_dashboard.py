@@ -6,8 +6,8 @@ The output follows the provided VIEWMODEL.json contract exactly:
   - monthly_metrics
   - employee_metrics
 
-The only added field is `productivity`, defined as:
-  story_points / tokens_used * 1_000_000
+Employee recommendations are based on the relationship between tokens used and
+story points delivered, but the internal productivity ratio is not exposed.
 """
 
 from __future__ import annotations
@@ -82,12 +82,6 @@ def percentile(values: list[float], q: float) -> float:
     return ordered[lower] * (1 - weight) + ordered[upper] * weight
 
 
-def percentile_rank(values: list[float], value: float) -> float:
-    if not values:
-        return 0.0
-    return sum(1 for item in values if item <= value) / len(values)
-
-
 def clamp(value: float, lower: float, upper: float) -> float:
     return max(lower, min(upper, value))
 
@@ -159,7 +153,6 @@ def build_monthly_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "name": row["name"],
                     "tokens_used": int(round(row["tokens_used"])),
                     "story_points": round_metric(row["story_points"], 1),
-                    "productivity": round_metric(row["productivity"], 2),
                 }
             )
 
@@ -180,16 +173,34 @@ def latest_employee_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def fallback_recommendation(category: str) -> str:
     if category == "high_roi":
-        return "Maintain usage and replicate workflow."
+        return (
+            "Maintain this level of AI access and use this person as a benchmark. "
+            "Their token consumption is justified by strong story point delivery, so the next action is to document the workflow, prompts, and review habits that make the spend productive."
+        )
     if category == "efficient_user":
-        return "Document workflow and expand adoption carefully."
+        return (
+            "Turn this person into an internal reference user. "
+            "They deliver strong story points without excessive token usage, so ask them to share concrete examples of prompts, context selection, and tasks where AI saves the most time."
+        )
     if category == "overspender":
-        return "Review prompts, tool usage, and token-heavy workflows."
+        return (
+            "Review this user's AI workflow before increasing their access. "
+            "The token spend is high relative to delivered story points, so check whether they are sending too much context, using AI for low-value tasks, or missing basic prompt patterns."
+        )
     if category == "low_adoption":
-        return "Provide onboarding and targeted AI workflow examples."
+        return (
+            "Run a targeted enablement test rather than cutting budget. "
+            "This user has low token usage and low story point delivery, so the issue may be under-adoption; give them practical examples and compare their next month against this baseline."
+        )
     if category == "quality_risk":
-        return "Add quality gates and reduce rework before scaling usage."
-    return "Monitor usage and coach toward top-performer patterns."
+        return (
+            "Do not scale AI usage for this user yet. "
+            "Story point delivery is weak relative to the usage pattern, so add review checkpoints and focus on task decomposition before encouraging more token consumption."
+        )
+    return (
+        "Keep monitoring this user against peers doing similar work. "
+        "Their token usage and story point delivery are not extreme, so the best next step is light coaching using examples from the highest-performing users."
+    )
 
 
 def classify_employee(
@@ -229,19 +240,6 @@ def classify_employee(
     return "average_user"
 
 
-def roi_score(
-    row: dict[str, Any],
-    token_values: list[float],
-    story_point_values: list[float],
-    productivity_values: list[float],
-) -> int:
-    productivity_rank = percentile_rank(productivity_values, row["productivity"])
-    story_point_rank = percentile_rank(story_point_values, row["story_points"])
-    token_rank = percentile_rank(token_values, row["tokens_used"])
-    score = 100 * (0.65 * productivity_rank + 0.35 * story_point_rank - 0.08 * token_rank)
-    return int(round(clamp(score, 0, 100)))
-
-
 def build_employee_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     employee_rows = latest_employee_rows(rows)
     token_values = [row["tokens_used"] for row in employee_rows]
@@ -255,14 +253,24 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             {
                 "name": row["name"],
                 "category": category,
-                "roi_score": roi_score(row, token_values, story_point_values, productivity_values),
                 "tokens_used": int(round(row["tokens_used"])),
+                "story_points": round_metric(row["story_points"], 1),
                 "recommendation": fallback_recommendation(category),
-                "productivity": round_metric(row["productivity"], 2),
             }
         )
 
-    return sorted(employees, key=lambda item: item["roi_score"], reverse=True)
+    category_rank = {
+        "high_roi": 0,
+        "efficient_user": 1,
+        "average_user": 2,
+        "low_adoption": 3,
+        "quality_risk": 4,
+        "overspender": 5,
+    }
+    return sorted(
+        employees,
+        key=lambda item: (category_rank.get(item["category"], 99), item["name"]),
+    )
 
 
 def rows_for_month(rows: list[dict[str, Any]], month: str | None) -> list[dict[str, Any]]:
@@ -275,12 +283,24 @@ def fallback_main_recommendation(categories: Counter[str]) -> str:
     if categories.get("overspender", 0) and (
         categories.get("high_roi", 0) or categories.get("efficient_user", 0)
     ):
-        return "Retrain high-token low-output users and replicate workflows from high-productivity users."
+        return (
+            "Prioritize two actions next month: review high-token users who deliver few story points, "
+            "and turn efficient users into internal examples. This keeps the AI budget focused on work that converts into measurable delivery."
+        )
     if categories.get("overspender", 0):
-        return "Cap and review token-heavy workflows before increasing AI spend."
+        return (
+            "Cap token-heavy workflows until managers review why the spend is not translating into story points. "
+            "The immediate goal is to reduce waste before expanding the AI budget."
+        )
     if categories.get("high_roi", 0) or categories.get("efficient_user", 0):
-        return "Expand AI usage by copying workflows from the most productive users."
-    return "Monitor productivity per million tokens monthly and review outliers."
+        return (
+            "Expand AI usage by copying the workflows of users who already convert tokens into story points. "
+            "Use their habits as the onboarding playbook for lower-performing teams."
+        )
+    return (
+        "Keep the AI budget stable and review employee-level outliers monthly. "
+        "The dashboard should be used to decide where AI coaching creates more delivery and where token spend needs tighter control."
+    )
 
 
 def build_executive_summary(
@@ -343,17 +363,19 @@ def maybe_apply_openai_recommendations(viewmodel: dict[str, Any]) -> str:
 
     model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
     prompt = {
-        "task": "Write concise manager recommendations for an AI token value dashboard.",
+        "task": "Write manager recommendations for an AI token value dashboard.",
         "rules": [
             "Use only the provided JSON.",
             "Do not add, remove, rename, or compute fields.",
             "Return only main_recommendation and employee recommendations by name.",
-            "Focus on productivity measured as story points per million tokens.",
+            "Base reasoning on tokens_used, story_points, and category.",
+            "Recommendations should be more detailed than one-liners: 2 clear sentences for each employee.",
+            "Explain the business action: retrain, monitor, replicate workflow, or run adoption coaching.",
         ],
         "required_json_shape": {
             "main_recommendation": "string",
             "employee_recommendations": [
-                {"name": "string", "recommendation": "one concise sentence"}
+                {"name": "string", "recommendation": "two concise sentences"}
             ],
         },
         "viewmodel": viewmodel,

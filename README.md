@@ -34,14 +34,8 @@ python3 api/value_dashboard.py \
 Le fichier généré contient :
 
 - `executive_summary` : résumé financier et recommandation globale
-- `monthly_metrics` : une liste de mois, avec `name`, `tokens_used`, `story_points`, `productivity`
-- `employee_metrics` : snapshot par employé avec `name`, `category`, `roi_score`, `tokens_used`, `recommendation`, `productivity`
-
-Le schéma respecte le `VIEWMODEL.json` fourni. Le seul champ ajouté est `productivity` :
-
-```text
-story_points / tokens_used * 1_000_000
-```
+- `monthly_metrics` : une liste de mois, avec `name`, `tokens_used`, `story_points`
+- `employee_metrics` : snapshot par employé avec `name`, `category`, `tokens_used`, `story_points`, `recommendation`
 
 Le but est de distinguer :
 
