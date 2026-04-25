@@ -486,7 +486,7 @@ def maybe_apply_openai_recommendations(
     if not api_key:
         return "skipped"
 
-    model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
+    model = os.environ.get("OPENAI_MODEL", "gpt-5.4")
     prompt = {
         "task": (
             "Write CFO and engineering-manager recommendations for an AI token value dashboard. "
@@ -564,7 +564,7 @@ def maybe_apply_openai_recommendations(
         recommendation = recommendation_by_name.get(item["name"])
         if isinstance(recommendation, str) and recommendation.strip():
             item["recommendation"] = recommendation.strip()
-    return "openai"
+    return f"openai:{model}"
 
 
 def build_viewmodel(
