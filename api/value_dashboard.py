@@ -533,6 +533,130 @@ def fallback_main_recommendation(categories: Counter[str]) -> str:
     )
 
 
+def build_global_recommendation_context(
+    rows: list[dict[str, Any]],
+    recommendation_context: list[dict[str, Any]],
+    cost_per_1m_tokens: float,
+    currency: str,
+) -> dict[str, Any]:
+    grouped: dict[str, dict[str, float]] = defaultdict(lambda: {"tokens_used": 0.0, "story_points": 0.0})
+    for row in rows:
+        grouped[row["month"]]["tokens_used"] += row["tokens_used"]
+        grouped[row["month"]]["story_points"] += row["story_points"]
+
+    monthly_spend = []
+    for month in sorted(grouped, key=month_sort_key):
+        tokens_used = grouped[month]["tokens_used"]
+        story_points = grouped[month]["story_points"]
+        monthly_spend.append(
+            {
+                "month": month_label(month),
+                "tokens_used": int(round(tokens_used)),
+                "estimated_spend": round_metric(tokens_used / 1_000_000 * cost_per_1m_tokens, 2),
+                "story_points": round_metric(story_points, 1),
+            }
+        )
+
+    first_month = monthly_spend[0] if monthly_spend else {}
+    latest_month = monthly_spend[-1] if monthly_spend else {}
+    peak_month = max(monthly_spend, key=lambda item: item["estimated_spend"], default={})
+    month_to_month_increases = sum(
+        1
+        for previous, current in zip(monthly_spend, monthly_spend[1:])
+        if current["estimated_spend"] > previous["estimated_spend"]
+    )
+
+    def by_category(category: str) -> list[dict[str, Any]]:
+        return [item for item in recommendation_context if item["category"] == category]
+
+    def employee_summary(item: dict[str, Any]) -> dict[str, Any]:
+        return {
+            "name": item["name"],
+            "tokens_used": item["tokens_used"],
+            "story_points": item["story_points"],
+            "tickets_resolved": item["tickets_resolved"],
+            "time_to_completion_days": item["time_to_completion_days"],
+            "tokens_per_story_point": item["tokens_per_story_point"],
+            "story_points_per_million_tokens": item["story_points_per_million_tokens"],
+            "team_median_tokens_per_story_point": item["team_median_tokens_per_story_point"],
+            "team_median_story_points_per_million_tokens": item[
+                "team_median_story_points_per_million_tokens"
+            ],
+        }
+
+    overspenders = sorted(
+        by_category("overspender"),
+        key=lambda item: item["tokens_per_story_point"],
+        reverse=True,
+    )
+    efficient_users = sorted(
+        by_category("high_roi") + by_category("efficient_user"),
+        key=lambda item: item["story_points_per_million_tokens"],
+        reverse=True,
+    )
+    low_adoption_users = sorted(
+        by_category("low_adoption"),
+        key=lambda item: (item["tokens_used"], item["story_points"]),
+    )
+
+    return {
+        "currency": currency,
+        "monthly_spend": monthly_spend,
+        "spend_first_month": first_month,
+        "spend_latest_month": latest_month,
+        "spend_peak_month": peak_month,
+        "spend_period_growth_percent": round_metric(
+            safe_divide(
+                latest_month.get("estimated_spend", 0.0) - first_month.get("estimated_spend", 0.0),
+                first_month.get("estimated_spend", 0.0),
+            )
+            * 100,
+            1,
+        ),
+        "month_to_month_increases": month_to_month_increases,
+        "month_to_month_periods": max(len(monthly_spend) - 1, 0),
+        "overspenders_to_reduce": [employee_summary(item) for item in overspenders[:4]],
+        "efficient_users_to_replicate": [employee_summary(item) for item in efficient_users[:5]],
+        "low_adoption_low_delivery_users": [
+            employee_summary(item) for item in low_adoption_users[:4]
+        ],
+    }
+
+
+def build_global_main_recommendation(global_context: dict[str, Any]) -> str:
+    first_month = global_context["spend_first_month"]
+    latest_month = global_context["spend_latest_month"]
+    peak_month = global_context["spend_peak_month"]
+    currency = global_context["currency"]
+    overspenders = global_context["overspenders_to_reduce"]
+    efficient_users = global_context["efficient_users_to_replicate"]
+    low_adoption_users = global_context["low_adoption_low_delivery_users"]
+
+    overspender_text = ", ".join(
+        f"{item['name']} ({item['tokens_per_story_point']} tokens/story point)"
+        for item in overspenders[:3]
+    )
+    efficient_text = ", ".join(
+        f"{item['name']} ({item['story_points_per_million_tokens']} story points/M tokens)"
+        for item in efficient_users[:3]
+    )
+    low_adoption_text = ", ".join(
+        f"{item['name']} ({item['tokens_used']} tokens, {item['story_points']} story points)"
+        for item in low_adoption_users[:3]
+    )
+
+    return (
+        f"Pain point: AI spend rose from {first_month.get('estimated_spend', 0)} {currency} in {first_month.get('month')} "
+        f"to {latest_month.get('estimated_spend', 0)} {currency} in {latest_month.get('month')} "
+        f"({signed_metric(global_context['spend_period_growth_percent'])}%), with increases in "
+        f"{global_context['month_to_month_increases']} of {global_context['month_to_month_periods']} month-to-month periods and a peak at "
+        f"{peak_month.get('estimated_spend', 0)} {currency} in {peak_month.get('month')}. "
+        f"The first waste bucket is high consumption with weak delivery: {overspender_text}; cap or reduce usage for these users and retrain them on smaller context and prompt discipline. "
+        f"The second opportunity is to replicate good usage: {efficient_text}; recognize these employees and have them coach peers because they turn tokens into delivery efficiently. "
+        f"The third pain point is low AI adoption with low delivery: {low_adoption_text}; do targeted enablement and watch whether story points and tickets resolved improve next month."
+    )
+
+
 def build_executive_summary(
     rows: list[dict[str, Any]],
     employee_metrics: list[dict[str, Any]],
@@ -589,6 +713,7 @@ def build_executive_summary(
 def maybe_apply_openai_recommendations(
     viewmodel: dict[str, Any],
     recommendation_context: list[dict[str, Any]],
+    global_context: dict[str, Any],
 ) -> str:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
@@ -604,6 +729,9 @@ def maybe_apply_openai_recommendations(
             "Use only the provided dashboard fields and KPI context.",
             "Do not add, remove, rename, or compute output fields.",
             "Return only main_recommendation and employee recommendations by name.",
+            "The main_recommendation must surface pain points first: monthly AI spend trend, high-token low-delivery employees, efficient users to replicate, and low-adoption low-delivery employees.",
+            "The main_recommendation must name concrete employees from the provided groups and give clear actions for each group.",
+            "The main_recommendation must mention the spend trend using the monthly_spend values, including the period growth and peak month.",
             "Each employee recommendation must be 3 to 4 concise sentences.",
             "Each employee recommendation must be understandable without knowing finance or analytics jargon.",
             "Do not mention any abstract invented metric.",
@@ -630,6 +758,7 @@ def maybe_apply_openai_recommendations(
             "employee_metrics": viewmodel["employee_metrics"],
         },
         "kpi_context": recommendation_context,
+        "global_context": global_context,
     }
     payload = {
         "model": model,
@@ -688,6 +817,12 @@ def build_viewmodel(
     normalized_rows = [normalized_row(row) for row in rows]
     employee_metrics, recommendation_context = build_employee_metrics(normalized_rows)
     monthly_budget = safe_float(os.environ.get("AI_MONTHLY_BUDGET"), default=0.0) or None
+    global_context = build_global_recommendation_context(
+        normalized_rows,
+        recommendation_context,
+        cost_per_1m_tokens,
+        currency,
+    )
 
     viewmodel = {
         "executive_summary": build_executive_summary(
@@ -700,7 +835,14 @@ def build_viewmodel(
         "monthly_metrics": build_monthly_metrics(normalized_rows),
         "employee_metrics": employee_metrics,
     }
-    recommendation_source = maybe_apply_openai_recommendations(viewmodel, recommendation_context)
+    viewmodel["executive_summary"]["main_recommendation"] = build_global_main_recommendation(
+        global_context
+    )
+    recommendation_source = maybe_apply_openai_recommendations(
+        viewmodel,
+        recommendation_context,
+        global_context,
+    )
     return viewmodel, recommendation_source
 
 
