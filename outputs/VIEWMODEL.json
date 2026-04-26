@@ -1,0 +1,1801 @@
+{
+  "executive_summary": {
+    "monthly_ai_spend_total": 77593.63,
+    "forecast_next_month_ai_spend": 73284.79,
+    "monthly_ai_spend_growth_percent": -5.6,
+    "budget_usage_percent": 81.7,
+    "productivity_gain_percent": 17.5,
+    "bugs_reduction_percent": -59.6,
+    "currency": "USD",
+    "main_recommendation": "AI spend appears productive overall, not wasteful: budget usage is 81.7%, spend is forecast to decline 5.6% next month, and the dashboard shows a 17.5% gain in delivery with a 59.6% reduction in bugs. The best next move is to control a small set of very high-token users whose tokens per story point are worse than the team median, while formally using the strongest high-roi and efficient users as coaches. This balances cost control with wider adoption, so savings come from reducing clearly inefficient usage rather than cutting effective AI work."
+  },
+  "monthly_metrics": [
+    {
+      "month": "2024-10",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 479177254,
+          "story_points": 46
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 443052294,
+          "story_points": 107
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 235331263,
+          "story_points": 76
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 19408963,
+          "story_points": 74
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 33253694,
+          "story_points": 21
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 662490438,
+          "story_points": 20
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 26590057,
+          "story_points": 42
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 219350965,
+          "story_points": 44
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 189015842,
+          "story_points": 54
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 81865168,
+          "story_points": 69
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 141869314,
+          "story_points": 40
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 120887003,
+          "story_points": 13
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 168877834,
+          "story_points": 47
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 172011756,
+          "story_points": 59
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 118783637,
+          "story_points": 36
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 3070806,
+          "story_points": 23
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 206910469,
+          "story_points": 31
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 246070302,
+          "story_points": 70
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 25121551,
+          "story_points": 90
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 566466338,
+          "story_points": 27
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 122000310,
+          "story_points": 34
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 48629199,
+          "story_points": 39
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 21530587,
+          "story_points": 62
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 12064662,
+          "story_points": 45
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 22580398,
+          "story_points": 59
+        },
+        {
+          "name": "Nina Traore",
+          "tokens_used": 144305747,
+          "story_points": 22
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 448035671,
+          "story_points": 26
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 404320214,
+          "story_points": 34
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 92692543,
+          "story_points": 44
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 120038144,
+          "story_points": 50
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 122076918,
+          "story_points": 54
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 217581291,
+          "story_points": 14
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 69892889,
+          "story_points": 58
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 269778902,
+          "story_points": 65
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 104816617,
+          "story_points": 23
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 101202981,
+          "story_points": 58
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 26047984,
+          "story_points": 3
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 25271405,
+          "story_points": 2
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 361717291,
+          "story_points": 33
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 6264149,
+          "story_points": 3
+        }
+      ]
+    },
+    {
+      "month": "2024-11",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 512246613,
+          "story_points": 29
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 487267947,
+          "story_points": 92
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 206631777,
+          "story_points": 37
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 23897744,
+          "story_points": 129
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 47360160,
+          "story_points": 18
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 571511047,
+          "story_points": 19
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 42618095,
+          "story_points": 44
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 237291932,
+          "story_points": 89
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 205941592,
+          "story_points": 49
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 113898525,
+          "story_points": 110
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 269142488,
+          "story_points": 59
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 117100612,
+          "story_points": 24
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 221827119,
+          "story_points": 8
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 192193747,
+          "story_points": 57
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 132283598,
+          "story_points": 49
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 3981081,
+          "story_points": 31
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 205491694,
+          "story_points": 18
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 300984527,
+          "story_points": 85
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 24888328,
+          "story_points": 89
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 652724963,
+          "story_points": 29
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 116673208,
+          "story_points": 47
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 67612048,
+          "story_points": 15
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 20918973,
+          "story_points": 50
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 13828686,
+          "story_points": 38
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 27951299,
+          "story_points": 29
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 484983079,
+          "story_points": 35
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 409261598,
+          "story_points": 79
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 90974451,
+          "story_points": 52
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 178857125,
+          "story_points": 65
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 113113611,
+          "story_points": 114
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 292377984,
+          "story_points": 22
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 66857434,
+          "story_points": 93
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 372494932,
+          "story_points": 94
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 88524309,
+          "story_points": 39
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 107678017,
+          "story_points": 20
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 25892084,
+          "story_points": 21
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 38749657,
+          "story_points": 5
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 386905905,
+          "story_points": 68
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 7673116,
+          "story_points": 19
+        }
+      ]
+    },
+    {
+      "month": "2024-12",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 379724737,
+          "story_points": 47
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 693563849,
+          "story_points": 67
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 233128529,
+          "story_points": 77
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 24638534,
+          "story_points": 36
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 33181721,
+          "story_points": 19
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 781195988,
+          "story_points": 20
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 37443008,
+          "story_points": 65
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 251228831,
+          "story_points": 35
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 226089213,
+          "story_points": 80
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 94388436,
+          "story_points": 89
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 254114456,
+          "story_points": 35
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 144095237,
+          "story_points": 40
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 199772860,
+          "story_points": 6
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 198391575,
+          "story_points": 49
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 135384432,
+          "story_points": 68
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 3338661,
+          "story_points": 34
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 223885577,
+          "story_points": 30
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 286585526,
+          "story_points": 51
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 24196762,
+          "story_points": 75
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 577320277,
+          "story_points": 25
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 137561703,
+          "story_points": 39
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 61187622,
+          "story_points": 32
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 26621675,
+          "story_points": 85
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 12677017,
+          "story_points": 33
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 27687859,
+          "story_points": 35
+        },
+        {
+          "name": "Nina Traore",
+          "tokens_used": 140881335,
+          "story_points": 9
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 623149176,
+          "story_points": 12
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 300984125,
+          "story_points": 50
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 114847352,
+          "story_points": 29
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 141828404,
+          "story_points": 90
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 136897573,
+          "story_points": 68
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 245027449,
+          "story_points": 23
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 67965649,
+          "story_points": 97
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 243518351,
+          "story_points": 43
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 139010762,
+          "story_points": 31
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 112239276,
+          "story_points": 49
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 26787130,
+          "story_points": 60
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 45344219,
+          "story_points": 9
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 447314753,
+          "story_points": 21
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 9219333,
+          "story_points": 22
+        }
+      ]
+    },
+    {
+      "month": "2025-01",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 495071338,
+          "story_points": 43
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 390317536,
+          "story_points": 80
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 299497166,
+          "story_points": 62
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 24703366,
+          "story_points": 39
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 44654165,
+          "story_points": 44
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 820688196,
+          "story_points": 16
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 58867701,
+          "story_points": 68
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 259797071,
+          "story_points": 81
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 221456635,
+          "story_points": 53
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 116071064,
+          "story_points": 96
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 285706660,
+          "story_points": 62
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 89375040,
+          "story_points": 84
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 316926780,
+          "story_points": 40
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 293314925,
+          "story_points": 55
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 143262066,
+          "story_points": 43
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 5035312,
+          "story_points": 15
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 242029809,
+          "story_points": 28
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 243972027,
+          "story_points": 102
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 25661965,
+          "story_points": 93
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 750690644,
+          "story_points": 37
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 134135518,
+          "story_points": 12
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 70176351,
+          "story_points": 63
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 23082890,
+          "story_points": 103
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 11205907,
+          "story_points": 39
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 19086619,
+          "story_points": 70
+        },
+        {
+          "name": "Nina Traore",
+          "tokens_used": 145764556,
+          "story_points": 19
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 433591936,
+          "story_points": 24
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 439701963,
+          "story_points": 32
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 100084344,
+          "story_points": 40
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 160106975,
+          "story_points": 49
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 159443628,
+          "story_points": 104
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 341041938,
+          "story_points": 19
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 95485231,
+          "story_points": 49
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 358111596,
+          "story_points": 38
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 110203316,
+          "story_points": 34
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 111089822,
+          "story_points": 58
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 28864827,
+          "story_points": 35
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 38419724,
+          "story_points": 21
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 363488168,
+          "story_points": 88
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 6685535,
+          "story_points": 24
+        }
+      ]
+    },
+    {
+      "month": "2025-02",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 738368748,
+          "story_points": 52
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 759745353,
+          "story_points": 87
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 348382966,
+          "story_points": 87
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 23898797,
+          "story_points": 68
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 42672876,
+          "story_points": 14
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 1192558541,
+          "story_points": 5
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 48166339,
+          "story_points": 40
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 277414115,
+          "story_points": 57
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 232984773,
+          "story_points": 110
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 126840055,
+          "story_points": 76
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 349456536,
+          "story_points": 62
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 178959319,
+          "story_points": 55
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 280527119,
+          "story_points": 12
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 364045967,
+          "story_points": 98
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 152045694,
+          "story_points": 32
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 6897143,
+          "story_points": 35
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 258731380,
+          "story_points": 76
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 255244038,
+          "story_points": 70
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 33329217,
+          "story_points": 79
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 695014713,
+          "story_points": 50
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 144704168,
+          "story_points": 37
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 93878199,
+          "story_points": 42
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 31664829,
+          "story_points": 69
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 21990408,
+          "story_points": 82
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 30595284,
+          "story_points": 34
+        },
+        {
+          "name": "Nina Traore",
+          "tokens_used": 211465009,
+          "story_points": 12
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 602542300,
+          "story_points": 13
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 468659286,
+          "story_points": 21
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 134122416,
+          "story_points": 70
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 172231995,
+          "story_points": 94
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 191199068,
+          "story_points": 59
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 394968137,
+          "story_points": 18
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 115841762,
+          "story_points": 85
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 278612420,
+          "story_points": 62
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 171701241,
+          "story_points": 9
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 147288911,
+          "story_points": 17
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 31638489,
+          "story_points": 82
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 49978056,
+          "story_points": 23
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 601937141,
+          "story_points": 61
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 9173029,
+          "story_points": 6
+        }
+      ]
+    },
+    {
+      "month": "2025-03",
+      "employees": [
+        {
+          "name": "Adrien Ivanova",
+          "tokens_used": 745127529,
+          "story_points": 74
+        },
+        {
+          "name": "Alexandre Diallo",
+          "tokens_used": 626235460,
+          "story_points": 74
+        },
+        {
+          "name": "Alix Mbaye",
+          "tokens_used": 248018565,
+          "story_points": 73
+        },
+        {
+          "name": "Amina Blanc",
+          "tokens_used": 40417346,
+          "story_points": 65
+        },
+        {
+          "name": "Antoine Petit",
+          "tokens_used": 48323460,
+          "story_points": 7
+        },
+        {
+          "name": "Baptiste Bernard",
+          "tokens_used": 767324881,
+          "story_points": 42
+        },
+        {
+          "name": "Camille Garnier",
+          "tokens_used": 48839131,
+          "story_points": 57
+        },
+        {
+          "name": "Chloe Leroy",
+          "tokens_used": 288050639,
+          "story_points": 40
+        },
+        {
+          "name": "Clara Chevalier",
+          "tokens_used": 305157673,
+          "story_points": 34
+        },
+        {
+          "name": "Eva Moreau",
+          "tokens_used": 122269890,
+          "story_points": 77
+        },
+        {
+          "name": "Fatima Muller",
+          "tokens_used": 348549942,
+          "story_points": 22
+        },
+        {
+          "name": "Florian Rousseau",
+          "tokens_used": 209759142,
+          "story_points": 15
+        },
+        {
+          "name": "Hugo Dubois",
+          "tokens_used": 242512967,
+          "story_points": 28
+        },
+        {
+          "name": "Ines Camus",
+          "tokens_used": 402794252,
+          "story_points": 39
+        },
+        {
+          "name": "Jade Faure",
+          "tokens_used": 139009694,
+          "story_points": 90
+        },
+        {
+          "name": "Jules Nguyen",
+          "tokens_used": 5689436,
+          "story_points": 47
+        },
+        {
+          "name": "Julien Bourgeois",
+          "tokens_used": 310404973,
+          "story_points": 42
+        },
+        {
+          "name": "Laure Fontaine",
+          "tokens_used": 351310057,
+          "story_points": 91
+        },
+        {
+          "name": "Leila Park",
+          "tokens_used": 28132738,
+          "story_points": 136
+        },
+        {
+          "name": "Lena Chen",
+          "tokens_used": 531690249,
+          "story_points": 77
+        },
+        {
+          "name": "Lucas Renard",
+          "tokens_used": 170434052,
+          "story_points": 26
+        },
+        {
+          "name": "Maxime Lefebvre",
+          "tokens_used": 92614426,
+          "story_points": 45
+        },
+        {
+          "name": "Maya Kowalski",
+          "tokens_used": 24334442,
+          "story_points": 71
+        },
+        {
+          "name": "Nadia Fernandez",
+          "tokens_used": 16464467,
+          "story_points": 24
+        },
+        {
+          "name": "Nicolas Michel",
+          "tokens_used": 44450539,
+          "story_points": 31
+        },
+        {
+          "name": "Nina Traore",
+          "tokens_used": 202833499,
+          "story_points": 13
+        },
+        {
+          "name": "Omar Leclerc",
+          "tokens_used": 753829866,
+          "story_points": 41
+        },
+        {
+          "name": "Pierre Okafor",
+          "tokens_used": 443924602,
+          "story_points": 55
+        },
+        {
+          "name": "Quentin Morin",
+          "tokens_used": 146482942,
+          "story_points": 41
+        },
+        {
+          "name": "Remy Dupuis",
+          "tokens_used": 157657495,
+          "story_points": 83
+        },
+        {
+          "name": "Romain Roux",
+          "tokens_used": 161093114,
+          "story_points": 45
+        },
+        {
+          "name": "Sara Mercier",
+          "tokens_used": 269440710,
+          "story_points": 16
+        },
+        {
+          "name": "Simon Martin",
+          "tokens_used": 90801785,
+          "story_points": 69
+        },
+        {
+          "name": "Sofia Benali",
+          "tokens_used": 433353302,
+          "story_points": 92
+        },
+        {
+          "name": "Theo Girard",
+          "tokens_used": 124441231,
+          "story_points": 11
+        },
+        {
+          "name": "Thomas Simon",
+          "tokens_used": 160459695,
+          "story_points": 60
+        },
+        {
+          "name": "Victor Durand",
+          "tokens_used": 36760403,
+          "story_points": 60
+        },
+        {
+          "name": "Yasmine El Idrissi",
+          "tokens_used": 32039670,
+          "story_points": 31
+        },
+        {
+          "name": "Yuna Schmitt",
+          "tokens_used": 518066030,
+          "story_points": 68
+        },
+        {
+          "name": "Zoe Laurent",
+          "tokens_used": 10102844,
+          "story_points": 6
+        }
+      ]
+    }
+  ],
+  "employee_metrics": [
+    {
+      "name": "Leila Park",
+      "category": "high_roi",
+      "month": "2025-03",
+      "tokens_used": 28132738,
+      "story_points": 136,
+      "tickets_resolved": 22,
+      "time_to_completion_days": 1.5,
+      "bugs_closed": 4,
+      "lines_of_code": 10008,
+      "merge_requests": 21,
+      "merge_requests_per_ticket": 0.95,
+      "recommendation": "Leila Park sets the standard: rank #1 of 40 in story points and rank #2 in efficiency, with 206858 tokens per story point versus a team median of 4285456; tokens per story point means how many tokens were spent to deliver one story point, and lower is better. She also resolved 22 tickets versus the median of 9 and finished work in 1.5 days versus 2.29 days. Praise this behavior and replicate her workflow by having her mentor peers on prompt discipline and keeping context tight. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Amina Blanc",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 40417346,
+      "story_points": 65,
+      "tickets_resolved": 14,
+      "time_to_completion_days": 2.14,
+      "bugs_closed": 5,
+      "lines_of_code": 8435,
+      "merge_requests": 23,
+      "merge_requests_per_ticket": 1.64,
+      "recommendation": "Amina Blanc is using AI well: 1.61 story points per million tokens versus a team median of 0.24, and 621805 tokens per story point versus 4285456 at the median. She also resolved 14 tickets versus 9 and had 23 merge requests versus a median of 14.5. Praise this pattern and replicate her workflow by having her coach peers on how she selects context and uses prompts. Next month, watch story points per million tokens."
+    },
+    {
+      "name": "Camille Garnier",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 48839131,
+      "story_points": 57,
+      "tickets_resolved": 8,
+      "time_to_completion_days": 2.38,
+      "bugs_closed": 2,
+      "lines_of_code": 5208,
+      "merge_requests": 14,
+      "merge_requests_per_ticket": 1.75,
+      "recommendation": "Camille Garnier is efficient, delivering 1.17 story points per million tokens versus a team median of 0.24 and using 856827 tokens per story point versus 4285456 at the median. Story points are above median at 57 versus 45, even though tickets resolved are slightly below median at 8 versus 9. Praise this usage pattern and replicate what is working by having her share how she uses AI for focused tasks without overusing tokens. Next month, watch story points per million tokens."
+    },
+    {
+      "name": "Jules Nguyen",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 5689436,
+      "story_points": 47,
+      "tickets_resolved": 9,
+      "time_to_completion_days": 2.33,
+      "bugs_closed": 3,
+      "lines_of_code": 7319,
+      "merge_requests": 14,
+      "merge_requests_per_ticket": 1.56,
+      "recommendation": "Jules Nguyen is the strongest efficiency example: rank #1 in efficiency, with 8.26 story points per million tokens versus a team median of 0.24 and only 121052 tokens per story point versus 4285456 at the median. He delivered 47 story points, slightly above the median of 45, while using far fewer tokens than almost anyone else. Praise this behavior and replicate it by asking him to mentor peers on low-token, high-output usage habits. Next month, watch story points per million tokens."
+    },
+    {
+      "name": "Maya Kowalski",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 24334442,
+      "story_points": 71,
+      "tickets_resolved": 14,
+      "time_to_completion_days": 1.79,
+      "bugs_closed": 2,
+      "lines_of_code": 12857,
+      "merge_requests": 26,
+      "merge_requests_per_ticket": 1.86,
+      "recommendation": "Maya Kowalski is a model for efficient AI use, with 2.92 story points per million tokens versus a team median of 0.24 and 342739 tokens per story point versus 4285456 at the median. She also resolved 14 tickets versus 9, completed work in 1.79 days versus 2.29 days, and had 26 merge requests versus 14.5. Praise this behavior and replicate her workflow by having her coach others on how to turn AI usage into faster delivery without extra token spend. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Simon Martin",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 90801785,
+      "story_points": 69,
+      "tickets_resolved": 14,
+      "time_to_completion_days": 1.79,
+      "bugs_closed": 3,
+      "lines_of_code": 9146,
+      "merge_requests": 13,
+      "merge_requests_per_ticket": 0.93,
+      "recommendation": "Simon Martin is clearly above the team median, with 0.76 story points per million tokens versus 0.24 and 1315968 tokens per story point versus 4285456 at the median. He also resolved 14 tickets versus 9 and completed work in 1.79 days versus 2.29 days. Praise this pattern and replicate the parts that work by having him share how he keeps token use lower while sustaining delivery. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Victor Durand",
+      "category": "efficient_user",
+      "month": "2025-03",
+      "tokens_used": 36760403,
+      "story_points": 60,
+      "tickets_resolved": 8,
+      "time_to_completion_days": 1.62,
+      "bugs_closed": 1,
+      "lines_of_code": 10454,
+      "merge_requests": 11,
+      "merge_requests_per_ticket": 1.38,
+      "recommendation": "Victor Durand is using AI efficiently, with 1.63 story points per million tokens versus a team median of 0.24 and 612673 tokens per story point versus 4285456 at the median. He delivered 60 story points versus a median of 45 and completed work in 1.62 days versus 2.29 days. Praise this behavior and replicate it by having him mentor peers on how to use AI in shorter, more targeted cycles. Next month, watch story points per million tokens."
+    },
+    {
+      "name": "Alexandre Diallo",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 626235460,
+      "story_points": 74,
+      "tickets_resolved": 17,
+      "time_to_completion_days": 1.41,
+      "bugs_closed": 1,
+      "lines_of_code": 16450,
+      "merge_requests": 24,
+      "merge_requests_per_ticket": 1.41,
+      "recommendation": "Alexandre Diallo is not an extreme outlier: top 10% token usage (rank #4/40, P92), top 20% story point delivery (rank #8/40, P82), and top 72.5% efficiency (rank #29/40, P30), using 8462641 tokens per story point versus a team median of 4285456. Delivery context: 17 tickets resolved versus a team median of 9, 1.41 days average completion time versus 2.29 days median, 1 bugs closed, 24 merge requests, and 16450 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-49.9% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Alix Mbaye",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 248018565,
+      "story_points": 73,
+      "tickets_resolved": 15,
+      "time_to_completion_days": 2.53,
+      "bugs_closed": 2,
+      "lines_of_code": 11039,
+      "merge_requests": 19,
+      "merge_requests_per_ticket": 1.27,
+      "recommendation": "Alix Mbaye is not an extreme outlier: top 40% token usage (rank #16/40, P62), top 25% story point delivery (rank #10/40, P78), and top 42.5% efficiency (rank #17/40, P60), using 3397515 tokens per story point versus a team median of 4285456. Delivery context: 15 tickets resolved versus a team median of 9, 2.53 days average completion time versus 2.29 days median, 2 bugs closed, 19 merge requests, and 11039 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+24.9% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Chloe Leroy",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 288050639,
+      "story_points": 40,
+      "tickets_resolved": 9,
+      "time_to_completion_days": 2.67,
+      "bugs_closed": 3,
+      "lines_of_code": 10997,
+      "merge_requests": 15,
+      "merge_requests_per_ticket": 1.67,
+      "recommendation": "Chloe Leroy is not an extreme outlier: top 35% token usage (rank #14/40, P68), top 65% story point delivery (rank #26/40, P38), and top 62.5% efficiency (rank #25/40, P40), using 7201266 tokens per story point versus a team median of 4285456. Delivery context: 9 tickets resolved versus a team median of 9, 2.67 days average completion time versus 2.29 days median, 3 bugs closed, 15 merge requests, and 10997 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-41.1% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Clara Chevalier",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 305157673,
+      "story_points": 34,
+      "tickets_resolved": 10,
+      "time_to_completion_days": 2.3,
+      "bugs_closed": 3,
+      "lines_of_code": 11248,
+      "merge_requests": 20,
+      "merge_requests_per_ticket": 2,
+      "recommendation": "Clara Chevalier is not an extreme outlier: top 32.5% token usage (rank #13/40, P70), top 70% story point delivery (rank #28/40, P32), and top 77.5% efficiency (rank #31/40, P25), using 8975226 tokens per story point versus a team median of 4285456. Delivery context: 10 tickets resolved versus a team median of 9, 2.3 days average completion time versus 2.29 days median, 3 bugs closed, 20 merge requests, and 11248 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-52.7% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Eva Moreau",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 122269890,
+      "story_points": 77,
+      "tickets_resolved": 17,
+      "time_to_completion_days": 1.65,
+      "bugs_closed": 2,
+      "lines_of_code": 14242,
+      "merge_requests": 22,
+      "merge_requests_per_ticket": 1.29,
+      "recommendation": "Eva Moreau is not an extreme outlier: top 67.5% token usage (rank #27/40, P35), top 15% story point delivery (rank #6/40, P88), and top 30% efficiency (rank #12/40, P72), using 1587921 tokens per story point versus a team median of 4285456. Delivery context: 17 tickets resolved versus a team median of 9, 1.65 days average completion time versus 2.29 days median, 2 bugs closed, 22 merge requests, and 14242 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+167.2% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Hugo Dubois",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 242512967,
+      "story_points": 28,
+      "tickets_resolved": 7,
+      "time_to_completion_days": 3.14,
+      "bugs_closed": 2,
+      "lines_of_code": 5077,
+      "merge_requests": 7,
+      "merge_requests_per_ticket": 1,
+      "recommendation": "Hugo Dubois is not an extreme outlier: top 42.5% token usage (rank #17/40, P60), top 77.5% story point delivery (rank #31/40, P25), and top 75% efficiency (rank #30/40, P28), using 8661177 tokens per story point versus a team median of 4285456. Delivery context: 7 tickets resolved versus a team median of 9, 3.14 days average completion time versus 2.29 days median, 2 bugs closed, 7 merge requests, and 5077 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-51% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Jade Faure",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 139009694,
+      "story_points": 90,
+      "tickets_resolved": 11,
+      "time_to_completion_days": 2.45,
+      "bugs_closed": 0,
+      "lines_of_code": 5508,
+      "merge_requests": 16,
+      "merge_requests_per_ticket": 1.45,
+      "recommendation": "Jade Faure is not an extreme outlier: top 62.5% token usage (rank #25/40, P40), top 10% story point delivery (rank #4/40, P92), and top 27.5% efficiency (rank #11/40, P75), using 1544552 tokens per story point versus a team median of 4285456. Delivery context: 11 tickets resolved versus a team median of 9, 2.45 days average completion time versus 2.29 days median, 0 bugs closed, 16 merge requests, and 5508 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+174.7% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Julien Bourgeois",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 310404973,
+      "story_points": 42,
+      "tickets_resolved": 8,
+      "time_to_completion_days": 2.25,
+      "bugs_closed": 1,
+      "lines_of_code": 7347,
+      "merge_requests": 9,
+      "merge_requests_per_ticket": 1.12,
+      "recommendation": "Julien Bourgeois is not an extreme outlier: top 30% token usage (rank #12/40, P72), top 55% story point delivery (rank #22/40, P48), and top 65% efficiency (rank #26/40, P38), using 7390595 tokens per story point versus a team median of 4285456. Delivery context: 8 tickets resolved versus a team median of 9, 2.25 days average completion time versus 2.29 days median, 1 bugs closed, 9 merge requests, and 7347 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-42.6% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Laure Fontaine",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 351310057,
+      "story_points": 91,
+      "tickets_resolved": 16,
+      "time_to_completion_days": 2,
+      "bugs_closed": 1,
+      "lines_of_code": 10961,
+      "merge_requests": 18,
+      "merge_requests_per_ticket": 1.12,
+      "recommendation": "Laure Fontaine is not an extreme outlier: top 25% token usage (rank #10/40, P78), top 7.5% story point delivery (rank #3/40, P95), and top 50% efficiency (rank #20/40, P52), using 3860550 tokens per story point versus a team median of 4285456. Delivery context: 16 tickets resolved versus a team median of 9, 2 days average completion time versus 2.29 days median, 1 bugs closed, 18 merge requests, and 10961 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+9.9% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Lena Chen",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 531690249,
+      "story_points": 77,
+      "tickets_resolved": 12,
+      "time_to_completion_days": 2.58,
+      "bugs_closed": 3,
+      "lines_of_code": 5428,
+      "merge_requests": 12,
+      "merge_requests_per_ticket": 1,
+      "recommendation": "Lena Chen is not an extreme outlier: top 12.5% token usage (rank #5/40, P90), top 15% story point delivery (rank #6/40, P88), and top 60% efficiency (rank #24/40, P42), using 6905068 tokens per story point versus a team median of 4285456. Delivery context: 12 tickets resolved versus a team median of 9, 2.58 days average completion time versus 2.29 days median, 3 bugs closed, 12 merge requests, and 5428 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-38.5% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Lucas Renard",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 170434052,
+      "story_points": 26,
+      "tickets_resolved": 8,
+      "time_to_completion_days": 1.88,
+      "bugs_closed": 3,
+      "lines_of_code": 5147,
+      "merge_requests": 13,
+      "merge_requests_per_ticket": 1.62,
+      "recommendation": "Lucas Renard is not an extreme outlier: top 50% token usage (rank #20/40, P52), top 80% story point delivery (rank #32/40, P22), and top 55% efficiency (rank #22/40, P48), using 6555156 tokens per story point versus a team median of 4285456. Delivery context: 8 tickets resolved versus a team median of 9, 1.88 days average completion time versus 2.29 days median, 3 bugs closed, 13 merge requests, and 5147 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-35.3% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Maxime Lefebvre",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 92614426,
+      "story_points": 45,
+      "tickets_resolved": 9,
+      "time_to_completion_days": 2.33,
+      "bugs_closed": 0,
+      "lines_of_code": 9860,
+      "merge_requests": 14,
+      "merge_requests_per_ticket": 1.56,
+      "recommendation": "Maxime Lefebvre is not an extreme outlier: top 70% token usage (rank #28/40, P32), top 50% story point delivery (rank #20/40, P52), and top 37.5% efficiency (rank #15/40, P65), using 2058098 tokens per story point versus a team median of 4285456. Delivery context: 9 tickets resolved versus a team median of 9, 2.33 days average completion time versus 2.29 days median, 0 bugs closed, 14 merge requests, and 9860 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+106.2% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Nicolas Michel",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 44450539,
+      "story_points": 31,
+      "tickets_resolved": 6,
+      "time_to_completion_days": 2.17,
+      "bugs_closed": 0,
+      "lines_of_code": 9413,
+      "merge_requests": 10,
+      "merge_requests_per_ticket": 1.67,
+      "recommendation": "Nicolas Michel is not an extreme outlier: top 80% token usage (rank #32/40, P22), top 72.5% story point delivery (rank #29/40, P30), and top 25% efficiency (rank #10/40, P78), using 1433888 tokens per story point versus a team median of 4285456. Delivery context: 6 tickets resolved versus a team median of 9, 2.17 days average completion time versus 2.29 days median, 0 bugs closed, 10 merge requests, and 9413 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+195.9% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Pierre Okafor",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 443924602,
+      "story_points": 55,
+      "tickets_resolved": 13,
+      "time_to_completion_days": 2.62,
+      "bugs_closed": 2,
+      "lines_of_code": 7922,
+      "merge_requests": 16,
+      "merge_requests_per_ticket": 1.23,
+      "recommendation": "Pierre Okafor is not an extreme outlier: top 17.5% token usage (rank #7/40, P85), top 45% story point delivery (rank #18/40, P57), and top 70% efficiency (rank #28/40, P32), using 8071356 tokens per story point versus a team median of 4285456. Delivery context: 13 tickets resolved versus a team median of 9, 2.62 days average completion time versus 2.29 days median, 2 bugs closed, 16 merge requests, and 7922 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-47.4% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Quentin Morin",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 146482942,
+      "story_points": 41,
+      "tickets_resolved": 9,
+      "time_to_completion_days": 2.11,
+      "bugs_closed": 2,
+      "lines_of_code": 10756,
+      "merge_requests": 24,
+      "merge_requests_per_ticket": 2.67,
+      "recommendation": "Quentin Morin is not an extreme outlier: top 60% token usage (rank #24/40, P42), top 60% story point delivery (rank #24/40, P42), and top 45% efficiency (rank #18/40, P57), using 3572755 tokens per story point versus a team median of 4285456. Delivery context: 9 tickets resolved versus a team median of 9, 2.11 days average completion time versus 2.29 days median, 2 bugs closed, 24 merge requests, and 10756 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+18.8% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Remy Dupuis",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 157657495,
+      "story_points": 83,
+      "tickets_resolved": 15,
+      "time_to_completion_days": 1.8,
+      "bugs_closed": 1,
+      "lines_of_code": 10646,
+      "merge_requests": 26,
+      "merge_requests_per_ticket": 1.73,
+      "recommendation": "Remy Dupuis is not an extreme outlier: top 57.5% token usage (rank #23/40, P45), top 12.5% story point delivery (rank #5/40, P90), and top 35% efficiency (rank #14/40, P68), using 1899488 tokens per story point versus a team median of 4285456. Delivery context: 15 tickets resolved versus a team median of 9, 1.8 days average completion time versus 2.29 days median, 1 bugs closed, 26 merge requests, and 10646 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+123.4% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Romain Roux",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 161093114,
+      "story_points": 45,
+      "tickets_resolved": 13,
+      "time_to_completion_days": 2.15,
+      "bugs_closed": 2,
+      "lines_of_code": 16026,
+      "merge_requests": 22,
+      "merge_requests_per_ticket": 1.69,
+      "recommendation": "Romain Roux is not an extreme outlier: top 52.5% token usage (rank #21/40, P50), top 50% story point delivery (rank #20/40, P52), and top 47.5% efficiency (rank #19/40, P55), using 3579847 tokens per story point versus a team median of 4285456. Delivery context: 13 tickets resolved versus a team median of 9, 2.15 days average completion time versus 2.29 days median, 2 bugs closed, 22 merge requests, and 16026 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+18.5% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Sofia Benali",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 433353302,
+      "story_points": 92,
+      "tickets_resolved": 16,
+      "time_to_completion_days": 2.06,
+      "bugs_closed": 3,
+      "lines_of_code": 10810,
+      "merge_requests": 19,
+      "merge_requests_per_ticket": 1.19,
+      "recommendation": "Sofia Benali is not an extreme outlier: top 20% token usage (rank #8/40, P82), top 5% story point delivery (rank #2/40, P98), and top 52.5% efficiency (rank #21/40, P50), using 4710362 tokens per story point versus a team median of 4285456. Delivery context: 16 tickets resolved versus a team median of 9, 2.06 days average completion time versus 2.29 days median, 3 bugs closed, 19 merge requests, and 10810 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-9.9% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Thomas Simon",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 160459695,
+      "story_points": 60,
+      "tickets_resolved": 14,
+      "time_to_completion_days": 2.29,
+      "bugs_closed": 1,
+      "lines_of_code": 11351,
+      "merge_requests": 15,
+      "merge_requests_per_ticket": 1.07,
+      "recommendation": "Thomas Simon is not an extreme outlier: top 55% token usage (rank #22/40, P48), top 37.5% story point delivery (rank #15/40, P65), and top 40% efficiency (rank #16/40, P62), using 2674328 tokens per story point versus a team median of 4285456. Delivery context: 14 tickets resolved versus a team median of 9, 2.29 days average completion time versus 2.29 days median, 1 bugs closed, 15 merge requests, and 11351 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+58.7% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Yasmine El Idrissi",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 32039670,
+      "story_points": 31,
+      "tickets_resolved": 8,
+      "time_to_completion_days": 2.75,
+      "bugs_closed": 4,
+      "lines_of_code": 3756,
+      "merge_requests": 3,
+      "merge_requests_per_ticket": 0.38,
+      "recommendation": "Yasmine El Idrissi is not an extreme outlier: top 87.5% token usage (rank #35/40, P15), top 72.5% story point delivery (rank #29/40, P30), and top 20% efficiency (rank #8/40, P82), using 1033538 tokens per story point versus a team median of 4285456. Delivery context: 8 tickets resolved versus a team median of 9, 2.75 days average completion time versus 2.29 days median, 4 bugs closed, 3 merge requests, and 3756 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (+310.6% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Yuna Schmitt",
+      "category": "average_user",
+      "month": "2025-03",
+      "tokens_used": 518066030,
+      "story_points": 68,
+      "tickets_resolved": 15,
+      "time_to_completion_days": 2.2,
+      "bugs_closed": 3,
+      "lines_of_code": 9967,
+      "merge_requests": 15,
+      "merge_requests_per_ticket": 1,
+      "recommendation": "Yuna Schmitt is not an extreme outlier: top 15% token usage (rank #6/40, P88), top 32.5% story point delivery (rank #13/40, P70), and top 67.5% efficiency (rank #27/40, P35), using 7618618 tokens per story point versus a team median of 4285456. Delivery context: 15 tickets resolved versus a team median of 9, 2.2 days average completion time versus 2.29 days median, 3 bugs closed, 15 merge requests, and 9967 lines of code. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median (-44.3% vs median) or token usage rises without a matching delivery increase."
+    },
+    {
+      "name": "Antoine Petit",
+      "category": "low_adoption",
+      "month": "2025-03",
+      "tokens_used": 48323460,
+      "story_points": 7,
+      "tickets_resolved": 4,
+      "time_to_completion_days": 3.5,
+      "bugs_closed": 1,
+      "lines_of_code": 3832,
+      "merge_requests": 6,
+      "merge_requests_per_ticket": 1.5,
+      "recommendation": "Antoine Petit looks under-adopted rather than wasteful: both tokens used and story points are well below the median, at 48323460 tokens versus 165763583 and 7 story points versus 45. His 4 tickets resolved and 3.5 days to completion also trail the team median of 9 tickets and 2.29 days. Run adoption coaching instead of budget cuts, because the bigger opportunity is helping him use AI more effectively to raise delivery rather than saving a small amount of spend. Next month, watch story points."
+    },
+    {
+      "name": "Nadia Fernandez",
+      "category": "low_adoption",
+      "month": "2025-03",
+      "tokens_used": 16464467,
+      "story_points": 24,
+      "tickets_resolved": 5,
+      "time_to_completion_days": 1.6,
+      "bugs_closed": 1,
+      "lines_of_code": 8847,
+      "merge_requests": 9,
+      "merge_requests_per_ticket": 1.8,
+      "recommendation": "Nadia Fernandez appears under-adopted, not a cost problem: she used only 16464467 tokens versus a team median of 165763583 and delivered 24 story points versus 45. Her efficiency is actually strong at 1.46 story points per million tokens versus a team median of 0.24, which suggests more capable use could create more value than cutting budget. Run adoption coaching to help her apply AI on a wider share of work, since enablement is more likely to lift output than cost control here. Next month, watch story points."
+    },
+    {
+      "name": "Zoe Laurent",
+      "category": "low_adoption",
+      "month": "2025-03",
+      "tokens_used": 10102844,
+      "story_points": 6,
+      "tickets_resolved": 2,
+      "time_to_completion_days": 3.5,
+      "bugs_closed": 1,
+      "lines_of_code": 3706,
+      "merge_requests": 1,
+      "merge_requests_per_ticket": 0.5,
+      "recommendation": "Zoe Laurent is also under-adopted: tokens used are 10102844 versus a team median of 165763583, and story points are 6 versus 45. She resolved only 2 tickets versus the median of 9 and took 3.5 days versus 2.29 days. Run adoption coaching rather than reducing access, because there is little spend to cut and the larger business upside is helping her use AI enough to improve delivery. Next month, watch tickets_resolved."
+    },
+    {
+      "name": "Fatima Muller",
+      "category": "quality_risk",
+      "month": "2025-03",
+      "tokens_used": 348549942,
+      "story_points": 22,
+      "tickets_resolved": 7,
+      "time_to_completion_days": 2,
+      "bugs_closed": 3,
+      "lines_of_code": 10054,
+      "merge_requests": 15,
+      "merge_requests_per_ticket": 2.14,
+      "recommendation": "Fatima Muller should be monitored before any increase in AI spend: she used 348549942 tokens versus a team median of 165763583 but delivered only 22 story points versus 45. Her tokens per story point are 15843179 versus a team median of 4285456; tokens per story point means how many tokens were spent to deliver one story point, and lower is better. Retrain and monitor with tighter review checkpoints, because cost should be controlled until token use converts into more delivery. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Florian Rousseau",
+      "category": "quality_risk",
+      "month": "2025-03",
+      "tokens_used": 209759142,
+      "story_points": 15,
+      "tickets_resolved": 4,
+      "time_to_completion_days": 2.25,
+      "bugs_closed": 0,
+      "lines_of_code": 5299,
+      "merge_requests": 15,
+      "merge_requests_per_ticket": 3.75,
+      "recommendation": "Florian Rousseau is spending more than the median on tokens, 209759142 versus 165763583, but delivered only 15 story points versus 45. His tokens per story point are 13983943 versus a team median of 4285456, and he resolved only 4 tickets versus the median of 9. Retrain and monitor with clearer task breakdown and review steps, because current spend is not turning into enough delivered work. Next month, watch story points."
+    },
+    {
+      "name": "Nina Traore",
+      "category": "quality_risk",
+      "month": "2025-03",
+      "tokens_used": 202833499,
+      "story_points": 13,
+      "tickets_resolved": 2,
+      "time_to_completion_days": 4,
+      "bugs_closed": 2,
+      "lines_of_code": 3980,
+      "merge_requests": 9,
+      "merge_requests_per_ticket": 4.5,
+      "recommendation": "Nina Traore is a clear case for tighter control: tokens used are 202833499 versus a team median of 165763583, while story points are only 13 versus 45. She also resolved 2 tickets versus 9 and took 4 days to complete work versus 2.29 days. Reduce and monitor usage until work habits improve, because current cost is high relative to delivered output and cycle time is also worse than the team median. Next month, watch tokens_used."
+    },
+    {
+      "name": "Sara Mercier",
+      "category": "quality_risk",
+      "month": "2025-03",
+      "tokens_used": 269440710,
+      "story_points": 16,
+      "tickets_resolved": 5,
+      "time_to_completion_days": 2.6,
+      "bugs_closed": 1,
+      "lines_of_code": 3381,
+      "merge_requests": 5,
+      "merge_requests_per_ticket": 1,
+      "recommendation": "Sara Mercier is using more tokens than the median, 269440710 versus 165763583, but delivered only 16 story points versus 45. Her tokens per story point are 16840044 versus a team median of 4285456, and she had only 5 merge requests versus a median of 14.5. Reduce and monitor usage, because cost should be controlled until token spend produces more delivered work. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Theo Girard",
+      "category": "quality_risk",
+      "month": "2025-03",
+      "tokens_used": 124441231,
+      "story_points": 11,
+      "tickets_resolved": 5,
+      "time_to_completion_days": 3.2,
+      "bugs_closed": 2,
+      "lines_of_code": 5433,
+      "merge_requests": 12,
+      "merge_requests_per_ticket": 2.4,
+      "recommendation": "Theo Girard delivered only 11 story points versus a team median of 45, even with 124441231 tokens used. His tokens per story point are 11312839 versus a team median of 4285456, and his completion time is 3.2 days versus 2.29 days. Retrain and monitor rather than expand usage, because the current pattern shows too much spend for too little delivered work. Next month, watch story points."
+    },
+    {
+      "name": "Adrien Ivanova",
+      "category": "overspender",
+      "month": "2025-03",
+      "tokens_used": 745127529,
+      "story_points": 74,
+      "tickets_resolved": 11,
+      "time_to_completion_days": 2.82,
+      "bugs_closed": 4,
+      "lines_of_code": 11444,
+      "merge_requests": 12,
+      "merge_requests_per_ticket": 1.09,
+      "recommendation": "Adrien Ivanova is a cost-control priority: token usage is rank #3 of 40 and 745127529 tokens, versus a team median of 165763583, while tokens per story point are 10069291 versus 4285456 at the median. Tokens per story point means how many tokens were spent to deliver one story point, and lower is better; his level is much worse than the team norm, and completion time is also slower at 2.82 days versus 2.29 days. Reduce and cap usage, then retrain on smaller context and tighter prompt habits, because cost is rising faster than delivery value. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Baptiste Bernard",
+      "category": "overspender",
+      "month": "2025-03",
+      "tokens_used": 767324881,
+      "story_points": 42,
+      "tickets_resolved": 6,
+      "time_to_completion_days": 2.83,
+      "bugs_closed": 3,
+      "lines_of_code": 3540,
+      "merge_requests": 8,
+      "merge_requests_per_ticket": 1.33,
+      "recommendation": "Baptiste Bernard is the strongest case for immediate cost control: he is rank #1 of 40 in tokens used at 767324881, but delivered only 42 story points versus a team median of 45. His tokens per story point are 18269640 versus a team median of 4285456, and he resolved only 6 tickets versus the median of 9. Reduce and cap usage, then retrain before any budget increase, because this is very high cost without matching delivery. Next month, watch tokens_used."
+    },
+    {
+      "name": "Ines Camus",
+      "category": "overspender",
+      "month": "2025-03",
+      "tokens_used": 402794252,
+      "story_points": 39,
+      "tickets_resolved": 11,
+      "time_to_completion_days": 2.45,
+      "bugs_closed": 3,
+      "lines_of_code": 11912,
+      "merge_requests": 19,
+      "merge_requests_per_ticket": 1.73,
+      "recommendation": "Ines Camus is overspending relative to output: she used 402794252 tokens versus a team median of 165763583 but delivered 39 story points versus 45. Her tokens per story point are 10328058 versus a team median of 4285456, even though tickets resolved are only modestly above median at 11 versus 9. Reduce and cap usage, then retrain on tighter AI usage patterns, because cost should be controlled until delivery catches up. Next month, watch tokens per story point."
+    },
+    {
+      "name": "Omar Leclerc",
+      "category": "overspender",
+      "month": "2025-03",
+      "tokens_used": 753829866,
+      "story_points": 41,
+      "tickets_resolved": 7,
+      "time_to_completion_days": 2.29,
+      "bugs_closed": 3,
+      "lines_of_code": 5050,
+      "merge_requests": 10,
+      "merge_requests_per_ticket": 1.43,
+      "recommendation": "Omar Leclerc is a top cost-reduction case: token usage is rank #2 of 40 at 753829866, while story points are 41 versus a team median of 45. His tokens per story point are 18386094 versus a team median of 4285456, and he resolved only 7 tickets versus the median of 9. Reduce and cap usage, then retrain on smaller context and more focused prompting, because current spend is far too high for the delivery level achieved. Next month, watch tokens per story point."
+    }
+  ]
+}

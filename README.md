@@ -21,6 +21,33 @@ uv run python api/csv_extraction.py
 
 Output : `employee_metrics.jsonl` (une ligne par employé × mois)
 
+## Générer le dashboard
+
+Le POC front peut consommer directement :
+
+```bash
+python3 api/value_dashboard.py \
+  --input employee_metrics.jsonl \
+  --output outputs/VIEWMODEL.json
+```
+
+Le fichier généré contient :
+
+- `executive_summary` : résumé financier et recommandation globale
+- `monthly_metrics` : une liste de mois, avec `name`, `tokens_used`, `story_points`
+- `employee_metrics` : snapshot par employé pour la vue détaillée, avec `name`, `category`, `month`, `tokens_used`, `story_points`, `tickets_resolved`, `time_to_completion_days`, `bugs_closed`, `lines_of_code`, `merge_requests`, `merge_requests_per_ticket`, `recommendation`
+
+Le but est de distinguer :
+
+- forte consommation de tokens pour peu de story points
+- consommation modérée de tokens avec forte livraison
+- faible consommation de tokens et faible livraison
+- forte consommation de tokens justifiée par une forte livraison
+
+Si vous voulez enrichir le narratif avec OpenAI, remplissez `cle.env` localement
+avec `OPENAI_API_KEY=...`. Ce fichier est ignoré par Git. Sans clé, le script
+utilise des recommandations déterministes.
+
 ## Données
 
 Les deux CSV racontent une histoire : **l'usage IA seul ne suffit pas, c'est le contexte qui compte.**
