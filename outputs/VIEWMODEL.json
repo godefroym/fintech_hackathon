@@ -7,7 +7,7 @@
     "productivity_gain_percent": 6,
     "bugs_reduction_percent": -40,
     "currency": "USD",
-    "main_recommendation": "AI consumption keeps rising: 7959.9 MT in 2024-10 to 10351 MT in 2025-03 (+30%), peaking at 10351 MT. Cut waste first: Clara Chevalier, Adrien Ivanova, Chloe Leroy burn too many tokens for their delivery; cap usage, review prompts, and retrain on smaller context. Scale what works: Zoe Laurent, Remy Dupuis convert tokens into delivery efficiently; have them coach peers. Fix under-adoption: Simon Martin, Quentin Morin, Lucas Renard use little AI and deliver little; run enablement and track story points plus tickets next month."
+    "main_recommendation": "- Consumption: 7959.9 MT in 2024-10 to 10351 MT in 2025-03 (+30%), peaking at 10351 MT. \n- Cut waste: Clara Chevalier, Adrien Ivanova, Chloe Leroy burn too many tokens for their delivery; cap usage, review prompts, and retrain on smaller context. \n- Scale what works: Zoe Laurent, Remy Dupuis convert tokens into delivery efficiently; have them coach peers. \n- Fix under-adoption: Simon Martin, Quentin Morin, Lucas Renard use little AI and deliver little; run enablement and track story points plus tickets next month."
   },
   "monthly_metrics": [
     {
@@ -497,6 +497,8 @@
       "category": "high_roi",
       "month": "2025-03",
       "tokens_used": 456666666,
+      "tokens_used_mt": 456.7,
+      "estimated_ai_cost": 3653.33,
       "story_points": 62,
       "tickets_resolved": 9,
       "time_to_completion_days": 1.56,
@@ -504,13 +506,15 @@
       "lines_of_code": 11595,
       "merge_requests": 8,
       "merge_requests_per_ticket": 0.89,
-      "recommendation": "Zoe Laurent sets the best example to replicate: 62 story points is rank #1 and 456666666 tokens is below the team median of 662777777. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Zoe is at 7365591 versus the team median of 17158730, with 1.56 days to completion versus 2.56 days median. Praise this behavior and have Zoe coach peers on prompt discipline, smaller context, and task selection that should be copied. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 456.7 MT and about $3,653, with 7,365,591 tokens per story point, which means how many tokens were spent to deliver one story point; lower is better, and this is well below the team median of 17,158,730.\n- Delivery: 62 story points ranked #1 of 15, 9 tickets resolved versus the team median of 7, and 1.56 days to completion versus 2.56 days median, showing strong output with lower token use than the median.\n- Action: replicate this workflow and have Zoe coach peers on focused prompt and context habits; next month watch tokens per story point to keep it below the team median."
     },
     {
       "name": "Remy Dupuis",
       "category": "efficient_user",
       "month": "2025-03",
       "tokens_used": 564555555,
+      "tokens_used_mt": 564.6,
+      "estimated_ai_cost": 4516.44,
       "story_points": 45,
       "tickets_resolved": 11,
       "time_to_completion_days": 2,
@@ -518,13 +522,15 @@
       "lines_of_code": 12643,
       "merge_requests": 10,
       "merge_requests_per_ticket": 0.91,
-      "recommendation": "Remy Dupuis is a strong pattern to replicate: 45 story points is above the team median of 40 while 564555555 tokens is below the team median of 662777777. Story points per million tokens means how much delivery came from each million tokens; higher is better, and Remy is at 0.08 versus the team median of 0.06, with 11 tickets resolved versus 7 median. Praise this usage and ask Remy to mentor peers on the prompt and workflow habits behind this result. Next month, watch story points per million tokens."
+      "recommendation": "- Usage: 564.6 MT and about $4,516, with 12,545,679 tokens per story point and 0.08 story points per million tokens, which means delivered work per token spent; this is better than the 0.06 team median.\n- Delivery: 45 story points, 11 tickets resolved versus the team median of 7, and 2.0 days to completion versus 2.56 days median, so delivery is above median without unusually high token use.\n- Action: praise this pattern and ask Remy to mentor peers on prompt reuse, task selection, and smaller context windows; next month watch story points per million tokens."
     },
     {
       "name": "Alexandre Diallo",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 557555555,
+      "tokens_used_mt": 557.6,
+      "estimated_ai_cost": 4460.44,
       "story_points": 33,
       "tickets_resolved": 7,
       "time_to_completion_days": 2.57,
@@ -532,13 +538,15 @@
       "lines_of_code": 4830,
       "merge_requests": 3,
       "merge_requests_per_ticket": 0.43,
-      "recommendation": "Alexandre Diallo is close to the team middle: 33 story points is below the median of 40, while 557555555 tokens is below the median of 662777777. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Alexandre is at 16895623, almost the same as the team median of 17158730, with tickets resolved matching the median at 7. Monitor rather than cut usage, and retrain on the efficient-user playbook if token use rises without more delivery. Next month, watch story points."
+      "recommendation": "- Usage: 557.6 MT and about $4,460, with 16,895,623 tokens per story point, almost in line with the team median of 17,158,730, so current AI spend looks broadly matched to output.\n- Delivery: 33 story points is below the team median of 40, tickets resolved are 7 which matches the median, and time to completion is 2.57 days versus 2.56 days median, so delivery is steady but not ahead of peers.\n- Action: monitor for now and retrain only if token use rises without more story points or tickets; next month watch story points."
     },
     {
       "name": "Alix Mbaye",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 720666666,
+      "tokens_used_mt": 720.7,
+      "estimated_ai_cost": 5765.33,
       "story_points": 42,
       "tickets_resolved": 10,
       "time_to_completion_days": 2.3,
@@ -546,13 +554,15 @@
       "lines_of_code": 15024,
       "merge_requests": 9,
       "merge_requests_per_ticket": 0.9,
-      "recommendation": "Alix Mbaye is using AI at a balanced level: 42 story points is slightly above the team median of 40, and 720666666 tokens is slightly above the median of 662777777. Tokens per story point is exactly 17158730, which matches the team median, while 10 tickets resolved is above the median of 7 and completion time is faster at 2.3 days versus 2.56 days. Monitor this pattern and replicate efficient-user habits only if higher token use stops translating into more delivery. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 720.7 MT and about $5,765, with 17,158,730 tokens per story point, exactly in line with the team median, so AI spend appears balanced rather than clearly wasteful.\n- Delivery: 42 story points versus the team median of 40, 10 tickets resolved versus 7 median, and 2.3 days to completion versus 2.56 days median, which supports keeping current usage under observation.\n- Action: monitor and replicate any prompt habits from efficient peers if token use increases further; next month watch tokens per story point."
     },
     {
       "name": "Fatima Muller",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 688888888,
+      "tokens_used_mt": 688.9,
+      "estimated_ai_cost": 5511.11,
       "story_points": 52,
       "tickets_resolved": 10,
       "time_to_completion_days": 2.1,
@@ -560,13 +570,15 @@
       "lines_of_code": 12176,
       "merge_requests": 10,
       "merge_requests_per_ticket": 1,
-      "recommendation": "Fatima Muller is delivering strong results with solid token use: 52 story points is well above the team median of 40, while 688888888 tokens is only slightly above the median of 662777777. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Fatima is at 13247863 versus the team median of 17158730, with 10 tickets resolved versus 7 median. Monitor and replicate the workflow if this pattern holds, because this is a good example of getting more delivery without a large token increase. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 688.9 MT and about $5,511, with 13,247,863 tokens per story point, which is below the team median of 17,158,730 and shows better-than-median use of AI spend.\n- Delivery: 52 story points ranked #2 of 15, 10 tickets resolved versus the team median of 7, and 2.1 days to completion versus 2.56 days median, so delivery is strong for the level of spend.\n- Action: monitor and consider having Fatima share what should be copied from her workflow if this pattern continues; next month watch tokens per story point."
     },
     {
       "name": "Leila Park",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 662777777,
+      "tokens_used_mt": 662.8,
+      "estimated_ai_cost": 5302.22,
       "story_points": 42,
       "tickets_resolved": 7,
       "time_to_completion_days": 2,
@@ -574,13 +586,15 @@
       "lines_of_code": 9865,
       "merge_requests": 10,
       "merge_requests_per_ticket": 1.43,
-      "recommendation": "Leila Park is slightly better than the team middle: 42 story points is above the median of 40, and token use at 662777777 is exactly at the team median. Tokens per story point is 15780423 versus the team median of 17158730, which means slightly fewer tokens were needed for each story point, and completion time is faster at 2 days versus 2.56 days. Monitor this pattern and replicate the workflow if the same balance of delivery and token use continues. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 662.8 MT and about $5,302, with 15,780,423 tokens per story point, slightly better than the team median of 17,158,730, so spend is reasonable for the output delivered.\n- Delivery: 42 story points versus the team median of 40, 7 tickets resolved which matches the median, and 2.0 days to completion versus 2.56 days median, indicating solid delivery without excess token use.\n- Action: monitor and keep current usage steady, with light coaching from efficient peers if token use climbs; next month watch tokens per story point."
     },
     {
       "name": "Nina Traore",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 760000000,
+      "tokens_used_mt": 760,
+      "estimated_ai_cost": 6080,
       "story_points": 34,
       "tickets_resolved": 9,
       "time_to_completion_days": 3,
@@ -588,13 +602,15 @@
       "lines_of_code": 13766,
       "merge_requests": 9,
       "merge_requests_per_ticket": 1,
-      "recommendation": "Nina Traore is using more AI than the team median without matching delivery: 760000000 tokens is above the median of 662777777, but 34 story points is below the median of 40. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Nina is at 22352941 versus the team median of 17158730, while completion time is slower at 3 days versus 2.56 days. Retrain on smaller context and tighter prompt use, and monitor closely because cost should be controlled when higher token use does not produce more delivery. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 760.0 MT and about $6,080, with 22,352,941 tokens per story point, above the team median of 17,158,730, which means more tokens were spent to deliver each story point than most peers.\n- Delivery: 34 story points is below the team median of 40, while 9 tickets resolved is above the median of 7, and 3.0 days to completion is slower than the 2.56 days median, so cost is running ahead of delivery.\n- Action: monitor closely and retrain on smaller prompts and tighter context to control cost before approving more usage; next month watch tokens per story point."
     },
     {
       "name": "Victor Durand",
       "category": "average_user",
       "month": "2025-03",
       "tokens_used": 702888888,
+      "tokens_used_mt": 702.9,
+      "estimated_ai_cost": 5623.11,
       "story_points": 40,
       "tickets_resolved": 6,
       "time_to_completion_days": 3,
@@ -602,13 +618,15 @@
       "lines_of_code": 9374,
       "merge_requests": 3,
       "merge_requests_per_ticket": 0.5,
-      "recommendation": "Victor Durand is near the team median but not clearly efficient: 40 story points matches the team median, while 702888888 tokens is above the median of 662777777. Tokens per story point is 17572222 versus the team median of 17158730, so slightly more tokens were needed for each story point, and tickets resolved at 6 is below the median of 7. Monitor this pattern and retrain if token use increases again without more story points or tickets. Next month, watch tickets_resolved."
+      "recommendation": "- Usage: 702.9 MT and about $5,623, with 17,572,222 tokens per story point, slightly above the team median of 17,158,730, so AI spend is near the line but not clearly efficient.\n- Delivery: 40 story points matches the team median, but 6 tickets resolved is below the median of 7 and 3.0 days to completion is slower than the 2.56 days median, so delivery does not clearly justify higher token use.\n- Action: monitor and retrain on more focused AI use if spend rises again without faster completion or more tickets; next month watch time to completion days."
     },
     {
       "name": "Lucas Renard",
       "category": "low_adoption",
       "month": "2025-03",
       "tokens_used": 550666666,
+      "tokens_used_mt": 550.7,
+      "estimated_ai_cost": 4405.33,
       "story_points": 28,
       "tickets_resolved": 6,
       "time_to_completion_days": 3.83,
@@ -616,13 +634,15 @@
       "lines_of_code": 6733,
       "merge_requests": 7,
       "merge_requests_per_ticket": 1.17,
-      "recommendation": "Lucas Renard looks under-adopted more than wasteful: 550666666 tokens is below the team median of 662777777, and 28 story points is also below the median of 40. Story points per million tokens means how much delivery came from each million tokens; higher is better, and Lucas is at 0.05 versus the team median of 0.06, with slower completion at 3.83 days versus 2.56 days. Run adoption coaching rather than budget cuts, because better use of AI may create more value than reducing already-below-median usage. Next month, watch story_points."
+      "recommendation": "- Usage: 550.7 MT and about $4,405, with 19,666,667 tokens per story point, above the team median of 17,158,730, but this looks more like uneven adoption than simple waste because total usage is still below the team median.\n- Delivery: 28 story points and 6 tickets resolved are both below the team medians of 40 and 7, and 3.83 days to completion is much slower than the 2.56 days median, so there is room for AI to help more if used better.\n- Action: run adoption coaching before cutting budget, because better use may create more value than lower spend; next month watch story points and tickets resolved."
     },
     {
       "name": "Quentin Morin",
       "category": "low_adoption",
       "month": "2025-03",
       "tokens_used": 172444444,
+      "tokens_used_mt": 172.4,
+      "estimated_ai_cost": 1379.56,
       "story_points": 19,
       "tickets_resolved": 5,
       "time_to_completion_days": 2.6,
@@ -630,13 +650,15 @@
       "lines_of_code": 6734,
       "merge_requests": 7,
       "merge_requests_per_ticket": 1.4,
-      "recommendation": "Quentin Morin is a clear low-adoption case: 172444444 tokens is far below the team median of 662777777, and 19 story points is also far below the median of 40. Even though tokens per story point is strong at 9076023 versus the team median of 17158730, total delivery remains low with 5 tickets resolved versus 7 median, so the issue is limited use rather than waste. Run adoption coaching and expand use on suitable tasks, because enablement is more likely to create value here than cutting an already small budget. Next month, watch tickets_resolved."
+      "recommendation": "- Usage: 172.4 MT and about $1,380, with 9,076,023 tokens per story point, well below the team median of 17,158,730, which means token use is efficient but very low overall.\n- Delivery: 19 story points and 5 tickets resolved are both below the team medians of 40 and 7, while 2.6 days to completion is close to the 2.56 days median, so the main issue is limited adoption rather than overspending.\n- Action: run adoption coaching instead of budget cuts, because broader use could raise delivery at low added cost; next month watch story points and tickets resolved."
     },
     {
       "name": "Simon Martin",
       "category": "low_adoption",
       "month": "2025-03",
       "tokens_used": 107222222,
+      "tokens_used_mt": 107.2,
+      "estimated_ai_cost": 857.78,
       "story_points": 14,
       "tickets_resolved": 3,
       "time_to_completion_days": 2,
@@ -644,13 +666,15 @@
       "lines_of_code": 2395,
       "merge_requests": 5,
       "merge_requests_per_ticket": 1.67,
-      "recommendation": "Simon Martin is also under-adopted, not wasteful: 107222222 tokens is the lowest on the team and far below the median of 662777777, while 14 story points is also the lowest and below the median of 40. Story points per million tokens means how much delivery came from each million tokens; higher is better, and Simon is at 0.13 versus the team median of 0.06, so the token use that does happen is efficient, but total output is still low at 3 tickets resolved versus 7 median. Run adoption coaching instead of budget cuts, because broader use on more tasks may lift delivery without needing much extra spend. Next month, watch story_points."
+      "recommendation": "- Usage: 107.2 MT and about $858, with 7,658,730 tokens per story point, far below the team median of 17,158,730, so token use is very efficient but extremely low in total.\n- Delivery: 14 story points and 3 tickets resolved are well below the team medians of 40 and 7, even though 2.0 days to completion is faster than the 2.56 days median, which points to under-adoption more than waste.\n- Action: run adoption coaching rather than reduce access, because increased use may create more value from a very small spend base; next month watch story points and tickets resolved."
     },
     {
       "name": "Julien Bourgeois",
       "category": "quality_risk",
       "month": "2025-03",
       "tokens_used": 597111111,
+      "tokens_used_mt": 597.1,
+      "estimated_ai_cost": 4776.89,
       "story_points": 16,
       "tickets_resolved": 3,
       "time_to_completion_days": 3.33,
@@ -658,13 +682,15 @@
       "lines_of_code": 2555,
       "merge_requests": 2,
       "merge_requests_per_ticket": 0.67,
-      "recommendation": "Julien Bourgeois should not receive more AI usage yet: 597111111 tokens is only below the team median of 662777777, but story points are just 16 versus the team median of 40. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Julien is at 37319444 versus the team median of 17158730, with only 3 tickets resolved and 3.33 days to completion versus 2.56 days median. Retrain on task breakdown and add closer monitoring before allowing heavier AI use, because current spend is not turning into enough delivery. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 597.1 MT and about $4,777, with 37,319,444 tokens per story point, far above the team median of 17,158,730, which means too many tokens were spent for each story point delivered.\n- Delivery: 16 story points and 3 tickets resolved are both well below the team medians of 40 and 7, and 3.33 days to completion is slower than the 2.56 days median, so current spend is not being converted into enough delivery.\n- Action: retrain and monitor with tighter review checkpoints before allowing heavier AI use; next month watch tokens per story point."
     },
     {
       "name": "Adrien Ivanova",
       "category": "overspender",
       "month": "2025-03",
       "tokens_used": 1401777777,
+      "tokens_used_mt": 1401.8,
+      "estimated_ai_cost": 11214.22,
       "story_points": 46,
       "tickets_resolved": 12,
       "time_to_completion_days": 2.92,
@@ -672,13 +698,15 @@
       "lines_of_code": 18851,
       "merge_requests": 14,
       "merge_requests_per_ticket": 1.17,
-      "recommendation": "Adrien Ivanova is a clear cost-control priority: 1401777777 tokens is the highest on the team and far above the median of 662777777, while 46 story points is only modestly above the median of 40. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Adrien is at 30473430 versus the team median of 17158730, so cost should be reduced because much more token spend is buying only a limited delivery gain. Cap usage, review prompt logs, and retrain on smaller context before approving any increase. Next month, watch tokens_used."
+      "recommendation": "- Usage: 1401.8 MT and about $11,214, the highest token use in the team, with 30,473,430 tokens per story point versus the team median of 17,158,730, so cost should be reduced because each story point is consuming far more tokens than peers.\n- Delivery: 46 story points and 12 tickets resolved are strong versus team medians of 40 and 7, but 2.92 days to completion is slower than the 2.56 days median, so delivery does not fully justify the very high spend.\n- Action: cap usage and retrain on smaller context and prompt review before approving more budget; next month watch tokens per story point."
     },
     {
       "name": "Chloe Leroy",
       "category": "overspender",
       "month": "2025-03",
       "tokens_used": 1227222222,
+      "tokens_used_mt": 1227.2,
+      "estimated_ai_cost": 9817.78,
       "story_points": 46,
       "tickets_resolved": 9,
       "time_to_completion_days": 2.56,
@@ -686,13 +714,15 @@
       "lines_of_code": 11969,
       "merge_requests": 7,
       "merge_requests_per_ticket": 0.78,
-      "recommendation": "Chloe Leroy is overspending relative to delivery: 1227222222 tokens is far above the team median of 662777777, while 46 story points is only above the median of 40 by a small amount. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Chloe is at 26678744 versus the team median of 17158730, so cost should be controlled because token spend is rising faster than delivery. Reduce or cap usage, review prompt patterns, and retrain on smaller context and tighter task selection. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 1227.2 MT and about $9,818, with 26,678,744 tokens per story point versus the team median of 17,158,730, so cost should be controlled because each story point is taking materially more tokens than peers.\n- Delivery: 46 story points is strong and 9 tickets resolved is above the team median of 7, while 2.56 days to completion matches the median, so delivery is good but not strong enough to justify this level of spend.\n- Action: cap usage and retrain on smaller context and prompt discipline to lower cost without hurting output; next month watch tokens per story point."
     },
     {
       "name": "Clara Chevalier",
       "category": "overspender",
       "month": "2025-03",
       "tokens_used": 1180555555,
+      "tokens_used_mt": 1180.6,
+      "estimated_ai_cost": 9444.44,
       "story_points": 31,
       "tickets_resolved": 7,
       "time_to_completion_days": 2.43,
@@ -700,7 +730,7 @@
       "lines_of_code": 10000,
       "merge_requests": 10,
       "merge_requests_per_ticket": 1.43,
-      "recommendation": "Clara Chevalier is the strongest case for reducing waste: 1180555555 tokens is far above the team median of 662777777, but story points are only 31 versus the team median of 40. Tokens per story point means how many tokens were spent to deliver one story point; lower is better, and Clara is at 38082437 versus the team median of 17158730, which explains why cost should be reduced and controlled. Cap usage, retrain on prompt discipline and smaller context, and monitor closely before allowing more AI spend. Next month, watch tokens per story point."
+      "recommendation": "- Usage: 1180.6 MT and about $9,444, with 38,082,437 tokens per story point versus the team median of 17,158,730, so cost should be reduced because each story point is using more than double the median token level.\n- Delivery: 31 story points is below the team median of 40, tickets resolved are 7 which matches the median, and 2.43 days to completion is slightly better than the 2.56 days median, so current spend is not justified by delivery.\n- Action: cap usage, retrain on smaller context, and review prompt habits immediately to control waste; next month watch tokens per story point."
     }
   ]
 }
