@@ -35,7 +35,7 @@ Le fichier généré contient :
 
 - `executive_summary` : résumé financier et recommandation globale
 - `monthly_metrics` : une liste de mois, avec `name`, `tokens_used`, `story_points`
-- `employee_metrics` : snapshot par employé avec `name`, `category`, `tokens_used`, `story_points`, `recommendation`
+- `employee_metrics` : snapshot par employé pour la vue détaillée, avec `name`, `category`, `month`, `tokens_used`, `story_points`, `tickets_resolved`, `time_to_completion_days`, `bugs_closed`, `lines_of_code`, `merge_requests`, `merge_requests_per_ticket`, `recommendation`
 
 Le but est de distinguer :
 

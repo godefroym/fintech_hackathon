@@ -128,6 +128,17 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def parse_days(value: Any) -> float:
+    if value is None:
+        return 0.0
+    if isinstance(value, (int, float)):
+        return float(value)
+    match = re.search(r"[-+]?\d*\.?\d+", str(value))
+    if not match:
+        return 0.0
+    return float(match.group(0))
+
+
 def productivity(story_points: float, tokens_used: float) -> float:
     return safe_divide(story_points, tokens_used) * 1_000_000
 
@@ -144,7 +155,12 @@ def normalized_row(row: dict[str, Any]) -> dict[str, Any]:
         "month_label": month_label(str(row.get("month") or "unknown")),
         "tokens_used": tokens_used,
         "story_points": story_points,
+        "tickets_resolved": safe_float(row.get("tickets_resolved")),
+        "time_to_completion_days": parse_days(row.get("time_to_completion")),
+        "merge_requests_per_ticket": safe_float(row.get("merge_requests_per_ticket")),
         "bugs_closed": safe_float(row.get("bugs_closed")),
+        "lines_of_code": safe_float(row.get("lines_of_code")),
+        "merge_requests": safe_float(row.get("merge_requests")),
         "productivity": productivity(story_points, tokens_used),
     }
 
@@ -203,6 +219,11 @@ def build_recommendation_context(
     token_values: list[float],
     story_point_values: list[float],
     productivity_values: list[float],
+    ticket_values: list[float],
+    completion_day_values: list[float],
+    bug_values: list[float],
+    line_values: list[float],
+    merge_request_values: list[float],
 ) -> dict[str, Any]:
     employee_count = len(token_values)
     token_rank = rank_desc(token_values, row["tokens_used"])
@@ -221,6 +242,11 @@ def build_recommendation_context(
     median_story_points = percentile(story_point_values, 0.5)
     median_efficiency = percentile(productivity_values, 0.5)
     median_tokens_per_story_point = percentile(tokens_per_story_point_values, 0.5)
+    median_tickets = percentile(ticket_values, 0.5)
+    median_completion_days = percentile(completion_day_values, 0.5)
+    median_bugs = percentile(bug_values, 0.5)
+    median_lines = percentile(line_values, 0.5)
+    median_merge_requests = percentile(merge_request_values, 0.5)
 
     flags = []
     if token_rank / employee_count <= 0.05 and efficiency_percentile <= 60:
@@ -236,6 +262,12 @@ def build_recommendation_context(
         "name": row["name"],
         "tokens_used": int(round(row["tokens_used"])),
         "story_points": round_metric(row["story_points"], 1),
+        "tickets_resolved": int(round(row["tickets_resolved"])),
+        "time_to_completion_days": round_metric(row["time_to_completion_days"], 2),
+        "bugs_closed": int(round(row["bugs_closed"])),
+        "lines_of_code": int(round(row["lines_of_code"])),
+        "merge_requests": int(round(row["merge_requests"])),
+        "merge_requests_per_ticket": round_metric(row["merge_requests_per_ticket"], 2),
         "story_points_per_million_tokens": round_metric(row["productivity"], 2),
         "tokens_per_story_point": round_metric(tokens_per_story_point, 0),
         "employee_count": employee_count,
@@ -256,6 +288,11 @@ def build_recommendation_context(
         "efficiency_percentile": round_metric(efficiency_percentile, 0),
         "team_median_tokens_used": int(round(median_tokens)),
         "team_median_story_points": round_metric(median_story_points, 1),
+        "team_median_tickets_resolved": round_metric(median_tickets, 1),
+        "team_median_time_to_completion_days": round_metric(median_completion_days, 2),
+        "team_median_bugs_closed": round_metric(median_bugs, 1),
+        "team_median_lines_of_code": int(round(median_lines)),
+        "team_median_merge_requests": round_metric(median_merge_requests, 1),
         "team_median_story_points_per_million_tokens": round_metric(median_efficiency, 2),
         "team_median_tokens_per_story_point": round_metric(median_tokens_per_story_point, 0),
         "token_vs_median_percent": round_metric(
@@ -272,6 +309,26 @@ def build_recommendation_context(
         ),
         "tokens_per_story_point_vs_median_percent": round_metric(
             vs_median(tokens_per_story_point, median_tokens_per_story_point),
+            1,
+        ),
+        "tickets_vs_median_percent": round_metric(
+            vs_median(row["tickets_resolved"], median_tickets),
+            1,
+        ),
+        "completion_days_vs_median_percent": round_metric(
+            vs_median(row["time_to_completion_days"], median_completion_days),
+            1,
+        ),
+        "bugs_vs_median_percent": round_metric(
+            vs_median(row["bugs_closed"], median_bugs),
+            1,
+        ),
+        "lines_of_code_vs_median_percent": round_metric(
+            vs_median(row["lines_of_code"], median_lines),
+            1,
+        ),
+        "merge_requests_vs_median_percent": round_metric(
+            vs_median(row["merge_requests"], median_merge_requests),
             1,
         ),
         "flags": flags,
@@ -298,38 +355,52 @@ def fallback_recommendation(category: str, context: dict[str, Any]) -> str:
     token_vs_median = signed_metric(context["token_vs_median_percent"])
     story_vs_median = signed_metric(context["story_points_vs_median_percent"])
     efficiency_vs_median = signed_metric(context["efficiency_vs_median_percent"])
+    tickets_vs_median = signed_metric(context["tickets_vs_median_percent"])
+    completion_days_vs_median = signed_metric(context["completion_days_vs_median_percent"])
     tokens_per_story_point_vs_median = signed_metric(
         context["tokens_per_story_point_vs_median_percent"]
+    )
+    delivery_detail = (
+        f"{context['tickets_resolved']} tickets resolved versus a team median of "
+        f"{context['team_median_tickets_resolved']}, {context['time_to_completion_days']} days "
+        f"average completion time versus {context['team_median_time_to_completion_days']} days median, "
+        f"{context['bugs_closed']} bugs closed, {context['merge_requests']} merge requests, "
+        f"and {context['lines_of_code']} lines of code"
     )
 
     if category == "high_roi":
         return (
             f"{name} is a benchmark: {story_position} and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
-            f"Usage is {token_position} ({token_vs_median}% vs median), but delivery is {story_vs_median}% vs median and efficiency is {efficiency_vs_median}% vs median, so recognize this person as a top AI user and have them coach others on token discipline."
+            f"Usage is {token_position} ({token_vs_median}% vs median), but delivery is {story_vs_median}% vs median and efficiency is {efficiency_vs_median}% vs median. "
+            f"Delivery context: {delivery_detail}. Recognize this person as a top AI user and have them coach others on token discipline."
         )
     if category == "efficient_user":
         return (
             f"{name} is efficient: {story_position} with {token_position}, producing {story_points_per_million_tokens} story points per million tokens versus a team median of {context['team_median_story_points_per_million_tokens']}. "
-            f"Because token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median, praise this usage pattern and have this employee share prompts, context-selection habits, and task patterns with the rest of the team."
+            f"Because token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median, praise this usage pattern. "
+            f"Delivery context: {delivery_detail}. Have this employee share prompts, context-selection habits, and task patterns with the rest of the team."
         )
     if category == "overspender":
         return (
             f"{name} is a cost-reduction priority: {token_position}, but only {story_position} and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
-            f"Token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median, so review prompt logs, cap oversized context, and retrain before increasing this user's AI budget."
+            f"Token usage is {token_vs_median}% vs median while efficiency is {efficiency_vs_median}% vs median. "
+            f"Delivery context: {delivery_detail}. Review prompt logs, cap oversized context, and retrain before increasing this user's AI budget."
         )
     if category == "low_adoption":
         return (
             f"{name} looks like an adoption problem rather than pure waste: usage is {token_position} and delivery is {story_position}, with {story_points_per_million_tokens} story points per million tokens. "
-            f"Because both usage and story points sit below the peer median ({token_vs_median}% tokens, {story_vs_median}% story points), run targeted coaching and compare next month against this baseline before cutting access."
+            f"Because both usage and story points sit below the peer median ({token_vs_median}% tokens, {story_vs_median}% story points), run targeted coaching before cutting access. "
+            f"Delivery context: {delivery_detail}; tickets are {tickets_vs_median}% versus median and completion time is {completion_days_vs_median}% versus median."
         )
     if category == "quality_risk":
         return (
             f"{name} should not receive more AI budget yet: delivery is only {story_position} and efficiency is {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
-            f"Usage is {token_vs_median}% vs median but story points are {story_vs_median}% vs median, so add task decomposition, review checkpoints, and quality gates before encouraging heavier AI usage."
+            f"Usage is {token_vs_median}% vs median but story points are {story_vs_median}% vs median. "
+            f"Delivery context: {delivery_detail}. Add task decomposition, review checkpoints, and quality gates before encouraging heavier AI usage."
         )
     return (
         f"{name} is not an extreme outlier: {token_position}, {story_position}, and {efficiency_position}, using {tokens_per_story_point} tokens per story point versus a team median of {context['team_median_tokens_per_story_point']}. "
-        f"Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median ({efficiency_vs_median}% vs median) or token usage rises without a matching story point increase."
+        f"Delivery context: {delivery_detail}. Keep monitoring the trend, then use efficient-user playbooks if efficiency stays below the peer median ({efficiency_vs_median}% vs median) or token usage rises without a matching delivery increase."
     )
 
 
@@ -375,6 +446,11 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> tuple[list[dict[str, A
     token_values = [row["tokens_used"] for row in employee_rows]
     story_point_values = [row["story_points"] for row in employee_rows]
     productivity_values = [row["productivity"] for row in employee_rows]
+    ticket_values = [row["tickets_resolved"] for row in employee_rows]
+    completion_day_values = [row["time_to_completion_days"] for row in employee_rows]
+    bug_values = [row["bugs_closed"] for row in employee_rows]
+    line_values = [row["lines_of_code"] for row in employee_rows]
+    merge_request_values = [row["merge_requests"] for row in employee_rows]
 
     employees = []
     recommendation_context = []
@@ -385,6 +461,11 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> tuple[list[dict[str, A
             token_values,
             story_point_values,
             productivity_values,
+            ticket_values,
+            completion_day_values,
+            bug_values,
+            line_values,
+            merge_request_values,
         )
         context["category"] = category
         recommendation_context.append(context)
@@ -392,8 +473,15 @@ def build_employee_metrics(rows: list[dict[str, Any]]) -> tuple[list[dict[str, A
             {
                 "name": row["name"],
                 "category": category,
+                "month": row["month_label"],
                 "tokens_used": int(round(row["tokens_used"])),
                 "story_points": round_metric(row["story_points"], 1),
+                "tickets_resolved": int(round(row["tickets_resolved"])),
+                "time_to_completion_days": round_metric(row["time_to_completion_days"], 2),
+                "bugs_closed": int(round(row["bugs_closed"])),
+                "lines_of_code": int(round(row["lines_of_code"])),
+                "merge_requests": int(round(row["merge_requests"])),
+                "merge_requests_per_ticket": round_metric(row["merge_requests_per_ticket"], 2),
                 "recommendation": fallback_recommendation(category, context),
             }
         )
@@ -520,6 +608,7 @@ def maybe_apply_openai_recommendations(
             "Each employee recommendation must be understandable without knowing finance or analytics jargon.",
             "Do not mention any abstract invented metric.",
             "Use only plain comparisons: tokens_used, story_points, tokens per story point, story points per million tokens, peer rank, percentile, and median comparison.",
+            "Also use the employee delivery data when relevant: tickets_resolved, time_to_completion_days, bugs_closed, lines_of_code, merge_requests, and merge_requests_per_ticket.",
             "When using a derived ratio, explain it directly, for example: 'tokens per story point means how many tokens were spent to deliver one story point; lower is better'.",
             "Do not use the word productivity in employee recommendations; use 'efficiency' only when it is tied to a direct ratio such as story points per million tokens.",
             "Each employee recommendation must include a clear business action: reduce/cap usage, retrain, monitor, replicate workflow, or run adoption coaching.",
