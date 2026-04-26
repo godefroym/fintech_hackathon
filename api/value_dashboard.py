@@ -214,6 +214,10 @@ def vs_median(value: float, median: float) -> float:
     return safe_divide(value - median, median) * 100
 
 
+def tokens_mt(tokens_used: float) -> float:
+    return round_metric(tokens_used / 1_000_000, 1)
+
+
 def build_recommendation_context(
     row: dict[str, Any],
     token_values: list[float],
@@ -552,6 +556,7 @@ def build_global_recommendation_context(
             {
                 "month": month_label(month),
                 "tokens_used": int(round(tokens_used)),
+                "tokens_mt": tokens_mt(tokens_used),
                 "estimated_spend": round_metric(tokens_used / 1_000_000 * cost_per_1m_tokens, 2),
                 "story_points": round_metric(story_points, 1),
             }
@@ -573,6 +578,7 @@ def build_global_recommendation_context(
         return {
             "name": item["name"],
             "tokens_used": item["tokens_used"],
+            "tokens_mt": tokens_mt(item["tokens_used"]),
             "story_points": item["story_points"],
             "tickets_resolved": item["tickets_resolved"],
             "time_to_completion_days": item["time_to_completion_days"],
@@ -627,33 +633,30 @@ def build_global_main_recommendation(global_context: dict[str, Any]) -> str:
     first_month = global_context["spend_first_month"]
     latest_month = global_context["spend_latest_month"]
     peak_month = global_context["spend_peak_month"]
-    currency = global_context["currency"]
     overspenders = global_context["overspenders_to_reduce"]
     efficient_users = global_context["efficient_users_to_replicate"]
     low_adoption_users = global_context["low_adoption_low_delivery_users"]
 
     overspender_text = ", ".join(
-        f"{item['name']} ({item['tokens_per_story_point']} tokens/story point)"
+        item["name"]
         for item in overspenders[:3]
     )
     efficient_text = ", ".join(
-        f"{item['name']} ({item['story_points_per_million_tokens']} story points/M tokens)"
+        item["name"]
         for item in efficient_users[:3]
     )
     low_adoption_text = ", ".join(
-        f"{item['name']} ({item['tokens_used']} tokens, {item['story_points']} story points)"
+        item["name"]
         for item in low_adoption_users[:3]
     )
 
     return (
-        f"Pain point: AI spend rose from {first_month.get('estimated_spend', 0)} {currency} in {first_month.get('month')} "
-        f"to {latest_month.get('estimated_spend', 0)} {currency} in {latest_month.get('month')} "
-        f"({signed_metric(global_context['spend_period_growth_percent'])}%), with increases in "
-        f"{global_context['month_to_month_increases']} of {global_context['month_to_month_periods']} month-to-month periods and a peak at "
-        f"{peak_month.get('estimated_spend', 0)} {currency} in {peak_month.get('month')}. "
-        f"The first waste bucket is high consumption with weak delivery: {overspender_text}; cap or reduce usage for these users and retrain them on smaller context and prompt discipline. "
-        f"The second opportunity is to replicate good usage: {efficient_text}; recognize these employees and have them coach peers because they turn tokens into delivery efficiently. "
-        f"The third pain point is low AI adoption with low delivery: {low_adoption_text}; do targeted enablement and watch whether story points and tickets resolved improve next month."
+        f"AI consumption keeps rising: {first_month.get('tokens_mt', 0)} MT in {first_month.get('month')} "
+        f"to {latest_month.get('tokens_mt', 0)} MT in {latest_month.get('month')} "
+        f"({signed_metric(global_context['spend_period_growth_percent'])}%), peaking at {peak_month.get('tokens_mt', 0)} MT. "
+        f"Cut waste first: {overspender_text} burn too many tokens for their delivery; cap usage, review prompts, and retrain on smaller context. "
+        f"Scale what works: {efficient_text} convert tokens into delivery efficiently; have them coach peers. "
+        f"Fix under-adoption: {low_adoption_text} use little AI and deliver little; run enablement and track story points plus tickets next month."
     )
 
 
@@ -728,10 +731,8 @@ def maybe_apply_openai_recommendations(
         "rules": [
             "Use only the provided dashboard fields and KPI context.",
             "Do not add, remove, rename, or compute output fields.",
-            "Return only main_recommendation and employee recommendations by name.",
-            "The main_recommendation must surface pain points first: monthly AI spend trend, high-token low-delivery employees, efficient users to replicate, and low-adoption low-delivery employees.",
-            "The main_recommendation must name concrete employees from the provided groups and give clear actions for each group.",
-            "The main_recommendation must mention the spend trend using the monthly_spend values, including the period growth and peak month.",
+            "Return only employee recommendations by name.",
+            "Do not rewrite main_recommendation; it is generated separately for a compact website layout.",
             "Each employee recommendation must be 3 to 4 concise sentences.",
             "Each employee recommendation must be understandable without knowing finance or analytics jargon.",
             "Do not mention any abstract invented metric.",
@@ -748,7 +749,6 @@ def maybe_apply_openai_recommendations(
             "Write for a CFO or manager, not for a developer.",
         ],
         "required_json_shape": {
-            "main_recommendation": "string",
             "employee_recommendations": [
                 {"name": "string", "recommendation": "3 to 4 concise sentences with KPI comparisons and actions"}
             ],
@@ -792,10 +792,6 @@ def maybe_apply_openai_recommendations(
         recommendations = json.loads(content)
     except (KeyError, json.JSONDecodeError, urllib.error.URLError, TimeoutError):
         return "fallback"
-
-    main_recommendation = recommendations.get("main_recommendation")
-    if isinstance(main_recommendation, str) and main_recommendation.strip():
-        viewmodel["executive_summary"]["main_recommendation"] = main_recommendation.strip()
 
     recommendation_by_name = {
         item.get("name"): item.get("recommendation")
